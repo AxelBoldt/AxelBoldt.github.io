@@ -1,0 +1,1822 @@
+ <!--  LAST EDIT: Mon Mar 25 21:57:04 1996 by Axel Boldt (boldt@math.ucsb.edu)  -->
+<html> <head>
+<title>Relationship between HIV and AIDS</title>
+<link rel="owner" rev="made" href="mailto:boldt@math.ucsb.edu">
+</head>
+
+<body>
+<h1>
+The Relationship between
+the Human Immunodeficiency Virus
+and
+the Acquired Immunodeficiency Syndrome
+</h1>
+
+
+
+
+
+<b>The National Institute of Allergy and
+Infectious Diseases<br>
+National Institutes of Health<br>
+Bethesda, Maryland</b><p>
+
+September 1995<p>
+
+(Conversion to HTML, Glossary and Remarks by <a
+href="http://math-www.uni-paderborn.de/~axel/">Axel Boldt</a>)
+
+
+
+<h2>Contents</h2>
+
+<ul>
+  <li><a href="#def">The Definition of AIDS</a>
+  <li><a href="#surveil">The Designation AIDS Is a Surveillance Tool</a>
+  <li><a href="#quant">Quantifying the Epidemic</a>
+  <li><a href="#history">A Brief History of the Emergence of AIDS</a>
+  <li><a href="#theory">Initial Theories</a>
+  <li><a href="#retro">Retrovirus Hypothesis</a>
+  <li><a href="#sero">Seroprevalence Surveys</a>
+  <li><a href="#lenti">HIV and Other Lentiviruses</a>
+  <li><a href="#infection">Course of HIV Infection</a>
+  <li><a href="#immun">Immunologic Profile of People With AIDS</a>
+  <li><a href="#depletion">Mechanisms of CD4+ T Cell Depletion</a>
+  <li><a href="#koch">Koch's Postulates Fulfilled</a>
+  <li><a href="#animal">Evidence From Animal and Laboratory Models</a>
+  <li><a href="#geo">Geographic Considerations</a>
+  <li><a href="#donor">Evidence From Blood Donor-Recipient Pairs</a>
+  <li><a href="#hemo">Impact of HIV Infection on Mortality of Hemophiliacs</a>
+  <li><a href="#pediatric">Pediatric AIDS</a>
+  <li><a href="#single">Single Source Outbreak of Pediatric AIDS</a>
+  <li><a href="#skeptic">Answering the Skeptics:  the "Risk-AIDS" or "Behavioral" Hypothesis</a>
+  <li><a href="#inject">AIDS and Injection Drug Users</a>
+  <li><a href="#sex">Sex and the AIDS Epidemic</a>
+  <li><a href="#drugs">Drug Use in the Pre-AIDS Era</a>
+  <li><a href="#azt">AZT and AIDS</a>
+  <li><a href="#anti">Disease Progression Despite Antibodies</a>
+  <li><a href="#transfusion">Risks Associated With Transfusion</a>
+  <li><a href="#eight">Exposure to Factor VIII</a>
+  <li><a href="#dist">Distribution of AIDS Cases</a>
+  <li><a href="#africa">AIDS in Africa</a>
+  <li><a href="#concl">Conclusion</a>
+  <li><a href="appendix.html#ref"><b>References</b></a>
+  <li><a href="appendix.html#glossary"><b>Glossary</b></a>
+  <li><a href="appendix.html#remarks"><b>Remarks</b></a>
+</ul>
+
+
+The acquired immunodeficiency syndrome (AIDS) is characterized by the
+progressive loss of the <a href="appendix.html#cd4">CD4+</a> helper/inducer subset of T <a href="appendix.html#lymphocytes">lymphocytes</a>,
+leading to severe immunosuppression and <a href="appendix.html#const">constitutional disease</a>,
+neurological complications, and opportunistic infections and <a href="appendix.html#neoplasm">neoplasms</a>
+that rarely occur in persons with intact immune function. Although the
+precise mechanisms leading to the destruction of the immune system
+have not been fully delineated, abundant epidemiologic, virologic and
+immunologic data support the conclusion that infection with the human
+immunodeficiency virus (HIV) is the underlying cause of AIDS.
+<p>
+
+The evidence for HIV's primary role in the <a href="appendix.html#pathogenesis">pathogenesis</a> of AIDS is
+reviewed elsewhere (<a href="appendix.html#ho.b">Ho et al., 1987</a>; <a
+href="appendix.html#fa.a">Fauci, 1988</a>, <a href="appendix.html#fa.b">1993a</a>; <a href="appendix.html#gr.f">Greene, 1993</a>;
+<a href="appendix.html#le.k">Levy, 1993</a>; <a href="appendix.html#we.d">Weiss, 1993</a>). In
+addition, many scientists (<a href="appendix.html#bl.b">Blattner et al.,
+1988a</a>,<a href="appendix.html#bl.c">b</a>; <a href="appendix.html#gi.c">Ginsberg, 1988</a>; <a href="appendix.html#ev.c">Evans,
+1989a</a>,<a href="appendix.html#ev.d">b</a>, <a href="appendix.html#ev.e">1992</a>; <a href="appendix.html#we.e">Weiss and Jaffe, 1990</a>; <a
+href="appendix.html#ga.g">Gallo, 1991</a>; <a href="appendix.html#go.g">Goudsmit, 1992</a>; <a
+href="appendix.html#gr.h">Groopman, 1992</a>; <a href="appendix.html#ku">Kurth, 1990</a>; <a
+href="appendix.html#as.a">Ascher et al., 1993a</a>,<a href="appendix.html#as.b">b</a>; <a href="appendix.html#sc.b">Schechter et
+al., 1993a</a>,<a href="appendix.html#sc.c">b</a>; <a href="appendix.html#lo.b">Lowenstein, 1994</a>; <a
+href="appendix.html#ni.b">Nicoll and Brown, 1994</a>; <a href="appendix.html#ha.i">Harris,
+1995</a>) have responded to specific arguments from individuals who
+assert that AIDS is not caused by HIV. The present discussion reviews
+the AIDS epidemic and summarizes the evidence supporting HIV as the
+cause of AIDS.
+ 
+<h2><a name="def">The Definition of AIDS</a></h2>
+ 
+ The term AIDS first appeared in the Morbidity and Mortality Weekly
+Report (MMWR) of the Centers for Disease Control (CDC) in 1982 to
+describe "... a disease, at least moderately predictive of a defect
+in cell-mediated immunity, occurring with no known cause for
+diminished resistance to that disease" (<a href="appendix.html#cd.d">CDC, 1982b</a>). The initial CDC
+list of AIDS-defining conditions, which included Kaposi's sarcoma
+(<a href="#KS">KS</a>), Pneumocystis carinii pneumonia (<a href="#PCP">PCP</a>), Mycobacterium avium
+complex (<a href="appendix.html#MAC">MAC</a>) and other conditions, has been updated on several
+occasions, with significant revisions (<a href="appendix.html#cd.k">CDC, 1985a</a>, <a href="appendix.html#cd.l">1987a</a>, <a href="appendix.html#cd.o">1992a</a>).
+<p>
+
+ For surveillance purposes, the CDC currently defines AIDS in an adult
+or adolescent age 13 years or older as the presence of one of 25
+AIDS-indicator conditions, such as KS, PCP or <a href="appendix.html#disseminated">disseminated</a> MAC. In
+children younger than 13 years, the definition of AIDS is similar to
+that in adolescents and adults, except that <a href="appendix.html#lymphoid_interstitial_pneumonitis">lymphoid interstitial
+pneumonitis</a> and recurrent bacterial infections are included in the
+list of AIDS-defining conditions (<a href="appendix.html#cd.m">CDC, 1987b</a>). The case definition in
+adults and adolescents was expanded in 1993 to include HIV infection
+in an individual with a <a href="appendix.html#cd4">CD4+ T cell</a> count less than 200 cells per
+cubic millimeter (mm3) of blood (<a href="appendix.html#cd.o">CDC, 1992a</a>). The current surveillance
+definition replaced criteria published in 1987 that were based on
+clinical conditions and evidence of HIV infection but not on CD4+ T
+cell determinations (<a href="appendix.html#cd.l">CDC, 1987a</a>).<a href="appendix.html#1">[1]</a>
+<p>
+
+ In many developing countries, where diagnostic facilities may be
+minimal, epidemiologists employ a case definition based on the
+presence of various clinical symptoms associated with immune
+deficiency and the exclusion of other known causes of
+immunosuppression, such as cancer or malnutrition (<a href="appendix.html#ry.a">Ryder and Mugewrwa,
+1994a</a>; <a href="appendix.html#da.h">Davachi, 1994</a>).
+ 
+<h2><a name="surveil">The Designation AIDS Is a Surveillance Tool</a></h2>
+ 
+ Surveillance definitions of AIDS have proven useful epidemiologically
+to track and quantify the recent epidemic of HIV-mediated
+<a href="appendix.html#immunosuppression">immunosuppression</a> and its manifestations. However, AIDS represents
+only the end stage of a continuous, progressive <a href="appendix.html#pathogenic">pathogenic</a> process,
+beginning with primary infection with HIV, continuing with a chronic
+phase that is usually <a href="appendix.html#asymptomatic">asymptomatic</a>, leading to progressively severe
+symptoms and, ultimately, profound immunodeficiency and opportunistic
+infections and <a href="appendix.html#neoplasm">neoplasms</a> (<a href="appendix.html#fa.b">Fauci, 1993a</a>). In clinical practice,
+symptomatology and measurements of immune function, notably levels of
+<a href="appendix.html#cd4">CD4+ T lymphocytes</a>, are used to guide the treatment of HIV-infected
+persons rather than an all-or-nothing paradigm of AIDS/non-AIDS (<a href="appendix.html#cd.o">CDC,
+1992a</a>; <a href="appendix.html#sa.j">Sande et al., 1993</a>; <a href="appendix.html#vo.b">Volberding and Graham, 1994</a>).
+ 
+<h2><a name="quant">Quantifying the Epidemic</a></h2>
+ 
+ Between June 1981 and Dec. 31, 1994, 441,528 cases of AIDS in the
+United States, including 270,870 AIDS-related deaths, were reported to
+the CDC (<a href="appendix.html#cd.s">CDC, 1995a</a>). AIDS is now the leading cause of death among
+adults aged 25 to 44 in the United States (<a href="appendix.html#cd.t">CDC, 1995b</a>).
+<p>
+
+ Worldwide, 1,025,073 cases of AIDS were reported to the World Health
+Organization (WHO) through December 1994, an increase of 20 percent
+since December 1993 (<a href="appendix.html#wh.j">WHO, 1995a</a>). Allowing for under-diagnosis,
+incomplete reporting and reporting delay, and based on the available
+data on HIV infections around the world, the WHO estimates that over
+4.5 million AIDS <a href="appendix.html#cumulative">cumulative</a> had occurred worldwide by late 1994
+and that 19.5 million people worldwide had been infected with HIV
+since the beginning of the epidemic (<a href="appendix.html#wh.j">WHO, 1995a</a>). By the year 2000,
+the WHO estimates that 30 to 40 million people will have been infected
+with HIV and that 10 million people will have developed AIDS (<a href="appendix.html#wh.i">WHO,
+1994</a>). The Global AIDS Policy Coalition has developed a considerably
+higher estimate--perhaps up to 110 million HIV infections and 25
+million AIDS cases by the turn of the century (<a href="appendix.html#ma.a">Mann et al., 1992a</a>).<a href="appendix.html#2">[2]</a>
+ 
+<h2><a name="history">A Brief History of the Emergence of AIDS</a></h2>
+ 
+ In 1981, clinical investigators in New York and California observed
+among young, previously healthy, homosexual men an unusual clustering
+of cases of rare diseases, notably Kaposi's sarcoma (<a href="#KS">KS</a>) and
+opportunistic infections such as Pneumocystis carinii pneumonia (<a href="#PCP">PCP</a>),
+as well as cases of unexplained, persistent <a href="appendix.html#lymphadenopathy">lymphadenopathy</a> (<a href="appendix.html#cd.a">CDC,
+1981a</a>,<a href="appendix.html#cd.b">b</a>, <a href="appendix.html#cd.c">1982a</a>; <a href="appendix.html#ma.h">Masur et al., 1981</a>; <a href="appendix.html#go.f">Gottlieb et al., 1981</a>;
+<a href="appendix.html#fr.f">Friedman-Kien, 1981</a>). It soon became evident that these men had a
+common immunologic deficit, an impairment in cell-mediated immunity
+resulting from a significant loss of "T-helper" cells, which bear the
+<a href="appendix.html#cd4">CD4</a> marker (<a href="appendix.html#go.f">Gottlieb et al., 1981</a>; <a href="appendix.html#ma.h">Masur et al., 1981</a>; <a href="appendix.html#si.a">Siegal et al.,
+1981</a>; <a href="appendix.html#am.c">Ammann et al., 1983a</a>).
+<p>
+
+ The widespread occurrence of KS and PCP in young people with no
+underlying disease or history of immunosuppressive therapy was
+unprecedented. Searches of the medical literature, autopsy records and
+tumor registries revealed that these diseases previously had occurred
+at very low levels in the United States (<a href="appendix.html#cd.b">CDC, 1981b</a>; <a href="appendix.html#cd.h">CDC, 1982f</a>).
+<p>
+
+ <a name="KS">KS</a>, a very rare skin <a href="appendix.html#neoplasm">neoplasm</a>, had affected mostly older men of
+Mediterranean origin or cancer or transplant patients undergoing
+immunosuppressive therapy (<a href="appendix.html#ga.h">Gange and Jones, 1978</a>; <a href="appendix.html#sa.d">Safai and Good,
+1981</a>). Before the AIDS epidemic, the annual incidence of Kaposi's
+sarcoma in the United States was 0.02 to 0.06 per 100,000 population
+(<a href="appendix.html#ro.e">Rothman, 1962a</a>; <a href="appendix.html#oe">Oettle, 1962</a>). In addition, a more aggressive form of
+KS that generally occurred in younger individuals was seen in certain
+parts of Africa (<a href="appendix.html#ro.f">Rothman, 1962b</a>; <a href="appendix.html#sa.e">Safai, 1984a</a>). By 1984, never-married
+men in San Francisco were found to be 2,000 times more likely to
+develop KS than during the years 1973 to 1979 (<a href="appendix.html#wi">Williams et al.,
+1994</a>). As of Dec. 31, 1994, 36,693 patients with AIDS in the United
+States with a definitive diagnosis of KS had been reported to the CDC
+(<a href="appendix.html#cd.t">CDC, 1995b</a>).
+<p>
+
+ <a name="PCP">PCP</a>, a lung infection caused by a <a href="appendix.html#pathogen">pathogen</a> to which most individuals
+are exposed with no undue consequences, was extremely rare prior to
+1981 in individuals other than those receiving immunosuppressive
+therapy or among the chronically malnourished, such as certain Eastern
+European children following World War II (<a href="appendix.html#wa.d">Walzer, 1990</a>). A 1967
+survey, for example, found only 107 U.S. cases of PCP reported in the
+medical literature up to that point, virtually all among individuals
+with underlying immunosuppressive conditions or who had undergone
+immunosuppressive therapy (<a href="appendix.html#le.a">Le Clair, 1969</a>). In that year, CDC became
+the sole supplier in the United States of pentamidine isethionate,
+then the only recommended PCP therapy, and began collecting data on
+each PCP case diagnosed and treated in this country. After reviewing
+requests for pentamidine in the period 1967 to 1970, researchers found
+only one case of confirmed PCP without a known underlying condition
+(<a href="appendix.html#wa.c">Walzer et al., 1974</a>). In the period immediately prior to the
+recognition of AIDS, January 1976 to June 1980, CDC received only one
+request for pentamidine isethionate to treat an adult in the United
+States who had PCP and no underlying disease (<a href="appendix.html#cd.h">CDC, 1982f</a>). In 1981
+alone, 42 requests for pentamidine were received to treat patients
+with PCP and no known underlying disorders (<a href="appendix.html#cd.h">CDC, 1982f</a>). By Dec. 31,
+1994, 127,626 individuals with AIDS in the United States with
+definitive diagnoses of PCP had been reported to the CDC (<a href="appendix.html#cd.t">CDC, 1995b</a>).
+<p>
+
+ Another rare opportunistic disease, <a
+href="appendix.html#disseminated">disseminated</a> infection with the
+Mycobacterium avium complex (<a href="appendix.html#MAC">MAC</a>), also was seen frequently in the
+first AIDS patients (<a href="appendix.html#za.d">Zakowski et al., 1982</a>; <a href="appendix.html#gr.d">Greene et al.,
+1982</a>). Prior to 1981, only 32 individuals with disseminated MAC
+disease had been described in the medical literature (<a href="appendix.html#ma.i">Masur,
+1982a</a>). By Dec. 31, 1994, the CDC had received reports of 28,954
+U.S. AIDS patients with definitive diagnoses of disseminated MAC (<a href="appendix.html#cd.t">CDC,
+1995b</a>).
+ 
+<h2><a name="theory">Initial Theories</a></h2>
+ 
+ The fact that homosexual men constituted the initial population in
+which AIDS occurred in the United States led some to surmise that a
+homosexual lifestyle was specifically related to the disease (<a href="appendix.html#go.a">Goedert
+et al., 1982</a>; <a href="appendix.html#hu.c">Hurtenbach and Shearer, 1982</a>; <a href="appendix.html#so.b">Sonnabend et al., 1983</a>;
+<a href="appendix.html#du.i">Durack, 1981</a>; <a href="appendix.html#ma.l">Mavligit et al., 1984</a>). These early suggestions that
+AIDS resulted from behavior specific to the homosexual population were
+largely dismissed when the syndrome was observed in distinctly
+different groups in the United States: in male and female injection
+drug users; in <a href="appendix.html#hemophilia">hemophiliacs</a> and blood transfusion recipients; among
+female sex partners of bisexual men, recipients of blood or blood
+products, or injection drug users; and among infants born to mothers
+with AIDS or with a history of injection drug use (<a href="appendix.html#cd.d">CDC, 1982b</a>,<a href="appendix.html#cd.e">c</a>,<a href="appendix.html#cd.f">d</a>,<a href="appendix.html#cd.h">f</a>,
+<a href="appendix.html#cd.i">1983a</a>; <a href="appendix.html#po.a">Poon et al., 1983</a>; <a href="appendix.html#el">Elliot et al., 1983</a>; <a href="appendix.html#ma.j">Masur et al., 1982b</a>;
+<a href="appendix.html#da.i">Davis et al., 1983</a>; <a href="appendix.html#ha.h">Harris et al., 1983</a>; <a href="appendix.html#ru">Rubinstein et al., 1983</a>;
+<a href="appendix.html#ol.b">Oleske et al., 1983</a>; <a href="appendix.html#am.d">Ammann et al., 1983b</a>). In 1983, for example, a
+study found that <a name="hemophilia">hemophiliacs</a> with no history of any of the proposed
+causes of AIDS in homosexual men had developed the syndrome, and some
+of the men had apparently transmitted the infection to their wives
+(<a href="appendix.html#de.c">deShazo et al., 1983</a>).
+<p>
+
+ Many public health experts concluded that the clustering of AIDS
+cases (<a href="appendix.html#au">Auerbach et al., 1984</a>; <a href="appendix.html#ga.j">Gazzard et al., 1984</a>) and the occurrence
+of cases in diverse risk groups could be explained only if AIDS were
+caused by an infectious microorganism transmitted in the manner of
+<a href="appendix.html#hepatitis">hepatitis B</a> virus (HBV): by sexual contact, by <a href="appendix.html#inoculation">inoculation</a> with blood
+or blood products, and from mother to newborn infant (<a href="appendix.html#fr.b">Francis et al.,
+1983</a>; <a href="appendix.html#cu.a">Curran et al., 1984</a>; <a href="appendix.html#am.a">AMA, 1984</a>; <a href="appendix.html#cd.h">CDC, 1982f</a>, <a href="appendix.html#cd.i">1983a</a>,<a href="appendix.html#cd.j">b</a>).
+<p>
+
+ Early suspects for the cause of AIDS were <a href="appendix.html#cytomegalovirus">cytomegalovirus</a> (CMV),
+because of its association with immunosuppression, and <a href="appendix.html#epstein">Epstein-Barr
+virus</a> (EBV), which has an affinity for <a href="appendix.html#lymphocytes">lymphocytes</a> (<a href="appendix.html#go.f">Gottlieb et al.,
+1981</a>; <a href="appendix.html#hy">Hymes et al., 1981</a>; <a href="appendix.html#cd.h">CDC, 1982f</a>). However, AIDS was a new
+phenomenon, and these viruses already had a worldwide
+distribution. Comparative <a href="appendix.html#seroprevalence">seroprevalence</a> studies showed no convincing
+evidence to assign these viruses or other known agents a primary role
+in the syndrome (<a href="appendix.html#ro.c">Rogers et al., 1983</a>). Also lacking was evidence that
+these viruses, when isolated from patients with AIDS, differed
+significantly from strains found in healthy individuals or from
+strains found in the years preceding the emergence of AIDS (AMA,
+1984).
+ 
+<h2><a name="retro">Retrovirus Hypothesis</a></h2>
+ 
+ By 1983, several research groups had focused on <a href="appendix.html#retrovirus">retroviruses</a> for
+clues to the cause of AIDS (<a href="appendix.html#ga.f">Gallo and Montagnier, 1987</a>). Two recently
+recognized retroviruses, HTLV-I and HTLV-II, were the only viruses
+then known to preferentially infect helper T <a href="appendix.html#lymphocytes">lymphocytes</a>, the cells
+depleted in people with AIDS (<a href="appendix.html#ga.d">Gallo and Reitz, 1982</a>; <a href="appendix.html#po.b">Popovic et al.,
+1984</a>). The pattern of HTLV transmission was similar to that seen among
+AIDS patients: HTLV was transmitted by sexual contact, from mother to
+child or by exposure to infected blood (<a href="appendix.html#es.b">Essex, 1982</a>; <a href="appendix.html#ga.d">Gallo and Reitz,
+1982</a>). In addition, HTLV-I was known to cause mild immunosuppression,
+and a related retrovirus, the <a href="appendix.html#lymphotropic">lymphotropic</a> feline leukemia virus
+(FeLV), caused <a href="appendix.html#lethal">lethal</a> immunosuppression in cats (<a href="appendix.html#es.a">Essex et al., 1975</a>).
+<p>
+
+ In May 1983, the first report providing experimental evidence for an
+association between a retrovirus and AIDS was published
+(<a href="appendix.html#ba.g">Barre-Sinoussi et al., 1983</a>). After finding <a href="appendix.html#antibodies">antibodies</a> cross-reactive
+with HTLV-I in a homosexual patient with <a href="appendix.html#lymphadenopathy">lymphadenopathy</a>, a group led
+by Dr. Luc Montagnier isolated a previously unrecognized virus
+containing <a href="appendix.html#reverse_transcriptase">reverse transcriptase</a> that was <a href="appendix.html#cytopathic">cytopathic</a> for <a href="appendix.html#cord-blood">cord-blood</a>
+<a href="appendix.html#lymphocytes">lymphocytes</a> (<a href="appendix.html#ba.g">Barre-Sinoussi et al., 1983</a>). This virus later became
+known as lymphadenopathy-associated virus (LAV). The French group
+subsequently reported that LAV was <a href="appendix.html#tropic">tropic</a> for T-helper cells, in which
+it grew to substantial <a href="appendix.html#titer">titers</a> and caused cell death (<a href="appendix.html#kl.a">Klatzmann et al.,
+1984a</a>; <a href="appendix.html#mo.a">Montagnier et al., 1984</a>).
+<p>
+
+ In 1984, a considerable amount of new data added to the evidence for
+a retroviral <a href="appendix.html#etiology">etiology</a> for AIDS. Researchers at the National Institutes
+of Health reported the isolation of a <a href="appendix.html#cytopathic">cytopathic</a> T-<a href="appendix.html#lymphotropic">lymphotropic</a> virus
+from 48 different people, including 18 of 21 with pre-AIDS, three of
+four clinically normal mothers of children with AIDS, 26 of 72
+children and adults with AIDS, and one (who later developed AIDS) of
+22 healthy homosexuals (<a href="appendix.html#ga.e">Gallo et al., 1984</a>). The virus, named
+HTLV-III, could not be found in 115 healthy heterosexual subjects.
+<p>
+
+<a href="appendix.html#antibodies">Antibodies</a> reactive with HTLV-III <a href="appendix.html#antigen">antigens</a> were found in <a href="appendix.html#serum">serum</a>
+samples of 88 percent of 48 patients with AIDS, 79 percent of 14
+homosexuals with pre-AIDS, and fewer than 1 percent of hundreds of
+healthy heterosexuals (<a href="appendix.html#sa.k">Sarngadharan et al., 1984</a>).
+<p>
+
+ Shortly thereafter, the researchers found that 100 percent (34 of 34)
+of AIDS patients tested were positive for HTLV-III antibodies in a
+study in which none of 14 controls had antibodies (<a href="appendix.html#sa.f">Safai et al.,
+1984b</a>).
+<p>
+
+ In a study in the United Kingdom reported later that year,
+investigators found that 30 of 31 AIDS patients tested were
+<a href="appendix.html#seropositive">seropositive</a> for HTLV-III antibodies, as were 110 of 124 individuals
+with persistent generalized <a href="appendix.html#lymphadenopathy">lymphadenopathy</a> (<a href="appendix.html#ch.d">Cheingsong-Popov et al.,
+1984</a>). None of more than 1,000 blood donors selected randomly had
+antibodies to HTLV-III in this study.
+<p>
+
+ During the same time period, HTLV-III was isolated from the semen of
+patients with AIDS (<a href="appendix.html#za.b">Zagury et al., 1984</a>, <a href="appendix.html#ho.c">Ho et al., 1984</a>), findings
+consistent with the epidemiologic data demonstrating AIDS transmission
+via sexual contact.
+<p>
+
+ Researchers in San Francisco subsequently reported the isolation of a
+retrovirus they named the AIDS-associated retrovirus (ARV) from AIDS
+patients in different risk groups, as well as from <a href="appendix.html#asymptomatic">asymptomatic</a> people
+from AIDS risk groups (<a href="appendix.html#le.i">Levy et al., 1984</a>). The researchers isolated
+ARV from 27 of 55 patients with AIDS or lymphadenopathy syndrome; they
+detected antibodies to ARV in 90 percent of 113 individuals with the
+same conditions. Like HTLV-III and LAV, ARV grew substantially in
+<a href="appendix.html#peripheral_blood">peripheral blood</a> mononuclear cells and killed <a href="appendix.html#cd4">CD4+ T cells</a>. The same
+group subsequently isolated ARV from genital secretions of women with
+antibodies to the virus, data consistent with the observation that men
+could contract AIDS following contact with a woman infected with the
+virus (<a href="appendix.html#wo">Wofsy et al., 1986</a>).
+<p>
+
+ During the same period, HTLV-III and ARV were isolated from the
+brains of children and adults with AIDS-associated <a href="appendix.html#encephalopathy">encephalopathy</a>,
+which suggested a role for these viruses in the central nervous system
+disorders seen in many patients with AIDS (<a href="appendix.html#le.j">Levy et al., 1985</a>; <a href="appendix.html#ho.d">Ho et
+al., 1985</a>).
+<p>
+
+ By 1985, analyses of the nucleotide sequences of HTLV-III, LAV and
+ARV demonstrated that the three viruses belonged to the same
+retroviral family and were strikingly similar (<a href="appendix.html#wa.b">Wain-Hobson et al.,
+1985</a>; <a href="appendix.html#ra.c">Ratner et al., 1985</a>; <a href="appendix.html#sa.i">Sanchez-Pescador et al., 1985</a>). In 1986,
+the International Committee of Viral Taxonomy renamed the viruses the
+human immunodeficiency virus (HIV) (<a href="appendix.html#co.b">Coffin et al., 1986</a>).
+
+
+<h2><a name="sero">Seroprevalence Surveys</a></h2>
+ 
+ Serologic tests for <a href="appendix.html#antibodies">antibodies</a> to HIV, developed in 1984
+(<a href="appendix.html#sa.k">Sarngadharan et al., 1984</a>; <a href="appendix.html#po.b">Popovic et al., 1984</a>; reviewed in
+<a href="appendix.html#br.b">Brookmeyer and Gail, 1994</a>), have enabled researchers to conduct
+hundreds of <a href="appendix.html#seroprevalence">seroprevalence</a> surveys throughout the world. Using these
+tests, investigators have repeatedly demonstrated that the occurrence
+of AIDS-like illnesses in different populations has closely followed
+the appearance of HIV antibodies (<a href="appendix.html#un">U.S. Bureau of the Census,
+1994</a>). For example, <a href="appendix.html#retrospective">retrospective</a> examination of sera collected in the
+late 1970s in association with <a href="appendix.html#hepatitis">hepatitis B</a> studies in New York, San
+Francisco and Los Angeles suggests that HIV entered the
+U.S. population sometime in the late 1970s (<a href="appendix.html#ja.c">Jaffe et al., 1985a</a>). In
+1978, 4.5 percent of men in the San Francisco <a href="appendix.html#cohort">cohort</a> had antibodies to
+HIV (<a href="appendix.html#ja.c">Jaffe et al., 1985a</a>). The first cases of AIDS in homosexual men
+in San Francisco were reported in 1981, and by 1984, more than
+two-thirds of the San Francisco <a href="appendix.html#cohort">cohort</a> had HIV antibodies and almost
+one-third had developed AIDS-related conditions (<a href="appendix.html#ja.c">Jaffe et al.,
+1985a</a>). By the end of 1992, approximately 70 percent of 539 men in the
+San Francisco cohort with a well-documented date of HIV <a href="appendix.html#seroconversion">seroconversion</a>
+before 1983 had developed an AIDS-defining condition or had a <a href="appendix.html#cd4">CD4+ T
+cell</a> count of less than 200/mm3; another 11 percent had CD4+ T cell
+counts between 200 and 500/mm3 (<a href="appendix.html#bu.a">Buchbinder et al., 1994</a>).
+<p>
+
+ <a href="appendix.html#retrospective">Retrospective</a> tests of the U.S. blood supply have shown that, in
+1978, at least one batch of <a href="appendix.html#Factor_VIII">Factor VIII</a> was contaminated with HIV
+(<a href="appendix.html#ev">Evatt et al., 1985</a>; <a href="appendix.html#ar">Aronson, 1993</a>). Factor VIII was given to some
+2,300 males in the United States that year. In July 1982, the first
+cases of AIDS in <a href="appendix.html#hemophilia">hemophiliacs</a> were reported (<a href="appendix.html#cd.e">CDC, 1982c</a>). Through
+Dec. 31, 1994, 3,863 individuals in the United States with hemophilia
+or other <a href="appendix.html#coagulation">coagulation</a> disorders had been diagnosed with AIDS (<a href="appendix.html#cd.s">CDC,
+1995a</a>).
+<p>
+
+ Elsewhere in the world, a similar chronological association between
+HIV and AIDS has been noted. The appearance of HIV in the blood supply
+has preceded or coincided with the occurrence of AIDS cases in every
+country and region where cases of AIDS have been reported (<a href="appendix.html#in">Institute
+of Medicine, 1986</a>; <a href="appendix.html#ch.e">Chin and Mann, 1988</a>; <a href="appendix.html#cu.b">Curran et al., 1988</a>; <a href="appendix.html#pi.b">Piot et
+al., 1988</a>; <a href="appendix.html#ma.b">Mann, 1992</a>; <a href="appendix.html#ma.a">Mann et al., 1992</a>; <a href="appendix.html#un">U.S. Bureau of the Census,
+1994</a>). For example, a review of serosurveys associated with dengue
+fever in the Caribbean found that the earliest evidence of HIV
+infection in Haiti appeared in samples from 1979 (<a href="appendix.html#pa.f">Pape et al., 1983,
+1993</a>); the first cases of AIDS in Haiti and in Haitians in the United
+States were reported in the early 1980s (<a href="appendix.html#cd.g">CDC, 1982e</a>; <a href="appendix.html#pa.f">Pape et al.,
+1983</a>, <a href="appendix.html#pa.g">1993</a>).
+<p>
+
+ In Africa between 1981 and 1983, clinical epidemics of chronic,
+life-threatening <a href="appendix.html#enteropathic">enteropathic</a> diseases
+("slim disease"), <a href="appendix.html#cryptococcal_meningitis">cryptococcal
+meningitis</a>, progressive <a href="#KS">KS</a> and <a
+href="appendix.html#eso">esophageal</a>  <a href="appendix.html#candidiasis">candidiasis</a> were recognized
+in Rwanda, Tanzania, Uganda, Zaire and Zambia, and in 1983 the first
+AIDS cases among Africans were reported (<a href="appendix.html#qu.a">Quinn et al., 1986</a>; <a href="appendix.html#es.c">Essex,
+1994</a>). The earliest blood sample from Africa from which HIV has been
+recovered is from a possible AIDS patient in Zaire, tested in
+connection with a 1976 <a href="appendix.html#Ebola_virus">Ebola virus</a> outbreak (<a href="appendix.html#ge.c">Getchell et al., 1987</a>;
+<a href="appendix.html#my">Myers et al., 1992</a>).
+<p>
+
+ Serologic data have suggested the presence of HIV infection as early
+as 1959 in Zaire (<a href="appendix.html#na">Nahmias et al., 1986</a>). Other investigators have
+found evidence of HIV <a href="appendix.html#proviral">proviral</a> <a href="appendix.html#DNA">DNA</a> in tissues of a sailor who died in
+Manchester, England, in 1959 (<a href="appendix.html#co.p">Corbitt et al., 1990</a>). In the latter
+case, this finding may have represented a contamination with a virus
+isolated at a much later date (<a href="appendix.html#zh">Zhu and Ho, 1995</a>).
+<p>
+
+ HIV did not become epidemic until 20 to 30 years later, perhaps
+because of the migration of poor and young sexually active individuals
+from rural areas to urban centers in developing countries, with
+subsequent return migration and, internationally, due to civil wars,
+tourism, business travel and the drug trade (<a href="appendix.html#qu.b">Quinn, 1994</a>).
+ 
+<h2><a name="lenti">HIV and Other Lentiviruses</a></h2>
+ 
+ As a <a href="appendix.html#retrovirus">retrovirus</a>, HIV is an <a href="appendix.html#RNA">RNA</a> virus that codes for the enzyme
+<a href="appendix.html#reverse_transcriptase">reverse transcriptase</a>, which transcribes the viral genomic RNA into a
+<a href="appendix.html#DNA">DNA</a> copy that ultimately integrates into the host cell genome (<a href="appendix.html#fa.a">Fauci,
+1988</a>). Within the retrovirus family, HIV is classified as a
+lentivirus, having genetic and <a href="appendix.html#morphologic">morphologic</a> similarities to animal
+lentiviruses such as those infecting cats (feline immunodeficiency
+virus), sheep (visna virus), goats (caprine arthritis-encephalitis
+virus), and non-human primates (simian immunodeficiency virus)
+(<a href="appendix.html#st.b">Stowring et al., 1979</a>; <a href="appendix.html#go.e">Gonda et al., 1985</a>; <a href="appendix.html#ha.b">Haase, 1986</a>; <a href="appendix.html#te.a">Temin, 1988</a>,
+<a href="appendix.html#te.b">1989</a>). Like HIV in humans, these animal viruses primarily infect cells
+of the immune system, including T <a href="appendix.html#lymphocytes">lymphocytes</a> and <a href="appendix.html#macrophages">macrophages</a> (<a href="appendix.html#ha.b">Haase,
+1986</a>, <a href="appendix.html#ha.a">1990</a>; <a href="appendix.html#le.k">Levy, 1993</a>).
+<p>
+
+ Lentiviruses often cause immunodeficiency in their hosts in addition
+to slow, progressive wasting disorders, neurodegeneration and death
+(<a href="appendix.html#ha.b">Haase, 1986</a>, <a href="appendix.html#ha.a">1990</a>). SIV, for example, infects several subspecies of
+macaque monkeys, causing diarrhea, wasting, <a href="appendix.html#cd4">CD4+ T cell</a> depletion,
+opportunistic infections and death (<a href="appendix.html#de.d">Desrosiers, 1990</a>; <a href="appendix.html#fu.a">Fultz,
+1993</a>). HIV is closely related to SIV, as evidenced by viral protein
+cross-reactivity and genetic sequence similarities (<a href="appendix.html#fr.a">Franchini et al.,
+1987</a>; <a href="appendix.html#hi.b">Hirsch et al., 1989</a>; <a href="appendix.html#de.d">Desrosiers, 1990</a>; <a href="appendix.html#my">Myers, 1992</a>).
+<p>
+
+ One feature that distinguishes lentiviruses from other retroviruses
+is the remarkable complexity of their viral genomes. Most retroviruses
+that are capable of replication contain only three genes--env, gag and
+pol (<a href="appendix.html#va.b">Varmus, 1988</a>). HIV contains not only these essential genes but
+also the complex regulatory genes tat, rev, nef, and auxiliary genes
+vif, vpr and vpu (<a href="appendix.html#gr.g">Greene, 1991</a>). The actions of these additional genes
+probably contribute to the profound <a href="appendix.html#pathogen">pathogenicity</a> that differentiates
+HIV from many other retroviruses.
+<p>
+
+ <a href="appendix.html#cd4">CD4+ T cells</a>, the cells depleted in AIDS patients, are primary
+targets of HIV because of the affinity of the gp120 glycoprotein
+component of the <a href="appendix.html#viral_envelope">viral envelope</a> for the CD4 molecule (<a href="appendix.html#da.e">Dalgleish et
+al., 1984</a>; <a href="appendix.html#kl.b">Klatzmann et al., 1984b</a>; <a href="appendix.html#mc.a">McDougal et al., 1985a</a>,
+<a href="appendix.html#mc.c">1986</a>). These so-called T-helper cells coordinate a number of critical
+immunologic functions. The loss of these cells results in the
+progressive impairment of the immune system and is associated with a
+deteriorating clinical course (<a href="appendix.html#pa.a">Pantaleo et al., 1993a</a>). In advanced
+HIV disease, abnormalities of virtually every component of the immune
+system are evident (<a href="appendix.html#fa.b">Fauci, 1993a</a>; <a href="appendix.html#pa.a">Pantaleo et al., 1993a</a>).
+ 
+<h2><a name="infection">Course of HIV Infection</a></h2>
+ 
+ Primary HIV infection is associated with a burst of HIV <a href="appendix.html#viremia">viremia</a> and
+often a <a href="appendix.html#concomitant">concomitant</a> abrupt decline of <a href="appendix.html#cd4">CD4+
+T cells</a> in the <a href="appendix.html#peripheral_blood">peripheral
+blood</a> (<a href="appendix.html#co.n">Cooper et al., 1985</a>; <a href="appendix.html#da.b">Daar et al., 1991</a>; <a href="appendix.html#ti">Tindall and Cooper,
+1991</a>; <a href="appendix.html#cl">Clark et al., 1991</a>; <a href="appendix.html#pa.a">Pantaleo et al., 1993a</a>, <a href="appendix.html#pa.c">1994</a>). The decrease
+in circulating <a href="appendix.html#cd4">CD4+ T cells</a> during primary infection is probably due
+both to HIV-mediated cell killing and to <a href="appendix.html#re-trafficking">re-trafficking</a> of cells to
+the lymphoid tissues and other organs (<a href="appendix.html#fa.b">Fauci, 1993a</a>).
+<p>
+
+ The median period of time between infection with HIV and the onset of
+clinically apparent disease is approximately 10 years in western
+countries, according to prospective studies of homosexual men in which
+dates of <a href="appendix.html#seroconversion">seroconversion</a> are known (<a href="appendix.html#le.e">Lemp et al., 1990</a>; <a href="appendix.html#pa.a">Pantaleo et al.,
+1993a</a>; <a href="appendix.html#he">Hessol et al., 1994</a>). Similar estimates of <a href="appendix.html#asymptomatic">asymptomatic</a> periods
+have been made for HIV-infected blood-transfusion recipients,
+injection drug users and adult <a href="appendix.html#hemophilia">hemophiliacs</a> (reviewed in <a href="appendix.html#al.a">Alcabes et
+al., 1993a</a>).
+<p>
+
+ HIV disease, however, is not uniformly expressed in all
+individuals. A small proportion of persons infected with the virus
+develop AIDS and die within months following primary infection, while
+approximately 5 percent of HIV-infected individuals exhibit no signs
+of disease progression even after 12 or more years (<a href="appendix.html#pa.d">Pantaleo et al.,
+1995a</a>; <a href="appendix.html#ca">Cao et al., 1995</a>). Host factors such as age or genetic
+differences among individuals, the level of virulence of the
+individual strain of virus, as well as influences such as co-infection
+with other microbes may determine the rate and severity of HIV disease
+expression in different people (<a href="appendix.html#fa.b">Fauci, 1993a</a>; <a href="appendix.html#pa.a">Pantaleo et al.,
+1993a</a>). Such variables have been termed "clinical illness promotion
+factors" or co-factors and appear to influence the onset of clinical
+disease among those infected with any <a href="appendix.html#pathogen">pathogen</a> (<a href="appendix.html#ev.b">Evans, 1982</a>). Most
+people infected with <a href="appendix.html#hepatitis">hepatitis B</a>, for example, show no symptoms or
+only jaundice and clear their infection, while others suffer disease
+ranging from chronic liver inflammation to <a href="appendix.html#cirrhosis">cirrhosis</a> and
+<a href="appendix.html#hepatocellular_carcinoma">hepatocellular carcinoma</a> (<a href="appendix.html#ro.b">Robinson, 1990</a>). Co-factors probably also
+determine why some smokers develop lung cancer, while others do not.
+<p>
+
+ As disease progresses, increasing amounts of infectious virus, viral
+<a href="appendix.html#antigen">antigens</a> and HIV-specific nucleic acids in the body correlate with a
+worsening clinical course (<a href="appendix.html#al.f">Allain et al., 1987</a>; <a href="appendix.html#ni.a">Nicholson et al.,
+1989</a>; <a href="appendix.html#ho.a">Ho et al., 1989</a>; <a href="appendix.html#sc.e">Schnittman et al., 1989</a>, <a href="appendix.html#sc.f">1990a</a>, <a href="appendix.html#sc.g">1991</a>; <a href="appendix.html#ma.k">Mathez et
+al., 1990</a>; <a href="appendix.html#ge.a">Genesca et al., 1990</a>; <a href="appendix.html#hu.a">Hufert et al., 1991</a>; <a href="appendix.html#sa.a">Saag et al.,
+1991</a>; <a href="appendix.html#ao">Aoki-Sei et al., 1992</a>; <a href="appendix.html#ye">Yerly et al., 1992</a>; <a href="appendix.html#ba.d">Bagnarelli et al.,
+1992</a>; <a href="appendix.html#fe.c">Ferre et al., 1992</a>; <a href="appendix.html#mi">Michael et al., 1992</a>; <a href="appendix.html#pa.b">Pantaleo et al.,
+1993b</a>; <a href="appendix.html#gu.b">Gupta et al., 1993</a>; <a href="appendix.html#co.i">Connor et al., 1993</a>; <a href="appendix.html#sa.h">Saksela et al., 1994</a>;
+<a href="appendix.html#di.a">Dickover et al., 1994</a>; <a href="appendix.html#da.c">Daar et al., 1995</a>; <a href="appendix.html#fu.b">Furtado et al., 1995</a>).
+<p>
+
+ Cross-sectional studies in adults and children have shown that levels
+of infectious HIV or <a href="appendix.html#proviral">proviral</a> <a href="appendix.html#DNA">DNA</a> in the blood are substantially
+higher in patients with AIDS than in <a href="appendix.html#asymptomatic">asymptomatic</a> patients (<a href="appendix.html#ho.a">Ho et al.,
+1989</a>; <a href="appendix.html#co.m">Coombs et al., 1989</a>; <a href="appendix.html#sa.a">Saag et al., 1991</a>; <a href="appendix.html#sr">Srugo et al., 1991</a>;
+<a href="appendix.html#mi">Michael et al., 1992</a>; <a href="appendix.html#ao">Aoki-Sei et al., 1992</a>). In both blood and lymph
+tissues from HIV-infected individuals, researchers at the National
+Institutes of Health found <a href="appendix.html#viral_burden">viral burden</a> and replication to be
+substantially higher in patients with AIDS than in early-stage
+patients (<a href="appendix.html#pa.b">Pantaleo et al., 1993b</a>). This group also found deterioration
+of the architecture and microenvironment of the lymphoid tissue to a
+greater extent in late-stage patients than in asymptomatic
+individuals. The dissolution of the follicular dendritic cell network
+of the lymph node germinal center and the progressive loss of
+antigen-presenting capacity are likely critical factors that
+contribute to the immune deficiency seen in individuals with AIDS
+(<a href="appendix.html#pa.b">Pantaleo et al., 1993b</a>).
+<p>
+
+ More recently, the same group studied 15 long-term non-progressors,
+defined as individuals infected for more than seven years (usually
+more than 10 years) who received no antiretroviral therapy and showed
+no decline in <a href="appendix.html#cd4">CD4+ T cells</a>. They found that <a
+href="appendix.html#viral_burden">viral burden</a> and viral
+replication in the peripheral blood and in lymph nodes, measured by
+<a href="appendix.html#DNA">DNA</a> and <a href="appendix.html#RNA">RNA</a> <a href="appendix.html#PCR">PCR</a>, respectively, were at least 10 times lower than in 18
+HIV-infected individuals whose disease progression was more
+typical. In addition, the lymph node architecture in long-term
+non-progressors remained intact (<a href="appendix.html#pa.d">Pantaleo et al., 1995a</a>).
+<p>
+
+ Longitudinal studies also have quantified viral burden and
+replication in the blood and their relationship to disease progression
+(<a href="appendix.html#sc.f">Schnittman et al., 1990a</a>; <a href="appendix.html#co.i">Connor et al., 1993</a>; <a href="appendix.html#sa.h">Saksela et al., 1994</a>;
+<a href="appendix.html#da.c">Daar et al., 1995</a>; <a href="appendix.html#fu.b">Furtado et al., 1995</a>). In a study of <a href="appendix.html#asymptomatic">asymptomatic</a>
+HIV-infected individuals who ultimately developed rapidly progressive
+disease, the number of <a href="appendix.html#cd4">CD4+ T cells</a> in which HIV <a href="appendix.html#DNA">DNA</a> could be found
+increased over time, whereas this did not occur in patients with
+stable disease (<a href="appendix.html#sc.f">Schnittman et al., 1990a</a>). Using serial blood samples
+from HIV-infected individuals who had a precipitous drop in CD4+ T
+cells followed by a rapid progression to AIDS, other groups found a
+significant increase in the levels of HIV DNA concurrent with or prior
+to CD4+ T cell decline (<a href="appendix.html#co.i">Connor et al., 1993</a>; <a href="appendix.html#da.c">Daar et al.,
+1995</a>). Increased expression of HIV <a href="appendix.html#mRNA">mRNA</a> in peripheral blood
+mononuclear cells has also been shown to precede clinically defined
+progression of disease (<a href="appendix.html#sa.h">Saksela et al., 1994</a>).
+<p>
+
+ In the longitudinal Multicenter AIDS Cohort Study (MACS), homosexual
+and bisexual men for whom the time of <a href="appendix.html#seroconversion">seroconversion</a> had been
+documented had increasing levels of both <a href="appendix.html#plasma">plasma</a> HIV <a href="appendix.html#RNA">RNA</a> and
+intracellular RNA as disease progressed and had CD4+ T cell numbers
+that declined (<a href="appendix.html#gu.b">Gupta et al., 1993</a>; <a href="appendix.html#me.a">Mellors et al., 1995</a>). Men who
+remained <a href="appendix.html#asymptomatic">asymptomatic</a> with stable CD4+ T cell numbers maintained
+extremely low levels of viral RNA. These findings suggest that plasma
+HIV RNA levels are a strong, CD4-independent predictor of rapid
+progression to AIDS. Another longitudinal study found that increasing
+plasma RNA levels were highly predictive of the development of
+zidovudine (<a href="appendix.html#AZT">AZT</a>) resistance and death in patients on long-term therapy
+with that drug (<a href="appendix.html#va.a">Vahey et al., 1994</a>).
+<p>
+
+ Other evidence suggests that changes in viral load due to changes in
+therapy can predict clinical benefit in patients. It was recently
+found that the amount of HIV RNA in the peripheral blood decreased in
+patients who switched to didanosine (ddI) after taking AZT and
+increased in patients who continued to take AZT (<a href="appendix.html#nt">NTIS, 1994</a>; <a href="appendix.html#we.g">Welles et
+al., 1995</a>). Decreases in HIV RNA were associated with fewer
+progressions to new, previously undiagnosed AIDS-defining diseases or
+death. This study provided the first evidence that a therapy-induced
+reduction of HIV viral load is associated with clinical
+outcome. Similarly, studies of blood samples collected serially from
+HIV-infected patients found that a decrease in HIV RNA copy number in
+the first months following treatment with AZT strongly correlated with
+improved clinical outcome (<a href="appendix.html#ob">O'Brien et al., 1994</a>; <a href="appendix.html#ju.b">Jurriaans et al.,
+1995</a>).
+<p>
+
+ The emergence of HIV variants that are more <a href="appendix.html#cytopathic">cytopathic</a> and replicate
+in a wider range of susceptible cells <a href="appendix.html#vitro">in vitro</a> has also been shown to
+correlate with disease progression in HIV-infected individuals (<a href="appendix.html#fe.a">Fenyo
+et al., 1988</a>; <a href="appendix.html#te.d">Tersmette et al., 1988</a>, <a href="appendix.html#te.e">1989a</a>,<a href="appendix.html#te.f">b</a>; <a href="appendix.html#ri.c">Richman and Bozzette,
+1994</a>; <a href="appendix.html#co.i">Connor et al., 1993</a>, <a href="appendix.html#co.j">Connor and Ho, 1994a</a>,<a href="appendix.html#co.k">b</a>). Similar results
+have been seen <a href="appendix.html#vivo">in vivo</a> with macaques infected with molecularly cloned
+SIV (<a href="appendix.html#ko.b">Kodama et al., 1993</a>). It has also been reported that HIV isolates
+from patients who progress to AIDS have a higher rate of replication
+compared with HIV isolates from individuals who remain <a href="appendix.html#asymptomatic">asymptomatic</a>
+(<a href="appendix.html#fe.a">Fenyo et al., 1988</a>; <a href="appendix.html#te.e">Tersmette et al., 1989a</a>), and that rapidly
+replicating variants of HIV emerge during the asymptomatic stage of
+infection prior to disease progression (<a href="appendix.html#te.f">Tersmette et al., 1989b</a>;
+<a href="appendix.html#co.k">Connor and Ho, 1994b</a>).
+ 
+<h2><a name="immun">Immunologic Profile of People With AIDS</a></h2>
+ 
+ It is well established that a number of viral, <a href="appendix.html#rickettsial">rickettsial</a>, fungal,
+<a href="appendix.html#protozoal">protozoal</a> and bacterial infections can cause transient T cell
+decreases (<a href="appendix.html#ch.b">Chandra, 1983</a>). Immune deficiencies due to tumors,
+autoimmune diseases, rare <a href="appendix.html#congenital">congenital</a> disorders, chemotherapy and other
+factors have been shown to render certain individuals susceptible to
+opportunistic infections (<a href="appendix.html#am.e">Ammann, 1991</a>). As mentioned above, chronic
+malnutrition following World War II resulted in <a href="#PCP">PCP</a> in Eastern
+European children (<a href="appendix.html#wa.d">Walzer, 1990</a>). Transplant recipients treated with
+immunosuppressive drugs such as cyclosporin and glucocorticoids often
+suffer recurrent diseases due to <a href="appendix.html#pathogen">pathogens</a>
+such as <a href="appendix.html#varicella_zoster_virus">varicella zoster virus</a> and <a href="appendix.html#cytomegalovirus">cytomegalovirus</a> that also cause disease in HIV-infected
+individuals (<a href="appendix.html#ch.b">Chandra, 1983</a>; <a href="appendix.html#am.e">Ammann, 1991</a>).
+<p>
+
+ However, the specific immunologic profile that typifies AIDS--a
+progressive reduction of <a href="appendix.html#cd4">CD4+ T cells</a> resulting in
+persistent <a href="appendix.html#cd4_lymphocytopenia">CD4+ T
+lymphocytopenia</a> and profound deficits in cellular immunity--is
+extraordinarily rare in the absence of HIV infection or other known
+causes of immunosuppression. This was recently demonstrated in several
+surveys that sought to determine the frequency of <a href="appendix.html#idiopathic">idiopathic</a> <a
+href="appendix.html#cd4_lymphocytopenia">CD4+
+T-cell lymphocytopenia</a>  (ICL), which is characterized by <a href="appendix.html#cd4">CD4+ T cell</a>
+counts lower than 300 cells per cubic millimeter (mm3) of blood in the
+absence of HIV <a href="appendix.html#antibodies">antibodies</a> or conditions or therapies associated with
+depressed levels of CD4+ T cells (reviewed in <a href="appendix.html#fa.b">Fauci, 1993b</a>; <a href="appendix.html#la.e">Laurence,
+1993</a>).
+<p>
+
+ In a CDC survey, only 47 (.02 percent) of 230,179 individuals
+diagnosed with AIDS were both HIV-<a href="appendix.html#seronegative">seronegative</a> and had persistently
+low CD4+ T cell counts (&lt;300/mm3) in the absence of conditions or
+therapies associated with immunosuppression (<a href="appendix.html#sm.b">Smith et al., 1993</a>).
+<p>
+
+ In the MACS, 22,643 CD4+ T cell determinations in 2,713
+HIV-seronegative homosexual men revealed only one individual with a
+CD4+ T cell count persistently lower than 300 cells/mm3, and this
+individual was receiving immunosuppressive therapy (<a href="appendix.html#ve.c">Vermund et al.,
+1993a</a>). A similar review of another <a href="appendix.html#cohort">cohort</a> of homosexual and bisexual
+men found no case of persistently lowered CD4+ T cell counts among 756
+HIV-seronegative men who had no other cause of immunosuppression
+(<a href="appendix.html#sm.b">Smith et al., 1993</a>). Analogous results were reported from the San
+Francisco Men's Health Study, a population-based cohort recruited in
+1984. Among 206 HIV-seronegative heterosexual and 526 HIV-<a href="appendix.html#seronegative">seronegative</a>
+homosexual or bisexual men, only one had consistently low <a href="appendix.html#cd4">CD4+ T cell</a>
+counts (<a href="appendix.html#sh.a">Sheppard et al., 1993</a>). This individual also had low CD8+ T
+cell counts, suggesting that he had general lymphopenia rather than a
+selective loss of CD4+ T cells. No AIDS-defining clinical condition
+was observed among these HIV-seronegative men.
+<p>
+
+ Studies of blood donors, recipients of blood and blood products, and
+household and sexual contacts of transfusion recipients also suggest
+that persistently low CD4+ T cell counts are extremely rare in the
+absence of HIV infection (<a href="appendix.html#al.e">Aledort et al., 1993</a>; <a href="appendix.html#bu.b">Busch et al.,
+1994</a>). Longitudinal studies of injection-drug users have demonstrated
+that unexplained <a href="appendix.html#cd4_lymphocytopenia">CD4+ T lymphocytopenia</a> is almost never seen among
+HIV-seronegative individuals in this population, despite a high risk
+of exposure to <a href="appendix.html#hepatitis">hepatitis B</a>, <a href="appendix.html#cytomegalovirus">cytomegalovirus</a> and other blood-borne
+pathogens (<a href="appendix.html#de.b">Des Jarlais et al., 1993</a>; <a href="appendix.html#we.f">Weiss et al., 1992</a>).
+ 
+<h2><a name="depletion">Mechanisms of CD4+ T Cell Depletion</a></h2>
+ 
+ HIV infects and kills <a href="appendix.html#cd4">CD4+ T lymphocytes</a> <a href="appendix.html#vitro">in vitro</a>, although
+scientists have developed immortalized T-cell lines in order to
+propagate HIV in the laboratory (<a href="appendix.html#po.b">Popovic et al., 1984</a>; <a href="appendix.html#za.c">Zagury et al.,
+1986</a>; <a href="appendix.html#ga.i">Garry, 1989</a>; <a href="appendix.html#cl">Clark et al., 1991</a>). Several mechanisms of CD4+ T
+cell killing have been observed in lentivirus systems in vitro and may
+explain the progressive loss of these cells in HIV-infected
+individuals (reviewed in <a href="appendix.html#ga.i">Garry, 1989</a>; <a href="appendix.html#fa.b">Fauci, 1993a</a>; <a href="appendix.html#pa.a">Pantaleo et al.,
+1993a</a>). These mechanisms include disruption of the cell membrane as
+HIV buds from the surface (<a href="appendix.html#le.f">Leonard et al., 1988</a>) or the intracellular
+accumulation of <a href="appendix.html#heterodisperse">heterodisperse</a> <a href="appendix.html#RNA">RNAs</a> and unintegrated <a href="appendix.html#DNA">DNA</a> (<a href="appendix.html#pa.j">Pauza et
+al., 1990</a>; <a href="appendix.html#ko.d">Koga et al., 1988</a>). Evidence also suggests that
+intracellular complexing of CD4 and viral envelope products can result
+in cell killing (<a href="appendix.html#ho.f">Hoxie et al., 1986</a>).
+<p>
+
+ In addition to these direct mechanisms of CD4+ T cell depletion,
+indirect mechanisms may result in the death of uninfected CD4+ T cells
+(reviewed in <a href="appendix.html#fa.b">Fauci, 1993a</a>; <a href="appendix.html#pa.a">Pantaleo et al., 1993a</a>). Uninfected cells
+often fuse with infected cells, resulting in giant cells called
+syncytia that have been associated with the <a href="appendix.html#cytopathic">cytopathic</a> effect of HIV
+in vitro (<a href="appendix.html#so.a">Sodroski et al., 1986</a>; <a href="appendix.html#li.a">Lifson et al., 1986</a>). Uninfected
+cells also may be killed when free gp120, the envelope protein of HIV,
+binds to their surfaces, marking them for destruction by
+<a href="appendix.html#antibodies">antibody</a>-dependent <a href="appendix.html#cellular_cytotoxicity_responses">cellular cytotoxicity responses</a> (<a href="appendix.html#ly">Lyerly et al.,
+1987</a>). Other autoimmune phenomena may also contribute to CD4+ T cell
+death since HIV envelope proteins share some degree of homology with
+certain major histocompatibility complex type II (MHC-II) molecules
+(<a href="appendix.html#go.c">Golding et al., 1989</a>; <a href="appendix.html#ko.c">Koenig et al., 1988</a>).
+<p>
+
+ A number of investigators have suggested that superantigens, either
+encoded by HIV or derived from unrelated agents, may trigger massive
+stimulation and expansion of CD4+ T cells, ultimately leading to
+depletion or anergy of these cells (<a href="appendix.html#ja.e">Janeway, 1991</a>; <a href="appendix.html#hu.a">Hugin et al.,
+1991</a>). The untimely induction of a form of programmed cell death
+called apoptosis has been proposed as an additional mechanism for CD4+
+T cell loss in HIV infection (<a href="appendix.html#am.b">Ameisen and Capron, 1991</a>; <a href="appendix.html#te.c">Terai et al.,
+1991</a>; <a href="appendix.html#la.f">Laurent-Crawford et al., 1991</a>). Recent reports indicate that
+apoptosis occurs to a greater extent in HIV-infected individuals than
+in non-infected persons, both in the peripheral blood and lymph nodes
+(<a href="appendix.html#fi.a">Finkel et al., 1995</a>; <a href="appendix.html#pa.e">Pantaleo and Fauci, 1995b</a>; <a href="appendix.html#mu.d">Muro-Cacho et al.,
+1995</a>).
+<p>
+
+ It has also been observed that HIV infects precursors of CD4+ T cells
+in the bone marrow and thymus and damages the microenvironment of
+these organs necessary for the optimal sustenance and maturation of
+progenitor cells (<a href="appendix.html#sc.g">Schnittman et al., 1990b</a>; <a href="appendix.html#st.a">Stanley et al.,
+1992</a>). These findings may help explain the lack of regeneration of the
+CD4+ T cell pool in patients with AIDS (<a href="appendix.html#fa.b">Fauci, 1993a</a>).
+<p>
+
+ Recent studies have demonstrated a substantial viral burden and
+active viral replication in both the peripheral blood and lymphoid
+tissues even early in HIV infection (<a href="appendix.html#fo">Fox et al., 1989</a>; <a href="appendix.html#co.m">Coombs et al.,
+1989</a>; <a href="appendix.html#ho.a">Ho et al., 1989</a>; <a href="appendix.html#mi">Michael et al., 1992</a>; <a href="appendix.html#ba.d">Bagnarelli et al., 1992</a>;
+<a href="appendix.html#pa.b">Pantaleo et al., 1993b</a>; <a href="appendix.html#em">Embretson et al., 1993</a>; <a href="appendix.html#pi.a">Piatak et al.,
+1993</a>). One group has reported that 25 percent of CD4+ T cells in the
+lymph nodes of HIV-infected individuals harbor HIV <a href="appendix.html#DNA">DNA</a> early in the
+course of disease (<a href="appendix.html#em">Embretson et al., 1993</a>). Other data suggest that
+HIV infection is sustained by a dynamic process involving continuous
+rounds of new viral infection and the destruction and replacement of
+over 1 billion CD4+ T cells per day (<a href="appendix.html#we.b">Wei et al., 1995</a>; <a href="appendix.html#ho.e">Ho et al.,
+1995</a>).
+<p>
+
+ Taken together, these studies strongly suggest that HIV has a central
+role in the <a href="appendix.html#pathogenesis">pathogenesis</a> of AIDS, either directly or indirectly by
+triggering a series of <a href="appendix.html#pathogenic">pathogenic</a> events that contribute to
+progressive immunosuppression.
+ 
+<h2><a name="koch">Koch's Postulates Fulfilled</a></h2>
+ 
+ Recent developments in HIV research provide some of the strongest
+evidence for the causative role of HIV in AIDS and fulfill the
+classical postulates for disease causation developed by Henle and Koch
+in the 19th century (Koch's postulates reviewed in <a href="appendix.html#ev.a">Evans, 1976</a>, <a href="appendix.html#ev.c">1989a</a>;
+<a href="appendix.html#ha.f">Harden, 1992</a>). Koch's postulates have been variously interpreted by
+many scientists over the years. One scientist who asserts that HIV
+does not cause AIDS has set forth the following interpretation of the
+postulates for proving the causal relationship between a microorganism
+and a specific disease (<a href="appendix.html#du.a">Duesberg, 1987</a>):
+<ul>
+  <li> 1)    The microorganism must be found in all cases of the disease.
+ 
+  <li> 2)    It must be isolated from the host and grown in pure culture.
+ 
+  <li> 3)    It must reproduce the original disease when introduced into a susceptible host.
+ 
+  <li> 4)    It must be found in the experimental host so infected.
+
+</ul>
+
+ Recent developments in HIV/AIDS research have shown that HIV fulfills
+these criteria as the cause of AIDS.
+<p>
+
+ 1) The development of <a href="appendix.html#PCR">DNA</a> <a href="appendix.html#PCR">PCR</a> has enabled researchers to document the
+    presence of cell-associated <a href="appendix.html#proviral">proviral</a> HIV in virtually all patients
+    with AIDS, as well as in individuals in earlier stages of HIV
+    disease (<a href="appendix.html#kw">Kwok et al., 1987</a>; <a href="appendix.html#wa.a">Wages et al., 1991</a>; <a href="appendix.html#ba.c">Bagasra et al.,
+    1992</a>; <a href="appendix.html#br.d">Bruisten et al., 1992</a>; <a href="appendix.html#pe.d">Petru et al., 1992</a>; <a href="appendix.html#ha.d">Hammer et al.,
+    1993</a>). <a href="appendix.html#RNA">RNA</a> <a href="appendix.html#PCR">PCR</a> has been used to detect cell-free and/or
+    cell-associated viral RNA in patients at all stages of HIV disease
+    (<a href="appendix.html#ot">Ottmann et al., 1991</a>; <a href="appendix.html#sc.h">Schnittman et al., 1991</a>; Aoki-Sei, 1992;
+    <a href="appendix.html#mi">Michael et al., 1992</a>; <a href="appendix.html#pi.a">Piatak et al., 1993</a>).
+<p>
+
+ 2) Improvements in co-culture techniques have allowed the isolation of HIV in virtually all AIDS patients, as well as in almost all <a href="appendix.html#seropositive">seropositive</a> individuals with both early- and late-stage disease (<a href="appendix.html#co.m">Coombs et al., 1989</a>; <a href="appendix.html#sc.e">Schnittman et al., 1989</a>; <a href="appendix.html#ho.a">Ho et al., 1989</a>; <a href="appendix.html#ja.a">Jackson et al., 1990</a>).
+<p>
+
+ 1-4) All four postulates have been fulfilled in three laboratory
+workers with no other risk factors who have developed AIDS or severe
+immunosuppression after accidental exposure to concentrated HIVIIIB in
+the laboratory (<a href="appendix.html#bl.d">Blattner et al., 1993</a>; <a href="appendix.html#re.a">Reitz et al., 1994</a>; <a href="appendix.html#co.e">Cohen,
+1994c</a>). Two patients were infected in 1985 and one in 1991. All three
+have shown marked <a href="appendix.html#cd4">CD4+ T cell</a> depletion, and two have CD4+ T cell
+counts that have dropped below 200/mm3 of blood. One of these latter
+individuals developed <a href="#PCP">PCP</a>, an AIDS indicator disease, 68 months after
+showing evidence of infection and did not receive antiretroviral drugs
+until 83 months after the infection. In all three cases, HIVIIIB was
+isolated from the infected individual, sequenced, and shown to be the
+original infecting strain of virus.
+<p>
+
+ In addition, as of Dec. 31, 1994, CDC had received reports of 42
+health care workers in the United States with documented,
+occupationally acquired HIV infection, of whom 17 have developed AIDS
+in the absence of other risk factors (<a href="appendix.html#cd.s">CDC, 1995a</a>). These individuals
+all had evidence of HIV <a href="appendix.html#seroconversion">seroconversion</a> following a discrete
+<a href="appendix.html#percutaneous">percutaneous</a> or <a href="appendix.html#mucoutaneous">mucocutaneous</a> exposure to blood, body fluids or other
+clinical laboratory specimens containing HIV.
+<p>
+
+ The development of AIDS following known HIV seroconversion also has
+been repeatedly observed in pediatric and adult blood transfusion
+cases (<a href="appendix.html#wa.e">Ward et al., 1989</a>; <a href="appendix.html#as.e">Ashton et al., 1994</a>), in mother-to-child
+transmission (<a href="appendix.html#eu.a">European Collaborative Study, 1991</a>, <a href="appendix.html#eu.b">1992</a>; <a href="appendix.html#tu">Turner et al.,
+1993</a>; <a href="appendix.html#bl.a">Blanche et al., 1994</a>), and in studies of <a href="appendix.html#hemophilia">hemophilia</a>, injection
+drug use, and sexual transmission in which the time of seroconversion
+can be documented using serial blood samples (<a href="appendix.html#go.b">Goedert et al., 1989</a>;
+<a href="appendix.html#re.c">Rezza et al., 1989</a>; <a href="appendix.html#bi.a">Biggar,
+1990</a>; <a href="appendix.html#al.a">Alcabes et al., 1993a</a>,<a href="appendix.html#al.b">b</a>; <a href="appendix.html#gi.a">Giesecke et
+al., 1990</a>; <a href="appendix.html#bu.a">Buchbinder et al., 1994</a>; <a href="appendix.html#sa.c">Sabin et al., 1993</a>).
+<p>
+
+ In many such cases, infection is followed by an acute retroviral
+syndrome, which further strengthens the chronological association
+between HIV and AIDS (<a href="appendix.html#pe.a">Pedersen et al., 1989</a>, <a href="appendix.html#pe.b">1993</a>; <a href="appendix.html#sc.a">Schechter et al.,
+1990</a>; <a href="appendix.html#ti">Tindall and Cooper, 1991</a>; <a href="appendix.html#ke.a">Keet et al., 1993</a>; <a href="appendix.html#si.b">Sinicco et al.,
+1993</a>; <a href="appendix.html#ba.b">Bachmeyer et al., 1993</a>; <a href="appendix.html#li.d">Lindback et al., 1994</a>).
+ 
+<h2><a name="animal">Evidence From Animal and Laboratory Models</a></h2>
+ 
+ A recent study demonstrated that an HIV variant that causes AIDS in
+humans--HIV-2--also causes a similar syndrome when injected into
+baboons (<a href="appendix.html#ba.f">Barnett et al., 1994</a>). Over the course of two years,
+HIV-2-infected animals exhibited a significant decline in immune
+function, as well as lymphocytic interstitial pneumonia (which often
+afflicts children with AIDS), the development of lesions similar to
+those seen in Kaposi's sarcoma, and severe weight loss akin to the
+wasting syndrome that occurs in human AIDS patients. Other studies
+suggest that pigtailed macaques also develop AIDS-associated diseases
+subsequent to HIV-2 infection (<a href="appendix.html#mo.e">Morton et al., 1994</a>).
+<p>
+
+ Asian monkeys infected with clones of the simian immunodeficiency
+virus (SIV), a lentivirus closely related to HIV, also develop
+AIDS-like syndromes (reviewed in <a href="appendix.html#de.d">Desrosiers, 1990</a>; <a href="appendix.html#fu.a">Fultz, 1993</a>). In
+macaque species, various cloned SIV isolates induce syndromes that
+parallel HIV infection and AIDS in humans, including early
+<a href="appendix.html#lymphadenopathy">lymphadenopathy</a> and the occurrence of opportunistic infections such as
+pulmonary Pneumocystis carinii infection, <a href="appendix.html#cytomegalovirus">cytomegalovirus</a>,
+cryptosporidium, <a href="appendix.html#candidiasis">candida</a> and disseminated <a href="appendix.html#MAC">MAC</a> (<a href="appendix.html#le.h">Letvin et al., 1985</a>;
+<a href="appendix.html#ke.c">Kestler et al., 1990</a>; <a href="appendix.html#de.f">Dewhurst et al., 1990</a>; <a href="appendix.html#ko.b">Kodama et al., 1993</a>).<a href="appendix.html#3">[3]</a>
+<p>
+
+ In cell culture experiments, molecular clones of HIV are <a href="appendix.html#tropic">tropic</a> for
+the same cells as clinical HIV isolates and laboratory strains of the
+virus and show the same pattern of cell killing (<a href="appendix.html#ha.l">Hays et al., 1992</a>),
+providing further evidence that HIV is responsible for the immune
+defects of AIDS. Moreover, in severe combined immunodeficiency (SCID)
+mice with human thymus/liver implants, molecular clones of HIV produce
+the same patterns of cell killing and <a href="appendix.html#pathogenesis">pathogenesis</a> as seen with
+clinical isolates (<a href="appendix.html#bo.b">Bonyhadi et al., 1993</a>; <a href="appendix.html#al.d">Aldrovandi et al., 1993</a>).
+ 
+<h2><a name="geo">Geographic Considerations</a></h2>
+ 
+ Convincing evidence that HIV causes AIDS also comes from the
+geographic correlation between rates of HIV <a href="appendix.html#antibodies">antibody</a> positivity and
+incidence of disease. Numerous studies have shown that AIDS is common
+only in populations with a high seroprevalence of HIV
+antibodies. Conversely, in populations in which HIV antibody
+<a href="appendix.html#seroprevalence">seroprevalence</a> is low, AIDS is extremely rare (<a href="appendix.html#un">U.S. Bureau of the
+Census, 1994</a>).
+<p>
+
+ Malawi, a country in southern Africa with 8.2 million inhabitants,
+reported 34,167 cases of AIDS to the WHO as of December 1994 (<a href="appendix.html#wh.j">WHO,
+1995a</a>). This is the highest case rate in the region. The rate of HIV
+seroprevalence in Malawi is also high, as evidenced by serosurveys of
+pregnant women and blood donors (<a href="appendix.html#un">U.S. Bureau of the Census, 1994</a>). In
+one survey, approximately 23 percent of more than 6,600 pregnant women
+in urban areas were HIV-positive (<a href="appendix.html#da.f">Dallabetta et al.,
+1993</a>). Approximately 20 percent of 547 blood donors in a 1990 survey
+were HIV-positive (<a href="appendix.html#ko.e">Kool et al., 1990</a>).
+<p>
+
+ In contrast, Madagascar, an island country off the southeast coast of
+Africa with a population of 11.3 million, reported only nine cases of
+AIDS to the WHO through December 1994 (<a href="appendix.html#wh.j">WHO, 1995a</a>). HIV seroprevalence
+is extremely low in this country; in recent surveys of 1,629 blood
+donors and 1,111 pregnant women, no evidence of HIV infection was
+found (<a href="appendix.html#ra.b">Rasamindrakotroka et al., 1991</a>). Yet, other sexually
+transmitted diseases are common in Madagascar; a 1989
+seroepidemiologic study for syphilis found that 19.5 percent of 12,457
+persons tested were infected (<a href="appendix.html#la.b">Latif, 1994</a>; <a href="appendix.html#ha.g">Harms et al., 1994</a>). It is
+likely that due to the relative geographic isolation of this island
+nation, HIV was introduced late into its population. However, the high
+rate of other STDs such as syphilis would predict that HIV will spread
+in this country in the future.
+<p>
+
+ Similar patterns have been noted in Asia. Thailand reported 13,246
+cases of AIDS to the WHO through December 1994, up from only 14 cases
+through 1988 (<a href="appendix.html#wh.j">WHO, 1995a</a>). This rise has paralleled the spread of HIV
+infection in Thailand. Through 1987, fewer than .05 percent of 200,000
+Thais from all risk groups were HIV-<a href="appendix.html#seropositive">seropositive</a> (<a href="appendix.html#we.h">Weniger et al.,
+1991</a>). By 1993, 3.7 percent of 55,000 inductees into the Royal Thai
+Army tested positive for HIV antibodies, up from 0.5 percent of men
+recruited in 1989 (<a href="appendix.html#un">U.S. Bureau of the Census Database, December
+1994</a>). Seropositivity among brothel prostitutes in Thailand rose from
+3.5 percent in June 1989 to 27.1 percent in June 1993 (<a href="appendix.html#ha.e">Hanenberg et
+al., 1994</a>). By mid-1993, an estimated 740,00 people were infected with
+HIV in Thailand (<a href="appendix.html#br.c">Brown and Sittitrai, 1994</a>). By the year 2000,
+researchers estimate that there may be 1.4 million <a href="appendix.html#cumulative">cumulative</a> HIV
+infections and 480,000 AIDS cases in that country (<a href="appendix.html#co.d">Cohen, 1994b</a>).
+<p>
+
+ By comparison, South Korea reported only 25 cases of AIDS to the WHO
+through Dec. 1994 (<a href="appendix.html#wh.j">WHO, 1995a</a>). In serosurveys in that country
+conducted in 1993, HIV seroprevalence was .008 percent among female
+prostitutes and .00007 percent among blood donors (<a href="appendix.html#sh.b">Shin et al., 1994</a>).<a href="appendix.html#4">[4]</a>
+ 
+<h2><a name="donor">Evidence From Blood Donor-Recipient Pairs</a></h2>
+ 
+ By the end of 1994, 7,223 <a href="appendix.html#cumulative">cumulative</a> cases of AIDS in the United
+States resulting from blood transfusions or the receipt of blood
+components or tissue had been reported to the CDC (<a href="appendix.html#cd.s">CDC,
+1995a</a>). Virtually all of these cases can be traced to transfusions
+before the screening of the blood supply for HIV commenced in 1985
+(<a href="appendix.html#jo.c">Jones et al., 1992</a>; <a href="appendix.html#se.b">Selik et al., 1993</a>).
+<p>
+
+ Compelling evidence supporting a cause-and-effect relationship
+between HIV and AIDS has come from studies of transfusion recipients
+with AIDS who have received blood from at least one donor with HIV
+infection. In the earliest such study (before the discovery of HIV),
+seven patients with transfusion-acquired AIDS were shown to have
+received a total of 99 units of blood components. At least one donor
+to each patient was identified who had AIDS-like symptoms or
+immunosuppression (<a href="appendix.html#cu.a">Curran et al., 1984</a>).
+<p>
+
+ With the identification of HIV and the development of serologic
+assays for the virus in 1984, it became possible to trace infected
+donors (<a href="appendix.html#sa.k">Sarngadharan et al., 1984</a>). The first reports of
+donor-recipient pairs appeared later that year (<a href="appendix.html#fe.b">Feorino et al., 1984</a>;
+<a href="appendix.html#gr.i">Groopman et al., 1984</a>). In one instance, HIV was isolated from both
+donor and recipient, and both had developed AIDS (<a href="appendix.html#fe.b">Feorino et al.,
+1984</a>); in the other, the recipient was HIV antibody-positive and had
+developed AIDS, and the donor had culturable virus in his blood and
+was in a group considered to be at high risk for AIDS (<a href="appendix.html#gr.i">Groopman et
+al., 1984</a>). Molecular analysis of HIV isolates from these
+donor-recipient pairs found that the viruses were slightly different
+but much more similar than would be expected by chance alone (<a href="appendix.html#fe.b">Feorino
+et al., 1984</a>; <a href="appendix.html#gr.i">Groopman et al., 1984</a>).
+<p>
+
+ In a subsequent study of patients with transfusion-acquired AIDS, 28
+of 28 individuals had antibodies to HIV, and each had received blood
+from an HIV-infected donor (<a href="appendix.html#ja.d">Jaffe et al., 1985b</a>). Similar results were
+reported from a set of 18 patients with transfusion-acquired AIDS,
+each of whom had received blood from an HIV-infected donor (<a href="appendix.html#mc.b">McDougal
+et al., 1985b</a>). Fifteen of the 18 donors in this study had low
+<a href="appendix.html#cd4">CD4+</a>/CD8+ T cell ratios, an immune defect seen in pre-AIDS and AIDS
+patients.
+<p>
+
+ Another group studied seropositive recipients of blood from 112
+donors in whom AIDS later developed and from 31 donors later found to
+be positive for HIV antibody. Of 101 seropositive recipients followed
+for a median of 55 months after infection, 43 developed AIDS (<a href="appendix.html#wa.e">Ward et
+al., 1989</a>).
+<p>
+
+ More recently, Australian investigators identified 25 individuals
+with transfusion-acquired HIV whose infection could be traced to eight
+individuals who donated blood between 1980 and 1985, and subsequently
+developed AIDS. By 1992, nine of the 25 HIV-infected blood recipients
+had developed AIDS, with progression to AIDS and death more rapid
+among the recipients who received blood from the faster-progressing
+donors (<a href="appendix.html#as.e">Ashton et al., 1994</a>).
+ 
+<h2><a name="hemo">Impact of HIV Infection on Mortality of Hemophiliacs</a></h2>
+ 
+ As noted above, HIV has been detected in stored blood samples taken
+from <a href="appendix.html#hemophilia">hemophiliac</a> patients in the United States as early as 1978
+(<a href="appendix.html#ar">Aronson, 1993</a>). By 1984, 55 to 78 percent of U.S. hemophilic patients
+were HIV-infected (<a href="appendix.html#le.b">Lederman et al., 1985</a>; <a href="appendix.html#an.a">Andes et al., 1989</a>). A more
+recent survey found 46 percent of 9,496 clotting-factor recipients to
+be HIV-infected, only 9 of whom had a definitive date of
+<a href="appendix.html#seroconversion">seroconversion</a> subsequent to April 1987 (<a href="appendix.html#fr.c">Fricke et al., 1992</a>). By
+Dec. 31, 1994, 3,863 individuals in the United States with hemophilia
+or <a href="appendix.html#coagulation">coagulation</a> disorders had been diagnosed with AIDS (<a href="appendix.html#cd.s">CDC, 1995a</a>).
+<p>
+
+ The impact of HIV on the life expectancy of hemophiliacs has been
+dramatic. In a <a href="appendix.html#retrospective">retrospective</a> study of mortality among 701 hemophilic
+patients in the United States, median life expectancy for males with
+hemophilia increased from 40.9 years at the beginning of the century
+(1900-1920) to a high of 68 years after the introduction of factor
+therapy (1971 to 1980). In the era of AIDS (1981 to 1990), life
+expectancy declined to 49 years (<a href="appendix.html#jo.b">Jones and Ratnoff, 1991</a>).
+<p>
+
+ Another analysis found that the death rate for individuals with
+hemophilia A in the United States rose three-fold between the periods
+1979-1981 and 1987-1989. Median age at death decreased from 57 years
+in 1979-1981 to 40 years in 1987-1989 (<a href="appendix.html#ch.f">Chorba et al., 1994</a>).
+<p>
+
+ In the United Kingdom, 6,278 males diagnosed with hemophilia were
+living during the period 1977-91. During 1979-86, 1,227 were infected
+with HIV during transfusion therapy. Among 2,448 individuals with
+severe hemophilia, the annual death rate was stable at 8 per 1,000
+during 1977-84; during 1985-92 death rates remained at 8 per 1,000
+among HIV-seronegative persons with severe hemophilia but rose steeply
+in those who were seropositive, reaching 81 per 1,000 in
+1991-92. Among 3,830 with mild or moderate hemophilia, the pattern was
+similar, with an initial death rate of 4 per 1,000 in 1977-84, rising
+to 85 per 1,000 in 1991-92 among seropositive individuals (<a href="appendix.html#da.g">Darby et
+al., 1995</a>).
+<p>
+
+ In a British <a href="appendix.html#cohort">cohort</a> of hemophiliacs infected with HIV between 1979
+and 1985 and followed prospectively, 50 of 111 patients had died by
+the end of 1994, 43 after a diagnosis of AIDS. Only eight of the 61
+living patients had <a href="appendix.html#cd4">CD4+ T cell</a> counts above 500/mm3 (<a href="appendix.html#le.d">Lee et al.,
+1995</a>).
+ 
+<h2><a name="pediatric">Pediatric AIDS</a></h2>
+ 
+ Newborn infants have no behavioral risk factors, yet 6,209 children
+in the United States have developed AIDS through Dec. 31, 1994 (<a href="appendix.html#cd.s">CDC,
+1995a</a>).
+<p>
+
+ Studies have consistently shown that of infants born to HIV-infected
+mothers, only the 15-40 percent of infants who become HIV-infected
+before or during birth go on to develop immunosuppression and AIDS,
+while babies who are not HIV-infected do not develop AIDS (<a href="appendix.html#ka.b">Katz, 1989</a>;
+<a href="appendix.html#da.a">d'Arminio et al., 1990</a>; <a href="appendix.html#pr">Prober and Gershon, 1991</a>; <a href="appendix.html#eu.a">European
+Collaborative Study, 1991</a>; <a href="appendix.html#la.a">Lambert et al., 1990</a>; <a href="appendix.html#li.e">Lindgren et al. 1991</a>;
+<a href="appendix.html#an.b">Andiman et al., 1990</a>; <a href="appendix.html#jo.a">Johnson et al., 1989</a>; <a href="appendix.html#ro.d">Rogers et al., 1989</a>; <a href="appendix.html#hu.d">Hutto
+et al., 1991</a>). Moreover, in those infants who do acquire HIV and
+develop AIDS, the rate of disease progression varies directly with the
+severity of the disease in the mother at the time of delivery
+(<a href="appendix.html#eu.b">European Collaborative Study, 1992</a>; <a href="appendix.html#bl.a">Blanche et al., 1994</a>).
+<p>
+
+ Almost all infants born to <a href="appendix.html#seropositive">seropositive</a> mothers have detectable HIV
+<a href="appendix.html#antibodies">antibody</a>, which may persist for as long as 15 months. In most cases,
+the presence of this antibody does not represent actual infection with
+HIV, but is antibody from the HIV-infected mother that diffuses across
+the placenta. In a French study of 22 infants born to HIV-infected
+mothers, seven babies had antibodies to HIV after one year and all
+developed AIDS. In these seven infants, the presence of HIV antibodies
+marked actual infection with HIV, not merely antibodies acquired from
+the mother. The other 15 children showed a complete loss of maternally
+acquired HIV antibodies, were not actually infected, and remained
+healthy. Of the babies who developed AIDS, virus was found in four of
+four infants tested. HIV was not found in the 15 children who remained
+healthy (<a href="appendix.html#do.d">Douard et al., 1989</a>; <a href="appendix.html#ga.g">Gallo, 1991</a>).
+<p>
+
+ In the European Collaborative Study, children born to
+HIV-seropositive mothers are followed from birth in 10 European
+centers. A majority of the mothers have a history of injection drug
+use. A recent report showed that none of the 343 children who had lost
+maternally transferred HIV antibodies (i.e. they were truly
+HIV-negative) had developed AIDS or persistent immune deficiency. In
+contrast, among 64 children who were truly HIV-infected (i.e. they
+remained HIV antibody positive), 30 percent presented with AIDS within
+6 months of age or with oral <a href="appendix.html#candidiasis">candidiasis</a> followed rapidly by the onset
+of AIDS. By their first birthday, 17 percent died of HIV-related
+diseases (<a href="appendix.html#eu.a">European Collaborative Study, 1991</a>).
+<p>
+
+ In a multicenter study in Bangkok, Thailand, 105 children born to
+HIV-infected mothers were recently evaluated at 6 months of age
+(<a href="appendix.html#ch.c">Chearskul et al., 1994</a>). Of 27 infants determined to be HIV-infected
+by <a href="appendix.html#PCR">polymerase chain reaction</a>, 24 developed HIV-related symptoms,
+including six who developed CDC-defined AIDS and four who died with
+conditions clinically consistent with AIDS. Among 77 exposed but
+uninfected infants, no deaths occurred.
+<p>
+
+ In a study of 481 infants in Haiti, the survival rate at 18 months
+was 41 percent for HIV-infected infants, 84 percent among uninfected
+infants born to seropositive women, and 95 percent among infants born
+to seronegative women (<a href="appendix.html#bo.c">Boulos et al., 1994</a>).
+<p>
+
+ Investigators have also reported cases of HIV-infected mothers with
+twins <a href="appendix.html#discordant">discordant</a> for HIV-infection in which the HIV-infected child
+developed AIDS, while the other child remained clinically and
+immunologically normal (<a href="appendix.html#pa.i">Park et al., 1987</a>; <a href="appendix.html#me.b">Menez-Bautista et al.,
+1986</a>; <a href="appendix.html#th.b">Thomas et al., 1990</a>; <a href="appendix.html#yo">Young et al., 1990</a>; <a href="appendix.html#ba.e">Barlow and Mok, 1993</a>;
+<a href="appendix.html#gu.a">Guerrero Vazquez et al., 1993</a>).
+ 
+<h2><a name="single">Single Source Outbreak of Pediatric AIDS</a></h2>
+ 
+ Other researchers have used molecular epidemiology to find a single
+source of HIV for an outbreak of pediatric AIDS cases in Russia. In
+that country between 1988 and 1990, over 250 children were infected
+with HIV after exposure to non-sterile needles. By June 1994, 43 of
+these children had died of AIDS (<a href="appendix.html#ir">Irova et al., 1993</a>). In a recent
+report on 22 of these children from two hospitals, 12 had developed
+AIDS. Molecular analysis of HIV isolates from all 22 children showed
+the isolates to be very closely related, confirming epidemiological
+data that these two outbreaks resulted from a single source: an infant
+born to an HIV-infected mother whose husband was infected in central
+Africa (<a href="appendix.html#bo.a">Bobkov et al., 1994</a>).
+ 
+<h2><a name="skeptic">Answering the Skeptics: the "Risk-AIDS" or "Behavioral" Hypothesis</a></h2>
+ 
+ Skeptics of the role of HIV in AIDS have espoused a "risk-AIDS" or a
+"drug-AIDS" hypothesis (<a href="appendix.html#du.a">Duesberg, 1987</a>-<a href="appendix.html#du.h">1994</a>), asserting at different
+times that factors such as promiscuous homosexual activity; repeated
+venereal infections and antibiotic treatments; the use of recreational
+drugs such as nitrite inhalants, cocaine and heroin; immunosuppressive
+medical procedures; and treatment with the drug <a href="appendix.html#AZT">AZT</a> are responsible
+for the epidemic of AIDS.
+<p>
+
+ Such arguments have been repeatedly contradicted. Compelling evidence
+against the risk-AIDS hypothesis has come from <a href="appendix.html#cohort">cohort</a> studies of
+high-risk groups in which all individuals with AIDS-related conditions
+are HIV-<a href="appendix.html#antibodies">antibody</a> positive, while matched, HIV-antibody negative
+controls do not develop AIDS or immunosuppression, despite engaging in
+high-risk behaviors.
+<p>
+
+ In a prospectively studied <a href="appendix.html#cohort">cohort</a> in Vancouver (<a href="appendix.html#sc.b">Schechter et al.,
+1993a</a>), 715 homosexual men were followed for a median of 8.6
+years. Among 365 HIV-positive individuals, 136 developed AIDS. No
+AIDS-defining illnesses occurred among 350 HIV-negative men despite
+the fact that these men reported appreciable levels of nitrite use,
+other recreational drug use, and frequent receptive anal
+intercourse. The average rate of <a href="appendix.html#cd4">CD4+ T cell</a> decline was 50 cells/mm3
+per year in the HIV-positive men, while the HIV-negative men showed no
+decline. Significantly, the decline of CD4+ T cell counts in
+HIV-positive men and the stability of CD4+ T cell counts in
+HIV-negative men were apparent whether or not nitrite inhalants were
+used. There were 101 AIDS-related deaths among the HIV-<a href="appendix.html#seropositive">seropositive</a>
+men, including six unrelated to HIV infection. In the <a href="appendix.html#seronegative">seronegative</a>
+group, only two deaths occurred: one heart attack and one suicide. In
+this study, lifetime prevalences of risk behaviors were similar in the
+136 HIV-seropositive men who developed AIDS and in the 226
+HIV-seropositive men who did not develop AIDS: use of nitrite
+inhalants, 88 percent in both groups; use of other illicit drugs, 75
+percent and 80 percent, respectively; more than 25 percent of sexual
+encounters involving receptive anal intercourse, 78 percent and 82
+percent, respectively. Among HIV-seronegative men (none of whom
+developed AIDS), the lifetime prevalences of these behaviors were
+somewhat lower, but substantial: 56 percent, 74 percent and 58
+percent, respectively.
+<p>
+
+ Similar results were reported from the San Francisco Men's Health
+Study, a cohort of single men recruited in San Francisco in 1984
+without regard to sexual preference, lifestyle or serostatus (<a href="appendix.html#as.a">Ascher
+et al., 1993a</a>). During 96 months of follow-up, 215 cases of AIDS had
+occurred among 445 HIV-antibody positive homosexual men, 174 of whom
+had died. Among 367 antibody-negative homosexual men and 214
+antibody-negative heterosexual men, no AIDS cases and eight deaths
+unrelated to AIDS-defining conditions were observed. The authors found
+no overall effect of drug consumption, including nitrites, on the
+development of Kaposi's sarcoma or other AIDS-defining conditions, nor
+an effect of the extent of the participants' drug use on these
+conditions. A consistent loss of CD4+ T cells was limited to
+HIV-positive subjects, among whom there was no discernible difference
+in CD4+ T cell counts related to drug-taking behavior. Among
+HIV-seronegative men, moderate or heavy drug users had higher CD4+ T
+cell counts than non-users.
+<p>
+
+ Observational studies of HIV-infected individuals have found that
+drug use does not accelerate progression to AIDS (<a href="appendix.html#ka.a">Kaslow et al., 1989</a>;
+<a href="appendix.html#co.a">Coates et al., 1990</a>; <a href="appendix.html#li.b">Lifson et al., 1990</a>; <a href="appendix.html#ro.a">Robertson et al., 1990</a>). In
+a Dutch <a href="appendix.html#cohort">cohort</a> of HIV-seropositive homosexual men, no significant
+differences in sexual behavior or use of cannabis, alcohol, tobacco,
+nitrite inhalants, LSD or amphetamines were found between men who
+remained <a href="appendix.html#asymptomatic">asymptomatic</a> for long periods and those who progressed to
+AIDS (<a href="appendix.html#ke.b">Keet et al., 1994</a>). Another study, of five cohorts of homosexual
+men for whom dates of seroconversion were well-documented, found no
+association between HIV disease progression and history of sexually
+transmitted diseases, number of sexual partners, use of <a href="appendix.html#AZT">AZT</a>, alcohol,
+tobacco or recreational drugs (<a href="appendix.html#ve.e">Veugelers et al., 1994</a>).
+<p>
+
+ Similarly, in the San Francisco City Clinic Cohort, recruited in the
+late 1970s and early 1980s in conjunction with <a
+href="appendix.html#hepatitis">hepatitis B</a> studies, no
+consistent differences in exposure to recreational drugs or sexually
+transmitted diseases were seen between HIV-infected men who progressed
+to AIDS and those who remained healthy (<a href="appendix.html#bu.a">Buchbinder et al., 1994</a>).
+<p>
+
+ Because many children with AIDS are born to mothers who abuse
+recreational drugs (<a href="appendix.html#no.a">Novick and Rubinstein, 1987</a>; <a href="appendix.html#eu.a">European
+Collaborative Study, 1991</a>), it has been postulated that the mothers'
+drug consumption is responsible for children developing AIDS
+(<a href="appendix.html#du.a">Duesberg, 1987</a>-<a href="appendix.html#du.h">1994</a>). This theory is contradicted by numerous reports
+of infants with AIDS born to women infected with HIV through
+heterosexual contact or transfusions who do not use drugs (<a href="appendix.html#cd.s">CDC,
+1995a</a>). As noted above, the only factor that predicts whether a child
+will develop AIDS is whether he or she is infected with HIV, not
+maternal drug use.
+ 
+<h2><a name="inject">AIDS and Injection Drug Users</a></h2>
+ 
+ Central to the "risk-AIDS" hypothesis is the notion that chronic
+injection drug use causes AIDS (<a href="appendix.html#du.f">Duesberg, 1992</a>), a view that is
+contradicted by numerous studies.
+<p>
+
+ Although some evidence suggests injection drug use can cause certain
+immunologic abnormalities, such as reduction in natural killer (NK)
+cell activity (reviewed in <a href="appendix.html#kr.a">Kreek, 1990</a>), the specific immune deficit
+that leads to AIDS--a progressive reduction of <a href="appendix.html#cd4">CD4+ T cells</a> resulting
+in persistent <a href="appendix.html#cd4_lymphocytopenia">CD4+ T lymphocytopenia</a>--is rare in HIV-seronegative
+injection drug users in the absence of other immunosuppressive
+conditions (<a href="appendix.html#de.b">Des Jarlais et al., 1993</a>; <a href="appendix.html#we.f">Weiss et al., 1992</a>).
+<p>
+
+ In a survey of 229 HIV-seronegative injection drug users in New York
+City, mean CD4+ T cell counts of the group were consistently over
+1000/mm3 (<a href="appendix.html#de.b">Des Jarlais et al., 1993</a>). Only two individuals had two CD4+
+T cell measurements of fewer than 300/mm3, one of whom died with
+cardiac disease and non-Hodgkin's lymphoma listed as the cause of
+death. In a study of 180 HIV-seronegative injection drug users in New
+Jersey, the participants' average CD4+ T cell count was 1169/mm3
+(<a href="appendix.html#we.f">Weiss et al., 1992</a>). Two of these individuals,
+both with <a href="appendix.html#generalized_lymphocytopenia">generalized
+lymphocytopenia</a>, had CD4+ T cell counts less than 300/mm3.
+<p>
+
+ In the MACS, median CD4+ T cell counts of 63 HIV-seronegative
+injection drug users rose from 1061/mm3 to 1124/mm3 in a 15 to 21
+month follow-up period (<a href="appendix.html#ma.f">Margolick et al., 1992</a>). In a cross-sectional
+study, 11 HIV-seronegative, long-term heroin addicts had mean CD4+ T
+cell counts of 1500/mm3, while 11 healthy controls had CD4+ T cell
+counts of 820 cells/mm3 (<a href="appendix.html#no.b">Novick et al., 1989</a>).
+<p>
+
+ Recent data also refute the notion that a certain lifetime dosage of
+injection drugs is sufficient to cause AIDS in HIV-seronegative
+individuals. In a Dutch study, investigators compared 86
+HIV-seronegative individuals who had been injecting drugs for a mean
+of 7.6 years with 70 HIV-seropositive people who had injected drugs
+for a mean of 9.1 years. Upon enrollment in 1989, CD4+ T cell counts
+were 914/mm3 in the HIV-seronegative group, and 395/mm3 in the
+seropositive group. By 1994, there were 25 deaths attributable to
+AIDS-defining conditions in the seropositive group; among
+HIV-seronegative individuals, eight deaths occurred, none due to
+AIDS-defining diseases (<a href="appendix.html#co.c">Cohen, 1994a</a>).
+<p>
+
+ Excess mortality among HIV-infected injection drug users as compared
+to HIV-seronegative users has also been observed by other
+investigators. In a prospective Italian study of 2,431 injection drug
+users enrolled in drug treatment programs from 1985 to 1991,
+HIV-seropositive individuals were 4.5 times more likely to die than
+HIV-seronegative subjects (<a href="appendix.html#za.a">Zaccarelli et al., 1994</a>). No deaths due to
+AIDS-defining conditions were seen among 1,661 HIV-seronegative
+individuals, 41 of whom died of other conditions, predominantly
+overdose, liver disease and accidents. Among 770 individuals who were
+HIV-seropositive at study entry or who <a href="appendix.html#seroconversion">seroconverted</a> during the study
+period, 89 died of AIDS-related conditions and 52 of other conditions.
+<p>
+
+ In HIV-seropositive individuals, a number of investigators have found
+no statistical association between injection drug use and decline of
+CD4+ T cell counts (<a href="appendix.html#ga.b">Galli et al., 1989</a>, <a href="appendix.html#ga.c">1991</a>; <a href="appendix.html#sc.i">Schoenbaum et al., 1989</a>;
+<a href="appendix.html#ma.f">Margolick et al., 1992</a>, <a href="appendix.html#ma.g">1994</a>; <a href="appendix.html#mo.b">Montella et al., 1992</a>; <a href="appendix.html#al.b">Alcabes et al.,
+1993b</a>, <a href="appendix.html#al.c">1994</a>; Galai et al., 1995), nor a difference in disease
+progression between active versus former users of injection drugs
+(<a href="appendix.html#we.a">Weber et al., 1990</a>; <a href="appendix.html#ga.c">Galli et al., 1991</a>; <a href="appendix.html#mo.b">Montella et al., 1992</a>;
+Italian Seroconversion Study, 1992).
+<p>
+
+ Taken together, these studies suggest that any negative effects of
+injection drugs on CD4+ T cell levels are limited and may explain why
+many investigators have found that HIV-seropositive injection drug
+users have rates of disease progression that are similar to other
+HIV-infected individuals (<a href="appendix.html#re.d">Rezza et al., 1990</a>; <a href="appendix.html#mo.b">Montella et al., 1992</a>;
+<a href="appendix.html#ga.b">Galli et al., 1989</a>; <a href="appendix.html#se.c">Selwyn et al., 1992</a>; <a href="appendix.html#mu.c">Munoz et al., 1992</a>; <a href="appendix.html#it">Italian
+Seroconversion Study, 1992</a>; <a href="appendix.html#ma.e">MAP Workshop, 1993</a>; <a href="appendix.html#pe.e">Pezzotti et al., 1992</a>;
+<a href="appendix.html#ma.f">Margolick et al., 1992</a>, <a href="appendix.html#ma.g">1994</a>; <a href="appendix.html#al.b">Alcabes, 1993b</a>, <a href="appendix.html#al.c">1994</a>; Galai et al.,
+1995).
+ 
+<h2><a name="sex">Sex and the AIDS Epidemic</a></h2>
+ 
+ It has been asserted "... in America, only promiscuity aided by
+aphrodisiac and psychoactive drugs, practiced mostly by 20 to 40
+year-old male homosexuals and some heterosexuals, seems to correlate
+with AIDS diseases" (<a href="appendix.html#du.e">Duesberg, 1991</a>). Even a cursory review of history
+provides evidence to the contrary: such behaviors have existed for
+decades --in some cases centuries--and have increased only in a
+relative sense in recent years, if at all, whereas AIDS clearly is a
+new phenomenon.
+<p>
+
+ If promiscuity were a cause of AIDS, one would have expected cases to
+have occurred among prostitutes (male or female) prior to
+1978. Reports of such cases are lacking, even though prostitution has
+been present in most if not all cultures throughout history.
+<p>
+
+ In this country, trends in gonorrheal infections suggest that
+extramarital sexual activity was extensive in the pre-AIDS era. Cases
+of gonorrhea in the United States peaked at approximately 1 million in
+1978; between 250,000 and 530,000 cases were reported each year in the
+1960s, approximately 250,000 cases each year in the 1950s, and between
+175,000 and 380,000 cases annually in the 1940s (<a href="appendix.html#cd.n">CDC, 1987c</a>,
+<a href="appendix.html#cd.q">1993b</a>). Despite the frequency of sexually transmitted diseases, only a
+handful of documented cases of AIDS in the United States prior to 1978
+have been reported.
+<p>
+
+ Historians, archaeologists and sociologists have documented extensive
+homosexual activity dating from the ancient Greeks to the
+well-established homosexual subculture in the United States in the
+20th century (<a href="appendix.html#we.c">Weinberg and Williams, 1974</a>; <a href="appendix.html#gi.b">Gilbert, 1980-81</a>; <a href="appendix.html#sa.g">Saghir
+and Robins, 1973</a>; <a href="appendix.html#re.b">Reinisch et al., 1990</a>; <a href="appendix.html#do.a">Doll et al., 1990</a>; <a href="appendix.html#ka.c">Katz,
+1992</a>; <a href="appendix.html#fr.e">Friedman and Downey, 1994</a>). Depictions of anal intercourse, both
+male and female, can be found in the art and literature of numerous
+cultures on all inhabited continents (<a href="appendix.html#re.b">Reinisch et al., 1990</a>). In the
+1940s, Kinsey et al. reported that 37 percent of all American males
+surveyed had at least some overt homosexual experience to the point of
+orgasm between adolescence and old age and that 10 percent of men were
+exclusively or predominantly homosexual between the ages of 16 and 55
+(<a href="appendix.html#ki">Kinsey et al., 1948</a>). More recent surveys have found that 2 to 5
+percent of men are homosexual or bisexual (reviewed in <a href="appendix.html#fr.f">Friedman and
+Downey, 1994</a>; <a href="appendix.html#se.a">Seidman and Rieder, 1994</a>; <a href="appendix.html#la.d">Laumann, 1994</a>).
+<p>
+
+ Many homosexuals had multiple sexual partners in the pre-AIDS era: a
+1969 survey found that more than 40 percent of white homosexual males
+and one-third of black homosexual males had at least 500 partners in
+their lifetime, and an additional one-fourth reported between 100 and
+500 partners (<a href="appendix.html#be.b">Bell and Weinberg, 1978</a>). A majority of these men
+reported that more than half their partners had been strangers before
+the sexual encounters (<a href="appendix.html#be.b">Bell and Weinberg, 1978</a>). Further evidence of
+extensive homosexual behavior in the years preceding the AIDS epidemic
+comes from reports of numerous cases of rectal gonorrheal and anal
+herpes simplex virus infections among men (<a href="appendix.html#je">Jefferiss, 1956</a>; <a href="appendix.html#sc.j">Scott and
+Stone, 1966</a>; <a href="appendix.html#pa.h">Pariser and Marino, 1970</a>; <a href="appendix.html#ow">Owen and Hill, 1972</a>; <a href="appendix.html#br.a">British
+Cooperative Clinical Group, 1973</a>; <a href="appendix.html#ja.b">Jacobs, 1976</a>; <a href="appendix.html#ju.a">Judson et al., 1977</a>;
+<a href="appendix.html#me.d">Merino and Richards, 1977</a>; <a href="appendix.html#mc.e">McMillan and Young, 1978</a>).
+ 
+<h2><a name="drugs">Drug Use in the Pre-AIDS Era</a></h2>
+ 
+ A temporal association between the onset of extensive use of
+recreational drugs and the AIDS epidemic is also lacking. The
+widespread use of opiates in the United States has existed since the
+middle of the 19th century (<a href="appendix.html#co.q">Courtwright, 1982</a>); as many as 313,000
+Americans were addicted to opium and morphine prior to 1914. Heroin
+use spread throughout the country in the 1920s and 1930s (<a href="appendix.html#co.q">Courtwright,
+1982</a>), and the total number of active heroin users peaked at about
+626,000 in 1971 (<a href="appendix.html#gr.e">Greene et al., 1975</a>; <a href="appendix.html#fr.d">Friedland, 1989</a>). Opiates were
+initially administered by oral or inhalation routes, but by the 1920s
+addicts began to inject heroin directly into their veins (<a href="appendix.html#co.q">Courtwright,
+1982</a>). In 1940, intravenous use of opiates was seen in 80 percent of
+men admitted to a large addiction research center in Kentucky
+(<a href="appendix.html#fr.d">Friedland, 1989</a>).
+<p>
+
+ While cocaine use increased markedly during the 1970s (<a href="appendix.html#ko.f">Kozel and
+Adams, 1986</a>), the use of the drug, frequently with morphine, is
+well-documented in the United States since the late 19th century
+(<a href="appendix.html#da.d">Dale, 1903</a>; <a href="appendix.html#as.d">Ashley, 1975</a>; <a href="appendix.html#sp">Spotts and Shontz, 1980</a>). For example, a
+survey in 1902 reported that only 3 to 8 percent of the cocaine sold
+in New York, Boston and other cities went into the practice of
+medicine or dentistry (<a href="appendix.html#sp">Spotts and Shontz</a>). After a period of relative
+obscurity, cocaine became increasingly popular in the late 1950s and
+1960s. Over 70 percent of 1,100 addicts at the addiction research
+center in Kentucky in 1968 and 1969 reported use or abuse of cocaine
+(<a href="appendix.html#ch.a">Chambers, 1974</a>).
+<p>
+
+ The recreational use of nitrite inhalants ("poppers") also predates
+the AIDS epidemic. Reports of the widespread use of these drugs by
+young men in the 1960s were the impetus for the reinstatement by the
+Food and Drug Administration of the prescription requirement for amyl
+nitrite in 1968 (<a href="appendix.html#is">Israelstam et al., 1978</a>; <a href="appendix.html#ha.k">Haverkos and Dougherty,
+1988</a>). Since the early years of the AIDS epidemic, the use of nitrite
+inhalants has declined dramatically among homosexual men, yet the
+number of AIDS cases continues to increase (<a href="appendix.html#os.a">Ostrow et al., 1990</a>, <a href="appendix.html#os.b">1993</a>;
+<a href="appendix.html#la.c">Lau et al., 1992</a>).
+<p>
+
+ In the general population, the number of individuals aged 25 to 44
+years reporting current use of marijuana, cocaine, inhalants,
+hallucinogens and cigarettes declined between 1974 and 1992, while the
+AIDS epidemic worsened (<a href="appendix.html#su">Substance Abuse and Mental Health Services
+Administration, 1994</a>).
+ 
+<h2><a name="azt">AZT and AIDS</a></h2>
+ 
+ Although some individuals maintain that treatment with zidovudine
+(<a href="appendix.html#AZT">AZT</a>) has compounded the AIDS epidemic (<a href="appendix.html#du.f">Duesberg, 1992</a>), published
+reports of both placebo-controlled clinical trials and observational
+studies provide data to the contrary.
+<p>
+
+ In patients with symptomatic HIV disease, for whom a beneficial
+effect is measured in months, AZT appears to slow disease progression
+and prolong life, according to double-blind, placebo-controlled
+clinical studies (reviewed in <a href="appendix.html#sa.j">Sande et al., 1993</a>; <a href="appendix.html#mc.d">McLeod and Hammer,
+1992</a>; <a href="appendix.html#vo.c">Volberding and Graham, 1994</a>). A clinical trial known as BW 002
+compared <a href="appendix.html#AZT">AZT</a> with placebo in 282 patients with AIDS or advanced signs
+or symptoms of HIV disease. In this study, which led to the approval
+of AZT by the FDA, only one of 145 patients treated with AZT died
+compared with 19 of 137 placebo recipients in a six month
+period. Opportunistic infections occurred in 24 AZT recipients and 45
+placebo recipients. In addition to reducing mortality, AZT was shown
+to have reduced the frequency and severity of AIDS-associated
+opportunistic infections, improved body weight, prevented
+deterioration in Karnofsky performance score, and increased counts of
+<a href="appendix.html#cd4">CD4+ T lymphocytes</a> in the <a href="appendix.html#peripheral_blood">peripheral blood</a> (<a href="appendix.html#fi.b">Fischl et al., 1987</a>;
+<a href="appendix.html#ri.a">Richman et al., 1987)</a>. Continued follow-up in 229 of these patients
+showed that the survival benefit of AZT extended to at least 21 months
+after the initiation of therapy; survival in the original treatment
+group was 57.6 percent at that time, whereas survival among members of
+the original placebo group was 51.5 percent at nine months (<a href="appendix.html#ri.b">Richman
+and Andrews, 1988</a>; <a href="appendix.html#fi.c">Fischl et al., 1989</a>).
+<p>
+
+ In another placebo-controlled study known as ACTG 016, which enrolled
+711 symptomatic HIV-infected patients with <a href="appendix.html#cd4">CD4+ T cell</a> counts between
+200 and 500 cells/mm3, those taking AZT were less likely to experience
+disease progression than those on placebo during a median study period
+of 11 months (<a href="appendix.html#fi.d">Fischl et al., 1990</a>). In this study, no difference in
+disease progression was noted among participants who began the trial
+with CD4+ T cell counts greater than 500/mm3.
+<p>
+
+ A Veteran's Administration study of 338 individuals with early
+symptoms of HIV disease and CD4+ T cell counts between 200 and 500
+cells/mm3 found that immediate therapy significantly delayed disease
+progression compared with deferred therapy, but did not lengthen (or
+shorten) survival after an average study period of more than two years
+(<a href="appendix.html#ha.c">Hamilton et al., 1992</a>).
+<p>
+
+ Among <a href="appendix.html#asymptomatic">asymptomatic</a> HIV-infected individuals, several
+placebo-controlled clinical trials suggest that AZT can delay disease
+progression for 12 to 24 months but ultimately does not increase
+survival. Significantly, long-term follow-up of persons participating
+in these trials, although not showing prolonged benefit of AZT, has
+never indicated that the drug increases disease progression or
+mortality (reviewed in <a href="appendix.html#mc.d">McLeod and Hammer, 1992</a>; <a href="appendix.html#sa.j">Sande et al., 1993</a>;
+<a href="appendix.html#vo.c">Volberding and Graham, 1994</a>). The lack of excess AIDS cases and death
+in the AZT arms of these large trials effectively rebuts the argument
+that AZT causes AIDS.
+<p>
+
+ During a 4.5 year follow-up period (mean 2.6 years) of a trial known
+as ACTG 019, no differences were seen in overall survival between AZT
+and placebo groups among 1,565 asymptomatic patients entering the
+study with fewer than 500 CD4+ T cells/mm3 (<a href="appendix.html#vo.b">Volberding et al.,
+1994</a>). In that study, AZT was superior to placebo in delaying
+progression to AIDS or advanced <a href="appendix.html#ARC">ARC</a> for approximately one year, and a
+more prolonged benefit was seen among a subset of patients.
+<p>
+
+ The Concorde study in Europe enrolled 1,749 asymptomatic patients
+with CD4+ T cell counts less than 500/mm3. In that study, no
+statistically significant differences in progression to advanced
+disease were observed after three years between individuals taking AZT
+immediately and those who deferred AZT therapy or did not take the
+drug (<a href="appendix.html#co.h">Concorde Coordinating Committee, 1994</a>). However, the rate of
+progression to death, AIDS or severe ARC was slower among the
+"immediate" AZT group during the first year of therapy. Although the
+Concorde study did not show a significant benefit over time with the
+early use of AZT, it clearly demonstrated that AZT was not harmful to
+the patients in the "immediate" AZT group as compared to the
+"deferred" AZT group.
+<p>
+
+ A European-Australian study (EACG 020) of 993 patients with CD4+ T
+cell counts greater than 400/mm3 showed no differences between AZT and
+placebo arms of the trial during a median study period of 94 weeks,
+although AZT did delay progression to certain clinical and
+immunological endpoints for up to three years (<a href="appendix.html#co.o">Cooper et al.,
+1993</a>). Both this study and the Concorde study reported little severe
+AZT-related <a href="appendix.html#hematologic_toxicity">hematologic toxicity</a> at doses of 1,000 mg/day, which is
+twice the recommended daily dose in the United States.
+<p>
+
+ Uncontrolled studies have found increased survival and/or reduced
+frequency of opportunistic infections in patients with HIV disease and
+AIDS who were treated with AZT or other anti-retrovirals (<a href="appendix.html#cr">Creagh-Kirk
+et al., 1988</a>; <a href="appendix.html#mo.c">Moore et al., 1991a</a>,<a href="appendix.html#mo.d">b</a>; <a href="appendix.html#ra.a">Ragni et al., 1992</a>; <a href="appendix.html#sc.d">Schinaia et
+al., 1991</a>; <a href="appendix.html#ko.a">Koblin et al., 1992</a>; <a href="appendix.html#gr.a">Graham et al., 1991</a>, <a href="appendix.html#gr.c">1992</a>, <a href="appendix.html#gr.b">1993</a>;
+<a href="appendix.html#lo.a">Longini, 1993</a>; <a href="appendix.html#ve.a">Vella et al., 1992</a>, <a href="appendix.html#ve.b">1994</a>; <a href="appendix.html#sa.b">Saah et al., 1994</a>; <a href="appendix.html#ba.a">Bacellar
+et al., 1994</a>). In the Multicenter AIDS Cohort Study, for example,
+HIV-infected individuals treated with AZT had significantly reduced
+mortality and progression to AIDS for follow-up intervals of six, 12,
+18 and 24 months compared to those not taking AZT, even after
+adjusting for health status, CD4+ T cell counts and <a href="#PCP">PCP</a> prophylaxis
+(<a href="appendix.html#gr.a">Graham et al., 1991</a>, <a href="appendix.html#gr.c">1992</a>).
+<p>
+
+ In addition, several <a href="appendix.html#cohort">cohort</a> studies show that life expectancy of
+individuals with AIDS has increased since the use of AZT became common
+in 1986-87. Among 362 homosexual men in <a href="appendix.html#hepatitis">hepatitis
+B</a> vaccine trial
+<a href="appendix.html#cohort">cohorts</a> in New York City, San Francisco and Amsterdam, the time from
+<a href="appendix.html#seroconversion">seroconversion</a> to death, a period not influenced by variations in
+diagnosing AIDS, has lengthened slightly in recent years (<a href="appendix.html#he">Hessol et
+al., 1994</a>). In a Dutch study of 975 males and females with HIV
+infection, median survival with AIDS increased from nine months in
+1982-1985, to 26 months in 1990 (<a href="appendix.html#bi.b">Bindels et al., 1994</a>). Even taking
+into consideration the benefits of improved PCP prophylaxis and
+treatment, if AZT were contributing to or causing disease, one would
+expect a decrease in survival figures, rather than an increase that
+parallels the use of AZT.
+<p>
+
+ In an analysis from the San Francisco Men's Health Study, the
+investigators note that 169 (73 percent) of 233 AIDS patients had been
+treated with AZT at one time or another. However, 90 (53 percent of
+the 169) were diagnosed with clinical AIDS before beginning AZT
+treatment, and another 51 (30 percent of the 169) had CD4+ T cell
+counts lower than 200/mm3 before initiation of AZT treatment (<a href="appendix.html#as.c">Ascher
+et al., 1995</a>). The authors conclude, "These data are not consistent
+with the hypothesis of a causal role for AZT in AIDS."
+ 
+<h2><a name="anti">Disease Progression Despite Antibodies</a></h2>
+ 
+ It has been argued that HIV cannot cause AIDS because the body
+develops HIV-specific <a href="appendix.html#antibodies">antibodies</a> following primary infection
+(<a href="appendix.html#du.f">Duesberg, 1992</a>). This reasoning ignores numerous examples of viruses
+other than HIV that can be <a href="appendix.html#pathogenic">pathogenic</a> after evidence of immunity
+appears (<a href="appendix.html#ol.a">Oldstone, 1989</a>). Primary poliovirus infection is a classic
+example of a disease in which high <a href="appendix.html#titer">titers</a> of neutralizing antibodies
+develop in all infected individuals, yet a small percentage of
+individuals develop subsequent paralysis (<a href="appendix.html#ku">Kurth, 1990</a>). Measles virus
+may persist for years in brain cells, eventually causing a chronic
+neurological disease despite the presence of antibodies (<a href="appendix.html#ge.b">Gershon,
+1990</a>). Viruses such as <a href="appendix.html#cytomegalovirus">cytomegalovirus</a>, herpes simplex and varicella
+zoster may be activated after years of latency even in the presence of
+abundant antibodies (<a href="appendix.html#we.e">Weiss and Jaffe, 1990</a>). Lentiviruses with long
+and variable latency periods, such as visna virus in sheep, cause
+central nervous system damage even after the specific production of
+neutralizing antibodies (<a href="appendix.html#ha.a">Haase, 1990</a>). Furthermore, it is now
+well-documented that HIV can mutate rapidly to circumvent immunologic
+control of its replication.
+
+
+<h2><a name="transfusion">Risks Associated With Transfusion</a></h2>
+ 
+ It has been argued that AIDS among transfusion recipients is due to
+underlying diseases that necessitated the transfusion, rather than to
+HIV (<a href="appendix.html#du.e">Duesberg, 1991</a>). This theory is contradicted by a report by the
+Transfusion Safety Study Group, which compared HIV-negative and
+HIV-positive blood recipients who had been given transfusions for
+similar diseases. Approximately three years after the transfusion, the
+mean <a href="appendix.html#cd4">CD4+ T cell</a> count in 64 HIV-negative recipients was 850/mm3,
+while 111 HIV-<a href="appendix.html#seropositive">seropositive</a> individuals had average CD4+ T cell counts
+of 375/mm3 (<a href="appendix.html#do.c">Donegan et al., 1990</a>). By 1993, there were 37 cases of
+AIDS in the HIV-infected group, but not a single AIDS-defining illness
+in the HIV-seronegative transfusion recipients (<a href="appendix.html#co.f">Cohen, 1994d</a>).
+<p>
+
+ People have received blood transfusions for decades; however, as
+discussed above, AIDS-like symptoms were extraordinarily rare before
+the appearance of HIV. Recent surveys have shown that AIDS-like
+symptoms remain very rare among transfusion recipients who are
+HIV-seronegative and their sexual contacts. In one study of
+transfusion safety, no AIDS-defining illnesses were seen among 807
+HIV-negative recipients of blood or blood products, or 947 long-term
+sexual or household contacts of these individuals (<a href="appendix.html#al.e">Aledort et al.,
+1993</a>).
+<p>
+
+ In addition, through 1994, the CDC had received reports of 628 cases
+of AIDS in individuals whose primary risk factor was sex with an
+HIV-infected transfusion recipient (<a href="appendix.html#cd.s">CDC, 1995a</a>), a finding not
+explainable by the "risk-AIDS" hypothesis.
+ 
+<h2><a name="eight">Exposure to Factor VIII</a></h2>
+ 
+ It has also been argued that <a href="appendix.html#cumulative">cumulative</a> exposure to foreign proteins
+in <a href="appendix.html#Factor_VIII">Factor VIII</a> concentrates leads to <a href="appendix.html#cd4">CD4+ T cell</a> depletion and AIDS in
+<a href="appendix.html#hemophilia">hemophiliacs</a> (<a href="appendix.html#du.f">Duesberg, 1992</a>). This view is contradicted by several
+large studies. Among HIV-seronegative patients with hemophilia A
+enrolled in the Transfusion Safety Study, no significant differences
+in CD4+ T cell counts were noted between 79 patients with no or
+minimal factor treatment and 53 patients with the largest amount of
+lifetime treatments (cumulative totals in the latter group ranged from
+100,000 to 2,000,000 U in two years) (<a href="appendix.html#ha.j">Hassett et al., 1993</a>). Although
+the CD4+ T cell counts seen in the low- and high- groups (756/mm3 and
+718/mm3, respectively) were 20 to 25 percent lower than controls, such
+levels are still within the normal range.
+<p>
+
+ In a report from the Multicenter Hemophilia Cohort Study, the mean
+CD4+ T cell counts among 161 HIV-seronegative hemophiliacs was
+784/mm3; among 715 HIV-seropositive hemophiliacs, the mean CD4+ T cell
+count was 253/mm3 (<a href="appendix.html#le.c">Lederman et al., 1995</a>).
+<p>
+
+ In another study, no instances of AIDS-defining illnesses were seen
+among 402 HIV-seronegative hemophiliacs treated with factor therapy or
+in 83 hemophiliacs who received no treatment subsequent to 1979
+(<a href="appendix.html#al.e">Aledort et al., 1993</a>; <a href="appendix.html#mo.f">Mosely et al., 1993</a>).
+<p>
+
+ In a <a href="appendix.html#retrospective">retrospective</a> study of patients with severe hemophilia A, the
+rate of CD4+ T cell loss was 31.4 every six months for 41
+HIV-seropositive individuals without AIDS and 49.7 every six months
+for 14 HIV-seropositive individuals with AIDS. In contrast, among 28
+HIV-seronegative individuals, CD4+ T cell counts increased at a rate
+of 13.1 cells/six months (<a href="appendix.html#be.a">Becherer et al., 1990</a>).
+<p>
+
+ In a study of children and adolescents with hemophilia, the median
+CD4+ T cell count of 126 HIV-seronegative individuals was 895/mm3 at
+study entry; no individuals had CD4+ T cell counts below 200/mm3. In
+contrast, 26 percent of seropositive children had CD4+ T cell counts
+of less than 200/mm3; the mean CD4+ T cell count for seropositive
+children was 423/mm3 (<a href="appendix.html#ja.f">Jason et al., 1994</a>).
+<p>
+
+ Although some reports have suggested that high-purity Factor VIII
+concentrates are associated with a slower rate of CD4+ T cell decline
+in HIV-infected hemophiliacs than products of low and intermediate
+purity (<a href="appendix.html#hi.a">Hilgartner et al., 1993</a>; <a href="appendix.html#go.d">Goldsmith et al., 1991</a>; <a href="appendix.html#de.a">de Biasi et
+al., 1991</a>), other studies have shown no such benefit (<a href="appendix.html#ma.c">Mannucci et al.,
+1992</a>; <a href="appendix.html#gj">Gjerset et al., 1994</a>). In a study of 525 HIV-infected
+hemophiliacs, Transfusion Safety Study investigators found that
+neither the purity nor the amount of Factor VIII therapy had a
+deleterious effect on CD4+ T cell counts (<a href="appendix.html#gj">Gjerset et al.,
+1994</a>). Similarly, the Multicenter Hemophilia Cohort Study found no
+association between the <a href="appendix.html#cumulative">cumulative</a> dose of <a href="appendix.html#plasma">plasma</a> concentrate and
+incidence of AIDS among 242 HIV-infected hemophiliacs and thus "no
+support for cofactor hypotheses involving either <a href="appendix.html#antigen">antigen</a> stimulation
+or <a href="appendix.html#inoculum">inoculum</a> size" (<a href="appendix.html#go.b">Goedert et al., 1989</a>).
+<p>
+
+ In addition to the evidence from the <a href="appendix.html#cohort">cohort</a> studies cited above, it
+should be noted that 10 to 20 percent of wives and sex partners of
+male HIV-positive hemophiliacs in the United States are also
+HIV-infected (<a href="appendix.html#pi.c">Pitchenik et al., 1984</a>; <a href="appendix.html#kr.b">Kreiss et al., 1985</a>; <a href="appendix.html#pe.c">Peterman et
+al., 1988</a>; <a href="appendix.html#sm.a">Smiley et al., 1988</a>; <a href="appendix.html#di.b">Dietrich and Boone, 1990</a>; <a href="appendix.html#lu">Lusher et
+al., 1991</a>). Through December 1994, the CDC had received reports of 266
+cases of AIDS in those who had sex with a person with <a href="appendix.html#hemophilia">hemophilia</a> (<a href="appendix.html#cd.s">CDC,
+1995a</a>). These data cannot be explained by a non-infectious theory of
+AIDS <a href="appendix.html#etiology">etiology</a>.
+ 
+<h2><a name="dist">Distribution of AIDS Cases</a></h2>
+ 
+ Certain skeptics maintain that the distribution of AIDS cases casts
+doubt on HIV as the cause of the syndrome. They claim infectious
+microbes are not gender-specific, yet relatively few people with AIDS
+are women (<a href="appendix.html#du.f">Duesberg, 1992</a>).
+<p>
+
+ In fact, the distribution of AIDS cases, whether in the United States
+or elsewhere in the world, invariably mirrors the prevalence of HIV in
+a population (<a href="appendix.html#un">U.S. Bureau of the Census, 1994</a>). In the United States,
+HIV first appeared in populations of homosexual men and injection drug
+users, a majority of whom are male (<a href="appendix.html#cu.b">Curran et al., 1988</a>). Because HIV
+is spread primarily through sex or by the exchange of HIV-contaminated
+needles during injection drug use, it is not surprising that a
+majority of U.S. AIDS cases have occurred in men.
+<p>
+
+ Increasingly, however, women are becoming HIV-infected, usually
+through the exchange of HIV-contaminated needles or sex with an
+HIV-infected male (<a href="appendix.html#ve.d">Vermund, 1993b</a>; <a href="appendix.html#cd.s">CDC, 1995a</a>). As the number of
+HIV-infected women has risen, so too have the number of female AIDS
+cases. In the United States, the proportion of AIDS cases among women
+has increased from 7 percent in 1985 to 18 percent in 1994. AIDS is
+now the fourth leading cause of death among women aged 25 to 44 in the
+United States (<a href="appendix.html#cd.r">CDC, 1994</a>).
+<p>
+
+ In Africa, HIV was first recognized in sexually active heterosexuals,
+and in some parts of Africa AIDS cases have occurred as frequently in
+women as in men (<a href="appendix.html#qu.a">Quinn et al., 1986</a>; <a href="appendix.html#ma.b">Mann, 1992a</a>). In Zambia, for
+example, the 29,734 AIDS cases reported to the WHO through October 20,
+1993, were equally divided among males and females (<a href="appendix.html#wh.j">WHO, 1995a</a>,<a href="appendix.html#wh.k">b</a>).
+ 
+<h2><a name="africa">AIDS in Africa</a></h2>
+ 
+ One vocal skeptic of the role of HIV in AIDS argues that, in Africa,
+AIDS is nothing more than a new name for old diseases (<a href="appendix.html#du.e">Duesberg,
+1991</a>). It is true that the diseases that have come to be associated
+with AIDS in Africa--wasting, diarrheal diseases and TB--have long
+been severe burdens there. However, high rates of mortality from these
+diseases, formerly confined to the elderly and malnourished, are now
+common among HIV-infected young and middle-aged people (<a href="appendix.html#es.c">Essex,
+1994</a>). In a recent study of more than 9,000 individuals in rural
+Uganda, people testing positive for HIV <a href="appendix.html#antibodies">antibodies</a> were 60 times as
+likely to die during the subsequent two-year observation period as
+were otherwise similar persons who tested negative (<a href="appendix.html#mu.b">Mulder et al.,
+1994b</a>). Large differences in mortality were also seen between
+HIV-seropositive and HIV-seronegative individuals in another large
+Ugandan <a href="appendix.html#cohort">cohort</a> (<a href="appendix.html#se.d">Sewankambo et al., 1994</a>).
+<p>
+
+ Elsewhere in Africa findings are similar. One study of 1,400 Rwandan
+women tested for HIV during pregnancy found that HIV infected women
+were 20 times more likely to die in the two years following pregnancy
+than their HIV-negative counterparts (<a href="appendix.html#li.c">Lindan et al., 1992</a>). In another
+study in Rwanda, 215 HIV-seropositive women and 216 HIV-<a href="appendix.html#seronegative">seronegative</a>
+women were followed prospectively for up to four years, during which
+time 21 women developed AIDS (WHO definition), all of them in the
+HIV-seropositive group. The mortality rate among the HIV-seropositive
+women was nine times higher than seen among the HIV-seronegative women
+(<a href="appendix.html#le.g">Leroy et al., 1995</a>)
+<p>
+
+ In Zaire, investigators found that families in which the mother was
+HIV-1 seropositive experienced a five- to 10-fold higher maternal,
+paternal and early childhood mortality rate than families in which the
+mother was HIV-seronegative (<a href="appendix.html#ry.b">Ryder et al., 1994b</a>). In another study in
+Zaire, infants with HIV infection were shown to have an 11-fold
+increased risk of death from diarrhea compared with uninfected
+children (<a href="appendix.html#th.a">Thea et al., 1993</a>). In patients with pulmonary tuberculosis
+in Cote d'Ivoire, HIV-seropositive individuals were 17 times more
+likely to die than HIV-seronegative individuals (<a href="appendix.html#ac">Ackah et al., 1995</a>).
+<p>
+
+The extraordinary death rates among HIV-infected individuals confirm
+that the virus is an important cause of premature mortality in Africa
+(<a href="appendix.html#do.b">Dondero and Curran, 1994</a>).
+
+
+<h2><a name="concl">CONCLUSION</a></h2>
+ 
+ HIV and AIDS have been repeatedly linked in time, place and
+population group; the appearance of HIV in the blood supply has
+preceded or coincided with the occurrence of AIDS cases in every
+country and region where AIDS has been noted. Among individuals
+without HIV, AIDS-like symptoms are extraordinarily rare, even in
+populations with many AIDS cases. Individuals as different as
+homosexual men, elderly transfusion recipients, heterosexual women,
+drug-using heterosexual men and infants have all developed AIDS with
+only one common denominator: infection with HIV. Laboratory workers
+accidentally exposed to highly concentrated HIV and health care
+workers exposed to HIV-infected blood have developed immunosuppression
+and AIDS with no other risk factor for immune dysfunction. Scientists
+have now used <a href="appendix.html#PCR">PCR</a> to find HIV in virtually every patient with AIDS and
+to show that HIV is present in large and increasing amounts even in
+the pre-AIDS stages of HIV disease. Researchers also have demonstrated
+a correlation between the amount of HIV in the body and progression of
+the aberrant immunologic processes seen in people with AIDS.
+<p>
+
+ Despite this plethora of evidence, the notion that HIV does not cause
+AIDS continues to find a wide audience in the popular press, with
+potential negative impact on HIV-infected individuals and on public
+health efforts to control the epidemic. HIV-infected individuals may
+be convinced to forego anti-HIV treatments that can forestall the
+onset of the serious infections and malignancies of AIDS (Edelman et
+al., 1991). Pregnant HIV-infected women may dismiss the option of
+taking <a href="appendix.html#AZT">AZT</a>, which can reduce the likelihood of transmission of HIV
+from mother to infant (<a href="appendix.html#co.l">Connor et al., 1994</a>; <a href="appendix.html#bo.d">Boyer et al., 1994</a>).
+<p>
+
+ People may be dissuaded from being tested for HIV, thereby missing
+the opportunity, early in the course of disease, for counselling as
+well as for treatment with drugs to prevent AIDS-related infections
+such as <a href="#PCP">PCP</a>. Such prophylactic measures prolong survival and improve
+the quality of life of HIV-infected individuals (<a href="appendix.html#cd.p">CDC, 1992b</a>).
+<p>
+
+ Most troubling is the prospect that individuals will discount the
+threat of HIV and continue to engage in risky sexual behavior and
+needle sharing. If public health messages on AIDS prevention are
+diluted by the misconception that HIV is not responsible for AIDS,
+otherwise preventable cases of HIV infection and AIDS may occur,
+adding to the global tragedy of the epidemic.<p>
+
+
+<hr>
+Last changed: 
+<!-- hhmts start -->
+25-Mar-96
+<!-- hhmts end -->
+<address><a href="http://math-www.uni-paderborn.de/~axel/">Axel Boldt</a>
+<a href="mailto:boldt@math.ucsb.edu">&lt;boldt@math.ucsb.edu&gt;</a>
+</address>
+
+</body></html>
