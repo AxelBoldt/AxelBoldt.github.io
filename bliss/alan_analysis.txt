@@ -1,0 +1,46 @@
+From: alan@lxorguk.ukuu.org.uk (Alan Cox)
+Subject: Bliss: The Facts
+Date:   Sat, 8 Feb 1997 01:24:30 +0000 (GMT)
+
+1.      Bliss is a real program
+
+2.      Its really a trojan rather than a virus, but has a few simple worm
+        like properties.
+
+It works like this
+
+        When it runs it attempts to replace some system binaries with itself
+        and move the system binaries into /tmp/.bliss. Having done this
+        it runs /tmp/.bliss/programname
+
+        In order for it to succeed it means someone has pulled binary only
+        code from a third party and run it at some point as root or a
+        suitably priviledged user. People should NEVER be doing that anyway
+
+        The technique used is totally portable, it will work under any OS,
+        regardless of security because it does not circumvent the security
+        of the system, it relies on people with priviledge to do something
+        dumb
+
+        The second attack it makes which is fairly crude is to try and rsh
+        to other machines and stage attacks on those. Thus given a set of
+        machines which totally trust each other it can spread.
+
+Bliss is (fortunately) a mere toy and a demonstration of these techniques.
+With any OS you must be careful what you install. With a protected mode
+OS like Linux a user cannot do untold damage to others but root can. The
+recent demonstrations of things like an activeX object that looks for
+credit details in windows95 money and access databases is hopefully a
+reminder to all
+
+
+o       Use a distribution that lets you verify packages are ok and
+        preferably uses digital signatures
+
+o       Install using sources from reputable sites. Check digital
+        signatures on what you are installing
+
+Whatever the OS, whatever the security.....
+
+
+Alan

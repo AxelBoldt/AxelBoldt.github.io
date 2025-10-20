@@ -1,0 +1,16 @@
+Begin3
+Title:          krnl_cnfg_hlp
+Version:        1.3.28
+Entered-date:   25SEP95
+Description:    Help texts for the configuration options of Linux kernel 
+		version 1.3.x, containing gentle explanations
+		of many acronyms and pointers to the documentation.
+                A replacement for the standard Configure script, which
+		uses these help texts, is included.
+Keywords:       kernel configuration help
+Author:         boldt@math.ucsb.edu (Axel Boldt)
+Maintained-by:  boldt@math.ucsb.edu (Axel Boldt)
+Primary-site:   sunsite.unc.edu /pub/Linux/kernel/config
+		28 kb krnl_cnfg_hlp_1.3.28.tgz
+Copying-policy: GPL
+End

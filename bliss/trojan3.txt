@@ -1,0 +1,29 @@
+From: Halo5 <cvpsmith@hotmail.com>
+Subject: "Virus" vs. "Trojan Horse"
+Date: Tue, 05 Aug 1997 15:59:11 -0500
+To: boldt@math.ucsb.edu
+
+Cahalan's definition of the trojan is not entirely true, either.
+
+>With a trojan, there is no "infected binary". The trojan binary _is_
+>the original binary. Trojans are usually made by adding evil code to
+>the source tree of an application and recompiling. Viruses are made by
+>compiling a virus and then attaching the virus to a normal executable.
+
+This has nothing to do with the definition of a trojan.  Take for
+instance code that exhibits the above traits for a virus.  If said code
+is designed to activate on a certain date and erase the entire volume on
+which it resided, it would be considered a trojan horse (as is
+Michelangelo).  Such details are irrelevant; the fact that the user is
+executing code that is supposed to perform one task, and the trojan code
+is sneaking in "trojan style" in order to be executed so that it may
+perform its task, is what makes it inherent to the definition of a
+trojan horse.
+
+
+Paul W. Smith
+-- 
+Who is General Failure and why is he reading my hard disk?
+Mikrosoft spel chekar for sail, wurx grate!
+This message is brought to you by Linus Torvalds, 
+NOT Della Croce or Andrew Tanenbaum!

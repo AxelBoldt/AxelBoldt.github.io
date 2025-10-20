@@ -1,0 +1,2552 @@
+======================================================================
+This is a diary of facts and ideas I came across and wrote down for 
+my own benefit; some may not make sense to you without further 
+explanation. Nothing here is original but I left out all sources 
+and references.
+
+Axel Boldt
+axelboldt@yahoo.com
+http://math-www.uni-paderborn.de/~axel/
+======================================================================
+
+
+Nov 20, 2004
+
+Humans are slowed down apes; most of babyhood should really happen in
+the mom's belly; some later stages such as ape body hair never happen
+in humans. Lengthening of child stage allows for growth of brain.
+
+Feb 20, 2005
+
+The dual price p_i of a linear programming problem is the marginal
+increase in the optimal objective function value per increase of i-th
+constraint's right-hand side. They are also the solution of the dual
+problem: p_i is the "fair" price per unit of the resource described in
+the i-th constraint. Primal and Dual have the same optimal solution,
+the "fair price" of the whole operation.
+
+Mar 10, 2005
+
+Appolonius circle: start with two points, consider the locus of all
+points whose product of the distances to those two points is constant.
+
+Mar 20, 2005
+
+Fermat's principle in optics (light takes shortest-time path)
+explained by Feynman: light "tries out" all other paths to, but if a
+path's light-time is not stationary (variation = 0) then light
+travelling along nearby paths will be out of phase and will cancel
+out. He claims the same effect is at work in QED.
+
+Mar 25, 2005
+
+Inverted repeats in DNA: the only point seems to be to be able to form
+cruciform structures, in order to excise or expose the parts of the
+DNA between the repeats.
+
+Mar 30, 2005
+
+Huber-Dyson's conjecture in group theory: if a first-order statement
+is true about all groups, then this can be proven in ZFC. Not obvious:
+Diophantine incompleteness theorem yields a concrete polynomial with
+integer coefficients which doesn't have a zero yet there is no proof
+for this fact in ZFC.
+
+Apr 6, 2005
+
+Little white dots before eyes when looking in blue light: "blue field
+entoptic phenomenon", due to white blood cells creating gaps in blood
+columns in capillaries before retina. Larger, slower moving "floaters"
+due to debris floating inside the eye's vitreous humor.
+
+Apr 10, 2005
+
+Horoscopes and psychics use "cold reading" (vague general statements
+to elicit responses) and Forer effect (vague general personality
+statements are given high accuracy ratings by the subject).
+
+HIV-2 most common in West Africa, especially in Guinea-Bissau, former
+Portuguese colony. Thus Portugal has highest HIV-2 rate in Europe.
+Countries with ties to Portugal also have significant HIV-2: Angola,
+Mozambique, Brazil, Southwest India.
+http://www.socgenmicrobiol.org.uk/JGVDirect/18253/18253ft.htm
+
+Apr 16, 2005
+
+Protein folding problem: Neuronal nets are used to classify the amino
+acids of a protein according to local characteristics (alpha helix,
+beta sheet, outside, etc.). Groups of related proteins can be
+described by Hidden Markov Models. Folding prediction with molecular
+mechanics way too slow; other methods not very good. Crystallographer
+takes 1-3 years for a single protein.
+
+Apr 20, 2005
+
+In US, women without college degree have about 50% divorce rate, women
+with college degree about 25%. (NYT)
+
+Singular value decomposition: every linear map R^n -> R^m is described
+by a diagonal matrix with non-negative entries w.r.t. suitable
+orthonormal bases. This is the technique behind principal factor analysis.
+
+Apr 22, 2005
+
+"How many children do you have?" - "Two". "Any daughters?" - "Yes, in
+fact I have to pick up my daughter from school in half an hour."
+Probability 1/3 that they have two daughters.
+
+"How many children do you have?" - "Two, in
+fact I have to pick up my daughter from school in half an hour."
+Probability 1/2 that they have two daughters.
+
+What if in front of a girl's school?
+
+Apr 24, 2005
+
+Mozilla Bayesian spam filter: start with training set of classified
+spam/ham; tokenize messages; calculate for each token (=word) a
+subjective Pr(spam|token) (based on assumption that prior Pr(spam) =
+50%). Then for incoming message combine the 15 most extreme token
+scores using naive Bayes theorem (ignoring dependence of words) to get
+a subjective Pr(spam|message).
+
+Apr 27, 2005
+
+Left brain: details (e.g. logic, math, language syntax); right brain:
+big picture (spatial relations, emotional and metaphorical aspects of
+speech, context, meaning). Experimental confirmation: picture of big
+letter made of little letters. Later contradicted by big symbols made
+of little symbols! Left brain controls right side of body (and left
+side of the face), receives visual images from the right first (being
+connected to the left halves of both retinas). Added 3 Jan 2009: in
+heterosexual males and homosexual females, the right half is on
+average about 1% larger than the left; in the others the two halves
+are on average about the same size (std deviations are roughly 1-2
+percentage points). In male monkeys, right side of brain has on
+average more receptors for male sex hormones.  Jill Bolte Taylor
+relates how a left-side stroke created holistic feelings.
+
+Bolzmann's entropy theorem: if X is a random variable and you know
+E(f_j(X)) for functions f_j, then the density with largest entropy (if
+it exists) is proportional to exp(\sum \lambda_j f_j(x)). 
+This is the default choice if no other information is available.
+Applications: 
+ * normal distribution if only mean and standard 
+   deviation are known
+ * uniform distribution if supported on closed interval or finite set
+ * exponential distribution if supported on [0,\infty) with given expected value
+ * geometric distribution if supported on natural numbers with given expected value
+http://www.eecis.udel.edu/~jing/11.pdf
+
+May 2, 2005
+
+Utility theory: to decide, don't maximize expected Dollar amount E(X)
+but expected utility E(U(X)). The function U(X) (typically concave for
+large X; often convex for small X except for risk-averse individuals)
+can be experimentally determined: U(0)=0 and U(1,000,000)=1 arbitrary,
+then ask: "Give Dollar amount x such that a lottery with .5 chance of
+winning 1,000,000 and .5 chance of winning 0 is worth x$ to you." Then
+U(x)=.5. Repeat to get more points on the graph of U.
+
+St. Petersburg paradox: keep flipping a coin; if first head occurs on
+k-th trial, you get 2^k dollars. How much do you pay to play? (Expected
+value infinite, but likely values very small; need to use expected
+utility not expected money).
+
+May 8, 2005
+
+Leibniz' theory of the best possible world: most variety of phenomena
+with the simplest, most elegant laws. (-> simulated universe?)
+
+1+2+3+4+... = -1/12 because zeta(-1)=-1/12.
+
+Probability distributions:
+    Variable  | discrete   |  continuous
+   ======================================
+    number of | Binomial   |  Poisson
+    events    |            |
+   --------------------------------------
+    time until| Geometric  |  Exponential
+    next event|            |
+   --------------------------------------
+    time until| Negative   |  Gamma (or
+    k-th event| binomial   |  Erlang)
+
+Also: *  Beta(alpha,beta) distribution useful for prior on [0,1] if
+         you have seen alpha successes, beta failures.
+      *  Lifetimes: Weibull (exponential hazard function), lognormal
+         (accumulating small multiplicative effects) or Gamma
+         (sum of exponentials = sequence of constant-hazard processes)
+
+May 14, 2005
+
+Catabolism: liberate energy by taking high energy electron from A and 
+            giving it to B, i.e. oxidize A and reduce B.
+Fermentation: A,B are organic, generate ATP by substrate-level
+            phosphorylation (not very effective).
+Respiration: B inorganic, generate ATP by chemiosmosis: electron
+            chain along a membrane pumps H+ out, let back in through 
+            ATP synthase. 
+   Table of reduction reactions, most difficult first
+    H+    -> H2
+    CO2   -> CH4
+    (other organics here)
+    sulfate/sulfur -> H2S
+    nitrate -> nitrite
+    O2 -> H20
+   For a respiration reaction, combine the inverse of one line with another
+   line further down. This creates free energy.
+
+   In photosynthesis, free energy is input from light, and we combine
+   the inverse of one line with another line further UP. (June 17)
+
+   E. coli also have citric acid cycle, electron transfer chain, and
+   ATP synthase. Flagellum uses proton gradient to produce rotation
+   (Aug 19); operation of motor not known, but system is hollow and 
+   probably evolved from a protein ejection system, coupled with a
+   proton pump. (Aug 28)
+
+Retroviral Long Terminal Repeat (LTR): 
+    RNA:   RB-XXX-AR
+    DNA:  ARB-XXX-ARB
+ needed because A is promoter and B is end part which won't be copied
+    into RNA by host's polymerase.
+ during DNA synthesis, new RB piece jumps from left to right; later
+    forms cycle.
+
+Gallo found a growth factor for CD4-cells (IL-2), then isolated the
+first two human retroviruses (growing on CD4 cells) with reverse
+transcriptase assay, then was able to productively infect an immortal
+(=cancerous) CD4-cell line with HIV.
+
+Greasemonkey: firefox extension that can apply javascript by URL to
+              modify/extend given site
+Berkman Annotation Engine: proxy that allows users to leave and 
+              read annotations for arbitrary websites
+Wikalong: Firefox extension, accesses central wiki, gives every
+              website a wiki border (added June 5)
+
+May 25, 2005
+
+Taylor's theorem for analytic functions: exp(tD)f=f(.+t) (D=d/dx).
+More generally, exp describes the flow V(t,x) generated by an analytic 
+vector field v:
+  exp(tv)f = f(V(t,.)) for every analytic function f(x) on the manifold.
+Campbell-Hausdorff formula 
+  exp(v)exp(w)=exp(v+w+1/2[v,w]+...)
+is important here.
+
+May 28, 2005
+
+Solar wind: hot charged particles that escape from the upper atmosphere 
+of the Sun because of their high thermal energy.
+
+Water -> Oxygen photosynthesis was invented by cyanobacteria; needs
+two reaction centers, one from green and one from purple bacteria.
+Chloroplasts of green algae (leading to higher plants), red algae and
+glaucophytes were created by (just one event of?) primary
+endosymbiosis with eukaryotes (mitochondria, from bacteria that use
+oxygen to produce energy, were already in place). All other types of
+algae (protists) got their chloroplasts by secondary endosymbiosis.
+
+June 4, 2005
+
+Descartes to overcome scepticism: cogito ergo sum plus God is not
+deceptive, so we can trust our senses. God exists: I can conceive of a
+perfect being, and only perfect causes can have perfect effects, so
+God caused my conception of him.
+
+Hume's criticism of induction: you need a principle that says "what
+happened in the past will likely continue in the future", but our only
+justification of that principle is inductive => circular reasoning.
+
+June 6, 2005
+
+Cerebral cortex: Wrinkled 2mm thin outermost layer of the brain, about
+size of a pizza, responsible for higher processing. The cortex
+consists of neurons (grey matter) and covers white matter (myelinated
+axons). Almost all of it (neocortex) is only present in mammals and
+has six layers.
+
+ATP synthase: two coupled motors/generators: F0 and F1. F0 sits in
+membrane and converts H+ (sometimes Na+) gradient into rotation; F1
+sits on top and converts rotation into ADP->ATP transformation.
+Present in mitochondria, chloroplasts, and bacteria. 
+Can also operate in reverse: using ATP to pump H+, affecting
+pH (in human lysosomes, some archae).
+F0: 10-14 cyclically arranged identical units form a rotating
+wheel. Two fixed half-channels, open to opposite sides.
+Each unit is normally neutral and can gain/lose a protein only in the 
+half channels; more likely to lose a proton in one and gain a proton 
+in the other (because of proton concentration difference). 
+In the middle a permanently positively charged
+residue. => Thermal movements of the wheel push it forward in one
+direction.
+F1: three fixed outside slots, each can be in three states: 
+accepting ADP+Pi, converting into ATP, releasing ATP. 
+Rotationary axis in the middle cyclically changes the states.
+
+DNA topoisomerases: let DNA strands move through each other; essential
+for replication of DNA rings, so that they don't stay
+interlocked. Also removes supercoiling.
+
+June 11, 2005
+
+Fungi often have two names: anamorph (asexually reproducing) and
+telemorph (sexually reproducing). The two corresponding forms are not
+easily recognized.
+
+homolog: similar because of shared ancestry
+paralog: homolog after gene duplication
+ortholog: homolog after speciation
+
+June 20, 2005
+
+Bacterial evolution:
+ * fermentation of abundant organic molecules (produces organic acids)
+ * ATP synthase, operating as proton pump to reduce intracellular acidity
+ * electron chain to exploit redox reactions, better than
+   fermentation; ATP synthase now operates the other way
+ * H2S-based photosynthesis, using same electron chain
+ * H2O-based photosynthesis (cyanobacteria), needs two chlorophylls
+   -> chloroplasts
+ * Oxygen first oxidizes Fe (iron ores), then emerges into the atmosphere
+ * Modified electron chain used to oxidize organics (cyt c oxidase)
+   with oxygen; Krebs cycle -> mitochondria
+
+July 6, 2005
+
+Legendre trafo: convex f(x) <-> convex g(p) via g(p) = max_x (p.x - f(x))
+This transforms Laplacian L:T(C)->R into Hamiltonian H:T*(C)->R.
+The maximizing x-value satisfies df_x = p; this gives a diffeomorphism
+between T(C) (q1,...,qn,q1dot,...,qndot) and T*(C) (q1,...,qn,p1,...,pn)
+in coordinates: pi=del L/del qidot.
+
+Earth magnetic field: hot solid inner core causes rising convection in
+outer liquid core; Coreolis force turns these into helices. Helical
+movement of fluid conductors can turn a pre-existing magnetic field by
+90 degrees. Also: magnetic field lines in a moving liquid conductor
+are dragged along, creating a circular magnetic field along the
+equator in the core. Helices turn this to create Earth's magnetic
+field. (added 12-Nov-2005)
+
+August 2, 2005
+
+Szostak has 14-base self-replicating RNA. PACE: project to construct
+life from scratch. Venter minimizes 517-gene Mycoplasma genitalium.
+
+Original mammal genome is being computed from extant
+mammals. Neanderthal genome is being reconstructed using human
+scaffold.
+
+August 3, 2005
+
+Humans have 25000 genes (=DNA sequences that are transcribed into
+RNA). Introns are spliced out of pre-mRNA in nucleus. In complex
+organisms, Splicing Regulatory (SR) proteins
+bind to Exonic Splicing Enhancer (ESE) [or Exonic Splicing Suppressor
+(ESS)] sites within an exon, and thereby direct the spliceosome to
+the adjacent splice sites [or prevent it from attaching]. 
+
+Humans have highest number of introns per gene. Avg gene is 28000 bp
+long, with 8.8 exons, each usually about 120 bp long. In simple
+organisms, introns are much shorter and introns, not exons, are
+recognized for splicing out (evolutionary origin).
+
+SRs can be controlled to yield alternative splicing, which may affect 75% of
+human genes. Introns (in primates often with the 300 bp long
+retrotransposon Alu) yield a playground for evolution because they can
+become alternatively spliced exons.
+
+August 18, 2005
+
+Every square real matrix is product of two real symmetric matrices;
+every square complex matrix is product of two complex symmetric
+matrices. (Quick proof of the latter with Jordan Normal Form.)
+
+August 27, 2005
+
+Jet streams: polar air meets tropic air, +Coriolis force => strong
+wind west to east, 12km up. Two in each hemisphere. Meandering shape.
+
+August 30, 2005
+
+Kademlia: architecture for a distributed (key,value) database, used by
+(some) edonkey and bittorrent clients. Nodes have IDs which are of the
+same length as the keys; a (key, value) pair is stored at those nodes
+with closest IDs (metric: XOR, converted into int.)
+
+Sept 04, 2005
+
+Oxytocin: hormone involved in birth and breastfeeding and
+love/trust. Also inhibits development of drug tolerance, suggesting
+function: no need for tolerance of love/sex endorphins which act on
+opiate receptors (Sept 11).
+
+Sept 21, 2005
+
+Precession of the equinoxes: axis of Earth's rotation slowly
+precesses, completing one round every 26,000 years. Reason: Earth is
+not spherical but bulged at the equator, Sun's pull gives torque
+causing change in angular momentum vector.
+
+Sept 23, 2005
+
+All (non-trivial) conics are the same in two-dimensional real
+projective space. In fact, if points there are identified with lines
+through the origin in R^2, they are nothing but a cone!
+
+Oct 1, 2005
+
+p53 directs DNA repair in mammalian cells. It serves as a
+transcription factor for many genes; one of them is mdm2; mdm2 then
+degrades p53, resulting in a negative feedback loop. DNA damage leads
+to a number of discrete p53 pulses (same length and amplitude;
+strength of damage encoded in number of pulses).
+
+Oct 10, 2005
+
+Heavy things fall faster than lighter things, because they attract the
+Earth more.
+
+There's a solution to Newtonian n-body which goes to infinity in
+finite time: two pairs of horizontally rotating pairs, one particle
+shuttling back and forth. (Works only for *point* particles!) Can't
+extend past the singularity. But physically it should be
+extendible. Since Newtonian mechanics is time-reversible, this means
+it's not quite deterministic: the end stage, reversed, would have a
+new body appear from infinity!
+
+Oct 11, 2005
+
+Spiral arms of galaxies are moving regions of higher star density
+resulting from flight paths of the individual stars, which are
+*rotating* ellipses (galaxy cannot be simplified as a simple mass
+point like the solar system). Spiral galaxies slowly turn into barred
+spiral galaxies and back. Colliding spirals form elliptical galaxies.
+
+Oct 25, 2005
+
+E=mc^2 is always involved, when chemical energy is converted into
+kinetic energy: we "melt" a bit of mass to get kinetic energy. (Added
+Nov 17:) More radically: the only thing that exists is energy;
+electrons and quarks are bundles of energy (and therefore have mass by
+Einstein's formula, but no extension). There is no hard "matter";
+everything is energy and Einstein's formula just describes how much
+that energy weighs.
+
+In General Relativity, *spacetime* is curved, so the trajectories of
+particles are geodesics; parametrization is unimportant, speed can be
+read off from geodesic. Given a point and a direction in *spacetime*,
+there's just one geodesic that fits, so the particle's movement is
+determined; given a point and a direction in *space*, there are lots
+of particle paths that fit, with different speeds.
+
+Oct 30, 2005
+
+Cloning is mainly useful to produce transgenic animals: transformation
+of somatic cells can be performed in vitro en masse, much easier than
+microinjection of one-cell embryos with low yield.
+
+In pineapples, pinecones, sunflowers etc., you have two sets of
+spirals; the numbers of them are always two consecutive Fibonacci
+numbers. Reason(?): the units emerge from the center, push others
+away, and grow as large as they can.
+
+Nov 22, 2005
+
+Dopamine is the pleasure and reward neurotransmitter. 
+low dopamine = Parkinson's, 
+high dopamine = creativity/psychosis/schizophrenia. 
+Ritalin/amphetamine/cocaine increase dopamine (block reuptake);
+Opiates+THC increase dopamine output (block inhibitory neurotransmitters); 
+Antipsychotics like Haldol and friends block dopamine receptors.
+Ventral tegmental area and substantia nigra in the midbrain 
+release dopamine.
+
+Low levels of the neurotransmitter Serotonin are believed to be
+involved in depression (no firm evidence though, added 17 Jan 2008),
+and also in explosive aggression (added 14 Sept 2006). Prozac and
+friends increase serotonin by blocking reuptake. LSD blocks some and
+excites other serotonin receptors.
+
+(added Apr 2, 2006) GABA is the primary inhibitory
+neurotransmitter. Benzodiazepines and other GABA analogues are GABA
+receptor agonists and thus have relaxing, sedating, anti-anxiety and
+anti-convulsive effects.
+
+Glutamate is standard excitorary neurotransmitter. Alcohol increases
+activity of GABA receptors and blocks glutamate receptors.
+
+Nov 23, 2005
+
+We can take a photograph that records information about the direction
+light rays are coming from: take a grid of microlenses as your image
+plane, behind it many more actual light sensors. => Allows us later to
+focus on anything in the picture.
+
+Can sharpen ordinary picture with Fourier trafo and inverse
+convolution (because moving or unfocused camera can both be modeled as
+a convolution of the original picture).
+
+To remove noise in a photo use anisotropic diffusion PDE: first figure
+out direction of sharp lines, then diffuse in the direction (but not
+orthogonal to) these lines. (Added March 5, 2007.)
+
+Dec 17, 2005
+
+Teilhard de Chardin: atomism is correct, the smallest indivisible unit
+is the universe; the radius of any atom is equal to the radius of the
+universe; cannot separate parts without making mistakes at the
+boundaries. (Wave function of atom is non-zero everywhere.)
+
+Dec 26, 2005
+
+Franks were German tribe at lower Rhine, conquered France
+~500-600. Became Roman Catholics (trinitarians, not arians like the
+other Germanics). Charlemagne, crowned emperor in 800, spoke
+Frankish/German and conquered and violently christianized Saxons,
+incorporated Bavaria. Afterwards empire breaks apart: Kingdom of
+France, Holy Roman Empire of German Nation.
+
+Dec 28, 2005
+
+Senescence: death probability increases with age. Happens in all
+animals, possibly not in Hydra. Reason: cellular and molecular damages
+accumulate. In the wild, most deaths are caused by external factors,
+so repair (which is always possible) is waste of energy beyond a
+certain point. Better invest energy in reproduction (except during
+famine/caloric restriction).
+
+Jan 15, 2006
+
+Metasploit: modular framework to hack into a machine; can choose from
+a large variety of exploits and a large number of payloads.
+
+RNAi: RNA interference, a mechanism in all(?) eukaryotes to fight off
+double-stranded RNA-viruses: dsRNA is recognized and cut into 20-25 bp
+pieces (called "small interfering" siRNA) by Dicer; those pieces
+attach to RISC, and the double strand is split into a single
+strand. Other copies of the matching single stranded RNA are then
+degraded by this activated RISC.  Used by scientists to silence a
+gene: simply introduced a dsRNA of a part of the gene. (To fight
+disease or study function of a gene.)  Mechanism is also used in
+embryonal development to shut down genes: a DNA region codes for a
+specific siRNA, and the RNAi machinery does the rest.
+
+Jan 20, 2006
+
+Calabi-Yau manifold: compact, complex, with Riemannian and symplectic
+structure, and "flat" in some sense. 1-dim Calabi-Yau manifolds are
+just the elliptic curves. 3-dim Calabi-Yau manifold used in string
+theory for the tiny additional 6 dimensions in which the strings
+vibrate. 
+
+Jan 25, 2006
+
+Real photons are the quanta of electromagnetic radiation and
+constitute light; virtual photons transmit the electromagnetic
+force. Real gravitons are the quanta of gravitational radiation and
+constitute gravitational waves; virtual gravitons transmit
+gravitational force. Gravitons (and gravitational waves) are still
+hypothetical, but everyone believes in them.  Virtual particles can
+also move faster than the speed of light.
+
+Uranus orbit measurements lead to predict Neptune, which then was
+found. Mercury orbit measurements (perihelion precession) lead to
+predict "Vulcan" which was not found; General Relativity was the
+answer.
+
+Feb 26, 2006
+
+Amino acids in living things are all right-handed. Two theories: 
+1) They came from space, where circularly polarized light destroyed 
+one type in our cloud. 
+2) Weak nuclear force is not symmetrical w.r.t. handedness. Could
+affect magnetic water molecules and dissolved amino acids. No need for
+space intervention.
+
+Feb 27, 2006
+
+Buffer overflow exploit: send too long string to a function, which
+tries to store it on the stack, thereby overwriting the function's
+return address. Rest of string contains the exploit's "payload". In
+Unix: set return address directly to start of payload. In Windows:
+location of stack is not known, so find a register that points into
+the payload, then set return address to a known jump command in some
+DLL that uses said register.
+
+Mar 4, 2006
+
+Lie bracket: if v and w are C^k vectorfields, then [v,w] is a C^{k-1}
+vector field. [v,w](p)(f)=v(p)(w(f))-w(p)(v(f)) at every point p; the
+vector [v,w](p) depends not just on v(p) and w(p) but on v and w in a
+whole neighborhood of p (except on Lie groups). Turns the set of
+C^\infty vector fields into a Lie algebra. Geometrically:
+
+1) e^(tv)* w = w + t[v,w] + o(t) [pullback of w along v's integral
+   curve for time t]. Alternatively:
+   [v,w] = lim(t->0) (e^(tv)* w - w)/t 
+
+2) e^(tv)e^(tw) = e^(t(v + w) + 1/2 t^2 [v,w] + O(t^3)) [first
+   following w, then v, ist the same as following v+w to first order;
+   second order term is [v,w]
+
+3) e^(-tv)e^(-tw)e^(tv)e^(tw) = e^(t^2 [v,w] +O(t^3)) [move around in a
+   small square, alternatingly following v's and w's integral curves]
+
+Added Mar 21, 2006: Frobenius theorem. Suppose you're given a
+k-dimensional "distribution" in a C^\infty n-manifold M (i.e.:
+k-dimensional subspaces of M's tangent spaces). Then we can foliate M with
+k-dimensional submanifolds that have the given distribution as tangent
+spaces if and only if any two vector fields that live in the
+distribution have their Lie bracket also in the distribution. 
+Proof: => clear. <= coordinatize M so that the last n-k coordinate
+vectors are transversal to the distribution. Project the first k
+coordinate vectors into the distribution, along the last n-k. Then
+these k will have zero Lie bracket amongst each other (follows from
+assumption and the fact that coordinate vectors have zero Lie
+brackets). Then we can use the k vectors to span our foliating
+submanifolds. 
+
+Added Mar 29, 2006: Frobenius theorem generalizes fundamental theorem
+for vector fields: given a vector field V:M->TM, define a 1-d
+distribution on MxR: at the point (x,t), the space is spanned by
+(V(x)/|V(x)|,|V(x)|). Submanifold given by Frobenius is just the flow
+given by fundamental theorem.
+
+Mar 28, 2006
+
+Hyperinflation in Germany: 1921-1923, ending with Rentenmark. 
+Alcohol prohibition in U.S. 1920-1933 (amendment passed 1917, ratified 1919) 
+Women's suffrage in U.S.: 1920 (amendment passed 1919, ratified 1920)
+Great depression: October 1929 (50% stock market crash) - late 1930s. 
+Dust Bowl: 1930-1936 (drought + unsustainable agricultural practices;
+                      worst drought: Summer 1936)
+1930-1931: bank runs, deflation. 
+1928-1932: Republican President Hoover, 1928-1930 large Republican
+majorities in both houses, 1930-1932 tiny majorities in both houses.
+1930: Hoover increases tariffs with the Republican Smoot-Hawley bill, 
+resulting in retaliation and contributing to world trade depression. 
+Hoover also tried volunteer and government programs; didn't help.
+1933: Democrat F. D. Roosevelt comes into office, with 25% unemployment
+rate. He has Democratic majorities in both houses until 1945.
+Roosevelt's New Deal: 1933 reform financial system, abandon gold standard 
+to allow monetary policy, regulate prices and wages; 1935 Social Security. 
+Federal expenditures tripled from 1933-39, financed by debt.
+1937: "Second depression" after tax increase and rise in interest rates.
+Government expansion and spending during WWII ends depression.  
+
+Hitler and Roosevelt both came to office January 33 and died in office
+April 45.
+
+Stalin came to power in 1922; big famine in 1932/33 caused by collectivization. 
+Great Terror against party members starts 1937. Dies 1952.
+
+Plato: three forces propel man: reason, eros (passion), thymos (need to
+be recognized, to be valued, to be part of something important).
+
+Apr 7, 2006
+
+A meme is like a virus: sometimes harmful to the host. Consider the
+religious meme "don't question received beliefs".
+
+Gromov space: the isometry classes of compact metric spaces form the
+points of a metric space; distance is given by the minimal Hausdorff
+distance achievable by isometrically embedding the two spaces in some
+other space. (Can be extended to locally compact pointed spaces and be
+used in group theory, on Cayley trees.)
+
+Apr 12, 2006
+
+At a divergent boundary between two tectonic plates, molten rock rises
+from mantle and becomes crust, pulling the plates apart
+(e.g. Mid-Atlantic Ridge, growing in width several centimeters each
+year). At a subduction zone, one plate (usually the denser oceanic)
+slides underneath another, recycling the material back into the mantle
+(e.g. Japan, where Philipine and Pacific Plates subduct unterneath
+Eurasian and North-American Plates). These two processes power the
+movement of the plates.
+
+Oceanic crust: largely basalt. Continental crust: largely
+granite. Granite has more silicate and is not as dense as basalt.
+
+May 7, 2006
+
+Degree of a map f between two connected oriented compact manifolds 
+of the same dimension n:
+  * globally defined as the integer describing the action on H_n = Z,
+  * locally defined: pick any x such that f^-1(x) has no critical
+  points, then for each element u of f^-1(x) add 1 if f preserves
+  orientation and -1 otherwise.
+
+Index of a vector field at x: surround x with a small square (or
+triangle), put +1 at the center and the corners, -1 at the edge
+midpoints, let the vector field act and count the total "charge"
+inside the figure afterwards. Alternatively: surround x with a small
+sphere, and consider the normed vectorfield on that sphere as a map to
+the unit sphere; its degree is the index of the vector field at x. 
+
+Poincare Theorem: If a Riemannian manifold is closed and the vector
+field has only isolated zeros, then the Euler characteristic = sum of
+all the indices.
+
+Gauss-Bonnet: closed 2-dim. Riemann manifold. 2 pi * Euler
+characteristic = integral of Gaussian curvature.
+
+Adopt children whose mothers agree and no father comes forward: they
+automatically become German citizens. You are responsible for child
+support, so proceed only if pension cannot be taken away.
+
+May 17, 2006
+
+Compact connected 2-manifold without boundary: 
+  * orientable genus g: sphere with g handles, i.e. connected sum of g
+    toruses; Euler characteristic 2-2g (if embedded: = 2* degree of
+    Gauss map, which assigns to each point the normal vector)
+  * non-orientable genus g: connected sum of g projective planes 
+    = sphere with g disks cut out, opposite points on each disk's boundary
+      identified   
+    = star of g tubes, opposite points on each tube's boundary circle 
+      identified. 
+    Euler characteristic 2-g
+ 
+2 projective planes = Klein bottle; 
+3 projective planes = torus + projective plane.
+
+August 14, 2006
+
+Jimmy Gettys from OLPC project: cache misses are extremely slow, and
+often it is faster to recompute values than to retrieve them from
+memory. Programmers often have wrong assumptions.
+
+August 27, 2006
+
+Entropy in thermodynamics: amount of energy not available for useful
+work. Entropy of a gas is proportional to the number of bits stored in
+the molecules positions and velocities. I.e. thermodynamic entropy =
+informational entropy.
+
+Pax-6 is the gene that switches on the construction of an eye. The
+versions of mice and fruit flies are interchangeable, even though the
+eyes are completely differently constructed! So they must have the
+same ancient origin. Don't they also use the same light-detector cells?
+Same is true for genes that construct appendages.
+
+September 29, 2006
+
+Principal Component Analysis: given a set of points in R^n, find
+linear functions f1,f2,... such that f1 has highest variance, f2 next
+highest (subject to being uncorrelated to f1), and so on. These are the
+principal components. (added Nov 7:) The f's will be orthogonal, and
+projection via f1,f2 gives the 2-dim'l projection of the points which
+minimizes the sum of the squares of the distances between point and
+projected point. The f's are the eigenvectors of X^T*X, where the rows
+of the matrix X are the given points; moved so that all column
+averages are 0. PCA is different from *Factor analysis* where you try
+to find a small set of uncorrelated 'hidden' variables X1,...,Xp so
+that the observed variables are linear combinations of the hidden
+ones.
+
+Support Vector Machines: given training data (x_i, y_i) [where the x_i
+are typically from R^n, y_i \in {0,1} or \in R], we want to
+"generalize" and "learn" to find a good simple function that
+approximates the unknown underlying "true" function. Modeling with
+linear functions, and optimizing so that the separating line is
+furthest away from the data (or coefficients are smallest), is a
+quadratic optimization problem which is subject to duality. If
+expressed dually, it depends only on the inner products of the data
+points. To generalize to non-linear situations, we implicitly map to a
+high dimensional Hilbert space by using as "scalar product" a kernel
+K(x,y). In applications, choosing the kernel (often with a parameter)
+is the only important choice to be made, unlike in neural nets and
+other approaches, where many parameters need to be tuned.
+
+October 5, 2006
+
+Supernova type Ia: a white dwarf (cooling, small, very dense, dead
+star, resisting gravity by Pauli pressure [electrons are fermions and
+can't sit on top of each other], consisting of carbon and oxygen
+leftover core of a small star after the red giant phase) pulls in
+matter from a companion star until it reaches the Chandrashekar limit
+of 1.4 solar masses (gravity overcomes electron pressure) and a fusion
+reaction of carbon etc. ignites, exploding the star. Simulations show
+that turbulence is important or else the shock wave will peter out;
+therefore 2-D simulations don't work.
+
+Supernova type II: as fuel of a massive (10 solar masses) star gets
+exhausted, the core collapses to a neutron star (merging protons and
+electrons into neutrons, releasing neutrinos). As the collapse stops,
+the infalling matter bounces off the neutron star and, together with
+the neutrinos, creates an explosion, again with turbulence and
+asymmetry being important. In larger stars (~100 solar masses) the
+core can also collapse all the way to a black hole, creating gamma
+bursts.
+
+[Added Jan 23, 2012] Stars are displayed in an HR-diagram: 
+temperature=color on horizontal axis vs absolute magnitude=brightness on 
+vertical axis. Temperature is related to energy output per surface area, 
+while brightness is related to total energy output. 
+Stars that fuse hydrogen into helium (which are most of them for most 
+of their lifetime) are located on the Main Sequence, a diagonal strip 
+in the HR-diagram. As stars are born they move on the Main Sequence, 
+then they don't move much, until hydrogen fusion stops and they move 
+off the Main Sequence. 
+Upper left of Main Sequence = high mass = bright = hot 
+= short life on Main Sequences = not dense.
+
+After leaving the main sequence, fusion in the core stops, material falls 
+in, heats up, and hydrogen fusion in the outer layers starts up again, 
+creating red giants (upper right of HR-diagram).
+
+October 16, 2006
+
+Solomonoff's universal induction: imagine a bit sequence produced by a
+machine (representing the "environment") that, based on the previous
+bits, computes a probability for the next bit being a 1, then flips an
+appropriate coin. It's your job to predict the next bit, based on
+observation of the past string of bits w; you don't know the internal
+workings of the machine. Solomonov's approach, in several senses
+optimal, feeds a random input string to a pascal interpreter (note
+that end of a Pascal program is well-defined), considers only those
+whose output starts with w, and then asks whether the next output of
+these machines is 1 or 0. The probability of 1 determined this way
+approaches the true probability of 1 computed by the environment
+machine. So Solonomoff's prediction is the more likely of the two bits.
+
+Epicurus: "retain all theories that agree with the data"
+Occam: "retain only the simplest theory that agrees with the data"
+Solomonoff: "retain all theories, but put more trust into the simpler 
+             theories"
+
+November 6
+
+Maximizing the area of a rectangle with given circumference gives the
+same result as minimizing the circumference of a rectangle with given
+area. That's a special case of a general result, consequence of
+Lagrange's multiplier method: the gradient of the objective function
+and the gradients of the constraints are linearly dependent at the
+optimum; it doesn't matter which you call objective function and which
+you call constraints. Or: imagine the level curves of f expanding
+until they touch a fixed level curve of g; alternatively imagine the
+level curves of g shrinking until they touch the fixed level curve of
+f: same result.
+
+TiddlyWiki: a personal wiki, all in one Javascript-filled HTML
+page. Several nodes can be displayed at once; all is searchable and
+taggable. Can be published on the web, but other people can't
+permanently edit it.
+
+November 7
+
+Closures in javascript: at the moment an inner function is *defined*,
+all the free variables in its body are bound to the variables active
+in the then current execution context. These variables persist and can
+be read/changed by the inner function, even if the outer function has
+stopped execution (e.g. if the inner function has been passed to the
+caller via return, or has been assigned to some global variable/event
+handler). Several inner functions created this way can share access to
+the same variables, and communicate.
+
+var f,g;
+function Outer() {
+         var x=12;
+         //inner functions assigned to global variables;
+         //form closure and keep access to variable x.
+         f = function() { x++; print(x); }
+         g = function() { x--; print(x); }
+         x = 100;
+}
+Outer();
+
+f();
+  => 101   //and not 13!
+f();
+  =>102
+f();
+  =>103
+g();
+  =>102
+
+function Test(x) {
+         print(x);
+         //The x in the body of f does not refer to the variable
+         //current at *execution* time, but to the one current at
+         //*definition* time.
+         f();
+}
+Test(20);
+  => 20
+  => 102
+ 
+Another example:
+----------------
+
+function Outer(x){
+   var f=function() {
+            x++;           
+            return function(){x++; print(x)}
+         }
+   return f;
+} 
+var h=Outer(4);
+var g;
+function Outer2(x){
+         g=h();
+}
+
+Outer2(400);
+g();
+  =>6 //and not 401, because all the x's in the body of f were bound
+        to Outer's x at the time Outer was executed and f(=h) was defined.
+
+Closures work the same in Lisp/Scheme/Python/Smalltalk (called
+"blocks" in Smalltalk).
+
+November 9
+
+Real-time PCR: after every round of PCR, measure the amount of DNA
+with some dye. So you can *quantify*, not just *detect*, specific
+sequences. You determine the Ct value: the number of cycles needed to
+cross a predetermined detection threshold, and you compare the Ct
+values of different samples.
+
+November 19
+
+Key bumping: Take a key that fits into a lock but can't turn it, then
+file every position as low as possible (not too steep before and after
+the positions or else key won't go in and out the lock anymore). File
+a bit off the tip of the key and off the part where key meets outer
+lock. Insert in lock, hit slightly from the outside, and shortly
+afterwards turn: lock opens. Hitting the key pushes it further in
+(allowed by filing off the tip and the outer part), forcing the pins
+in the lock up the slope. This upward impulse is transmitted to the
+unconnected pins, which jump up, while the original pins stay down
+(kicking a billard ball that touches another will only move the second
+one, not the first). The lock can be turned in the short moment the
+unconnected rods are flying up. Lots of illustration videos on
+youtube, search for "bump key".
+
+November 25
+
+If r is the outcome of a measurement process designed to estimate the
+true value R, then E[(r-R)^2] = Var(r) + Bias^2(r), the latter being
+(E[r] - R)^2. "Reliability vs. Validity": often increasing one
+decreases the other.
+
+To estimate probability densities, better than histograms: compute
+convolution of data distribution with some smooth kernel like
+Gaussian; increase variance of kernel to increase smoothness of
+estimated density. Can use density estimate to plot probability level
+curves in bivariate case.
+
+If X,Y,Z are random variables, need to distinguish between "X & Y are
+independent" and "X & Y are independent given Z". Neither statement
+implies the other!
+
+EM algorithm: Given observations x1,...,xn, you want to estimate the
+parameters pk, sk of a probability distribution of the form 
+f(x)=sum(pk*fk(x,sk),k=1..K) (a mixture of K distributions fk whose
+shapes are assumed to be known; sum(pk,k=1..K)=1). 
+  1. Pick all the pk, sk randomly.
+  2. Assuming pickings from previous step were correct, estimate the 
+     probability that data xi came from distribution k, Pr(k|xi) for 
+     i=1..n, k=1..K using Bayes. (This is the E step.)
+  3. Compute new updates of pk, sk based on result of 2. (This is the
+     M step.) Then go back to 2.
+Once it converges, repeat with a different random starting point, to
+find the solution that maximizes likelihood of the observations. The
+computed Pr(k|x) can be used for clustering and classification of 
+new data x.
+
+Other approaches to clustering: K-means (pick K random cluster
+centers, assign each point to the closest cluster center, then use
+averages of each cluster as new cluster centers and iterate);
+agglomerative (initially each point in its own cluster, then
+successively merge two clusters that are "close" together).
+
+Cross-validation: To check how good a classification/prediction
+algorithm performs on unseen data, divide off a chunk of the original
+data, construct the model based on the other data, and then evaluate
+its performance on the chunk. Particularly popular: leaving-one-out
+method where the chunk has size 1, and cross-validation is performed
+for all possible chunks, to find an average error rate of the
+algorithm, so that it can be compared with competing algorithms.
+
+Bootstrap method: to estimate how an algorithm's performance on the
+observed sample compares to its performance on the whole population,
+take a random subsample of the sample and compare the algorithm's
+performance on the subsample to that on the sample.
+
+To predict classification based on a training set: Logistic regression
+(for two classes); look at k closest neighbors of x in training set
+and base classification of x on those; support vector machines (see
+above; inefficient for large training sets); tree models (keep
+dividing a component of input space along one variable, so as to
+minimize entropy; each component is assigned to the class of the
+majority of training points in it); naive Bayesian (assume that
+variables are independent given the classes; use Bayes to find
+probability of a given class given an observation x; works well even
+if assumptions are wrong, can be improved with Bayesian networks where
+some variables are taken as dependent). Naive Bayesian and and closest
+neighbors can easily deal with missing values.
+
+December 18
+
+In MySQL, use MyISAM tables for simple read-mostly applications, and
+InnoDB tables for read-write applications. The former has a locking
+mechanisms that slows down writing in many situations. InnoDB also
+allows transactions and foreign key constraints.
+
+In general, don't forget to index important rows and run 
+EXPLAIN ANALYZE on your queries.
+
+"S LEFT (OUTER) JOIN T ON cond" returns all the rows from SxT that match the
+condition, plus all the rows from Sx{null} to make sure that every row
+of S shows up at least once in the result set.
+
+SELECT returns a table, so can be nested.
+
+MP3 creation has several quality settings (that take different amounts
+of time), so the bits/sec rate of an MP3 stream is not enough to tell
+the stream's quality.
+
+December 27
+
+Plato: The creator god ("demiurge") is transcendental, sets moral law,
+is interested in human affairs, wants the good.
+
+Aristotle: World has existed forever, no need for creator. God is the
+ultimate mover, the reason behind the eternal order. God thinks
+theoretical thoughts, leading to the human ideal of understanding the
+world.
+
+Epicureans: World is infinite and made of moving atoms, everything is
+to be explained scientifically. God is tranquil, intelligent, made of
+fine atoms, not interested in us.
+
+Stoics: World is finite and made of continuous matter whose movement
+is caused by divinity present everywhere. Divinity set the rules and
+obeys them; no miracles.
+
+January 7
+
+MHC are the genes that define the body's self-tag and determine
+selectivity against pathogens. The two parents' MHC versions operate
+co-dominantly, meaning parents with differing MHCs produce children
+able to withstand more diseases. Female mice can sniff the MHC of
+males based on urine and prefer MHC-different partners. (Similar in
+fish.) Human females also prefer the body oder of MHC-different
+partners. MCH-like human couples have more often difficulty conceiving
+and produce weaker babies. However: when women take contraceptives,
+they prefer the body odor of MHC-like men.
+
+Number and intensity of wars has declined significantly since the end
+of the Cold War, and Pinker argues that much longer, similar trends
+are at play (much fewer people die violent deaths). Rate of reported
+rapes in U.S. has decreased by 85% between 1980 and 2005.
+
+January 15
+
+DSL: last-mile phone lines aren't built to cleanly transmit the high
+frequencies needed for DSL speeds. So the phone company measures the
+distortion produced by any single last-mile phone line, and puts in a
+box that precisely complensates for that distortion.
+
+1/24/2007 1:34 PM
+God for the atheist (Seligman): our institutions get better (in the
+moral sense), we get more powerful (in the technological sense) and we
+learn more (scientifically). The logical end and limit point is a
+good, omnipotent, omniscient entity: we are creating God.
+
+
+1/24/2007 10:13 PM
+Defeat any copy protection on video/audio: play the content on a
+certified software player in a virtual machine, copy material from the
+virtual screen/loudspeaker.
+
+
+1/28/2007 9:24 PM
+Of the important human features (big brain, language, upright walk)
+the latter came first, in Lucy (3.2 mio years ago). 
+
+Large animals have slower metabolism than smaller ones (ways are
+longer) but they all live about the same number of heart beats (humans
+live a bit longer than "allowed" by this equation, they develop
+extremely slowly.)
+
+
+1/31/2007 10:51 PM
+"Shoplifting raises everyone's prices" is false. Shoplifter who would
+otherwise have bought the item but steals instead increases fixed
+costs and lowers the price-demand curve and therefore lowers price
+(and profits). Same for a thief who sells the stolen item
+afterwards. Advertising raises prices for the same reason, and college
+teachers selling free textbooks lower prices. Thieves who would never
+have bought the item do not affect prices as long as the cost function
+(cost per item depending on number of items ordered) is constant. If
+non-constant need to analyze more. Raising a constant cost function
+always increases prices. 
+
+
+2/24/2007 4:23 PM
+Free market does not always give Pareto optimal solution. Customers
+equally distributed on a linear road [0,1], two competing stores,
+every customer shops at the closest store and incurs travel cost
+proportional to distance to store. Both stores will settle in the
+middle (Nash equilibrium), but that's not Pareto optimal; better would
+be to locate the stores on 1/4 and 3/4. Generally, competing firms
+will tend to cluster at the center of their markets (not just
+geographically, but also in terms of product characteristics).
+
+Rational self-interest predicts that perfect competition (in an
+efficient market with full information) will drive
+the market prices down until they reach the no-profit situation
+(allowing for reasonable return on capital investment built into the
+cost function).
+
+
+3/2/2007 3:42 PM 
+NP complete problems are "on average" not that hard;
+good approximate solvers exist. The human brain is also pretty good at
+these. 
+
+
+3/14/2007 10:18 PM
+The buoyant force of an object is equal to the weight of the displaced
+water (Archimedes). Proof: imagine a parcel of water were in the place
+of the object; the water wouldn't move, so a force equal to its weight
+and directed upwards must be acting on it.
+
+
+3/24/2007 11:29 PM 
+Creativity: frontal lobe generates ideas, temporal
+lobe edits and evalutates ideas, dopamine from the limbic system
+provides drive, reward, low latent inhibition.
+
+4/9/2007 11:42 PM
+Numeral systems: 
+~2000BC Sumer/Babylon: base 60 positional system. Digits are written
+        in a base 10 additive system. They didn't use a zero place holder
+        symbol until ~700BC.
+~300BC Brought to Greece by Alexander but not adopted. Greeks used
+       additive system with sequence of letters for digits and
+       multiples of ten; later adopted and improved by Romans.
+~500AD our base 10 number system with 0 in India, later adopted by Arabs
+~1200AD Fibonacci writes book to popularize system in Europe, meets 
+        with resistance, some merchants and bankers adopt it.
+
+4/12/2007 9:50 PM
+male:
+sex drive high and constant
+usually exclusively homo or hetero
+some images will arouse and some
+won't; knows the difference
+
+female:
+sex drive lower except around ovulation
+all sexual images will engorge genitals and lubricate vagina, even 
+the onles they don't like (possibly defense against rape?)
+more often open to both sexes
+
+Males have higher IQ std dev than females. Reason: many brain genes
+are on X chromosome.
+
+9/23/2007 12:53 AM
+
+Vitamin D (from food or sun light) may prevent LOTS of cancers (and
+bone loss in elderly women).  Vitamin B12 is beneficial in the
+elderly, and folic acid (B9) for women. All other vitamin supplements
+don't help and some even hurt. (added 23 Nov 2008)
+
+9/23/2007 12:54 AM
+
+Smog or second hand smoke: immune system reacts in the lung, leading
+to higher incidence of blood clots => heart attacks. Supported by
+tests in animals, people; statistics after smoking bans.
+
+9/23/2007 12:58 AM
+
+Poincare-Hopf Theorem: Given compact C-inf manifold with boundary and
+C-inf vector field that at the boundary is normal to the boundary, and
+has only isolated singularities (i.e. zeros), then the sum of the
+indices at the zeros equals the Euler characteristic. (Index = degree
+of induced map from sphere to sphere near zero.)
+
+By applying it to a gradient, get "Mountaineer's Theorem": a landscape
+that smoothly levels off towards infinity will have 
+(# of local maxima) - (# of saddle points) + (# of local minima) = 1
+
+Fermat's principle in optics: light follows a path whose length is
+stationary when pertubed slightly. Reason: if it isn't stationary, the
+phase of nearby paths is different and light cancels. This principle
+also underlies gravitational lensing!
+
+9/30/2007 2:32 PM
+
+Hydrolysis of water: 
+* at the cathode, where electrons are pumped into
+the water, you have the reduction reaction 2 H2O + 2 e- -> H2 + 2 OH-,
+the gas H2 escapes and the environment around the cathode turns basic.
+* at the anode, where electrons are pumped out of the water, you have
+the oxidation reaction 2 H2O -> O2 + 4 H+ + 4 e-, oxygen escapes and
+the environment turns acidic.
+* Without any salt in the water, the buildup of H+ at the anode and
+OH- at the cathode will soon resist the further flow of current, until
+these ions diffuse away from the electrodes. This diffusion is slow,
+so pure water is a poor conductor.
+* With extra ions in the water (e.g. from salt or acid), the buildup
+of charges in the water around the electrodes is quickly neutralized
+by nearby ions rushing in or out. (The H+ and OH- ions naturally
+occurring in pure water could in principle do the same job, but they
+are far too rare.)
+* The extra ions could in principle also partake in reduction at the
+cathode or oxidation at the anode. However, these ions are far fewer
+than water molecules, and these reactions generally require more
+energy to carry out than the bread down of water.
+
+10/20/2007 2:23 PM 
+
+Spiral form of galaxies: each star has elliptic path, different stars
+have different ellipses, inside stars move faster; under some
+assumptions you get slowly rotating log-spiral density pattern.
+
+11/1/2007 11:58 AM
+
+Phyllotaxis: the patterns of plant structures (leaves, seeds
+etc.). The plant grows at the tip of a cone; new structures arise
+there, want to stay away from previous structures as much as possible,
+then "move down the cone" as the cone grows further at its tip. This
+requires that they are placed at a turn of the golden ratio (tau) of a
+full circle relative to the previous one. (Tau is the "most
+irrational" number as it has the slowest continued fraction
+expansion.) This golden ratio pattern will create spirals whose
+numbers are two Fibonacci numbers (as their fractions best approximate
+tau.) Growth rate determines particular Fibonacci numbers; sometimes
+that rate changes, and e.g. sunflowers often show different numbers of
+spirals as you move out. Leaves along a stem and petals of a rose are
+also often turned tau*2pi with respect to each other, for the same
+reason.
+
+11/1/2007 7:20 PM
+
+Lions don't usually hunt cooperatively; typically only 2 are
+active. A pride has one or two males, often brothers; must constantly
+defend harem against young outside challengers. Ovulation is
+stimulated: after the female is ready, she flirts and then they have
+sex for 200-300 times over 2-3 days.
+
+11/16/2007 9:36 PM 
+
+Stoicism: started by Greek Zeno 3rd century BC, later writers: Romans
+Seneca (tutor and advisor of Nero), Marc Aurel (emperor).  Pantheistic
+materialism; everything is ordered for the best; can't be affected by
+loss or love; suffering is good for you; committing suicide is
+honorable. Follow nature, i.e. develop reason, do the best work at
+your position. People are fundamentally equal, strife for a global
+society (i.e.(?) Roman empire).
+
+11/24/2007 1:26 PM
+
+MPTP (byproduct of some synthetic illicit drugs) specifically kills
+dopaminergic neurons in substantia nigra, causing Parkinson's in
+humans. It's manufactured as a herbicide. A pesticide (rotenone )
+causes Parkinson's in rats. Maybe Parkinson's is caused by some
+environmental chemical?
+
+12/19/2007 and 6/8/2008 and 8/18/2012
+
+Magnetism is the relativistic correction for electrostatics. A test 
+charge moving parallel to a current-carrying line will see different 
+distances between the positive and negative charges, because of length 
+contraction. This creates a net charge on the line and an electrostatic 
+force in the rest frame of the test charge. In the rest frame of the line 
+this is the magnetic force exerted by the current on the moving charge.
+
+A moving charge or changing electric field creates a magnetic field. 
+A moving magnet or changing magnetic field creates an electric field. 
+Details in Maxwell's equations.
+
+Ferromagnetism: Iron and some other metals are attracted to a magnet
+because the unpaired electrons' spin align to form magnetic domains,
+and an externally applied field aligns these domains, increasing the
+internal field (= huge relative permeability) and producing an
+attractive force. Above Curie temperature this won't happen.
+
+Paramagnetism: Magnetization is proportional to applied magnetic field
+(and inverse proportional to temperature) if magnetic moments of
+electrons don't cancel completely. Smaller relative permeability.
+
+Diamagnetism: Change in applied magnetic field will cause electrons to
+form current loops whose magnetic field opposes the applied change. So
+material is repelled by any magnet. Every material has this, but it's
+a much smaller effect than paramagnetism or ferromagnetism. Extreme in
+super conductors.
+
+B = "Magnetic field" = "magnetic induction" = "magnetic flux density";
+occurs in Lorenz law describing force on moving charges
+
+H = "Magnetic field strength" = what is created by a current or magnet.  
+In vacuum, H and B are basically the same (except for different units).
+If the field passes through a material though, the material may be
+magnetized, changing the field within it, and H has to be multiplied
+by the material's relative permeability mu to get the effective B.
+
+Non-zero nuclear spin can also turn a substance magnetic, but is much
+weaker (factor 1000). Protons pair up, and so do neutrons; if nucleus
+has an even number of protons and of neutrons, then nuclear spin will
+be 0.
+
+1/7/2007
+
+Everybody has about twice as many female ancestors as male ancestors,
+because in every generation a few men father many children.
+
+Smoking protects against Parkinson's.
+
+1/20/2008 4:44 PM
+
+Cancer cells use lactose fermentation (in cytosol) rather than citric
+acid cycle (in mitochondria), even if oxygen is plentiful. This is the
+Warburg effect.
+
+Old theory: mitochondria of cancer cells are damaged and can't carry
+out citric acid cycle.
+
+New theory: mitochondria are responsible for apoptosis program, and
+inside a tumor there's not much oxygen, so it's in the interest of a
+cancer cell to shut off mitochondria. While fermentation is not as
+efficient as the citric acid cycle, it is much faster, and if the
+"egoistical" cells use a lot of sugar they will actually get more
+energy, and they will still have residual carbon skeletons left over
+to use for further growth. The lactic acid also harms surrounding
+healthy cells and weakens the extracellular matrix, allowing
+metastasis.
+
+Pyruvate hydrogenase kinase switches between lactose fermentation and
+citric acid cycle. Dichloroacetic acid (DCA) inhibits this enzyme,
+thereby increasing citric acid cycle and decreasing lactose
+fermentation. By restarting the mitochondria, DCA restores apoptosis,
+and cancer cells die.
+
+3/21/2008 2:04 PM
+
+Nanoradio: one end of a nanotube is connected to a battery's
+electrode, the other end is free to vibrate near the other
+electrode. It will vibrate in tune of external electromagnetic
+radiation; resonance frequency can be adjusted by changing battery's
+voltage. Electrons tunnel from tube's tip to the electrode, giving a
+current which depends on distance of tip to electrode. This dependency
+is quadratic, allowing the device to demodulate and recover the
+original signal. [Use cos^2(x) = 1/2 ( 1 + cos (2x) ). ]
+
+U.S. life insurance policy will pay if bought 2 years before suicide.
+
+3/27/2008 9:44 PM
+
+Bootstrap resampling: if you've got 100 data points, repeatedly draw
+100 points from this set (with replacement), and compute their
+means. Order these means, then take appropriate percentiles to compute
+population mean confidence interval. Similar for hypothesis
+testing. No model assumption needed.
+
+4/22/2008 12:17 PM
+
+Darwin's arguments about God/Christianity from his autobiography: 
+1) old testament is comparable to Hindu writings; despicable in that
+   it presents a revengeful tyran god that condems non-believers to
+   eternal torture; obviously factually wrong in manners of science.
+2) If God created human suffering for moral uplifting of humans, why
+   do sentient animals suffer so much?
+3) Inward strong convictions about the existance of a higher being,
+   found in all cultures, are of no evidentiary value as the various
+   concepts of god differ widely.
+4) Strongest argument for existence of God: the immense and wonderful
+   universe is hard to conceive without an intelligent mind as first
+   cause. But: we can't trust our mind in these matters, since our
+   mind has evolved from lower animals whose convictions on
+   metaphysics we certainly wouldn't trust.
+
+6/8/2008
+
+Thermodynamics. Assume that every isolated system (no exchange of
+heat/work/matter with environment) is an ergodic system with
+symmetric transition probabilities (motivated by QM, but also
+classically). This means that system approaches equilibrium where all
+states are equally likely. [For an ergodic system in equilibrium, time
+averages and ensemble averages are the same.]
+
+For an ensemble of such isolated systems, entropy is S = - k sum p_r
+ln(p_r) where p_r is probability of state r. S will increase over
+time ("H theorem"), until equilibrium is reached, where simply 
+S = k ln(N). S is a function of the ensemble/macrostate.
+
+If N(E) is the number of states of the system, depending on its total
+energy E, we define (absolute) temperature T = 1/(k d ln(N)/dE).  High
+temperature systems lose only few states (lose little entropy) if they
+give off a bit of energy dE. That's why systems in contact will
+exchange heat until the temperatures meet somewhere in the
+middle. Quantified: dS = dQ/T where dQ is the heat taken in.
+
+If a system A is in contact with a large heat bath A' which is
+kept at constant temperature T (or if only the ensemble average energy
+of A is known), then the states of A in equilibrium
+won't all be equally likely; instead state r with energy E_r will have
+probability p_r ~ exp(-E_r/kT) (Boltzmann/Maxwell). Lower energies are
+more likely, so systems "try to minimize their energy".
+
+In this case, consider partition function Z=sum exp(-beta E_r), which
+depends on beta=kT and on the external parameters x (which affect the E_r).
+Then avg E = - d ln(Z)/d beta; driving force d 1/beta ln(Z)/dx;
+entropy S = k ln Z + (avg E) / T.
+
+Simple heat [Carnot] engine: given two heat reservoirs R1, R2 at 
+temperatures T1<T2. Use gas cylinder C at temp T1 with volume V=V0.
+1.) Isolate C and compress until TC=T2.
+2.) Connect C+R2, C will expand and do work.
+3.) Isolate C, let expand to bring temperature down to T1; will do work.
+4.) Connect C+R1, compress back to V0, performing work and releasing heat.
+Now repeat; everything has to be done slowly (quasi-statically). 
+Enclosed area in V-p diagram is work gained.
+Efficiency: extracted work/used heat <= 1-T1/T2.
+
+Equipartition theorem: if the generalized variable p enters into a
+system's total energy only as a summand of the form U=a*p^2 (as is
+often the case if p is a momentum), then the expected value of U is
+kT/2. (Only true if T is large enough; else we'll have QM effects.)
+Application: translational kinetic energy per molecule in a gas is
+3kT/2 [but there can also be rotational and vibrational kinetic
+energy].
+
+Boltzmann equation for a dilute gas at non-equilibrium; 
+f(r,v,t)drdv = avg. number of molecules at time t at location [r, r+dr],
+velocity [v,v+dv]; yields an integro-PDE for f.
+This is the microscopic underpinning of Navier-Stokes.
+
+[Added 9 Sep 08] For small systems or short time spans, entropy can 
+decrease (necessarily, since the underlying process is time-symmetric), 
+but the probability of this happening decreases exponentially. That's 
+the Fluctuation Theorem. "Low entropy macrostates are extremely rare, 
+so we reach them seldomly and leave them quickly."
+
+8/9/2008 11:54 PM
+Real income development in West Germany over the last 20 years: the lowest 
+stay about the same, median rises slowly, highest rise faster.
+
+Among G8 countries, Germany has highest per-capita CO2 emission after 
+USA and Canada.
+
+Go playing algorithm (UTC): Starting from the current position, build a game
+tree dynamically; at the leaves play a random game to the very end and 
+propagate its result upward in the tree. When chosing random move, make sure 
+that all children of a node are being followed, and follow higher win-ratio 
+children more often. In the end play the move with the highest win-ratio.
+Best Go program works this way.
+
+9/10/2008 12:28 PM
+Hindu trinity of gods (trimurti): 
+    Brahma creator (four arms & faces; few temples), 
+    Vishnu maintainer (seated on lotus or riding on eagle, blue skin, 
+                       4 arms, often worshipped in form of his avatars
+                       Rama and Krishna), 
+    Shiva destroyer (third eye, holding a trident, often meditating or 
+                     dancing, also symbolized with lingam = cylindrical 
+                     stones).
+
+Hindu denominations
+  Vaishnava: worship Vishnu as supreme
+  Shaiva: worship Shiva as supreme
+  Shakta: worship the female force Shakti as supreme
+  Smarta: all gods are aspects of the one true god.
+
+Brahman: the one transcendent reality underlying everything
+
+Brahmin: priest
+
+Ganesh: elephant-head god, remover of obstacles, patron of arts and sciences, 
+        god of intellect and wisdom.
+
+9/22/2008 6:27 PM
+Overlooked reasons for lower numbers of women in top 
+politics/business/science slots:
+* Variance of all traits is bigger in males than in females (b/c of single X 
+  chromosome); thus at the extremes there will be many more males.
+* Success helps males much more than females in finding a partner; difference 
+  in incentive structures causes difference in outcomes.
+
+9/28/2008 1:21 PM 
+
+Menstrual cycle: (begins at onset of menstruation).  First two weeks
+Follicle Stimulating Hormone (FSH) slowly increases, causing several
+hundred eggs to mature. These produce estrogen.  Around day 14
+estrogen reaches threshold, causing spike in Luteinizing Hormone (LH)
+and more FSH, resulting in ovulation. The remaining corpus luteum
+produces estrogen and progesterone. Progesterone prepares uterus for
+pregnancy and signals pituary gland to shut off FSH and LH, so that no
+other eggs are released. The corpus luteum dies around day 28,
+stopping progesterone output, resulting in loss of endometrial lining
+(=menstruation) and slow increase in FSH. (In pregnancy, the fetus
+produces hormones that keep the corpus luteum going, preventing
+menstruation.) The main active ingredient of birth control pills is
+progesterone.
+
+10/5/2008 5:32 PM
+
+Even if flat on largest scales, the universe could be spatially
+finite, just like the flat metric on the torus or cylinder. In fact,
+if string theory is right, there are 6 additional spatial dimensions,
+all of them finite (and tiny), and it would seem odd if our three
+familiar spatial dimensions were infinite.
+
+10/21/2008 10:28 AM
+
+An oscillating electron radiates most of the light in the plane
+orthogonal to the oscillation axis, polarized parallel to the axis.
+
+So whenever light from source S is scattered by electron E to reach
+observer O, the light's predominant polarization axis will be
+orthogonal to the plane SEO. That's why sky light is polarized, and
+light reflected from a road is horizontally polarized. (=> Use of
+polarization filters in cameras and sun shades.)
+
+10/31/2008 8:16 PM
+Migraine = temporal artery (just outside of skull) expands
+Normal headache = muscles attached to outside of skull contract
+
+12/29/2008 1:00 PM
+Air at room temperature and atmospheric pressure: 
+density: 1.3 kg / m^3
+speed of a typical N2 molecule: 450 m/s = 1620 km/h
+speed of a typical H2 molecule: 1700 m/s = 6120 km/h
+mean free path: 70 nanometre ~ few hundred molecular radii
+
+1/3/2009 3:37 PM 
+
+Birds have a one-way lung with air entering air sacs and then passing
+almost constantly through the lung, allowing for a countercurrent
+system between blood and air: much more efficient than mammals'
+two-way lung. Lungs arose from fish lungs connected to the gut; in
+ray-finned fish these developed into swim bladders. In human embryos
+they're still connected to the gut.
+
+Aging is a tradeoff: an organism can either invest energy into quick
+procreation or into repair of accumulating damage to stave off
+aging. Animals that have lots of predators (early mammals) are better
+off doing the former. By contrast, many reptiles live long.
+
+3/8/2009 9:13 PM
+
+odds(A|E) = P(A|E)/P(~A|E) = P(A and E)/P(~A and E)
+Bayes theorem for odds:
+odds(A|E) = P(E|A)/P(E|~A) * odds(A)
+
+3/11/2009 7:30 PM
+
+Evo-Devo (Carroll): The genes involved in animal development
+(e.g. Hox) are largely conserved. Each one has numerous independent
+functions in development, acts as transcription factor for numerous
+other genes, and is affected by numerous other transcription
+factors. (By contrast, genes coding for ordinary structural proteins
+are regulated only by one or a few transcription factors.) The
+development genes thus form large Gene-Regulatory-Networks
+(GRNs). These GRNs evolve by mutations in the transcription-factor
+binding sites (CREs, Cis-regulatory elements). New CREs can arise from
+transposable elements.
+
+3/19/2009 6:42 PM
+
+Archimedes' way to find the volume of a sphere: semisphere is equal to
+a cylinder minus an upside-down cone, since the horizontal slices of
+the two solids have equal areas.
+
+3/23/2009 2:09 PM
+Moebius grp (connected complex Lie grp with complex dimension 3)
+ = grp of Moebius trafos (by def.)
+ = PGL(2,C)
+ = SL(2,C)/{+-} (with universal cover being SL(2,C))
+ = grp of conformal orientation-preserving maps S^2 -> S^2
+ = Aut (P^1 C) (holomorphic automorphisms of the Riemann sphere)
+ = grp of trafos in Minkowski spacetime preserving Lorentz form, the 
+   origin, the direction of time and orientation of space
+ = SO+(1,3) (proper orthochronous or restricted Lorentz group, by def.)
+ = component of identity in Lorentz group
+ = grp of orientation-preserving isometries of hyperbolic 3-space (which
+   we can think of as the interior of a 3-ball akin to the Poincare disk,
+   with a S^2 as "boundary")
+
+* Poincare group = grp of all isometries in Minkowski spacetime
+* Lorentz group = O(1,3) = subgroup of Poincare grp that fixes the
+  origin (observer)
+* Some authors define a (larger) Moebius group as
+   the real Lie grp of conformal maps S^2->S^2
+   = O+(1,3)
+   = grp of isometries of hyperbolic 3-space
+* the above (smaller) Moebius group is the identity component of this 
+  (larger) one.
+
+5/6/2009 5:42 PM
+Possible explanation for 
+  1) long period of thrusting during intercourse 
+  2) refractory period after male orgasm 
+  3) peculiar shape of glans
+Thrusting removes previous male's sperm from vagina.
+
+8/29/2009 3:38 PM
+Mermin's thought experiment to show quantum theory paradox:
+
+Machine has one emitter and two distant detectors. Each detectors can
+be set to '1', '2', or '3' and has a red and a green light. If a
+button at the emitter is pressed, one of the two lights at each of the
+emitters goes off. No information from the detectors can flow back to
+the emitter (enforced by distance/speed of light).
+
+Observations: if both detectors are set to the same number, they will
+always show the same color light; if they are set to different
+numbers, they will show the same color light only 25% of the time.
+
+Classically, if you assume 3 bits of information travel from emitter
+to the detectors, you get that the latter probability should be at
+least 33%
+
+QM predicts that such a machine can actually be built: the emitter
+sends out two identical photons; the detectors, depending on number
+setting, measure spin in 0, 120 or 240 degree direction. Probability
+that two different settings will give same sping is cos^2(theta/2),
+where theta=120; this is 1/4.
+
+This is similar to EPR paradox and Bell's inequality: shows that local
+hidden variable theories can't exist; either some signal travels
+faster than light between the detectors, or the system doesn't have a
+definite state until it is measured.
+
+8/30/2009 4:29 PM
+
+Limestone (CaCO3, calcium carbonate) is sedimentary rock from marine
+animal shells or microorganisms; chalk is a special form of soft
+limestone and marble is metamorphic (compressed) limestone. Heating
+limestone gives burnt lime (CaO), releaseing CO2. Treating burnt lime
+with water gives slaked or hydrated lime (calcium hydroxide, Ca(OH)2,
+very alkaline).
+
+Slaked lime is used in lime mortar and plaster: mixed with water and
+exposed to air, it will bind to CO2, harden and recreate calcium
+carbonate.
+
+Cement consists mainly of calcium silicates CaO.SiO2 made by heating
+ground limestone with clay. It hardens when water is added; the water
+serves as crystal water; no air is needed for this process.
+
+Gypsum (calcium sulphate hydrate, CaSO4.2H2O) is a mineral created
+when hot springs, vulcanos, seas etc. provide sulfur. For gypsum
+plaster, it is first heated to remove some of the crystal water; when
+water is later added, it hardens and gypsum is recreated.
+
+9/7/2009 6:29 PM
+Ideas from Musser's "Idiot's Guide to String Theory"
+
+"Ontogeny recapitulates phylogeny" also in physics: the various forces
+(and particles) are ultimately seen as aspects of a single entity
+(phylogeny), and in the early development of the cosmos they were
+indeed unified, then separated as the energy dropped (ontogeny).
+
+In special relativity, space and time are combined to form
+spacetime. Different observers slice it differently into space and
+time. In General Relativity, where gravity is taken to be equivalent
+to acceleration, the accelerated observer keeps slicing spacetime with
+different time axes, leading to a curved coordinate system: mass
+causes gravity (which is equivalent to acceleration) causes curvature
+of spacetime.
+
+Equivalence of mass and energy: in a fast moving train, two equally
+massive balls are thrown, one from the front and one from the
+back. They meet in the middle, stick together and fall to the
+ground. For the static observer, it looks as if one ball is slow and
+the other is fast, and when they meet they move together with the
+train's speed. This observer must conclude that the faster one is
+heavier: kinetic energy has mass.
+
+When two bosons are interchanged, their wave stays the same. When two
+fermions are interchanged, their wave changes sign. Two fermions can't
+sit on top of each other: the wave would have to be its own negative,
+i.e. would have to be 0.
+
+All fermions come in two versions: left-handed and
+right-handed. They're further divided in matter and antimatter. Weak
+force only acts on left-handed particles; its bosons (W&Z) have mass,
+unlike gluons and photons.
+
+Electron charge appears smaller than it really is, because the naked
+electron is surrounded by virtual electrons and positrons, attracting
+the positrons and repelling the electrons. At high energies, we can
+muscle through to the real electron, causing the electromagnetic force
+to become somewhat stronger. Similar arguments show that the strong
+and weak forces get weaker at higher temperatures, and eventually the
+three of them roughly meet.
+
+Gravitation varies much more dramatically with scale/energy. At the
+Planck scale (10^-35m) all 4 forces become roughly equal. Probing even
+smaller scales would require so much energy that a black hole would be
+created.
+
+Cosmological constant problem: accelerating universe requires a small
+non-zero constant; quantum theory predicts a huge one (vacuum energy
+from virtual particles).
+
+Main argument for string theory: gravity was not built in from the
+beginning, but a spin-2 particle naturally turned up; the graviton is
+known to be spin-2.
+
+Apparently, consistency of string theory requires General Relativity
+to hold!?
+
+The various string theories (9 space + 1 time dimension) unify in M
+theory: 10 space + 1 time. Extra dimensions are required to make
+Special Relativity work; using 10 dimensions unifies the particles of
+the Standard Model. The extra dimensions could be tiny, in which case
+gravity acting within them could look like electromagnetism to us; or
+they could be relatively large, in which case the end points of our
+open strings could be "glued" to a 3-D brane floating in the
+higher-dimensional space. Closed strings, like gravitons, could move
+between branes: large dimensions could explain the weakness of
+gravity, and they could be confirmed if gravity increases on small
+scales.
+
+Multiverse could consist of numerous universes: pockets where
+inflation has halted, the laws froze into different spots on the
+string theory landscape [each spot corresponds to a different way the
+extra dimensions curl up] and a local "Big Bang" occurred; in 
+between those pockets the empty space is still inflating. 
+[Added 10/22/2012, 10/4/2015:] Inflation can occur if you have a region 
+where an "inflation field" creates negative pressure (like a rubber 
+band: you need to put energy in to expand it) and if the energy 
+required to expand it to twice its volume is exactly enough to double 
+the energy contained in the field. 
+General Relativity says that negative pressure causes a negative 
+gravitational force that pushes things apart and enlarges the region,
+creating a self-sustaining exponential growth called inflation. 
+Inflation eventually halts in certain spots (which 
+turn into pocket universes when the energy stored in the inflation 
+field is turned into ordinary particles and radiation) because the 
+negative-pressure field eventually decays away. But this decay is 
+slower than the expansion of space, so you have "eternal inflation"
+surrounding the pocket universes. 
+Energy conservation is not violated by inflation: the density of 
+energy (which is stored as potential energy of the field) in the 
+inflating patch stays constant, so the total energy in the inflating 
+patch increases, but this is balanced by the growing negative energy 
+of the gravitational field (every gravitational field stores a 
+negative amount of potential energy). 
+It's quite possible that the total energy of our pocket universe is 0.
+
+Evidence for inflation: microwave background radiation is very uniform; 
+an ordinary Big Bang wouldn't be able to create that uniformity because 
+particles would have to move faster than c; in inflation there is enough 
+time to create homogeneity. But quantum fluctuations create slight 
+inhomogeneities which inflation would enlarge; the microwave background 
+shows exactly the right kind of fluctuations. The universe is flat (Omega 
+close to 1) which in an ordinary Big Bang model is an unstable situation. 
+Inflation creates Omega=1 automatically.
+
+Standard model claims protons are stable; string theory says they last
+on average 10^35 years before disintegrating.
+
+Supersymmetry: to every fermion there's a boson, to every boson
+there's a fermion. These partners are named with leading "s". None of
+them have been observed. Predicted by string theory and some other
+theories. They could be the cause of dark matter. The force related to
+supersymmetry might be gravity.
+
+The information content of a black hole (and of everything else) goes
+up with surface area and not with volume [massenergy ~ r and
+temperature ~ 1/r and information ~ massenergy / temperature]; this is
+an argument for the holographic principle: string theory in an
+n-dimensional spacetime with gravity is faithfully reflected by a
+string theory in a "surrounding" (n-1)-dimensional spacetime without
+gravity. We are sitting inside, but all information must also be
+stored in the outside.
+
+9/8/2009 12:30 PM
+
+Proof of existence of dark matter: a galaxy cluster consists of dark
+matter, hot gas, and a few galaxies. The gas is the major part of the
+ordinary matter. Two clusters collided. The gas stayed in the middle
+(x-ray picture); the galaxies and dark matter moved through each other
+(confirmed by gravitational lensing).
+
+11/7/2009 3:59 PM
+
+Steam power:
+
+1) Newcomen engine (~1710). Driving the piston out of the cylinder and
+   filling it with steam is *not* done by steam pressure but by action
+   of a counter weight. The cylinder is then cooled with water that's
+   sprayed in; the steam contracts and condenses and the resulting
+   vacuum pulls the piston into the cylinder, pulling the counter
+   weight up and driving the machine (which is used as a
+   pump). Problem: energy is lost by repeatedly heating/cooling the
+   cylinder.
+
+2) Watt engine (~1775). The cooling/condensing of the steam is done in
+   a separate cylinder; the first cylinder is always hot while the
+   condensing cylinder is always cool.
+
+   Two further Watt improvements: 
+   
+   a) use bored instead of cast cylinder, to produce better vacuum.
+   b) double acting engine: both halves of the main cylinder are
+   alternatingly filled with steam => same time for up- and
+   down-stroke, necessary for industrial applications other than
+   pumps.
+
+3) Cavish engine (~1800). Use high pressure steam for the first time.
+
+4) Steam turbine. (~1880). Better steel allowed a turbine to be driven
+   by high-pressure steam, giving many more revolutions per minute,
+   suitable for driving an electrical dynamo. Several such turbines
+   are placed in series, followed by a condenser, bringing the water
+   back to the boiler. These are the highest efficiency generators
+   available today (>40%).
+
+1/1/2010 3:09 PM 
+
+Plants, when attacked by herbivores such as caterpillars, produce
+chemicals that directly interfere with the attackers and also emit
+volatile chemicals that attract the natural enemies of the
+attackers. These signals may be picked up by nearby plants, causing
+them to start their own defense cascade.
+
+2/13/2010 7:28 PM
+
+Common sedimentary rocks:
+* Limestone from shells and corals of reefs 
+* Shale from mud in lagoons (between reef and beach)
+* Sandstone from sand at the beach
+* Coal from inland swamps
+So if the sea retreats and comes back, we often get a sequence
+limestone-shale-sandstone-coal-sandstone-shale-limestone-shale-...
+
+2/14/2010 2:35 PM
+Buddhism
+
+* Theravada (Sri Lanka, Thailand, Burma, Laos, Cambodia) "Lesser
+  Vehicle" - mostly focused on original teachings of the Buddha to
+  attain individual enlightenment. Texts in Pali.
+
+* Mahayana (China, Korea, Japan, Tibet, Nepal, Vietnam) "Greater
+  Vehicle" - mostly focused on attaining true buddhahood which aids in
+  universal liberation and enlightenment. Accepts the later Lotus
+  Sutra (1st century BC); defines Bodhisattvas as a being close to
+  enlightenment who holds back to help others on the path to
+  liberation. Many sects: Tibetan, Zen, etc. Texts in Sanskrit.
+
+* Vajrayana, or Tantric Buddhism. (Tibet) "Diamond vehicle". Sometimes
+  considered part of Mahayana. Focused on rituals to achieve
+  enlightenment.
+
+3/14/2010 3:58 PM
+Airtraffic Control (ATC) and Airplane navigation
+
+* Every plane is assigned to an ATC region at all times. Communicate
+  by radio. As the plane leaves one region, it is handed off to
+  another, often communicating on a different frequency. VHF/UHF is
+  used on land (line of sight); longer range HF over the ocean.
+
+* Each ATC group uses ordinary radar ("primary surveillance") to track
+  the planes it is responsible for. It also uses secondary
+  surveillance radar (SSR): a vertically rotating transmitter sends
+  out a signal, and every (large) plane has a transponder that
+  automatically responds to the signal with a message that includes
+  identification of the plane and possibly the height above
+  ground. Based on the time when this response arrives, ATC can figure
+  out the plane's position.
+
+* Planes do not have radar and don't know what's happening around
+  them. Except for the modern ADS-B technology that's being introduced
+  on passenger aircraft: Each plane broadcasts its precise location to
+  other planes and to ATC. The plane knows its location through GPS
+  improved by a network of geostationary satellites (WAAS).
+
+* Navigation is most often through VORs: a station sends out a signal
+  that varies in each direction; when receiving the signal you know at
+  what direction you are from the VOR. With more expensive equipment
+  you can also tell the distance to the VOR.
+
+* To guide a plane during landing, airports have instrument landing
+  systems (ILS). Antennas at each side of the runway broadcast a
+  signal that decreases in strength depending on direction; directly
+  above the runway the two signals are equal in strength, and the
+  plane (even small ones) can detect this. A similar system is used
+  vertically; two signals are equal in strength iff the plane is on
+  the right flight path down to the grown.
+
+4/14/2010 3:46 PM
+
+Central limit theorem proof: probability distribution of the sum of 
+independent variables is given by convolution of the distributions; 
+Fourier transform turns this into multiplication. Now use the fact that 
+if f(0)=1, f'(0)=0 and f''(0)=-1, then f^n(x/sqrt(n)) -> exp(-x^2/2). 
+Inverse Fourier transform of a Gaussian is a Gaussian. 
+
+4/25/2010 3:05 PM
+From Landsburg's "The Armchair Economist":
+
+Indifference principle: For people with average tastes and abilities, 
+all activities are equally desirable, taking all factors into account. 
+(Else nobody would engage in the least desirable ones.) Only owners of 
+resourses in fixed supply can avoid it. 
+
+Economists call a policy inefficient if it creates "deadweight losses", 
+i.e. losses (expressed in dollars) that are not offset by other's gains. 
+
+When having to choose between several alternatives, ask each affected 
+person how much they would be willing to pay to effect a particular 
+alternative (benefit) or to prevent that alternative (cost). Add up all 
+benefits and costs and pick the alternative that maximizes 
+benefits-costs. Argument for this method: if another alternative is 
+chosen, then one can theoretically construct a new alternative that 
+everyone would prefer over the chosen one. (So in that sense the chosen 
+alternative is inefficient.) 
+
+First Fundamental Theorem of Welfare Economics: Competitive markets 
+allocate resources efficiently. (Reason: if a product has a single 
+market price, then all producers will operate at the same marginal cost, 
+eliminating inefficiencies.) Rationality or biological evolution do not 
+always lead to efficiency, see e.g. sexual selection leading to 
+expensive signalling processes. 
+
+Second Fundamental Theorem of Welfare Economics: every efficient 
+resource allcation can be achieved by first redistributing income, and 
+then letting the competitive market take over. 
+
+Winner's curse: the winner of an auction valued the item higher than all 
+the other (expert) bidders, so it's likely that he overvalued the item 
+and will be disappointed by it. Same is true for every purchase you 
+make: your quality estimate of an item is not always correct, sometimes 
+too high and sometimes too low; you purchase only items whose quality 
+you estimate to be very high, and those quality estimates are likely to 
+be higher than the true quality. 
+
+5/8/2010 7:06 PM
+Aumann's "Agreeing to Disagree" theorem: two honest truthseekers should 
+over time agree when discussing the truth of a statement, since each one 
+will treat the other's opinion as new evidence, to be added to the 
+private evidence. 
+
+The "Delphi method" uses this idea to find a rough consensus among a 
+group of experts: they all answer a questionnaire and give written 
+reasons for their answers; these answers and reasons are then anonymized 
+and distributed to each member of the group; then another iteration 
+starts, the questionnaire is filled out again, etc. 
+
+9/19/2010 4:09 PM
+The only living dinoraurs (Dinosauria) are the birds. Crocodiles 
+belong to the larger group Archosauria and are the closest living 
+relatives of birds. The other reptiles are more distant relatives of 
+birds/crocodiles. 
+
+10/3/2010, updated 3/15/2017
+Homo erectus lived in Africa, Europe and Asia, 1.9-0.1 million years ago. 
+They controlled fire and used sophisticated stone tools.
+Homo ergaster is probably identical to or an ancestor of H. erectus. 
+
+H. ergaster/erectus gives rise to H. heidelbergensis in Africa (about 
+600,000 years ago). H. heidelbergensis moves to Europe. 
+
+Neanderthals appear in Europe and the Near East about 400,000 years 
+ago, having evolved there from H. heidelbergensis. They eat almost 
+exclusively meat of animals that they hunt collaboratively with spears 
+and other weapons. Evidence of cannibalism exists at numerous Neanderthal 
+sites. They can speak but they don't have art and few ornamental objects.
+
+H. sapiens arises from H. heidelbergensis in Africa (about 200,000 years 
+ago); about 40,000 years ago, during the last ice age (which lasted from 
+110,000 - 12,000 years ago), they start to move to Europe and Asia, 
+displacing the Neanderthals. The last Neanderthals die out 30,000 years ago.
+
+As H. sapiens moved out of Africa, they interbred with Neanderthals, 
+probably in the Middle East. Evidence: contemporary European, Asian and 
+Australian H. sapiens share about 2-4% of their genome with Neanderthals 
+(sequence completed in 2010), but sub-Saharan H. sapiens don't.
+
+4/6/2011 9:58 PM
+Uran consists mostly of U-238 and a little U-235. Only the latter is 
+useful for reactors or bombs. Have to use physical methods (centrifuges 
+etc.) to enrich U-235 or separate the two. In a reactor, the U-235 
+molecules split when hit with a neutron, creating heat, fission products 
+and two more neutrons. Some of the U-238 turns into Plutonium-239, which 
+can also be used for reactors or bombs (nuclear reprocessing). Cesium 
+rods and/or water with boron is used to slow down or swallow neutrons, 
+to prevent an exponential chain reaction and explosion. The fission
+products need to be cooled for a long time since they keep decaying
+further.
+
+[Added 1/12/2012:] Critical mass is the smallest amount of material that 
+starts a self-sustaining chain reaction. (17cm-diameter-sphere of U-235, 
+10cm-diameter-sphere of Pb-239). In an atomic bomb, the material is first 
+kept apart in a subcritical configuration, than imploded (with some other 
+conventional explosive) to reach critical mass and nuclear explosion.
+
+Modern nuclear weapons use the Teller-Ulam design: a conventional atomic
+bomb explodes and compresses a column of fusion fuel; the column contains 
+a sub-critical core of fissile material which becomes critical after 
+compression, explodes, and causes the fusion reaction to start.
+
+5/28/2011 11:53 AM
+According to PPP (Purchasing Power Parity), 1 Euro in Germany in 2010 
+buys as much as $1.24 in the US.
+
+6/26/2011 8:29 PM
+Basic personality traits (big five model): extraversion, emotional 
+stability (neuroticism), agreeableness, conscientiousness, openness to 
+experience
+
+Backfire effect: sometimes beliefs are strengthened when *contrary* 
+evidence is presented.
+
+6/28/2011 12:47 PM
+Germany loses battle of Stalingrad (turning point of war): 2/1942
+Devastating US+UK bombings of Hamburg: 7/1943
+Normandy landing: 6/1944
+German officer's assassination attempt on Hitler: 7/1944
+US+UK bombing of Dresden: 2/1945
+War ends: 5/1945
+
+8/1/2011 2:30 PM
+First well-defined alphabet: Phoenician, 14th century BC (right-to-left, 
+consonants only). Possibly preceeded by a script used by Semitic workers 
+in Egypt. 
+
+Phoenician gives rise to Greek (8th century BC, left-to-right, with 
+vowels) and that to Latin, Cyrillic etc. 
+
+Phoenician also gives rise to Aramaic (8th century BC, right-to-left, 
+without vowels) which developed into Hebrew and Arabic (same). 
+Aramic also developed into Brahmi script in India (6th century BC, 
+usually left-to-right, obligatory vowel notation) which gave rise to 
+many Asian scripts: Devanagari, Bengali, Thai etc. 
+
+12/29/2011 2:49 PM
+
+Tower of Babel story from the Bible: humanity was united, speaking one 
+language, building a tall tower. God said: "These people can accomplish 
+anything!" So he decided to separate them and confuse them by giving 
+them different languages.
+
+Rotational parabaloid, inscribed in a cylinder, will cut the cylinder's 
+volume in half. Also works for base areas other than circles.
+
+1/1/2012 7:38 PM
+
+Hawkins' "On Intelligence" describes cortex as a memory-prediction 
+machine: 
+
+Every region of cortex receives a sequence of input patterns from two or 
+more lower regions and predictions from a higher region. It classifies 
+each input patterns and processes the sequence of classifications 
+(basically by memory lookup of learned correlations) into a more 
+abstract and stable pattern ("invariant representations") which is sent 
+on to the higher region. The current pattern classification and the 
+prediction received from the higher region also serve to predict the 
+next pattern classification, which is sent down to the lower regions. 
+
+In the motor cortex, these "predictions" flowing down are actually 
+commands. 
+
+Consider the primary visual cortex V1 not as a single region, but as a 
+collection of many small independent regions, connecting up to V2 
+subregions. 
+
+Cortex has six vertical layers, from outside to inside: 
+1) Horizontal axons connecting different areas 
+2&3) Receive signals from layer 1 (predictions from higher regions and 
+delayed input from own region) as well as from layer 4; send signals 
+to higher regions, while also synapsing in layers 5&6. 
+4) Inputs from lower regions arrive at the neurons here; they send 
+signals to layers 2&3. 
+5&6) send signals down the hierarchy, to layer 1 where the signal 
+is spread out over a large area of the lower region. Receive signals 
+from 2&3 (signals moving up) and from incoming axons that connect to 
+layer 4. Some cells in 5 send axons to the thalamus, which sends 
+delayed signals back to layer 1 of the same region. (Proposed mechanism 
+for autoassociative learning.) 
+
+A region is organized as a set of vertical columns; every column 
+represents one classification; layer 4 cells in a column fire if that 
+classification is received from below; layer 6 cells fire if that 
+classification is received from below or predicted. Layer 2&3 produce 
+the invariant representation. 
+
+12/28/2012 11:58 PM
+
+Turing's model for pattern generation in biology: two substances 
+("morphogens"), activator and inhibitor, interact by 
+diffusion-reaction equation. Inhibitor reduces production of 
+activator and diffuses faster than activator. Then you can get 
+patterns of regions with high/low activator concentration. These 
+patterns can be stable in time, or can be oscillating (chemical 
+models exist for both situations). Minimal size of patterns is 
+governed by diffusion coefficients (=> small animals tend to have 
+fewer patterns, tails don't have dots but stripes). Not all 
+biological patterns are generated like this, but some examples of 
+Turing pattern generation have been found.
+
+12/28/2012
+The Milky Way (and most galaxies) started out as a homogeneous disk 
+of stars rotating about the central black hole. A collision with 
+small neighboring galaxy Sagittarius c. 2 billion years ago and 
+possibly some other collisions disturbed the elliptical paths of the 
+stars. Staggered ellipses resulted in spiral arms, regions of high 
+star density that themselves rotate about the center. The circular 
+rotation of the arms is independent of the elliptical rotation of the 
+stars that move in and out of the arms. 
+
+There is a bar in the center, two major arms attached to the bar's 
+ends, and two minor arms between the major arms.
+
+The galaxy has mopped up smaller galaxies in the neighborhood for 
+fuel. In 4 billion years it will collide with the larger Andromeda 
+galaxy and turn into an elliptical galaxy (an ellipsoid of stars 
+without spiral structure; each star on an elliptical path about the 
+center).
+
+2/28/2013 1:02 PM
+Snowball Earth: The last one occurred c. 650MYA, continents were 
+close together at the equator, leading to lots of precipitation and 
+high temperatures, which washes out lots of CO2 (arising from 
+volcanos) from the atmosphere and binds it to minerals as limestone 
+CaCO3 ("silicate weathering"). CO2 atmosphere levels drop, resulting 
+in reduced greenhouse effect, lowering temperatures. Reflection from 
+snow and ice cause positive feedback effect, resulting in snowball 
+earth. Lasted 6-12MY. Ended when CO2 levels built up again. Bilateral 
+animals appeared some 80MY later.
+
+4/29/2013 2:41 PM
+Temperature T of a system with entropy S and energy E is given by 
+  dS = (dE)/T
+This is compatible with the fact that hotter systems lose energy to 
+cooler systems, and that in any such interaction the total entropy 
+increases:
+if system 1 is hotter than system 2, T1>T2, and system 1 gives energy 
+dE to system 2, then system 1 loses entropy (dE)/T1 and system 2 
+gains entropy (dE)/T2 > (dE)/T1. 
+
+Systems can have negative temperature: this happens if the number of 
+states a particle can be in is bounded, which typically implies that 
+the particles can't have much kinetic energy. Increasing the total 
+energy of such a system pushes more and more particles in the 
+high-energy states, which eventually leads to decreasing entropy. 
+(Min entropy= all particles in lowest state or all in highest state; 
+max entropy = particles equally distributed among the states.) Such a 
+system will transfer energy to any positive-temperature system it is 
+brought in contact with, and is therefore "hotter" than any such 
+system. "Hottest" possible system: temperature just below 0.
+
+Intuitively, temperature is the average kinetic translational energy 
+per particle (ignoring rotational and internal vibrational energy, if 
+any.) This is not a definition but a consequence of the equipartition 
+theorem, which doesn't apply to the situation described above. It 
+says that the total energy per particle is equally distributed among 
+the particle's degrees of freedom, and that temperature is 
+proportional to average energy per degree of freedom. A molecule with 
+more degrees of freedom (b/c of rotational or vibrational modes) 
+therefore needs more energy (heat) input to rairse its temperature, 
+since some of the energy will be given to degrees of freedom, such as 
+rotation or internal vibration, that don't contribute to temperature.
+
+5/5/2013 9:22 PM
+Laser cooling: use atoms whose excited energy level exceeds the 
+ground level by deltaE, and shine laser photons on them whose energy 
+(in rest frame) is a bit below deltaE. Then only atoms moving against 
+the laser beam will absorb a photon (Doppler effect increases 
+photon's energy in atom's frame;  wavelength in atom's frame = 
+wavelength in rest frame*(1-v/c)). Momentum of photon (p=deltaE/c) is 
+transferred to atom, slowing it down; atom transitions to excited 
+energy level. Later it emits a photon (wavelength hc/deltaE in its 
+frame) in a random direction; in rest frame, Doppler effect causes 
+emitted photons moving in direction of atom to have higher energy 
+than those moving against the atom, so that the emitted photon's 
+momentum again slows the atom down, on average.
+
+3/29/2014 2:49 PM
+Monte Carlo method to play Go: 
+
+Dynamically build a tree of positions and associated values by 
+simulating many complete games that start at the current positions, 
+which is the root of the tree. For each position p in the tree and 
+each move m in position p record the values 
+  N(p,m) = # of times past simulations have chosen move m in positions p
+  W(p,m) = # of Black wins resulting from past simulations that chose m in p
+
+The early phase of every simulation ("descent phase") uses the N,W 
+values to chose promising moves, but employing a rule that ensures 
+that rarely or never-before chosen moves are preferred. Once the 
+simulation leaves the tree, it proceeds with a fixed randomized 
+strategy for both sides ("roll-out phase"). (Better than complete 
+randomization are roll-out strategies that take some pattern matching 
+on master games into account.) Once the end of the simulated game is 
+reached, one new leaf (the first position visited in roll-out) is 
+added to the tree and the N,W values of all visited positions in the 
+tree are updated ("update phase"). (One may also initialize N,W 
+values of the new leaf with "virtual" values coming from some 
+evaluation function learned from master games.)
+
+We continue simulating games until we run out of time, then choose 
+our actual move based on the computed N,W values of the current 
+position. 
+
+3/29/2014 3:35 PM
+Inflation at beginning of universe is needed to account for flatness 
+or metric and uniformity of microwave background radiation.
+
+Compatible with General Relativity: energy and pressure (and all the 
+other components of the stress-energy tensor) cause gravity; pressure 
+can be negative but energy cannot. A region has negative pressure if 
+expanding it will increase its energy (as in a rubber band). If you 
+have a region with a bit of energy and a lot of negative pressure, GR 
+will give a gravitational repulsion, so the region expands. This 
+causes its energy to increase (because of the negative pressure). So 
+if the initial combination of energy and negative pressure was just 
+right, you end up with a larger region that has the same energy 
+density and negative pressure as the original region. The process can 
+continue, giving inflation.
+
+During inflation, the universe is very empty and cold. At end of 
+inflation, the energy is converted into radiation and particles: very 
+hot and dense, start of big bang.
+
+380,000 years after inflation, atoms formed and the universe became 
+transparent to electromagnetic radiation, which we now observe as the 
+microwave background. 
+
+8/14/2014 5:05 PM
+Cells at the kidneys sense blood pressure; if it is too low, they 
+cause the release of hormone renin. Renin increases blood pressure by 
+a) contracting blood vessels, and b) causing the kidneys to pull less 
+sodium out of the blood, resulting in more water in the blood 
+(osmosis) and higher blood pressure.
+
+About 20% of the population have a genetic condition where increased 
+salt intake is not excreted by the kidneys and therefore causes high 
+blood pressure.
+
+Baroreceptors in carotid artery and aorta sense elevated blood 
+pressure and relay the information to the brainstem which then 
+downregulates blood pressure by activation of the parasympathetic and 
+deactivation of the sympathetic nervous system.
+
+11/2/2014 3:25 PM
+Energy comes only in two forms: motion and mass. "Motion" is 
+momentum, and "mass" is rest mass, which includes potential energy, 
+chemical energy, thermal energy etc.
+
+The formula is Einstein's E^2 = m^2 c^4 + p^2 c^2 (where E=total 
+energy, m=(rest) mass, p=momentum, c=speed of light). In this 
+equation, E and p depend on the observer; together they form the 
+energy-momentum vector (E/c, p) whose length in the Minkowski metric 
+is mc; this length is not observer dependent. 
+
+Photons have zero mass but positive energy and non-zero momentum. A 
+system of two photons, moving in opposite directions, has zero total 
+momentum but positive energy, therefore it must have positive mass.
+
+11/27/2014 6:11 PM
+Multi-level Price equation explains how altruism can evolve and group 
+selection occurs: an altruistic gene lowers the fitness compared to 
+other members of one's group, but may increase the overall fitness of 
+the group. If the other groups shrink as a result and the own group 
+grows, then the relative frequency of the altruistic gene in the 
+overall population can increase.
+
+(added 12/25/2019) Trivers has a theory how "reciprocal altruism" can
+evolve:  if organisms can recognize each other and repeatedly interact
+with each other, it can pay to perform an act that harms you a little 
+while helping someone else a lot, in the expectation that they will pay 
+back. (Similar to the successful tit-for-tat strategy in Axelrod's 
+repeated prisoner's dilemma tournaments.) In this scenario, it's crucial 
+to detect and punish cheaters and recognize friends, both of which are 
+ubiquitous in human societies.
+
+9/20/2015 4:53 PM
+Troposphere is the lowest layer of the atmosphere, up to ca. 7-20km. 
+It's where all the weather occurs. Above it: stratosphere and 
+mesosphere. 
+
+Troposphere, stratosphere and mesosphere don't conduct electricity 
+well; above them (at ~100km) is the ionosphere which is a good 
+conductor, as is the Earth's surface. So we have a capacitor 
+consisting of Earth's surface and the ionosphere, separated by 
+tropo/strato/mesosphere. This capacitor is being charged by 
+thunderstorms, leading to negatively charged surface and positively 
+charged ionosphere. Friction in the clouds collects negative charges 
+at the bottom of clouds and positive charges at the top; lightning 
+then transfers the negative charges to Earth's surface; the positive 
+charges travel to the ionosphere. There is also a "fair 
+weather current" which constantly and slowly transports negative 
+charges from the Earth back to the ionosphere.
+
+11/29/2015 6:50 PM
+Betz law says that a wind turbine cannot extract more than 59% of wind 
+power (since it isn't possible to bring the wind to full stop, so some 
+kinetic energy must be left). This limit comes from energy considerations 
+alone and doesn't take into account that some energy is also necessarily 
+lost in turbulence at the blades.
+
+In realistic wind turbines, increasing the number of blades increases 
+the efficiency slightly, decreases the optimal speed (thereby decreasing 
+noise), increases torque, and increases cost significantly.
+
+Early wind turbines were two-bladers. Three-bladers are almost as efficient 
+as two-bladers, easier to turn when wind direction changes, and not as noisy, 
+which is why they are almost always used today. Recently, off-shore windparks 
+have started to investigate two-bladers since they are easier to transport 
+and install and noise is not an issue.
+
+9/25/2016 2:47 PM
+When transmitting electrical power through a line, the current (not the
+voltage) causes the losses; that's why high voltage/low current schemes 
+are used.
+
+Over long distances, DC lines are used, even though AC-DC conversion causes 
+some additional losses. The reason is that DC doesn't have the problem of 
+reactive currents ("Blindströme").
+
+With AC, if an inductive or capacitive load is present, current and voltage 
+will be out of phase, which means that the effective transmitted power is 
+smaller than the product of effective current and effective voltage. A 
+portion of the current, the "reactive current", does not contributes to 
+power transmission but passes through the lines and causes losses.
+
+11/6/2016 4:33 PM
+Method of least squares: we want to estimate a1,...,aq by measuring 
+f1(a1,...,aq),...,fn(a1,...,aq). The functions fi are known, but measuring 
+them gives values Mi which involve an error ei that we assume is normally 
+distributed with mean 0 and standard deviation si. n is (often much) larger
+than q.
+
+The joint probability P(e1,...,en) has a density function that is 
+proportional to 
+exp(-e1^2/(2s1^2))*...*exp(-en^2/(2sn^2))= exp(-1/2*(e1^2/s1^2+...+en^2/sn^2)) 
+and to maximize this (maximal likelihood principle) we have to minimize 
+the sum of squares e1^2/s1^2+...+en^2/sn^2. So we pick as our best estimate 
+those values a1,...,aq which minimize
+
+(f1(a1,...,aq)-M1)^2/s1^2+...+(fn(a1,...,aq)-Mn)^2/sn^2
+
+This can be done efficiently if the functions fi happen to be linear, 
+but the approach works in all generality.
+
+1/6/2017 5:10 PM
+Structure of ice and snowflakes: normal water ice (hexagonal ice, ice Ih) 
+consists of identical layers, with each layer consisting of hexagons. Each 
+water molecule can be thought off as a tetrahedron with the oxygen at the 
+center, two corners positively charged (hydrogens) and two negatively 
+charged (lone electron pairs). Oppositely charged corners of different 
+molecules form "hydrogen bonds". Six can form a (staggered, not flat) 
+hexagon, and many such hexagons attach to from a layer. Half of the 
+molecules in a layer form a hydrogen bond to the layer above, half to 
+the layer below.  
+
+Irregular or round sides of a growing ice crystal grow fastests since they 
+offer many possibilities for new molecules to attach; these sides therefore 
+tend to straighten out, and the basic form of an ice crystal is a hexagonal 
+column. 
+
+Snow crystals form in clouds when supercooled water vapor sublimes into ice. 
+Temperature, humidity and pressure determine whether the crystal tends to 
+grow orthogonal to the layers, forming long columns or needles, or parallel 
+to the layers, forming thin hexagonal plates. In the latter case, it often 
+happens that availability of vapor molecules is highest at the hexagon's 
+corners, resulting in spikes growing out of these corners. Since the 
+temp/humid/pressure conditions tend to be the same at the six corners 
+of the small (ca. 1 mm) crystals, symmetrical growth results.
+
+1/6/2017 5:58 PM 
+Renormalization in Quantum Field Theory: 
+From Feynman diagrams we need to compute certain expressions M(λ,p), where 
+λ is a field-strength parameter, and p is a momentum vector. Unfortunately, 
+M(0,p)=0 and M(λ,p)= ∞ if λ>0, which is physically meaningless. The expression 
+M(λ,p) involves an integral over 4-dimensional spacetime, which can be solved 
+analytically, even for dimensions other than d=4. In fact, the expression 
+is analytic in the dimension d, which we now treat as a complex parameter. 
+M_d(λ,p) is finite if d<>4. The idea now is to treat λ as a function of d, 
+with lim_(d->4) λ = 0 und such that lim_(d->4) M_d(λ,p) gives a finite physically 
+meaningful answer. For a particularly simple p0 we can measure 
+m0=lim_(d->4) M_d(λ,p0), which can be solved for λ to determine the 
+speed with which λ should approach 0 as d->4. This then gives physically meaningful
+values for all p, which can be checked against experiment.
+
+3/11/18
+Unruh effect: in an empty spacetime, an accelerated observer will observe 
+particles (a very small effect). Intuitively: the virtual particles popping 
+in and out of existence appear to him as real. This is closely related to 
+Hawking radiation of a Black Hole: the static observer outside the Black 
+Hole is "accelerated" and therefore observes particles. The standard 
+explanation of "one partner of a virtual particle pair created near the 
+horizon falls in, the other becomes real" is too simplistic: the radiation 
+does not originate only near the horizon.
+
+9/12/2019
+In classical and also in intuitionist/constructivist logic, you prove ~p 
+by showing that the assumption of p leads to a contradiction.
+In classical logical, you can use proof by contradiction: to prove p,
+you show that the assumption of ~p leads to a contradiction.
+
+In intuitionist logic, the rule of the excluded middle is not valid; in 
+particular, the rule ~(~p) -> p  is missing, and proof by contradiction is 
+not accepted. This makes sense if (for example) one interprets p as "p can 
+be proven" and ~p as "p leads to a contradiction": after all, there might be 
+statements p that cannot be proven but also don't lead to a contradiction 
+[in fact Gödel showed us such statements].
+
+9/19/2019
+The current expansion rate of the universe ("Hubble parameter") is about 
+70 km/s/Mpc, which amounts to a distance dilation of 7% per billion years.  
+This rate will slowly decrease over time and settle down at 6% per billion 
+years eventually.  This slowdown is caused by ordinary matter and energy. 
+(Before we knew about dark energy, which pushes things apart and has constant 
+density, we believed that the presence of ordinary matter and energy would 
+eventually halt the expansion and cause the Hubble parameter to approach 
+0%/Gyr.)
+
+9/19/2019
+Haskell is a functional programming language: (almost) everything is done by 
+composing  functions without side effects; needed side effects (input/output) 
+have to be specially marked. 
+
+Syntactically, indentation is used to indicate parts of an expression that belong together.
+Application of the function f to the arguments x and y is written as f x y (left 
+associative, using Currying).
+            
+It is lazily evaluated: arguments to a function are only evaluated when and to the extend 
+that the called function needs the values; this allows for arguments that are infinite 
+sets or sequences. 
+
+Functions can take functions as arguments and produce functions as values; e.g. 
+     map :: (a -> b) -> [a] -> [b] 
+takes a function from type a to type b as input and produces a function from lists of type a 
+to lists of type b as output; "->" is right associative. (This function declaration uses 
+"type variables'', placeholders for actual types. Types start in upper case, type variables 
+in lower case.)
+              
+Functions can be defined using a list of pattern matching rules; the first rule in the 
+list matching the current arguments is used.
+
+The user can define new types, even ones that include type variables, called parameterized
+types. Type definitions, like function definitions, may be recursive.
+
+A "type class" is a collection of types (including parameterized types) that all implement a
+certain interface; e.g. all the types in the type class Ord are ordered and implement a
+function GreaterThan.  The parameterized types in a type class all must have the same 
+"kind", i.e. the same number and order of parameters. 
+
+When defining a function whose domain/codomain contains type variables, we can require that 
+the types replacing those variables must belong to certain type classes, thereby ensuring 
+that they implement certain required functions.  E.g.
+         iselem :: (Eq a) => a -> [a] -> Bool
+is a function that decides whether an item of type a is in a list of type [a]; the type 
+a must belong to the Eq type class of types that implement =.
+
+Functor is a type class containing parameterized types f that for every type a produces 
+a new type f a,  and such that "mapping over it" is defined, i.e. there is defined 
+a function
+        fmap :: (Functor f) => (a -> b) -> f a -> f b
+that satisfies the axioms of a category-theoretical functor (where a Haskell functor is 
+a category-theoretical functor from the category of Haskell types to the category of 
+Haskell types, with Haskell functions as morphisms).
+
+Example functors are: lists of type a; trees of type a; Maybe a (the latter is just like a 
+but with a new special value 'Nothing' thrown in). In one view, f a represents values of 
+a "wrapped in" a new computational context provided by f.
+
+A function that reads user input or a random number or writes text output formally produces 
+an "IO action" as output; such functions are considered "tainted" since they have side 
+effects; these IO actions can be performed only in the main loop of the program.
+IO is an example of a monad. Monads form a type class of functors that are useful to 
+chain actions together (as in IO, Maybe) or keep state or logging information when a 
+sequence of actions is performed (as in a parser) or to keep track of several possible 
+results of a computation (as in lists). The important operation of a monad is
+    (>>=) :: (Monad m) => m a -> (a -> m b) -> m b
+[Think of the values of m a as "actions" that result in value(s) of type a when performed; 
+the function a -> m b represents another action that modifies these a-values to b-values; 
+the result of >>= is the composition of these actions: a value of type m b.] To make 
+chaining of monadic actions easier, a special do/return/<- syntactic sugar is provided 
+which allows for an imperative programming style.
+
+9/6/2019
+Origin of eukaryotes and the cell nucleus (following Thomas Cavalier-Smith):
+Eukaryotes and archaebacteria are sister groups with a common prokaryotic 
+ancestor. The eukaryotic branch evolved phagocytocis (which is the key 
+innovation enabling all the others), endomembranes, a nucleus and then 
+captured a bacterium to serve as mitochondrion. 
+In prokaryotes, the DNA is attached to the inside of the cell 
+membrane. The ancestor of eukaryotes (probably an actinomycetes) had a 
+single cell membrane, unlike most other bacteria which have a double 
+cell membrane. This allowed phagocytocis to evolve. 
+During phagocytocis, a part of the cell membrane with attached
+DNA can turn inward and form a vesicle inside the cell, still
+with DNA attached. Several such vesicles, when merging, can create
+the endoplasmic reticulum connected to a double-membraned nucleus with 
+DNA inside, and nuclear pores at the locations where they merged. These 
+pore complexes are crucially important to let RNA out of the nucleus. 
+
+12/25/2019
+Unit quaternions form a 3-dimensional real Lie group, topologically S^3, 
+algebraically SU(2). This group is the universal cover of SO(3) via a
+surjective 2-1 homomorphism SU(2)->SO(3), so that SO(3)=SU(2)/{+1,-1} 
+can be thought off as the three-sphere with antipodal points identified. 
+Every rotation in R^3 can be described by a unit vector (axis) u and an 
+angle a, where (a,u) and (-a,-u) describe the same rotation in SO(3), 
+but these two are distinguished in SU(2).
+
+3/14/2020
+Social network graphs in humans and primates show "degree assortativity": 
+nodes tend to be connected to nodes of a similar degree, a result of status 
+seeking.  In most other naturally occurring graphs (airport connections, web 
+links etc.) we see the opposite: degree disassortativity. 
+
+6/3/20
+In Quantum Electro Dynamics (QED) the "field" view of classical electromagnetism 
+and the "particle" view of mechanics are unified: both theories become quantum 
+fields, which are operator-valued distributions on spacetime; the underlying 
+Hilbert space is a Fock space.
+
+Electrons are the quanta of the electron (quantum) field and photons are the 
+quanta of the electromagnetic (quantum) field; in both cases, the fields are 
+the fundamental entities; in many states of the quantum fields, the number and 
+types of these quanta are not defined (they are defined in the eigenstates of 
+the Hamiltonian, where the energy is well-defined). While electrons have location, 
+photons do not. Think of a photon as a "wave packet" that can have any of a large 
+number of shapes allowed by the classical field equations.
+
+To arrive at the quantum field for electromagnetism, one starts with the classical 
+Maxwell field equations; to arrive at the quantum field for electrons, one starts 
+with the Dirac equation (which itself is a quantum wave equation for the electron 
+and does not describe a classical field, therefore this process is called "second 
+quantization").
+
+The procedure to turn a field into a quantum field is similar in the two cases.  
+The field is expanded as a linear combination of eigenfunctions, and the 
+coefficients in that expansion are replaced by suitable operators. These operators 
+turn out to be the raising and lowering operators on the Fock space constructed 
+on the Hilbert space whose orthonormal basis is given by said eigenfunctions. For 
+electromagnetism, the symmetric Fock space is used. For electrons, the antisymmetric 
+Fock space is used. An element of the canonical orthonormal basis of this Fock space 
+is a list |n_1,n_2,...> of non-negative integers, almost all zero, where n_i is 
+interpreted as the number of field quanta belonging to the i-th eigenfunction.
+
+
+
+
+
+
+
+======================================================================
+This is a diary of facts and ideas I came across and wrote down for 
+my own benefit; some may not make sense to you without further 
+explanation. Nothing here is original but I left out all sources and 
+references.
+
+Axel Boldt
+axelboldt@yahoo.com
+http://math-www.uni-paderborn.de/~axel/
+======================================================================

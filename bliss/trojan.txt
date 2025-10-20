@@ -1,0 +1,43 @@
+Subject:      Re: [masq] 1st virus in Linux :( (fwd)
+From:         alan@lxorguk.ukuu.org.uk (Alan Cox)
+Date:         1997/02/09
+Message-Id:   <m0vtcfH-0005FcC@lightning.swansea.linux.org.uk>
+Sender:       owner-Linux-Kernel@vger.rutgers.edu
+References:   <6QZMm86zcsB@khms.westfalen.de>
+Content-Type: text
+X-Hdr-Sender: alan@lxorguk.ukuu.org.uk 
+X-Env-Sender: owner-Linux-Kernel-Outgoing@vger.rutgers.edu
+Newsgroups:   linux.dev.kernel
+
+
+> It's a virus in the old sense all right.
+
+No. Its a trojan. If the superuser doesn't run a binary containing it then
+it cannot affect more than the binaries a user has created of their own.
+Having the superuser run random user installed binaries could do far
+worse.
+
+> its own remover, if you execute a binary with some weird option in the GNU  
+> long option style, and in that if creates a log of its activities.
+
+Thats actually a bug - its meant to exec the 'log' copy.
+
+> Actually, I fail to understand the need of people to relabel a virus as a  
+> trojan.
+
+Because there are specific distinctions in security between a program
+which actively operates and seeks to attack system resources or applications
+to infect things and a trap that sits waiting for someone dumb enough to
+run it.
+
+McAffee are also wrong in that its the first unix virus for other reasons,
+such as the fact if you class it as a virus then people have demoed other
+similar tools. Those kind of latent trojans are big business in the
+military security/information warfare world, and thus I'd also suspect soon
+in the realms of sabotage and the less legal side of things.
+
+Once you've got the BLISS source reversed BTW you can port it to just
+about any OS I can think of including stuff like NT and VMS in a matter of 
+of minutes
+
+Followups to linux-security and or bugtraq

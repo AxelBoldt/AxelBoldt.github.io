@@ -1,0 +1,41 @@
+Received: from mail2.redhat.com (mail2.redhat.com [199.183.24.247]) by cbu.pvtnet.cz (8.7.6/8.7.3) with SMTP id IAA15147 for <snajdr@pvt.net>; Wed, 5 Feb 1997 08:10:59 +0100 (MET)
+Received: (qmail 4920 invoked by uid 501); 5 Feb 1997 06:56:19 -0000
+Resent-Date: 5 Feb 1997 06:56:19 -0000
+Resent-Cc: recipient list not shown: ;
+MBOX-Line: From linux-security-request@redhat.com  Wed Feb  5 01:56:06 1997
+From: Alan Cox <alan@cymru.net>
+Message-Id: <199702031711.RAA29292@snowcrash.cymru.net>
+To: linux-security@redhat.com
+Date: Mon, 3 Feb 1997 17:11:48 +0000 (GMT)
+In-Reply-To: <Pine.LNX.3.91.970131223429.24033C-100000@ne01.northeast.net> from "Peter" at Jan 31, 97 10:49:28 pm
+Content-Type: text
+Resent-Message-ID: <"A1c-L2.0.281.6y2-o"@mail2.redhat.com>
+Resent-From: linux-security@redhat.com
+Reply-To: linux-security@redhat.com
+X-Mailing-List: <linux-security@redhat.com> archive/latest/135
+X-Loop: linux-security@redhat.com
+Precedence: list
+Resent-Sender: linux-security-request@redhat.com
+Subject: [linux-security] Re: Linux virus
+
+> Today I became infected with the bliss virus, any info on this would be
+> appreciated!  How do I scan for files infected and is it possible to
+
+News to me.
+
+> Here are a few lines from the infected file:
+> infected by bliss %.8x: %.8x
+> ^@a^@%d %.8x %s/%s
+> ^@%s.bliss-tmp.%d^@%s already infected (%.8x)
+> ^@skipping, infected with same vers or different type
+
+Provide the actual binary itself with a warning to cert@cert.org. That way
+people can inspect it to see if you aren't just a hoax. In theory you
+can write a virus for any OS if the owner is dumb enough to install 
+unchecked binaries as root.
+
+You'll notice good distributions use signatures on their packages and
+have verify facilities so you can check binaries are valid.
+
+Alan
+

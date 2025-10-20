@@ -1,0 +1,111 @@
+<html> <head>
+<title>Bliss, a Linux virus</title>
+<link rel="owner" rev="made" href="mailto:axel@uni-paderborn.de">
+</head>
+
+<body>
+<img src="http://vg06.met.vgwort.de/na/a387ed4e291444f2a6a3aa3c15f6d8e1" width="1" height="1" alt="">
+
+<h1>Bliss, a Linux "virus"</h1>
+
+Bliss has been called a virus for Linux, a common Unix trojan,
+a virus-like trojan with worm-like
+features etc, depending on whom you ask. Apparently, the definitions
+aren't very clear. Here's its story.<p>
+
+The first sighting on the <a
+href="http://www.kernelnotes.org/lnxlists/linux-security/">linux-security
+mailing list</a> happened around January
+31, 1997, and Alan Cox replied with <a href="alan_reply.txt">this message</a>.<p><p>
+
+
+Then, on February 5th, the author of bliss, apparently a nice guy
+concerned that <a
+href="bliss_alpha.txt">an
+earlier alpha version</a> of his code (which was posted on September 29,
+1996 to comp.security.unix, alt.comp.virus and comp.os.linux.misc) could still be in use,
+posted <a href="bliss.txt">version 0.4.0</a> to the widely read Usenet
+newsgrooup comp.security.unix, complete with ample warnings and the prospect of a future
+(GPL'ed?) source code release.<p>
+
+It was promptly analyzed by <a href="alan_analysis.txt">Alan Cox</a>
+on February 8th, and, one day later and much more comprehensively, by <a href="ray_analysis.txt">Ray
+Lehtiniemi</a>. Quick summary: if you run bliss (which is, by the way,
+not specific to Linux and can be compiled for SunOS, Solaris, and
+OpenBSD) or any binary infected with bliss,
+it tries to attach itself to (i.e.: infect)
+all binaries that you have write access to, on all machines that you
+have rsh access to. It writes a neat log of all its actions to /tmp/.bliss
+and even has a <code>--bliss-uninfect-files-please</code> command line option that
+sometimes might come handy, and actually does what it promises. Bliss
+was compiled with helpful debugging information. I
+especially like the
+feature where it tries to patch the Linux kernel source, so that the next
+kernel compilation will produce a much more cooperative Linux. Moral:
+don't run it, especially if you're root. That's all there is to
+it. We all knew already that we should never do anything but system
+administration as root, now didn't we? We also should never run
+executables that we haven't
+compiled ourselves from inspected sources. Big deal. Enter McAfee.<p>
+
+McAfee is a company that makes its money from the fact that people
+continue to use inferior operating systems that can easily be infected
+with viruses, with disastrous results. In their <a
+href="mcafee_press.html">press release</a>,
+dated February 5 and widely reprinted in clueless media everywhere,
+they claim to have "discovered" bliss (actually, they are talking
+about the earlier alpha version, but they don't know this), a program
+that had been publicly available for several months
+at that time, thereby proving that they don't even follow the security
+and virus usenet newsgroups. They also recommend that you run one
+of <em>their</em> binaries, without
+letting you look at the sources, of course. Now what have we learned a
+moment ago: is that a good idea? An <a
+href="mcafee_analysis.txt">analysis</a> of the press announcement has
+been provided by Russ Allbery. <a href="kai_message.txt">Another
+message</a>
+shows that the information about bliss was provided to McAfee by a
+participant on the linux-security mailing list, where the sighting of
+the alpha version had been posted previously. McAfee, the heroic virus discoverer!
+Savior of the universe!<p>
+
+Here's another <a href="trojan.txt">message</a> from Alan Cox about
+the difference between viruses and trojan horses. Albert D. Cahalan
+begs to <a href="trojan2.txt">differ</a>, but that is not the <a
+href="trojan3.txt">last word on that matter</a>. And, on a final <a
+href="parsons_note.txt">note</a>: bliss shows that Linux is popular
+enough to attract virus writers, bliss makes people afraid of running
+as root which they shouldn't do anyway, and bliss makes people
+reluctant to
+run programs without inspectable sources. All hail bliss!  <p>
+
+<h2>Appendix</h2>
+
+For the paranoid: To check whether anything
+on your system is infected by bliss, do <code>cat /tmp/.bliss</code>.
+To protect against similar programs, keep backups of your important
+programs in a safe place and use a program which detects any
+modifications. Traditionally, tripwire has been used for this purpose,
+but nowadays people recommend the free alternative <a href="http://www.cs.tut.fi/~rammer/aide.html">AIDE</a>.
+<p>
+
+To read a description of a truly cool and diabolical trojan/virus as opposed to the
+rather lame bliss, check <a
+href="http://www.cs.umsl.edu/~sanjiv/sys_sec/security/thompson/hack.html">this</a>
+out.<p>
+
+
+If you have anything to contribute regarding bliss or want to read other people's
+comments, please go <a
+href="http://visar.csustan.edu:8000/HyperNews/get/bliss.html">here</a>
+or send me mail.
+<p>
+
+<hr>
+Last Change: <!-- hhmts start -->
+19-Jan-2000
+<!-- hhmts end --><br>
+<address><a href="http://math-www.uni-paderborn.de/~axel/">Axel Boldt</a> 
+<a href="mailto:axel@uni-paderborn.de">&lt;axel@uni-paderborn.de&gt;</a></address>
+
+</body> </html>

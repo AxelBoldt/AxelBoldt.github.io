@@ -1,0 +1,139 @@
+Subject:      Re: Bliss Virus (fwd)
+From:         Ray Lehtiniemi <rayl@crosskeys.com>
+Date:         1997/02/09
+Message-Id:   <Pine.SUN.3.90.970209224858.6326A-100000@ck68>
+Sender:       owner-Linux-Kernel@vger.rutgers.edu
+References:   <Pine.BSF.3.95q.970207170623.1945B-100000@stanton-1-1.quick.net>
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Hdr-Sender: rayl@crosskeys.com
+Mime-Version: 1.0
+X-Env-Sender: owner-Linux-Kernel-Outgoing@vger.rutgers.edu
+Newsgroups:   linux.dev.kernel
+
+
+
+hi all
+
+> > errors.  Can we get CERT (LERT?) to try this "virus" code, 
+> > so that if it turns out to be legitimate, proper warnings can
+> > be disseminated through the proper (credible) channels?
+
+it's more of a trojan than a virus, but anyway...
+
+
+> > If asked, will the poster of this message provide virus code
+> > to the members of this list?  I expect this virus to suddenly,
+> > mysteriously disappear, based on that question.
+
+i couldn;t find any source, therefore this analysis is based on the
+uuencoded binary posted here the other day. the exact details are still a
+bit hazy, but here's the general idea: 
+
+
+                             -------------
+
+  this virus is a complete ELF executable with voluminous debugging
+  comments.  it looks for executables you have write access to,
+  prepends itself to them, and appends a signature.  when run, it
+  extracts the original executable into a /tmp/.bliss-tmp.<pid> file
+  and forks.  the parent execs the temp file while the child keeps
+  running the infected original.
+
+  it does a bit of stealth if you try process tracing, and looks like
+  it wants to patch umask() in /usr/src/linux/kernel/sys.c.  it does some
+  .rhosts stuff for network propagation.  it scans your path for
+  executables, plus it loops over the getpwent() db looking for bin
+  directories and .rhosts files.
+
+  looks like a new virus infecting an older file will upgrade the old
+  file, and an old virus infecting a newer file will upgrade itself
+  from the newer file.
+
+                             -------------
+
+
+
+it seems that this version is a bit different from the one described on
+the mcafee site.  the size is different (18604 bytes) and it claims to be: 
+
+  bliss type 1 version 0.4.0 (00010004)
+  Compiled on Feb  5 1997 at 18:35:33
+
+the mcafee site says the virus destructively overwrites the
+executable.  this version prepends itself to executables and appends a
+signature to the file stating the version that the file is infected
+with.  the uninfect option checks the signature, then strips the
+virus and the signature to restore the original executable.
+
+when you run an infected executable, it forks.  the original exec is
+extracted to /tmp/.bliss-tmp.<pid> and executed, while the child keeps
+running the infected file.
+
+infected ELF execs seem to run okay, but infected shell scripts
+complain about the appended signature when you run them.  i guess the
+ELF loader reads only the sections in its 'table of contents' but the
+#! loader just dumps the rest of the file to the interpreter?
+
+if you trace the process (task->flags & 0x30) the virus exits.  change
+this:
+
+00002ae0: 740e b801 0000 00eb 098d b426 0000 0000
+
+to this:
+
+00002ae0: 740e b800 0000 00eb 098d b426 0000 0000
+
+to disable the check.
+
+it keeps an infection log in (by default) /tmp/.bliss which uninfect uses
+to clean up infected files.  each record contains the infection time,
+bliss version, and pathname of the infected file. 
+
+command line args start with --bliss-, equivalent args are listed
+separated by commas
+
+   uninfect-files-please, disinfect-files-please
+   dont-run-original, just-run-bliss, just-run-virus
+   dont-run-virus, dont-run-bliss, just-run-original
+   force-worm-stuff
+   exec
+   infect-file <file-list>
+   version
+   help
+
+unrecognized args containing please will exit(0), otherwise the virus
+will run
+
+there is some (seemingly unfinished??) code in place to patch
+sys_umask() in /usr/src/linux/kernel/sys.c along these lines:
+
+"if(mask&023000) {current->uid = current->euid = current->suid = 
+                  current->fsuid = 0; return old&023000;}"
+
+
+the worm code uses rsh and ssh.  it checks /etc/hosts.equiv,
+$HOME/.rhosts and scans getpwent() checking for a .rhosts in all home
+directories.  haven't examined this in detail yet.
+
+finally, it checks
+
+  $HOME/bin
+  $PATH
+  each getpwent()/bin 
+  /usr/spool/news
+  /var/spool/news
+  /dos
+  /proc
+  /cdrom
+  /
+
+looking for executable files to infect.  it seems to hit anything
+executable that you can write to.  this version will scan 20
+directories and then stop.
+
+
+cheers
+
+---------------------------------------------------------------------------
+  Ray Lehtiniemi <rayl@crosskeys.com>  
+

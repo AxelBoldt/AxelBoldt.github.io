@@ -1,0 +1,44 @@
+Subject:      Re: Bliss Virus (fwd)
+From:         o.r.c@p.e.l.l.c.h.i.i.l.u.s (david parsons)
+Date:         1997/02/07
+Message-Id:   <5dglfa$9rj@pell.pell.chi.il.us>
+Sender:       owner-Linux-Kernel@vger.rutgers.edu
+X-Reply-To:   orc@pell.chi.il.us
+References:   <linux.kernel.199702072233.RAA00594@aem.netcom.ca>
+X-Hdr-Sender: o.r.c@p.e.l.l.c.h.i.i.l.u.s 
+Comment:      email address space-Expanded to deter spam.
+Organization: Lust corrodes my body
+X-Env-Sender: owner-Linux-Kernel-Outgoing@vger.rutgers.edu
+Newsgroups:   linux.dev.kernel
+
+
+In article <linux.kernel.199702072233.RAA00594@aem.netcom.ca>,
+Andrew E. Mileski <aem@netcom.ca> wrote:
+>> The Bliss virus is currently a Linux binary-infecting virus.
+>> Unfortunately, please do not feel your safe.
+>
+>...unless you aren't stupid and only login as root for system admin,
+>and don't run executables blindly, etc., etc., etc., ...
+>
+>Basically, if you get bitten by Bliss (or any nasty program), you
+>probably deserved it. This is a hard way to learn a lesson, but
+>some people need to be taught using a baseball bat "attitude adjuster".
+
+   Given the choice between the right thing and the easy thing, people
+   will tend to pick the easy thing, particularly when it comes to
+   something like a computer.
+
+   In a sick way, I'm somewhat pleased to see these reports, and not
+   just because I'm making a living writing Linux antiviral products for
+   McAfee; if the malicious fuckwits of the world think that Linux is
+   popular enough to scribble graffiti over, that means it's actually
+   making it in the non-hobbyist world.
+
+   (And this is ANOTHER argument for something like the GGI; if you
+   don't have to be root to run doom, it's just a little bit harder for
+   an enterprising young virus to get in and fuck with the system.)
+
+                 ____
+   david parsons \bi/ Don't make the utopian mistake of assuming everyone
+                  \/                              thinks just like you do.
+

@@ -1,0 +1,74 @@
+Subject:      Re: [masq] 1st virus in Linux :( (fwd)
+From:         Russ Allbery <rra@cs.stanford.edu>
+Date:         1997/02/08
+Message-Id:   <qumhgjn1g4c.fsf@cyclone.stanford.edu>
+Sender:       eagle@cyclone.stanford.edu
+References:   <Pine.LNX.3.95.970207125812.20718B-100000@zeppelin.sk.sympatico.ca>
+X-Submitted-Via: news@ratatosk.yggdrasil.com (linux.* gateway)
+X-Hdr-Sender: rra@cs.stanford.edu
+Organization: The Eyrie
+X-Env-Sender: news@nntp.Stanford.EDU
+Newsgroups:   linux.dev.kernel
+
+
+Ambrose Au <achau@wwonline.com> writes:
+
+> In case you do not notice, there is a new destructive virus called Bliss
+> which infects Linux executables.
+
+> Its target is users who play games such as doom over the Internet with
+> root access.
+
+> Details at Mcafee's website: http://www.mcafee.com/corp/press/020597.html
+
+This is not a virus in the way the term is used for operating systems
+without memory protection.
+
+Any program being run as root has priviledges to modify the file system
+and do damage to your system; this is why you do not run general binaries
+as root.  All this is is a simple Trojan Horse, based on the idea of
+getting stupid people to run unknown binaries as root, with an interesting
+side twist of modifying other system binaries when it runs.  McAfee's
+statements about this are, at best, misleading.  To quote from their web
+site:
+
+    McAfee (Nasdaq: MCAF), the world's leading vendor of anti-virus
+    software, today announced that its virus researchers have discovered
+    the first computer virus capable of infecting the Linux operating
+    system.
+
+Whatever you would like to call this, it quite definitely isn't anything
+new.  Trojan Horse binaries for Unix systems have been around for years,
+as have Trojan Horse modified source distributions; there was a CERT
+several years ago about IRC, for example.
+
+    The virus, which is called Bliss, is significant because many in the
+    Unix industry have previously believed that viruses were not a concern
+    to Unix operating system users.
+
+The implication behind this statement is patently absurd.  Obviously, as
+anyone who knows anything about Unix is aware, if you run a hostile
+program as root it can do all sorts of nasty things to your system.  Duh.
+Again, McAfee is attempting to portray this as some major new problem when
+it's nothing of the sort.
+
+    We encourage concerned Linux users to download a free working
+    evaluation copy of our VirusScan for LINUX, which can be used to
+    detect the virus.
+
+No thank you.  Linux doesn't need a virus checker; Linux administrators
+need to use some basic intelligence about what they run as root.  People
+who run binary-only packages obtained from untrusted sources as root on
+their system get exactly what they deserve.
+
+It looks to me like McAfee is attempting to use this as a publicity stunt
+to promote their software business and to attempt to scare Linux users
+into paying them money.  I'll refrain from speculating about how much of a
+threat a real operating system is to a company who makes its living on
+protecting users of less sophisticated operating systems from their
+inherent limitations.
+
+McAfee just flushed all respect I had for them down the toilet.
+
+-- 
+Russ Allbery (rra@cs.stanford.edu)      <URL:http://www.eyrie.org/~eagle/>

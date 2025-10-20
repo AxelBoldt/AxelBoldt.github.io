@@ -1,0 +1,472 @@
+
+
+
+# LAST EDIT: Mon Sep 14 03:56:37 1992 by Axel Boldt (axel@uni-paderborn.de) 
+
+coxpoly := proc(kbaum,T,V)
+# 
+# Computes the coxeterpolynomial of the rooted cycle-tree described by
+# the symbol kbaum at T. If the optional parameter V is present an V
+# and T are names, then the result will contain the abbreviation V(j)
+# for (T^j-1)/(T-1).
+#
+# 
+  local resultat,W;
+  
+  # coxpoly's argument must not be a single $-expression. We have to
+  # check this here, because coxpoly1 accepts these expressions.
+  if type(kbaum,function) and op(0,kbaum)=`$` then
+    ERROR(`Als Argument ist kein $-Ausdruck erlaubt `,kbaum)
+  fi;
+
+  if not(type(`&Chi`,name) and type(`&chi`,name)) then
+    print(`WARNUNG: &chi und &Chi sollten Namen ohne Werte sein.`);
+  fi;
+
+  # coxpoly1 yields the coxeterpolynomial of kbaum as well as that of
+  # the cycle-tree resulting from deletion of kbaum's root. Here, we ar
+  # coxpoly1 liefert sowohl das Coxeterpolynom von kbaum als auch das
+  # des aus kbaum durch Entfernen der Wurzel entstehenden Koechers.
+  # Uns interessiert nur ersteres:
+  resultat:=`coxpoly/coxpoly1`(kbaum,T,W)[1]; 
+
+  # Verarbeite die Abkuerzung V richtig:
+  if nargs=3 then
+    if not( type (T,name) and type(V,name)) then
+      ERROR(`das zweite und dritte Argument muessen Namen sein.`)
+    fi;
+    W:=proc(j,U)
+      if   j=-1 then RETURN(-U^(-1))
+      elif j=0  then RETURN(0)
+      elif j=1  then RETURN(1)
+      else RETURN ('procname'(args[1]))
+      fi;
+    end;
+    # Ersetze W durch V im Resultat, aber nicht
+    # W(-1,U), W(0,U) und W(1,U):
+    RETURN(subs(W=V,eval(resultat)))
+  else
+    if T=1 then
+      W:=proc(j,U)
+        RETURN (j) # V(j) hat an der Stelle 1 den Wert j.
+      end
+    elif T=0 then
+      W:=proc(j,U)
+        if j=0 then
+          RETURN(0)
+        else 
+          RETURN(1)
+        fi
+      end 
+    else
+      W:=proc(j,U)
+        if   j=-1 then RETURN(-U^(-1))
+        elif j=0  then RETURN(0)
+        elif j=1  then RETURN(1)
+        elif j=2  then RETURN(U+1)
+        # Falls Maple x^j als x*x*...*x berechnet, muss hier eine
+        # intelligentere Routine eingebaut werden, die x^j in Zeit
+        # O(log(j)) bestimmen kann:
+        else RETURN((U^j-1)/(U-1))
+        fi
+      end
+    fi;
+  
+    # Ersetze nun im Resultat ueberall das W durch seine Definition:
+    RETURN(normal(eval(resultat),expanded))
+  fi
+end;
+
+
+
+#### 
+#### Nun folgen Hilfsprozeduren fuer coxpoly:
+#### 
+
+`coxpoly/is_nat_number_expr`:= proc(s)
+
+# Stellt fest, ob s ein Ausdruck ist, der eine natuerliche Zahl
+# bezeichnet (d.h. s ist eine natuerliche Zahl oder die in s 
+# vorkommenden Namen und Funktionsnamen beginnen mit Kleinbuchstaben)
+
+  evalb( type(s,posint) or `coxpoly/is_number_expr`(s) )
+
+end;
+
+
+
+
+`coxpoly/is_number_expr`:= proc(s)
+
+# Stellt fest, ob s ein Ausdruck ist, der eine ganze Zahl bezeichnet
+# (d.h. die Namen und Funktionsnamen in s beginnen mit Kleinbuchstaben)
+
+  local result,opnd;
+  option remember;
+
+  if type(s,string) then
+    RETURN( evalb( lexorder('a',s) # Achtung: 'a' und *nicht* `a`
+                   and lexorder(s,'zzzz') ) ) # ein bisschen gemogelt...
+  elif type(s,function) or type(s,indexed) then
+    RETURN(`coxpoly/is_number_expr`(op(0,s)))
+  elif type(s,integer) then
+    RETURN(true)
+  elif type(s,`+`) or type(s,`*`) or type(s,`^`) then
+    # Checke nun alle Operanden von s:
+    result:=true;
+    for opnd in op(s) while result do
+      result := `coxpoly/is_number_expr`(opnd) 
+    od;
+    RETURN(result)
+  else
+    RETURN(false)
+  fi
+end;
+
+
+
+`coxpoly/is_kbaum_name` := proc(s)
+
+# Stellt fest, ob s der Name eines verallgemeinerten Wurzelbaumes
+# ( beginnend mit einem Grossbuchstaben ) ist.
+
+  option remember;
+
+  if type(s,string) then
+    RETURN( evalb ( lexorder('A',s)
+                    and lexorder(s,'ZZZZ') ) )
+  elif type(s,function) or type(s,indexed) then
+    RETURN(`coxpoly/is_kbaum_name`(op(0,s)))
+  else
+    RETURN(false)
+  fi
+end;
+
+
+
+    
+  
+
+`coxpoly/coxpoly1` := proc(kbaum,T,V)
+
+# p1 sei das Coxeterpolynom von kbaum und p2 das des aus kbaum durch
+# Entfernen der Wurzel entstehenden Koechers. Zurueckgegeben wird
+# eine Liste der Werte von p1, p2 an der Stelle T.
+# Dabei steht V(j,T) synonym fuer (T^j-1)/(T-1), j>=-2.
+
+  local n,r,k,p,q,i,j,t,u,result,dummy_p1,dummy_q1,G,
+        erst_opnd,kanten,pkte,result_ohne_wurzel,zweit_opnd;
+  option remember; 
+
+##############################
+  if `coxpoly/is_nat_number_expr`(kbaum) then
+    RETURN( V(kbaum+1,T),
+            V(kbaum,T)
+          )
+##############################
+  elif type(kbaum,function) and op(0,kbaum)=`&*` then
+    if nops(kbaum)<>2 then
+      ERROR(`Der Operator &* benoetigt zwei Operanden`,kbaum)
+    fi;
+    erst_opnd:=op(1,kbaum);
+    if type(erst_opnd,function) and op(0,erst_opnd)=`&*` then
+      # Hier wird dafuer gesorgt, dass Ketten n1 &* n2 &* n3 &* ...
+      # als n1 &* ( n2 &* ( n3 &* ... ))) aufgefasst werden:
+      RETURN(`coxpoly/coxpoly1`(op(1,erst_opnd)&*
+                                  (op(2,erst_opnd)&*op(2,kbaum)),
+                                T,
+                                V)
+            )
+    elif type(op(2,kbaum),function) and op(0,op(2,kbaum))=`$` then
+      ERROR(`Als zweiter Operand zu &* ist kein $-Ausdruck erlaubt`,
+            kbaum)
+    elif `coxpoly/is_nat_number_expr`(erst_opnd) then
+      p:=`coxpoly/coxpoly1`(op(2,kbaum),T,V);
+      RETURN( V(erst_opnd,T)*p[1]-T*V(erst_opnd-1,T)*p[2],
+              V(erst_opnd-1,T)*p[1]-T*V(erst_opnd-2,T)*p[2]
+            )
+    elif type(erst_opnd,function) and op(0,erst_opnd)=`&K` then
+      if not(  nops(erst_opnd)=1 and
+               `coxpoly/is_nat_number_expr`(op(1,erst_opnd))
+            )
+      then
+        ERROR(`&K benoetigt eine natuerliche Zahl als Argument `,kbaum)
+      fi;
+      p:=`coxpoly/coxpoly1`(op(2,kbaum),T,V);
+      RETURN( V(2,T)*p[1]-op(1,erst_opnd)^2*T*p[2],
+              p[1]
+            )
+    else
+      ERROR(`der erste Operand von &* muss n oder &K(n) mit n>=1 sein`,
+            kbaum)
+    fi
+##############################
+  elif type(kbaum,list) then
+    t:=nops(kbaum);
+    for i from 1 to t do
+      p[i]:=`coxpoly/coxpoly1`(kbaum[i],T,V)
+    od;
+    RETURN( product('p[i][2]','i'=1..t)
+              *(sum('p[i][1]/p[i][2]','i'=1..t)-(t-1)*V(2,T)),
+            product('p[i][2]','i'=1..t)
+          )
+##############################
+  elif `coxpoly/is_kbaum_name`(kbaum) then
+    RETURN( &Chi(kbaum),
+            &chi(kbaum)
+          )
+##############################
+  elif type(kbaum,function) and op(0,kbaum)=`&C` then
+    if nops(kbaum)=0 then
+      ERROR(`&C benoetigt mindestens ein Argument `,kbaum)
+    fi;
+    kanten:=op(1,kbaum);
+    if not( type(kanten,list) and nops(kanten)=2 and
+            `coxpoly/is_nat_number_expr`(kanten[1]) and
+            `coxpoly/is_nat_number_expr`(kanten[2]) 
+          )
+    then
+      ERROR(`Das erste Argument zu &C muss eine Liste`.
+            ` aus zwei natuerlichen Zahlen sein.`)
+    fi;
+    if nops(kbaum)=1 then
+      RETURN( (T^kanten[1]-1)*(T^kanten[2]-1),
+              V(kanten[1]+kanten[2],T)
+            )
+    elif type(nops(kbaum),odd) then
+      ERROR(`&C benoetigt ein einziges oder eine gerade Anzahl `.
+            ` von Argumenten.`)
+    fi;
+    t:=nops(kbaum)/2-1;
+    # Es ist t die Anzahl der an den Kreis geklebten Koecher.
+    #
+    # Bestimme nun fur i=t..1 das Coxeterpolynom u[i] des linearen
+    # Graphen von der Wurzel von kbaum bis zur Wurzel des i-ten
+    # angeklebten Koechers (ausschliesslich):
+    u[t+1]:=0;
+    pkte:=-1;
+    for j from t by -1 to 1 do
+      k:=op(2*j+2,kbaum);
+      if ( type(k,integer) and k<=1 ) or
+           not `coxpoly/is_number_expr`(k)
+      then
+        ERROR(`Die Argumente von &C, beginnend mit dem zweiten, `.
+              `muessen abwechselnd Zahlen >=2 und Symbole fuer `.  
+              `fuer Kreisebaeume sein `,
+              kbaum)
+      fi;
+      u[j]:=(T*u[j+1]+1)*V(k-1,T)+u[j+1]*V(k,T)-V(2,T)*u[j+1]*V(k-1,T);
+      pkte:=pkte+k-1
+    od;
+    #
+    result:=(T^kanten[1]-1)*(T^kanten[2]-1);
+    # result ist zunaechst das Coxeterpolynom des Kreises, an dem noch
+    # gar kein Koecher haengt. Es werden nun sukzessive die Koecher
+    # angehaengt und dabei wird result mitveraendert.
+    n:=op(2,kbaum);
+    # Es ist n stets der Punkteabstand des letzten zum aktuellen am
+    # Kreis haengenden Teilkoechers
+    if ( type(n,integer) and n<=1 )
+       or not `coxpoly/is_number_expr`(n)
+    then
+      ERROR(`Die Argumente von &C, beginnend mit dem zweiten, muessen `.
+            `abwechselnd Zahlen >=2 und Symbole fuer Kreisebaeume sein `,
+            kbaum)
+    fi;
+    if normal(pkte+n-kanten[1]-kanten[2]) <> 0 then
+      ERROR(`Die numerischen Daten im &C-Ausdruck sind nicht `.
+            `konsistent `,kbaum)
+    fi;
+    p[1]:=V(n+1,T);
+    p[2]:=V(n,T);
+    # p bezeichnet die Coxeterpolynome des Koechers K, der entsteht,
+    # wenn man von der Wurzel des Kreises zu der Wurzel des aktuell
+    # betrachteten angeklebten Teilkoechers laeuft, und die bereits
+    # angeklebten Koecher mit aufnimmt. Die Wurzel von K ist die 
+    # Wurzel des aktuellen Teilkoechers.
+    q[1]:=V(n,T);
+    q[2]:=V(n-1,T);
+    # q bezeichnet die Coxeterpolynome des aus K durch Entfernen der
+    # Wurzel von kbaum entstehenden Koechers.
+    for i from 1 to t do
+      result_ohne_wurzel:=p[2]*u[i]+q[2]*(T*u[i]+1)-V(2,T)*q[2]*u[i];
+      # result_ohne_wurzel ist das Coxeterpolynom des Koechers, der 
+      # aus dem result zugrundeliegenden durch Entfernen der Wurzel 
+      # des gerade betrachteten, i-ten Teilkoechers entsteht.
+      #
+      G:=op(2*i+1,kbaum);
+      # G ist der i-te am Kreis haengende Koecher.
+      if type( G,function) and op(0,G)=`$`
+      then
+        ERROR(`In einem &C-Ausdruck ist kein $-Ausdruck erlaubt.`,
+              kbaum)
+      fi;
+      # Haenge nun G an den result zugrundeliegenden Koecher an:
+      r:=`coxpoly/coxpoly1`(G,T,V);
+      result:=result*r[2]+result_ohne_wurzel*r[1]
+               -V(2,T)*result_ohne_wurzel*r[2];
+      n:=op(2*i+2,kbaum);
+      if ( type(n,integer) and n<=1 ) 
+         or not `coxpoly/is_number_expr`(n) 
+      then
+        ERROR(`Die Argumente von &C, beginnend mit dem zweiten, `.
+              `muessen abwechselnd Zahlen >=2 und Symbole fuer `.
+              `Kreisbaeume sein`,
+              kbaum)
+      fi;
+      # Verlaengere nun die zu p und q gehoerigen Koecher und
+      # veraendere p und q mit:
+      r:=`coxpoly/coxpoly1`([G,n],T,V); # Dieser Aufruf verschlimmert
+                                        # den Aufwand nicht, weil Chi(G)
+                                        # wegen option remember nicht 
+                                        # neu berechnet werden muss.
+                                        # 
+                                        # Andererseits koennte dieser 
+                                        # erneute Aufruf auch leicht
+                                        # umgangen werden.
+      dummy_p1:=p[1]*r[2]+p[2]*r[1]-V(2,T)*p[2]*r[2];
+      dummy_q1:=q[1]*r[2]+q[2]*r[1]-V(2,T)*q[2]*r[2];
+      r:=`coxpoly/coxpoly1`([G,n-1],T,V); # s.o.
+      p[2]:=p[1]*r[2]+p[2]*r[1]-V(2,T)*p[2]*r[2];
+      q[2]:=q[1]*r[2]+q[2]*r[1]-V(2,T)*q[2]*r[2];
+      p[1]:=dummy_p1;
+      q[1]:=dummy_q1;
+    od;
+    RETURN( result,
+            q[2]
+          )
+##############################       
+  elif type(kbaum,function) and op(0,kbaum)=`$` then
+    if nops(kbaum)<>2 then
+      ERROR(`Der Operator $ braucht zwei Argumente`,kbaum)
+    fi;
+    p:=`coxpoly/coxpoly1`(op(1,kbaum),T,V);
+    zweit_opnd:=op(2,kbaum);
+    if `coxpoly/is_nat_number_expr`(zweit_opnd) then
+      RETURN( p[2]^(zweit_opnd - 1)*
+               (zweit_opnd * p[1]-(zweit_opnd - 1)*V(2,T)* p[2]),
+              p[2]^zweit_opnd
+            )
+    elif type(zweit_opnd,`=`) and
+         # Die Laufvariable muss mit einem Kleinbuchstaben beginnen!
+         `coxpoly/is_number_expr`(op(1,zweit_opnd)) and 
+         type(op(1,zweit_opnd),name) and   
+         type(op(2,zweit_opnd),range) 
+    then
+      # Es wird hier Sum statt sum und Product statt product
+      # zurueckgegeben; dies bedeutet eine riesige
+      # Rechenzeiteinsparung, denn sum und product wuerden
+      # versuchen, die entstehende Summe zu vereinfachen; das geht
+      # hier jedoch sicher nicht.
+      RETURN( Product(p[2],zweit_opnd)*
+               (Sum(p[1]/p[2],zweit_opnd)-
+               (op(2,op(2,zweit_opnd))-op(1,op(2,zweit_opnd)))*V(2,T)),
+              Product(p[2],zweit_opnd)
+            )
+    else
+      ERROR(`Das zweite Argument zu $ sollte eine natuerliche Zahl `.
+            `oder eine Gleichung der Form name=range sein`,kbaum)
+    fi
+##############################
+  elif type(kbaum,function) and op(0,kbaum)=`&K` then
+    if not( nops(kbaum)=1 and `coxpoly/is_nat_number_expr`(op(1,kbaum))
+          )
+    then
+      ERROR(`Der Operator &K benoetigt als Argument `.
+            `eine natuerliche Zahl`,
+            kbaum)
+    fi;
+    RETURN( V(2,T)^2-op(1,kbaum)^2*T,
+            V(2,T)
+          )
+##############################
+  else
+    ERROR(`Dieses ist kein gueltiges Symbol fuer einen `.
+          `Wurzel-Kreisebaum; als Operatoren sind  &*, &K, &C `.
+          `und [..] zulgelassen`
+          ,kbaum)
+  fi
+
+end;
+
+ 
+
+`help/text/coxpoly`:=TEXT(
+`FUNCTION: coxpoly - compute the Coxeterpolynomial of a cycletree `,
+` `,
+`CALLING SEQUENCE: `,
+`    coxpoly(cyctree,T,V); `,
+` `,
+`PARAMETERS: `,
+`    cyctree - an expression denoting a cycletree as described below `,
+`    T       - an expression `,
+`    V       - an optional name `,
+` `,
+`SYNOPSIS: `,
+`- cyctree denotes the equivalence class of an orientation of a rooted `,
+`  cycletree without oriented cycles. The value of the corresponding `,
+`  Coxeterpolynomial (which ist the characteristic polynomial of the `,
+`  Coxetermatrix) at T is returned. `,
+` `,
+`- if the third parameter V is present, T and V must be names. In the `,
+`  result, V(j) stands for (T^j-1)/(T-1) (this term appears often). `,
+` `,
+`- a cycletree is an undirected, connected graph every two `,
+`  distinct simple cycles of which are edge-disjoint. Multiple edges `,
+`  are allowed (but not in cycles). `,
+` `,
+`- two orientations of a cycletree are said to be equivalent if the `,
+`  first can be transformed to the second using only reflections at `,
+`  sinks or sources. `,
+` `,
+`- the linear graph with n points is denoted by n. (The root is one `,
+`  end.) `,
+` `,
+`- the graph with two points and a n-fold edge between them is denoted `,
+`  by &K(n) `,
+` `,
+`- if u is the symbol of a linear graph or a multiple edge and S is `,
+`  any symbol denoting a rooted cycletree, then u*S stands for the `,
+`  identification of one end of u with the root of S. The root of u*S `,
+`  is the other end of u. `,
+` `,
+`- if S1,...,St are symbols, then [S1,...,St] denotes the class of the `,
+`  graph resulting from identifying the roots of S1,...,St to one `,
+`  point, the root of [S1,...,St]. `,
+` `,
+`- if S1,...,St are symbols and p,q,n_1,...,n_(t+1) are natural `,
+`  numbers with n_i>=2 and n_1+...+n_(t+1) = p+q+t+1, then `,
+`  &C([p,q],n_1,S1,n_2,S2,...,St,n_(t+1)) stands for the graph `,
+`  resulting from identifying the root of n_1 with the free end of `,
+`  n_(t+1) to a new root in n_1&*[S1,n_2&*[...n_t&*[St,n_(t+1)]...]]. `,
+`  Of the p+q edges of the cycle, p are oriented clockwise and q `,
+`  counterclockwise. `,
+` `,
+`- &C([p,q]) is an abbreviation for &C([p,q],p+q+1) `,
+` `,
+`- in the above, the S,S1,...,St are allowed to be unevaluated `,
+`  (perhaps indexed) names beginning with capital letters. The `,
+`  Coxeterpolynomial is then computed symbolically using &Chi(S) for `,
+`  the Coxeterpolynomial of S and &chi(S) for the Coxeterpolynomial `,
+`  of the quiver resulting from deletion of the root of S. `,
+` `,
+`- in the above, n,p,q,n_1,...,n_(t+1) are allowed to be `,
+`  expressions containing unevaluated (perhaps indexed) names all of `,
+`  which have to begin with lower case letters. The Coxeterpolynomial`,
+`  is then computed symbolically using these names as parameters. `,
+` `,
+`- you can use (possibly nested) $-expressions in lists: [A(i)$i=1..t] `,
+`  is the same as [A(1),...,A(t)], even if t is an unevaluated name. `,
+` `,
+`- you may have to substitute "sum" for "Sum" in the result if you `,
+`  want to evaluate it for concrete values of the parameters.`,
+` `,
+`EXAMPLES: `,
+`> coxpoly([B1,B2],T); `,
+` `,
+`> coxpoly(4 &* [ 3, &C( [4,5], 4, &K(3), 3, &C([3,3]), 5) ], U); `,
+` `,
+`> coxpoly([ p(i)&*[2,2] $ i=1..t ],1); `,
+` `,
+`SEE ALSO:  coxmat`
+);

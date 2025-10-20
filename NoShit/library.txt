@@ -1,0 +1,255 @@
+########################
+# LAST EDIT: Fri Apr 18 20:49:45 1997 by Axel Boldt (boldt@math.ucsb.edu) 
+########################
+# 
+#            Library of NoShit filter scripts
+#            ================================
+#
+# This is a library of filter scripts for the NoShit extension to
+# Cern's httpd. It tries to filter ads out of popular web sites. Read
+# more about NoShit at http://math-www.uni-paderborn.de/~axel/NoShit/
+#
+# To use this library, put it in your directory ~/.webfilter and start
+# WebFilter like this:
+#    webfilter -r ~/.webfilter/library.txt -r ~/.webfilter/conf
+# where ~/.webfilter/conf is the WebFilter configuration file.
+#
+# The newest version of this file is always available from
+# http://math-www.uni-paderborn.de/~axel/NoShit/library.txt
+#
+# For comments, corrections or additions, check out the interactive
+# NoShit response page at
+# http://emile.math.ucsb.edu:8000/HyperNews/get/comments/noshit.html 
+#
+# The sed scripts are by me (Axel Boldt) and badly outdated by
+# now. Brad Threatt <silly@ugcs.caltech.edu> was kind enough to
+# write some up-to-date perl5 scripts. He is also willing to clean up
+# other sites. Let him now if you have specific requests.
+#
+# As you see, I'm a sed kind of guy, but feel free to submit filters
+# in any language you like. It's a great way to learn all about
+# regular expressions!
+#
+# I know it sucks, but when submitting additions to the filter script
+# library, please make sure that they run on the many brain-dead
+# non-GNU implementations out there. SUN for example is not even able
+# to program a decent sed.
+#
+#########################
+# We want to use full featured extended regular expressions in our
+# patterns: 
+
+RegExp On
+
+
+#########################
+#    Yahoo, a listing of web sites, http://www.yahoo.com
+#
+Filter http://.*yahoo\.com(.*/|.*\.html|/bin/search.*) \
+  exec perl -pe 's#^.*AdID=.*##;'
+
+#########################
+#    AltaVista, a search engine, http://altavista.digital.com
+#
+# This first rule drops everything past the form: If you like their little
+# software updates, take this out.
+Filter http://.*altavista\.digital\.com(.*/) \
+  exec perl -pe 's#^.*## if ($p == 1); \
+                 $p = 1 if (m#</form>#i); \
+                 s#<center>.*?ad\.doubleclick\.net.*?</center>##i; '
+
+# Drop the self-promotional stuff, in addition to the ads.
+Filter http://.*altavista\.digital\.com(.*\.html|/cgi-bin/query.*) \
+  exec perl -pe 's#<center>.*?ad\.doubleclick\.net.*?</center>##i; \
+                 s#.*Overwhelmed by \d+ documents\?.*##i; \
+                 s#<table .*<img src=\"/av/pix/.*##i;'
+
+#########################
+#    C-NET services  
+#    Covers cnet.com, search.com, download.com, shareware.com, gamecenter.com,
+#    activex.com, mediadome.com, news.com, and anything else you think
+#    qualifies.
+#
+Filter http://(.*\.)?(cnet|search|download|shareware|gamecenter|activex|mediadome|news)\.com(.*/|.*\.html|/bin/search.*) \
+  exec perl -pe 's#^.*src=\"/banners/.*##i; \
+                 s#<a href=\"[^>]*?/cgi-bin/redirect.*?</a>##i; \
+                 s#(<table|td)([^>]+)width=\d+%?([^>]+>)#$1$2$3#gi;'
+
+#########################
+#    CitySearch, http://www.citysearch.com
+#
+Filter http://(.*\.)?citysearch.*\.com(.*/|.*\.html) \
+  exec perl -pe 's#^.*try\-it\.cgi.*##;'
+
+#########################
+#    Bigbook, http://www.bigbook.com
+#
+Filter http://(.*\.)?bigbook\.com(.*/|.*\.html) \
+  exec perl -pe '$d=1 if (m#put_ad#); \
+                 $d=0 if (m#</table>#); \
+                 s#^.*## if ($d); \
+                 s#width=\"?\d+%?\"?##i; ' 
+
+#########################
+#    Microsoft's Slate, http://www.slate.com
+#
+Filter http://www\.slate\.com(.*/|.*\.html|.*\.asp) \
+  exec perl -pe 's#<a href=.*?ads\.msn\.com.*?</a>##i; \
+                 s#Set-Cookie:.*[\r\n]?##; '
+
+#########################
+#    Suck, http://www.suck.com and http://www.netmoguls.com
+#
+#    Added code to take out ads (and ad frames), but also to reformat it out
+#    of the tres-annoying 640x480 mode that lame web designers love so much.
+#
+Filter http://(.*\.)?suck\.com(.*/|.*\.html) \
+  exec perl -pe 's#^.*<frame(\s|set).*##i; \
+                 s#<a href=\"/cgi-bin/nredirect/.*?</a>##i; \
+                 s#<td\s+width=\d{3}#<td #ig; \
+                 s#<table\s+width=\d{3}#<table #ig; \
+                 s#^<p>##i; \
+                 s#</?center>##i; \
+                 s#Set-Cookie:.*[\r\n]?##; \
+                 s#\snowrap\s# #i; '
+Filter http://(.*\.)?netmoguls\.com(.*/|.*\.html) \
+  exec perl -pe 's#<a href=\"/cgi-bin/nredirect/.*?</a>##i;'
+
+#########################
+#    Four11, a directory service, http://www.four11.com
+#
+Filter http://(.*\.)?four11\.com(.*/|.*/cgi-bin/.*|.*\.html) \
+  exec perl -pe 's#<a href=\"?/cgi-bin/adclick.*?</a>##i; \
+                 if (m#<a href=\"?/cgi-bin/adclick#i) { s#$&##i; $d = 1; } \
+                 if ($d == 1) { if (m#</a>#) { s#^.*?</a>##i; $d = 0; } \
+                                else { s#^.*##; } } '
+
+#########################
+#   Lycos, an index of web pages, http://www.lycos.com
+#
+Filter http://(.*\.)?lycos\.com(.*/|.*/cgi-bin/.*|.*\.html) \
+  exec perl -pe 's#<a href=\"/cgi-bin/nph-ricochet.*?</a>##gi; \
+                 s#(<table|td)([^>]+)width=\d+%?([^>]+>)#$1$2$3#gi;'
+
+#########################
+#   New York Times, http://www.nytimes.com
+#
+Filter http://(.*\.)?nytimes\.com(.*/|.*\.html) \
+  exec perl -pe 's#^.*<a href=\"?[^>]*ads/.*##i; '
+
+#########################
+#   Price Watch, a hardware street price monitor, http://www.pricewatch.com
+#
+Filter http://(.*\.)?pricewatch\.com(.*/|.*\.htm|.*\.html) \
+  exec perl -pe 's#<a href=[^>]*ad\.doubleclick.*##i; \
+                 s#<img src=[^>]*ad\.doubleclick.*?</a>##i; '
+
+#########################
+#   CNN, a news service, http://www.cnn.com
+#
+Filter http://(.*\.)?cnn\.com(.*/|.*\.html) \
+  exec perl -pe '$p = 0 if !defined(p); \
+                 $p = 1 - $p if (m#^<!--.*Search and Promos#); \
+                 $p = 1 - $p if (m#^<!--.*AD SPACE===#); \
+                 $p = 1 - $p if (m#^<!--.*ADS===#); \
+                 s#^.*## if ($p == 1); '
+
+#########################
+#   HotWired, a magazine, http://www.hotwired.com
+#
+Filter http://(www|vip)\.hotwired\.com.*(\.html|/|/index) \
+  exec sed '/^<a href="[^"]*\/Spnsrs\//{\
+              N\
+              d\
+            }\
+            /<a href="[^"]*\/Spnsrs\//d\
+            /src="\/advertising/d'
+
+
+#########################
+#
+#   Netscape, a software company, http://www.netscape.com
+
+#Nice pattern here, but it fails in commun/internet_white_pages.html
+Filter http://(home|www.?)\.(netscape|mcom)\.com/.*\.html \
+  exec sed '/\[description\]/,/\[description\]/d
+
+Filter http://merchant\.netscape\.com/netstore/(index.html)? \
+  exec sed '/\[description\]/,/\[description\]/d'
+
+######################### 
+#
+#   InfoSeek, an index of web pages, http://www.infoseek.com
+  
+Filter http://guide[^/]*\.infoseek.com.*   \
+  exec sed '/src="[^"]*\/sponsors\/images/d'
+
+#########################
+#
+#   DejaNews, a usenet archive, http://www.dejanews.com
+Filter http://.*dejanews\.com(/|/forms/dnquery\.html|/index\.html|/dnhome\.html)? \
+  exec sed '1,30{\
+             /Sponsored by/,/<\/A>/d\
+            }'
+Filter http://.*dejanews\.com/cgi-bin/(nph-)?dnquery(\.tcl)? \
+  exec sed '/^<BODY/,/^<HR/{\
+             /^<HR/bL\
+             /^<BODY/!d\
+            }\
+            b\
+            :L\
+            n\
+            bL'
+Filter http://.*dejanews\.com/.*/dngetdoc\.html.* \
+  exec sed '/<\/HEAD/,/^<A.*\[Post/{\
+              /^<A.*\[Post/!d\
+            }'
+
+#########################
+#
+#   NandO Times, a newspaper, http://www.nando.net/nt/
+Filter http://www.?\.nando\.net(/nt(/nando\.cgi|.*(/|\.html))?|/SportServer(.*(/|/\.html))?) \
+  exec sed '/\/ads\/[^ ]*\.gif/s/<[aA].*<\/[aA]>//'
+
+#########################
+#
+#   Playboy, a magazine, http://www.playboy.com
+Filter http://www.?\.playboy\.com(/|.*\.html)? \
+  exec sed '/^<a .*playboy\.com\/ads\//,/<\/a>/d'
+
+######################### 
+#
+#   Excite, a WWW index, http://www.excite.com
+Filter http://[^/]*\.excite\.com(.*/|.*\.html|.*\.gw)? \
+  exec sed '/SRC="\/img\/ads/d\
+            /HREF="\/relocate\/http:/d\
+            /"75, \*, 75"/s/75, \*, 75/75, */\
+            /"ad_frame"/d'
+
+#########################
+#
+#   WebCrawler, a WWW index, http://webcrawler.com
+Filter http://.*webcrawler\.com/cgi-bin/WebQuery \
+  exec sed '/^<center>/d'
+
+#########################
+#
+#   Galaxy, a web site listing, http://galaxy.einet.net
+Filter http://.*einet\.net(/|/galaxy\.html|/galaxy(/|/.*\.html))? \
+  exec sed  '/brought to you by/s/<[aA].*<\/[aA]>//'
+
+#########################
+#
+#   Pathfinder, News & Entertainment, http://pathfinder.com
+Filter http://([^/]*\.)?pathfinder\.com(/|/index\.html|/welcome\.html)? \
+  exec sed  '/<!--sponsors:begin/,/<!--sponsors:end/d'
+
+
+#########################
+#
+#   Better switch the regexp support off again...
+RegExp  Off
+ 
+#########################
+# End of NoShit filter script library.
+#########################

@@ -1,0 +1,152 @@
+Subject:      Re: [masq] 1st virus in Linux :( (fwd)
+From:         kai@khms.westfalen.de (Kai Henningsen)
+Date:         1997/02/09
+Message-Id:   <6QZMm86zcsB@khms.westfalen.de>
+Sender:       owner-Linux-Kernel@vger.rutgers.edu
+References:   <Pine.LNX.3.95.970207125812.20718B-100000@zeppelin.sk.sympatico.ca>
+Content-Type: text/plain; charset=us-Ascii
+X-Hdr-Sender: kai@khms.westfalen.de 
+Comment:      Unsolicited commercial mail will incur an US$100 handling fee per received mail.
+Organization: Organisation? Me?! Are you kidding?
+X-No-Junk-Mail: I do not want to get *any* junk mail.
+Mime-Version: 1.0
+X-Env-Sender: owner-Linux-Kernel-Outgoing@vger.rutgers.edu
+Newsgroups:   linux.dev.kernel
+
+
+First: see the linux-security list if you're really interested in this.
+
+rra@cs.stanford.edu (Russ Allbery)  wrote on 08.02.97 in <qumhgjn1g4c.fsf@cyclone.stanford.edu>:
+
+> Ambrose Au <achau@wwonline.com> writes:
+>
+> > In case you do not notice, there is a new destructive virus called Bliss
+> > which infects Linux executables.
+>
+> > Its target is users who play games such as doom over the Internet with
+> > root access.
+>
+> > Details at Mcafee's website: http://www.mcafee.com/corp/press/020597.html
+>
+> This is not a virus in the way the term is used for operating systems
+> without memory protection.
+
+This turns out not to be the case.
+
+It's a virus in the old sense all right.
+
+It's a little atypical in that (according to linux-security) it contains  
+its own remover, if you execute a binary with some weird option in the GNU  
+long option style, and in that if creates a log of its activities.
+
+But the presence or absence of memory protection has nothing to do with  
+it, except that it can slow the infection.
+
+> as root.  All this is is a simple Trojan Horse, based on the idea of
+
+Nope. It doesn't meet the definition of a Trojan Horse. At least, no more  
+than any other virus.
+
+Actually, I fail to understand the need of people to relabel a virus as a  
+trojan.
+
+>From linux-security:
+
+--- snip ---
+> It's behaviour is as follows.
+>
+> For each directory in your $PATH, whip through it randomly picking
+> excecutable files (not just binaries) and prepend the 'bliss' binary to
+> them. Then when they are execed, the same thing happends.
+>
+>
+> /bin/ls got hit fairly early on, so it spread pretty fast, doing about 10-20
+> binaries a minute.
+>
+> The files 'infected' ;
+> a) grow by 17892 bytes
+> b) lose all of there original functionality
+> c) retain date/time stamp data
+> d) retain file permissions
+> e) are logged to /tmp/.bliss
+>
+> Links are destroyed.
+>
+>
+> The 'rsh' part it pretty basic. The routine is titled 'do_worm_stuff', but
+> that would appear to be a solid case of self aggrandisement, as all it
+> does (worm wise) is go through the hosts.equiv and .rhosts and try to
+> 'rsh' to each of those machines as each of the users in /etc/passwd.
+> A pretty unlikely scenario as nobody in their right mind is going to
+> use hosts.equiv nowadays.
+--- snip ---
+
+Another one:
+--- snip ---
+> It seems that bliss can uninfect files that it infects if you run an
+> infected program with the --bliss-uninfect-files-please argument.
+> First:
+> ------------------
+>       infecting: ls, 25604 bytes
+>       infect() returning success
+> ------------------
+> And then, when told to disinfect: (./ls --bliss-uninfect-files-please)
+> ------------------
+>       /home/virtest/ls, ver 10002, at Tue Feb  4 16:21:54 1997
+>       disinfecting: /home/virtest/ls
+>       read 25604 bytes
+>       successfully (i hope) disinfected /home/virtest/ls
+> ------------------
+> It seems to work fine... a diff of this file and the original shows no
+> changes at all.
+>
+> BTW, remember that if you're going to play around with this, make a
+> special user to do it with :)
+--- snip ---
+
+> getting stupid people to run unknown binaries as root, with an interesting
+> side twist of modifying other system binaries when it runs.  McAfee's
+> statements about this are, at best, misleading.  To quote from their web
+> site:
+>
+>     McAfee (Nasdaq: MCAF), the world's leading vendor of anti-virus
+>     software, today announced that its virus researchers have discovered
+>     the first computer virus capable of infecting the Linux operating
+>     system.
+
+Oh yeah. This does seem to conflict with what I read on linux-security,  
+which is that someone there told his friend (who works for McAfee) about  
+the virus. Or at least that indicates that McAfee's definition of  
+"discover" seems to be slightly different.
+
+Another excerpt:
+--- snip ---
+>       I've forwarded your message and the reply by Todd to
+>       the Chief AV Researcher at McAfee Associates (the
+>       premier PC Anti-virus company).
+>
+>       Jimmy is a friend of mine (I used to be the sysadmin
+>       there) and has assured me that he will look into it
+>       first thing in the morning (he's here at my house now).
+>
+>       This would be the first "live and in-the-wild" Linux
+>       virus that I've ever heard of -- have I been missing
+>       something?
+>
+>       In any event -- McAfee may be able to add this to
+>       their existing uvscan product.  uvscan scan Linux
+>       filesystems for DOS and Windows (including Word Macro)
+>       viruses.   It may be possible for the AV team to
+>       simply add bliss' signature to the next release -- and
+>       it may even be possible for them to create a remover.
+--- snip ---
+
+No surprises, though. Remember how Compuserve claimed to have invented  
+PNG?
+
+> McAfee just flushed all respect I had for them down the toilet.
+
+Well, you certainly didn't portray yourself as an authority in this area  
+either - at least not successfully.
+
+MfG Kai

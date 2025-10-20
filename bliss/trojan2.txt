@@ -1,0 +1,74 @@
+From: "Albert D. Cahalan" <acahalan@cs.uml.edu>
+Subject: Bliss
+Date: Mon, 17 Feb 1997 20:55:04 -0500 (EST)
+To: boldt@math.ucsb.edu
+
+
+I saw your Bliss web page. Bliss is definitely NOT a trojan.
+It is a worm, which is a type of virus.
+
+Trojan: Program that pretends to be good while doing harm.
+        An example would be a /bin/ls that mails /etc/passwd
+        to someone else. The /bin/ls binary does not cause
+        other programs to exhibit such behavior, nor does it
+        fail to function as a normal /bin/ls.
+
+Virus:  Program that reproduces. Sometimes viruses attach to
+        executable files, but not always. Sometimes viruses
+        spread using boot sectors, but not always. Sometimes
+        viruses attack the operating system, but not always.
+        There is a virus that spreads in MS Word documents as
+        a macro. The macro virus is a real virus without any
+        native code. Portable Unix viruses are very easy to
+        write as /bin/sh scripts.
+
+Worm:   Spreads from one computer to another. A worm is a virus
+        that can use network security holes to spread. Worms
+        often remove themselves as they spread, though not always.
+
+====================================================================
+From: "Albert D. Cahalan" <acahalan@cs.uml.edu>
+Subject: Re: Bliss
+Date: Mon, 17 Feb 1997 23:59:15 -0500 (EST)
+To: boldt@cardinal.math.ucsb.edu (Axel Boldt)
+
+> Thanks, I added your definitions to the page. I would say though,
+> since bliss attaches itself to ordinary looking binaries and does
+> it's dirty dead when that binary is run, it has some trojan-like
+> features as well, no?
+
+The definitions overlap, but:
+
+Not really. With a virus, the evil code is only attached to the
+original binary. The evil code can move on to another binary without
+any part of the original binary. Some viruses can get into the boot
+sector or OS kernel, sometimes never even existing as executables.
+
+With a trojan, there is no "infected binary". The trojan binary _is_
+the original binary. Trojans are usually made by adding evil code to
+the source tree of an application and recompiling. Viruses are made by
+compiling a virus and then attaching the virus to a normal executable.
+
+It is possible that someone would construct a trojan the same way
+a virus is constructed. That would be done if someone wanted to turn
+a commercial program (there is no public Netscape source) into a
+trojan.
+
+Being not quite accurate, you could say: A trojan is a bad program.
+If it makes other programs bad, call it a virus instead of a trojan.
+If it can make other programs bad even accross a network, call it a
+worm instead of a virus (or trojan).
+
+Example:
+If I download the /bin/ls source and add code to remove 1% of the files,
+I can upload the _trojan_ binary. If I write a program that attaches
+itself to other programs every time it is run (and may then run the
+original) I can attach the _virus_ to whatever binary I happen to have.
+If I make it so it can spread accross a network, it is a _worm_.
+
+An example of a worm that barely qualifies as a virus: A worm
+could use FTP to put itself on remote machines and modify crontab
+so that crond will run the worm. Only the most broad definition
+of a virus would include such a program. Such a program also does
+not qualify as a trojan at all because it never acts like something
+useful.

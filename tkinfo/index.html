@@ -1,0 +1,129 @@
+<html> <head>
+<title>TkInfo: a browser for info files</title>
+<link rel="owner" rev="made" href="mailto:axelboldt@yahoo.com">
+</head>
+
+<body>
+<img src="http://vg06.met.vgwort.de/na/6ab6d8372e1b4e1aa346e6e813a2d8d5" width="1" height="1" alt="">
+
+<h1>TkInfo: a free browser for info files</h1>
+
+Most GNU software documentation is written in the texinfo format (a
+very restricted dialect of TeX) and then converted to
+the info hypertext file format;
+tkInfo is a graphical browser for these hypertext files. It requires <a
+href="https://www.tcl.tk">Tcl7.4 and Tk4.0 or
+better</a> and runs on all systems which are supported by Tcl/Tk, i.e.,
+ Unix with X, Next, Windows, and MacOS.
+Tcl/Tk is a free
+scripting language for
+quick development of portable
+graphical user interfaces, among other things.<p>
+
+Features of tkInfo include:
+<ul>
+  <li>Intuitive point-and-click interface.
+  <li>Supports index lookups (for info files which contain an index).
+  <li>File-wide search (exact or regular expression).
+  <li>Multiple windows.
+  <li>"Redirect window feature" (bound to right mouse button) allows easy
+  exploring of large menus.
+  <li>Repeatedly hitting Space will scroll through the whole info file in logical order.
+  <li>Can be operated with little mouse movement: important commands
+  bound to right button, scrolling with middle button, selecting with
+  left button.
+  <li>Quick mouse-less operation: Tab jumps from link to link, Return
+  selects, key bindings almost identical to the ones of the standard
+  info program and emacs' info mode.
+  <li>History list of visited info nodes.
+  <li>Can be embedded into other Tcl/Tk programs to provide on-line
+  help.
+  <li>Deals with compressed info files.
+</ul>
+
+TkInfo was orginally written by Kennard White for Tcl/Tk 3.6.
+I made it work with
+newer versions of Tcl/Tk, polished the interface a bit and added some features.
+
+<ul>
+  <li><a href="tkinfo.gif">Screenshot</a>
+  <li><a href="tkinfo.lsm.txt">Linux Software Map entry</a>
+  <li><a href="README-tkinfo-2.11.txt">README file for tkinfo 2.11</a>
+  <li><a href="tkinfo-2.11.tar.gz">tkinfo-2.11.tar.gz download</a>
+<!--  <li><a href="ftp://ptolemy.eecs.berkeley.edu/pub/misc">Ken's
+      original version of tkInfo</a> -->
+</ul>
+
+<p>
+There's also a <a
+href="http://rpmfind.net/linux/rpm2html/search.php?query=tkinfo">RedHat-style .rpm
+package</a> of tkInfo and a <a
+href="http://packages.debian.org/cgi-bin/search_packages.pl?searchon=names&keywords=tkinfo">
+Debian-style .deb package</a>. 
+<p>
+
+<h2>Relevant information and links to other software</h2>
+<ul>
+  <li>The <a href="https://www.gnu.org/software/texinfo/">Texinfo Home page</a>, contains documentation and gives a link 
+  to download the main piece of software, <strong>texi2any</strong>, also known as <strong>makeinfo</strong>, which can be used to convcert 
+  texinfo sources into a wide variety of formats.
+  <li>The editor <strong>Emacs</strong> at <a
+  href="https://www.gnu.org/software/emacs/">https://www.gnu.org/software/emacs/</a>
+  includes an info reader which allows for key-based or mouse-based
+  operation. Newer versions of the editor contain a cool feature, the
+  "speedbar", which provides a nice navigatable tree view of info
+  files. Emacs runs on Unix, MacOS and Windows.
+  <li><strong>XEmacs</strong>, a variant of Emacs available from <a
+  href="http://www.xemacs.org/">http://www.xemacs.org/</a>, includes
+  the most powerful info reader to date; it supports bookmarks,
+  annotations, incremental search and index lookups. It is more user friendly than the
+  emacs info mode but still not too intuitive to use.
+  Once you've read the available help text you'll love it though.
+  Xemacs is huge and runs, contrary to what its name might suggest, on
+  Unix, Windows and Macs.
+  <li><strong>OO-Browser</strong> is a powerful class browser and
+  editor for object oriented languages. It comes with the editor XEmacs and includes a
+  separate X-based program (xoobr) for tree views and stuff. OO-Browser
+  can also be used as an innovative object-oriented info browser.
+  <li><strong>TkMan</strong>, a very comfortable man page reader
+  available from <a
+  href="https://sourceforge.net/projects/tkman/">https://sourceforge.net/projects/tkman/</a>,
+  includes a texinfo viewer. TkMan's formatting of info nodes
+  looks much better than
+  that of an ordinary info reader (such as tkInfo) and it also provides a
+  nice tree based view of the file structure; however, it needs the
+  texinfo sources of the documentation, not the info files. It uses Tcl/Tk and runs on Unix.
+  <li><strong>Pinfo</strong> is a Unix text-mode browser for info files and
+  man pages
+  which is more intuitive than the original GNU info browser and works very much like the text-mode web browser lynx. 
+  It is available from <a href="https://github.com/baszoetekouw/pinfo">https://github.com/baszoetekouw/pinfo</a> and is included in most Linux distributions.
+  <li><strong>Pdftex</strong> can produce PDF files from texinfo input. 
+  This produces nice, searchable, cross-linked files with
+  indexes and tables of contents which can be printed or viewed with any PDF reader. Pdftex can be gotten from <a
+  href="https://ctan.org/pkg/pdftex">http://ctan.tug.org/tex-archive/systems/pdftex/</a>
+  <li>The file manager and web browser <strong>Konqueror</strong> is part of the Unix KDE desktop/GUI and can be 
+  used to view man pages, info pages, and KDE help pages. It can be
+  gotten from the <a href="http://www.kde.org/">KDE homepage</a>. 
+  <li><strong>Yelp</strong> is an integrated help browser for the Gnome
+  desktop/GUI which displays HTML documents, man pages and info files. It can be gotten from the <a
+  href="http://www.gnome.org">GNOME homepage</a>. GNOME is designed
+  for Unix.
+  <li>Two other lists of third-party texinfo/info software:
+  <ul><li><a
+  href="https://en.wikipedia.org/wiki/Info_(Unix)">https://en.wikipedia.org/wiki/Info_(Unix)</a>
+  <li><a
+  href="https://www.gnu.org/software/texinfo/links.html">https://www.gnu.org/software/texinfo/links.html</a>
+  </ul>
+
+</ul>
+<p>
+<p>
+
+<hr>
+Last Change: <!-- hhmts start -->
+30-Nov-2023
+<!-- hhmts end --><br>
+<address><a href="http://math-www.uni-paderborn.de/~axel/">Axel Boldt</a> 
+<a href="mailto:axelboldt@yahoo.com">&lt;axelboldt@yahoo.com&gt;</a></address>
+
+</body> </html>

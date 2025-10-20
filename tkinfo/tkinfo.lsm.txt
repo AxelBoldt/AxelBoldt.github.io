@@ -1,0 +1,19 @@
+Begin3
+Title:          TkInfo
+Version:        2.11
+Entered-date:   17OCT17
+Description:    A graphical Tcl/Tk-based browser for documentation in 
+                the info hypertext format which is used by the GNU project.
+                Can also be embedded into other Tcl/Tk programs.  
+Keywords:       documentation, info, texinfo, GNU, hypertext
+Author:         kennard@ohm.eecs.berkeley.edu (Kennard White) 
+                axelboldt@yahoo.com (Axel Boldt) 
+Maintained-by:  axelboldt@yahoo.com (Axel Boldt)
+Primary-site:   http://math-www.uni-paderborn.de/%7Eaxel/tkinfo/ 
+Alternate-site: sunsite.unc.edu /pub/Linux/apps/doctools/info
+                56kiB tkinfo-2.11.tar.gz
+Platforms:      Unix and the X window system or MacOS or Windows. 
+                Requires Tcl 7.4 and Tk 4.0 or newer. 
+Copying-policy: The program itself: BSD; the man page and icon: GPL.
+End
+

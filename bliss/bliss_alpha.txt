@@ -1,0 +1,97 @@
+Subject:      Re: oops, I leaked an alpha copy of Bliss (i386-linux-elf binary only)
+From:         angus@bmsysltd.demon.co.uk (Gus)
+Date:         1996/10/01
+Message-Id:   <DyM97u.1Aq@bmsysltd.demon.co.uk>
+X-Nntp-Posting-Host: bmsysltd.demon.co.uk
+References: <i.forged.this.post.cause@i.dont.want.it.to.be.known.who.leaked.this.early> <paul.844103330@bean>
+Followup-To:  alt.comp.virus,comp.security.unix
+Organization: Private Site
+Newsgroups:   alt.comp.virus,comp.os.linux.misc,comp.security.unix
+
+
+Paul Wouters (paul@bean.xtdnet.nl) wrote:
+: [ bliss binary cut ]
+
+: Well, I couldn't resist ;)
+: Believing in my own system I sued to nobody and did an strace -f and
+: a strings on the binary. It crashed shortly after probing some
+directories
+: and files, and tries to do some rsh's on host.equiv trusted clients
+: (we dont use rsh, just ssh, so it failed )
+
+: Here's the trace:
+[...cut...]
+: Here's the strings output:
+[...cut...]
+
+: Anyone who finds out more, please let me know. I'd like to know
+: what it does, now that my curiosity has been aroused ;)
+
+
+I too ran it as 'nobody' and as yourself, watched it fail to do
+anything and then get stuck when it couldn't use 'rsh' (we use ssh
+too)
+
+So... being of curious nature, I tried it out, on a disposable system,
+running it as root.
+
+
+It's behaviour is as follows.
+
+For each directory in your $PATH, whip through it randomly picking
+excecutable files (not just binaries) and prepend the 'bliss' binary
+to them. Then when they are execed, the same thing happends.
+
+
+/bin/ls got hit fairly early on, so it spread pretty fast, doing about
+10-20 binaries a minute.
+
+The files 'infected' ;
+a) grow by 17892 bytes
+b) lose all of there original functionality
+c) retain date/time stamp data
+d) retain file permissions 
+e) are logged to /tmp/.bliss
+
+Links are destroyed.
+
+
+The 'rsh' part it pretty basic. The routine is titled 'do_worm_stuff',
+but that would appear to be a solid case of self aggrandisement, as
+all it does (worm wise) is go through the hosts.equiv and .rhosts and
+try to 'rsh' to each of those machines as each of the users in
+/etc/passwd.  A pretty unlikely scenario as nobody in their right mind
+is going to use hosts.equiv nowadays.
+
+
+Disinfection of the test machine was pretty simple, because of the log
+of infected files is available. Simply a case of 'cat'ing new copies
+of the binaries into the infected ones, and then adding back any
+set[ug]id bits that have been lost.
+
+If you do get infected, remember 
+0) do not log any more sessions in.
+1) disconnect the network card
+2) kill all non-essential processes (killall5 if it's still OK)
+3) replace all the binaries in /tmp/.bliss
+
+You could probably script the last one, but it's probably a bit
+dangerous to do so.
+
+I still haven't firgured out the reference in the 'strings' output to 
+/usr/lib/news and /var/spool/news. As far as I can see, no files were 
+created or changed in those directories (apart from the news system
+binaries)
+
+(nothing was added to the mail spool either)
+
+
+
+us
+
+--
+                              - angus@intasys.com -
+                       = http://www.thepulse.co.uk/angus =
+             -= 82 AA 4D 7F D8 45 58 05  6D 1B 1A 72 1E DB 31 B5 =-
+               But what if there were no hypothetical situations ?
+

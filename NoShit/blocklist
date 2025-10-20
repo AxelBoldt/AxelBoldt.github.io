@@ -1,0 +1,74 @@
+#	Blockfile for the Internet Junkbuster
+#
+# For details about the junkbuster, see 
+# http://www.junkbusters.com/ht/en/ijbfaq.html
+
+# I got this from http://mind.learning.cs.cmu.edu/blockfile
+# and changed it a little bit. Note that my junkbuster is compiled
+# to understand full Posix regular expressions. 
+# Send suggestions to boldt@math.ucsb.edu.
+# Home page: http://math-www.uni-paderboren.de/~axel/
+
+# Other blockfiles are available elsewhere, try searching
+# documents that mention "junkbuster" and are called "blocklist"
+# altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=.&q=%2Bjunkbuster+%2Burl%3Ablocklist
+
+# Empty lines and lines beginning with a # is ignored.
+# The following line should be included to block use of telnet (port 23)
+:23
+
+#------------------------
+#
+# generic paths
+#
+#------------------------
+/*.*/adgraph/
+/*.*/ads/
+/*.*/adv/
+/*.*/advert/
+/*.*/adverts/
+/*.*/advertising/
+/*.*/banners/
+/*.*/banner/
+/*.*/banner.cgi
+/*.*/drnbanner/
+/*.*/sponsors/
+/service/anzeigen/
+/*.*/sponsor/
+/*.*/werbung/
+
+#------------------------
+#
+# specific servers
+#
+#------------------------
+193.158.37.3/cgi-bin/impact/
+impartner.de/cgi-bin/
+ad.altavista.telia.com:80/ad_image/
+ad.doubleclick.net
+ad.infoseek.com
+ad.preferences.com
+linkexchange.com
+adcount.hollywood.com
+adforce.imgis.com
+bannermedia.com
+focalink.com
+heise.de/icons/oma
+ads.imdb.com
+bannerswap.com
+commonwealth.riddler.com
+globaltrack.com
+globaltrak.net
+movielink.com/media/imagelinks/MF.ad
+movielink.com/media/imagelinks/MF.sponsor
+nrsite.com
+smh.com.au/adproof/
+www.link4link.com/cgi-bin/
+www.nrsite.com
+www.search.com/Banners
+www.wishing.com/webaudit/
+yahoo.com/homet/
+yahoo.com/CategoryID=0
+yahoo.com/promotions/
+yimg.com/a/
+/adlemur/slashdot

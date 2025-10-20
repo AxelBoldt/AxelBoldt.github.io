@@ -1,0 +1,759 @@
+<html> <head>
+<title>Filtering the Web using WebFilter</title>
+<link rel="owner" rev="made" href="mailto:axel@uni-paderborn.de">
+</head>
+
+<body>
+<h1>Filtering the Web using WebFilter</h1>
+
+This document describes the <code>WebFilter</code> (formerly known as
+<code>NoShit</code>) extension to Cern's httpd web server which allows
+you to filter out annoying parts of web pages that you visit often.
+
+<h2><a name="toc">Table of Contents</a></h2>
+<ul>
+  <li><a href="#why">Why to use WebFilter</a>
+  <li><a href="#how">How it works</a>
+  <li><a href="#install">How to download and install it</a>
+  <li><a href="#use">How to configure it</a>
+  <li><a href="#copy">The copyright</a>
+  <li><a href="#other">Other implementations of the same idea</a>
+  <li><a href="#future">The future</a>
+  <li><a href="#feedback">What about feedback</a>
+</ul>
+
+<h1><a name="why">Why to use WebFilter</a></h1>
+
+You have probably noticed how many popular web sites that offer cool
+stuff sooner or later inevitably turn to advertising. They are very
+welcome to do that, of course, <em>except if they try to place their
+shit on my computer screen</em>. Instead of placing the ads on a
+separate page and linking to it as "A word from our sponsors" or
+"Advertisings", the ads are usually gifs that I'm forced to download
+because they appear in the middle of the information. However, I don't
+recall having rented out any of my time, bandwidth, screen real estate
+or brain capacity to anyone; so I decided to do something about these
+ads and filter them out of the web: that's what <code>WebFilter</code> does.<p>
+
+Of course, you can filter other things out of the web as well, not
+just ads. (Examples include: removing annoying big graphics or indecent
+language.) Not only can you remove stuff with <code>WebFilter</code>, you can
+<em>change your perspective of the web in any way you
+like</em>. (Examples include: adding annoying big graphics or indecent
+language.) 
+<p>
+
+It is inevitable that internet usage will soon be billed by the byte;
+it is equally inevitable that WebFilter will then become the ultimate
+killer app. Animated gifs also help a lot, of course. :-)<p>
+
+<a href="#toc">(Back to the Table of Contents)</a>
+
+<h1><a name="how">How WebFilter works</a></h1>
+
+<code>WebFilter</code> is a patch to Cern's <code>httpd</code> web server. This server can act as a
+<em>proxy</em>, which means that your web browser (e.g. Mosaic, Netscape or
+Lynx), when asked to bring up a certain web page, doesn't contact the
+remote web server directly, but queries the proxy server (which runs on your
+own computer, or nearby) instead; this proxy then turns around, fetches
+the page from the remote web server and forwards it back to the
+browser. This is commonly used in order to hop over a security firewall or
+to implement caching of web pages, but it can be used to
+filter the web as well.
+<p>
+
+
+The <code>WebFilter</code> extension to <code>httpd</code> allows you to provide the proxy server
+with a list of URL templates and corresponding filter
+scripts. Whenever the proxy is asked to fetch a web page whose address
+matches one or more of the URL templates, it pipes the page through the
+corresponding filter scripts and presents the result to the
+browser. The advantage of this approach is that it works transparently
+with every browser, and that there is extreme flexibility about what
+you can do to a page, since the filter script can be any program
+whatsoever (for most cases, a sed, awk or perl script will do,
+however).<p>
+
+The idea is to run your own personalized <code>WebFilter</code> proxy
+server, tell your browser about it, and off you go. The proxy does the
+filtering and the browser doesn't even know about it. That's why this
+approach works with every browser.<p>
+
+The disadvantage is that you need to write filter scripts for all your
+favorite web pages that you want to change. Two reasons why this
+isn't as bad as it sounds:
+<ul>
+  <li>Many sites with ads consist of a large collection of very
+  similar, more or less static
+  pages; think of Lycos or HotWired. Only one or two templates will
+  take care of all of their pages, once and for all (well, at least
+  until they change their layout...)
+  <li>Many ad-filtering tasks can be done without even writing a
+  filter script: simply by redirecting classes of URLs of offensive gifs to a small
+  local picture.
+  <li>I have created a <a href="library.txt">filter
+  script library</a> with filters for many of the most annoying
+  sites. People can grab filters from there or
+  contribute their own. The library is ready to be read upon start-up
+  by <code>WebFilter</code>. Unfortunately, it is outdated now. Any
+  takers?
+</ul>
+
+<code>WebFilter</code> should run on any platform that Cern httpd runs
+on, i.e. at least every Unix dialect. If you run something different,
+simply upgrade to <a
+href="http://sunsite.unc.edu/mdw/linux.html">Linux</a> or <a
+href="http://www.freebsd.org">FreeBSD</a>. Sad
+but true: the web browser does not have to run on Unix, as long as it
+has a network connection to a Unix machine running the <code>WebFilter</code>
+proxy. That Unix machine would then have to be specified as proxy host to
+the browser. This is explained in detail later.<p>
+
+
+Because the filter scripts that are applied to a page depend solely on
+the URL used to access that page and since <code>httpd</code> is able to remap
+URLs, you can invent your own specialized form of URL notation, for
+example:
+<code>http://somewhere.or.other/dir/file.html</code>
+will be presented without the ads,
+<code>http://somewhere.or.other/dir/file.html|shit</code>
+will be presented with ads included,
+<code>http://somewhere.or.other/dir/file.html|html</code>
+will remove all Netscape extensions from the file, or
+<code>http://somewhere.or.other/dir/file.html|noimage</code>
+presents the page without the images.<p>
+These specialized URLs can only be used by people who use your WebFilter
+proxy, so they aren't suitable for being put on the web, but they
+are nice to fetch a given page in a certain format; you can also put
+them into your hotlist.
+<p>
+
+<code>WebFilter</code> can also act as a regular web server; the
+filtering support is then useful to decompress local documents on the
+fly or to add a common trailer to all local HTML pages that you serve
+to the outside. To make writing the configuration file more flexible
+and convenient, Cern's simple URL templates can optionally be replaced
+by fully featured extended regular expressions as used by GNU
+<code>grep -E</code>.  <p>
+
+<a href="#toc">(Back to the Table of Contents)</a>
+
+<h1><a name="install">How to download and install WebFilter</a></h1>
+
+These are the instructions for using <code>WebFilter</code> as a
+personal filtering proxy server. I assume you have an account on a
+Unix machine from which you usually browse the web and you want to run
+the proxy on that same host.<p>
+
+(It is also possible to use <code>WebFilter</code>
+as a site-wide or even network-wide filtering proxy server or as a
+server for local documents to the outside world, or all at once;
+however, you are on your own there. Start with the <a
+href="http://www.w3.org/pub/WWW/Daemon/User/Admin.html">httpd
+documentation</a> and read the description of the
+<code>WebFilter</code> commands below and then use your imagination.)
+
+<ol>
+  <li>Cd to some temporary directory
+       <pre>mkdir /tmp/webfilter; cd /tmp/webfilter</pre>
+       and fetch the Cern httpd source from
+       <a
+       href="ftp://ftp.w3.org/pub/httpd/w3c-httpd-3.0A.tar.gz"><code>ftp://ftp.w3.org/pub/httpd/w3c-httpd-3.0A.tar.gz</code></a> and the WebFilter patches from <a href="http://visar.csustan.edu:8000/noshit/WebFilter_0.5.patch.gz"><code>http://visar.csustan.edu:8000/noshit/WebFilter_0.5.patch.gz</code></a>.
+  <li>Now unpack the <code>httpd</code> archive:
+       <pre>zcat w3c-httpd-3.0A.tar.gz | tar xvf -</pre>
+       and apply the <code>WebFilter</code> patches:
+       <pre>zcat WebFilter_0.5.patch.gz | patch -sp</pre>
+    You shouldn't get any error messages here. If you do, you've
+    probably forgotten the "-p" option for patch, or Netscape has
+    already uncompressed the patch, in which case you need to say:
+             <pre>cat WebFilter_0.5.patch | patch -sp</pre>
+        
+  <li>In case you currently use <code>Socks</code> to jump over a
+  network security
+  firewall, you'll have to compile <code>WebFilter</code> with <code>socks</code>
+  support, which is explained in <code>WWW/README-SOCKS</code>. If you
+  don't know what I'm talking about, relax.
+  <li>Type
+       <pre>make</pre>
+    in order to start the compilation.
+  If
+  you get any errors during compilation, consult the <code>README</code> file in the
+  directory <code>WWW</code>. If you suspect that the errors are due to the <code>WebFilter</code>
+  patch, try first building an unpatched <code>httpd</code>, i.e. try
+  to compile <code>httpd</code> without applying the <code>WebFilter</code> patches.
+  <li>The patched <code>httpd</code> is
+  <code>Daemon/MACH/httpd3.0A+WebFilter_0.5</code> where
+  <code>MACH</code> is your machine type. I move it to my directory of
+  executables and call it simply <code>webfilter</code>:
+       <pre>mv Daemon/linux/httpd3.0A+WebFilter_0.5 ~/bin/webfilter</pre>
+       
+  <li><code>WebFilter</code> needs a directory where it finds its configuration file
+  and stores error and log files. I use <code>~/.webfilter</code>:
+<pre>mkdir ~/.webfilter</pre>
+  Four sample config
+  files are provided in <code>server-root/config</code>. You want to use
+  <code>webfilter.conf</code>:
+<pre>cp server-root/config/webfilter.conf ~/.webfilter/conf</pre>
+       You'll probably want to change a couple of things in that file
+  (at the very least the value of the directive ServerRoot, which
+  should be the absolute path of your directory
+  <code>~/.webfilter</code>; it's not difficult because it comes with
+  lots of comments.
+  
+  <li>If you want to use my (rather outdated) library of filterscripts that remove ads
+  from many popular sites, copy it in place:
+       <pre>cp server-root/config/library.txt ~/.webfilter</pre>
+       You can always fetch the latest version of the filterscript
+       library from 
+   <a
+   href="library.txt"><code>http://math-www.uni-paderborn.de/~axel/NoShit/library.txt</code></a>.
+  <li>If you start <code>WebFilter</code> as root, then it will switch
+  to user <code>nobody</code>, so make sure that <code>nobody</code>
+  can read and write <code>~/.webfilter</code>.
+  <li>You can now start <code>WebFilter</code> with the line
+       <pre>webfilter -r ~/.webfilter/library.txt -r ~/.webfilter/conf</pre>
+       To automatically start up your personal <code>WebFilter</code> proxy at login time, put
+  the following into your <code>~/.login</code> (I'm assuming that you
+  use a csh-like login shell):<pre>
+# Kill old webfilter, if any (~/.webfilter/httpd-pid contains the current
+# server process's id):
+if ( -r ~/.webfilter/httpd-pid ) then
+  kill -9 `cat ~/.webfilter/httpd-pid`
+endif
+# Start new one (the -r option specifies the config files to read in; you
+# need to give an absolute pathnames here, tilde notation is fine).
+webfilter -r ~/.webfilter/library.txt -r ~/.webfilter/conf
+# Tell browsers about it. 7450 is the number specified with the
+# Port directive in ~/.webfilter/conf. Not all browser use the
+# value of the variable http_proxy though. We'll have to tell
+# them separately.
+setenv http_proxy "http://localhost:7450/"
+       </pre>
+  Of course, we want to kill <code>webfilter</code> when we log out, so the
+  following goes into <code>~/.logout</code>:<pre>
+# Kill proxy webfilter process:
+if ( -r ~/.webfilter/httpd-pid ) then
+  kill -9 `cat ~/.webfilter/httpd-pid`
+  rm -f ~/.webfilter/httpd-pid
+endif</pre>
+
+Another possibility is to start the proxy only when you start your web
+browser, which can be accomplished with an <code>alias</code> in your
+<code>~/.cshrc</code> file, for example if you use <code>Mosaic</code>:
+<pre>
+alias Mosaic '(webfilter -r ~/.webfilter/library.txt -r ~/.webfilter/conf; \
+               \Mosaic; kill -9 `cat ~/.webfilter/httpd-pid`)'  
+</pre>     
+  <li>Some browsers ignore the value of the environment variable
+  <code>http_proxy</code>, and we have to tell them separately about
+  the proxy.
+       <dl>
+         <dt>Mosaic on Unix
+         <dd>Go to File->Proxy List->Add and fill in http for Scheme,
+         localhost for Proxy Address and 7450 for Proxy Port. Then hit
+         Commit and Save.
+         <dt>Netscape 1.2
+         <dd>Go to Options->Preferences->Proxies and enter
+         <code>localhost</code> as the http proxy and
+         <code>7450</code> as the port.
+         <dt>Netscape 2.0
+         <dd>Go to Options->Network Preferences->Proxies, choose
+         Manual configuration, click on view and enter
+         <code>localhost</code> as the http proxy and
+         <code>7450</code> as the port.
+         <dt>WinWeb
+         <dd>Go to Options->Proxy Server... and enter
+         <code>localhost:7450</code> after <code>http:</code>.
+       </dl>
+  Please let me know about the procedure for other browsers that don't
+  use the <code>http_proxy</code> standard.
+  <li>It is conceivable that certain sites will disallow access from
+  <code>WebFilter</code> proxies. If this happens to you, just change the text in
+  <code>WWW/Daemon/Implementation/Version.make</code> to
+       <pre>VD = 3.0A</pre>
+  and recompile with <code>make</code>.
+  <code>WebFilter</code> will then look like an ordinary Cern <code>httpd</code> proxy to the
+  outside world.
+</ol>
+
+<p>
+<a href="#toc">(Back to the Table of Contents)</a>
+
+<h1><a name="use">How to configure WebFilter</a></h1>
+
+The <code>WebFilter</code> extensions to Cern's <code>httpd</code> consist of three new configuration
+directives to be used in the configuration file
+<code>~/.webfilter/conf</code>. They are explained here. For the other
+directives, consult the <a
+href="http://www.w3.org/pub/WWW/Daemon/User/Admin.html">httpd online
+documentation</a>. You need to be familiar with httpd's configuration
+before proceeding.
+
+<h2>TestingFilters</h2>
+
+The <code>TestingFilters</code> directive takes one argument, "On" or
+"Off" (without the quotes). It defaults to "Off". If "On", then
+<code>webfilter</code> will reload its configuration file prior to serving
+each request and, moreover, won't honor requests of the form
+"if-modified-since" but will send all documents unconditionally.<p>
+
+This is useful for interactively changing the configuration file,
+especially <code>Filter</code> directives: You can change something in
+the config file or filter scripts, save it and then reload a page from your browser. The
+effects will be visible immediately -- no need to send a signal to
+the proxy server or to flush the client's cache. If you operate like
+that, you shouldn't be too surprised by an occasional proxy crash
+though; it happens if you write a new config file to disk while the
+server is reading it.<p>
+
+Be aware, however, that if <code>TestingFilters</code> was "Off" when
+the server process was started and you switch it on, the server won't
+notice it until you force it to reload the config file with
+<pre>
+  kill -1 `cat ~/.webfilter/httpd-pid`
+</pre>
+
+When writing or changing filter scripts, you will want to check the
+proxy's error logs in <code>~/.webfilter</code> for hints in case
+something unexpected happens.<p>
+
+In ordinary use, it is imperative to switch off the directive 
+<code>TestingFilters</code>, because it slows down the proxy's
+operation considerably.
+
+<h2>RegExp</h2>
+
+All the rules in the <code>WebFilter</code> config file <code>~/.webfilter/conf</code> that
+appear between the lines
+<pre>RegExp On</pre>
+and
+<pre>RegExp Off</pre>
+use fully featured extended regular expressions as URL templates. For
+the
+syntax of extended regular expressions refer to the GNU <code>grep</code> man
+page. Regular
+expressions in the <code>WebFilter</code> config file are implicitly anchored at the start and end of the
+string, meaning that you don't have to start them with <code>^</code>
+or end them with <code>$</code>. Note that the characters
+<code>\|[](){}.?+*^$</code> have special meanings in extended regular
+expressions; if you want to use them literally, escape them with a
+preceding backslash. <p>
+
+If <code>RegExp</code> is on, then a special notation is used for
+replacement patterns (i.e. for the second arguments of <code>Map</code>, <code>Redirect</code>, <code>Exec</code> and
+<code>Pass</code>): you can refer back to the i-th parenthesized
+subexpression of the matching pattern with the notation
+<code>\i</code> where i is a digit. <code>\0</code> refers to
+the full matching string. All non-backslashes and all backslash-escaped
+non-digits stand for themselves in a replacement
+pattern.
+<p>
+
+As an example, the following rule switches the first two path components
+of URLs belonging to the host <code>www.weird.com</code> and then
+redirects them to <code>new.weird.com</code> (assuming that <code>RegExp</code> has been switched on before):
+<pre>
+Redirect http://www\.weird\.com/([^/]*)/([^/]*)(/.*)?  http://new.weird.com/\2/\1\3
+</pre>
+You shouldn't use regular expression matching unless you really need
+it.
+
+<h2>Filter</h2>
+
+The <code>Filter</code> directive specifies which filter scripts to
+apply to which URLs. It is the main work horse of WebFilter.
+It takes two arguments, a URL template and a
+filter script. <p>
+
+The URL template specifies those URLs that should be piped through the
+filter script. It can either be an extended regular expression (if
+<code>RegExp</code> has been switched on before) or contain one or more '*'-characters, each of
+which being a place holder for an arbitrary sequence of letters. <p>
+
+If a given URL matches the template of a <code>Filter</code>
+directive, and then later is mapped to a different URL using the
+<code>Map</code> directive, and matches another <code>Filter</code>
+line's template further down, then the document will be piped through
+both filter scripts; first through the first, then through the
+second.<p>
+
+The second argument to <code>Filter</code>, the filter script, is a
+string that will be passed as argument to
+<pre>/bin/sh -c</pre>
+This
+argument can contain spaces and backslash-escaped newlines; it ends
+when the first unescaped newline is encountered. Escaped newlines
+become literal newlines in the string passed to the shell -- be aware
+that sometimes the shell actually needs an escaped newline itself,
+which you can get by preceding the newline with two backslashes in the
+<code>WebFilter</code> config file. Every backslash that's not followed by a newline is
+copied literally to the command string.<p>
+
+Since you can't always be sure what the value of the <code>PATH</code>
+environment variable and the current directory was when
+<code>webfilter</code> was started, it is best to use absolute pathnames
+for all programs (you can't use "~" for you home directory either,
+since some brain dead non-GNU shells don't know about it. "$HOME" is
+ok, though.)<p>
+
+Because the second argument is processed by <code>sh -c</code>, it can
+contain pipes, command sequences, file redirections and references to
+environment variables. If you don't need all this and just want to
+start a single program with a couple of arguments, it's best to
+precede this program's name with <code>exec</code> to speed up matters.
+
+<p>
+
+There's one problem with filterscripts that need
+an <code>'</code>-enclosed argument, and this argument itself needs to
+contain an <code>'</code>. This situation appears for example if you
+specify a filter script as a perl argument like so
+<pre>
+Filter http://some.host.com/*    exec perl -e 'several;perl;commands;'
+</pre>
+since <code>'</code> is frequently used in perl commands.
+As a consequence of the shell's command line parsing, the only way to
+specify an <code>'</code> as part of the perl commands is to write it
+as <code>'\''</code>.<p>
+
+In addition to the document's HTML text, your filter script will
+probably see
+its MIME header on standard input, because it's part of the http
+protocol version 1.0 and later (if either your browser or the server
+does not support HTTP/1.0, which is unlikely, no MIME header is sent).
+MIME headers typically look like
+this:
+<pre>
+     HTTP/1.0 200 Document follows
+     MIME-Version: 1.0
+     Server: CERN/3.0
+     Date: Wednesday, 30-Aug-95 20:49:59 GMT
+     Content-Type: text/html
+     Content-Length: 716
+     Last-Modified: Saturday, 26-Aug-95 18:38:30 GMT
+</pre>
+
+Every line is ended by a carriage return + line feed (Ctrl-M Ctrl-J),
+and the whole header is ended by an empty line. Usually, your script
+can ignore this header, but sometimes you want to look at its first
+line: if anything but a 200 appears there, then you're not getting the
+document you requested, but an error message or an authorization
+request of some kind. In this case, you'll probably don't want to do
+any filtering. Another case is if you want to prevent certain
+servers from
+placing cookies on your computer (for the evils of cookies compare
+<a href="http://www.junkbusters.com/ht/en/cookies.html">junkbuster's
+cookie page</a>). Cookies are sent in the MIME header in a line
+starting with "Set-Cookie:", so it's trivial to filter them out. Note
+however that malignant sites can still set cookies using javascript;
+to prevent this, make your cookies file (somewhere in your browser's
+directory) non-writeable.<p>
+
+To find out what precisely your script sees on
+standard input, you can start out with filtering the document through
+the script
+<pre>
+tee outfile
+</pre>
+and examine <code>outfile</code> afterwards.
+<p>
+Make sure that your patterns are not too broad: you definitely don't
+want to pipe <code>.gif</code> files through your filter scripts!
+<p>
+
+If you want to block access to a particular set of URLs altogether,
+use <code>Fail</code> or <code>Redirect</code> and not <code>Filter</code>.
+This is much faster. It is especially suitable for shutting up the
+recently established junk companies that place their ad banners on other
+people's sites and use cookies to track virtually everybody's
+browsing habits. A single <code>Fail</code> or <code>Redirect</code> pattern will take care of them.
+Experience shows that <em>most</em> ad filtering can already be accomplished
+with a couple of good <code>Redirect</code> commands: for example, redirect all gifs from
+Yahoo to a small local gif saying "deleted". Use <code>Filter</code>
+only if you have to: it's more flexible, but
+much more complicated to use and slower
+than the alternatives.
+
+
+<h2>Examples of filtering schemes</h2>
+
+Here I explain how you can have several filtering schemes implemented
+on your proxy, and the client chooses which one to use. For examples
+of actually useful filter scripts, check out the <a href="library.txt">filter
+  script library</a>.<p>
+
+Make sure to read the <a href="http://www.w3.org/pub/WWW/Daemon/User/Config/Overview.html">httpd documentation</a> about the
+directives <code>Pass</code> and <code>Map</code> and the address
+mapping algorithm in general if you want to
+understand the following examples.<p>
+
+The first is the good old simple minded fascist approach: censor the
+shit, no questions asked. Don't let the client see the uncensored
+version (unless they are very smart, that is).
+<pre>
+Filter  http://host.with.ads.1/*.html          exec ~/.webfilter/script/for/host/1
+Filter  http://host.with.ads.2/some/dir/*.html exec ~/.webfilter/script/for/host/2
+Pass http://*
+</pre>
+This will let everything go through unfiltered except those specified
+URLs on <code>host.with.ads.1</code> and <code>host.with.ads.2</code>;
+they will be filtered through the specified scripts.
+<p>
+
+Here's a more sophisticated example: we allow clients to
+see the unfiltered version if they specify the URL in one of the
+following formats:
+<pre>
+  http://host.with.ads.1/some/page.html|shit
+  http://host.with.ads.1|shit/some/page.html
+</pre>
+The first format is good if only that single page should be
+unfiltered; with the second format, all partial references on
+<code>page.html</code> will also appear unfiltered if selected.
+<pre>
+RegExp   On
+Pass http://([^/]*)\|shit/(.*)        http://\1/\2
+Pass http://(.*)\|shit                http://\1
+RegExp   Off
+Filter  http://host.with.ads.1/*.html          exec ~/.webfilter/script/for/host/1
+Filter  http://host.with.ads.2/some/dir/*.html exec ~/.webfilter/script/for/host/2
+Pass http://*
+</pre>
+
+In the final example, we implement two filtering schemes, which can
+even be combined: adding <code>|noshit</code> to an URL will filter
+out ads, adding <code>|nofilth</code> removes indecent language,
+adding <code>|noshit|nofilth</code> does both and
+the unaltered URL gives the document unaltered. Again, we allow for
+the extension to be added after the hostname or after the document. 
+
+<pre>
+
+# First, move the extensions to the back:
+RegExp on
+Map http://([^/]*)\|noshit\|nofilth/(.*)  http://\1/\2|noshit|nofilth
+Map http://([^/]*)\|nofilth/(.*)          http://\1/\2|nofilth
+Map http://([^/]*)\|noshit/(.*)           http://\1/\2|noshit
+RegExp off
+
+# Now the nofilth filtering:
+Filter http://host.number.1/*|nofilth          exec ~/.noshit/nofilth/host/1
+Filter http://host.number.2/some/dir/*|nofilth exec ~/.noshit/nofilth/host/2
+
+# Remove |nofilth extension:
+Map *|nofilth *
+
+# Now the noshit filtering:
+Filter http://host.number.1/*|noshit           exec ~/.noshit/script/for/host/1
+Filter http://host.number.2/some/dir/*|noshit  exec ~/.noshit/script/for/host/2
+
+# Remove |noshit extension:
+Map *|noshit *
+
+# Pass everything through:
+Pass http://*
+</pre>
+
+Note that you can use these extended URLs in your hotlist or type them
+directly into your browser, but you can't put them as links on HTML
+pages that might be read by browsers not using your proxy.<p>
+
+<a href="#toc">(Back to the Table of Contents)</a>
+
+<h1><a name="copy">The Copyright</a></h1>
+
+<code>WebFilter</code> is released under the <a href="COPYING.txt">GNU
+General Public License</a>, our beloved little copyleft
+virus that infects everything it touches. Essentially this means that
+you can do with the <code>WebFilter</code> patches whatever you want unless you try to restrict
+someone else's right to do whatever they want.<p>
+
+<code>WebFilter</code> includes a slightly modified version of Tom
+Lord's regular expression library <code>rx</code>, which is also
+covered by the GPL.<p>
+
+<a href="#toc">(Back to the Table of Contents)</a>
+
+<h1><a name="other">Other Implementations of the same Idea</a></h1>
+
+WebFilter (then called NoShit) was firsted announced to the world on
+September 28, 1995. Since then, several programs implementing
+variations of the idea of filtering WWW proxies have appeared.<p>
+
+There was at some point a commercial
+filtering program around;
+it was implemented as a netscape plug-in for Windows 95
+and Windows NT machines and was called <em>Internet Fast
+Forward</em>. The company, PrivNet, was bought by PGP.com and
+apparently Internet Fast Forward died in the process.<p>
+
+Two implementations of the WebFilter idea for Unix systems have been
+presented at WWW conferences; they both appear to be smaller, cleaner
+and more powerful than WebFilter. I have not tried them though, and
+they don't seem to be actively supported anymore. The first is <a
+href="http://www.w3.org/pub/Conferences/WWW4/Papers/56/">OreO</a> from
+the OSF and the second is <a
+href="http://pauillac.inria.fr/~rouaix/V6/">V6</a> from Inria.  <p>
+
+The <a href="http://www.junkbuster.com/">Internet Junkbuster</a>
+is a lean and mean proxy that is specifically designed to block advertising
+banners (specified by URL regular expression matching) and
+cookies. Less flexible than WebFilter, but much smaller, faster
+and easier to use. It gets the job done remarkably well.
+Runs on Unix, Windows NT and Windows 95 and is free, including the
+source code. I use Junkbuster myself these days. <a
+href="blocklist">Here's</a> the blockfile I use to get rid of
+advertising banners.<p>
+
+A similar free Linux and Windows based product is <a href="http://lide.punknet.cz/miri/adbuster.html">AdBuster</a>.<p>
+
+<a href="http://www.robinlewis.freeserve.co.uk/AdKiller.html">Adkiller
+</a> is a similar free product which runs on Macs, Unix and Windows.<p>
+
+
+<a
+href="http://www.siemens.de/servers/wwash/wwash_us.htm">WebWasher</a>,
+written by Siemens, is a high quality ad filtering personal proxy, free for
+personal use. It removes ad banners based on size, gets rid of pop-up
+windows and stops animated graphics. It only works on Windows.<p>
+
+<a
+href="http://members.tripod.com/Proxomitron/features.html">Proxomitron</a>
+is a very flexible Windows based personal proxy which can alter HTML
+in many ways, for example removing ads, killing pop-up windows, change
+backgrounds, killing background sounds etc.<p>
+
+<a href="http://taz.net.au/block">Taz</a> is a free patch for the popular
+squid proxy which offers the same functionality as junkbuster, but is
+faster. Squid and Taz run on Unix systems, but the proxy can be used
+from any browser.<p>
+
+<a href="http://language.perl.com/misc/abiprox/index.html">Abiprox</a>
+is a perl based personal filtering proxy; it is extremely powerful and
+customizable, but not so easy to use. A more mature continuation of that same
+theme is <a
+href="http://draal.physics.wisc.edu/FilterProxy/">FilterProxy</a>.<p>
+
+
+<a href="http://muffin.doit.org/">Muffin</a> is a free filtering proxy
+for the web written in Java; runs on all platforms. Similar to
+junkbuster, but more flexible, portable and powerful. It supports
+several "filters", one of which can delete images based on their
+width/height ratio (banner ads) and another one allows modifying the
+incoming HTML stream using a simple language, allowing for stripping
+other ads. Highly recommended.<p>
+
+
+<a href="http://www.besiex.org/ByProxy/index.html">ByProxy</a> is a more general solution: it can act as a
+proxy for every IP service (most important are email and WWW) and
+modifies the in- and outgoing traffic based on completely general
+plug-ins. It's free, written in
+Java and should hence be widely portable. There is a plug-in for
+removing ads from webpages, but I don't know how well it
+works.<p>
+
+There are also several commercial ad-filtering products
+around, but don't waste your money. I won't give them any free
+advertising here :-)<p>
+
+Neither of these solutions can remove the annoying top-level
+advertising windows coming from various "free-internet" or
+"money-for-surfing" companies. You can use the wonderful Windows shareware
+utility <a href="http://www.halyava.ru/goosh/">NookMe</a> for this
+purpose.<p>
+
+The <a href="http://www.inf.ethz.ch/department/IS/ea/blinds/">WAB
+project</a> in Zürich uses a filtering proxy to prepare HTML pages for
+blind users.<p>
+
+Several video cassette recorders by RCS
+can skip recorded commercials during
+play-back. After recording a
+program, it goes back over the tape and looks for gaps of the proper
+length between
+fades-to-black; these are then marked as
+commercials. During playback, it automatically fast-forwards through these
+commercials. It's said to be about 90% accurate. 
+Video Magazine reviewed a unit and found it worked well.<p>
+
+TiVo and ReplayTV are two Linux based devices which record TV in real
+time on a hard drive, allowing for delayed playback, during which the
+viewer can skip ads using a "skip 30 seconds" or "fast forward"
+button. They still cannot remove ads automatically, though.<p>
+
+
+Please check out the excellent collections of junk filtering software links
+<a
+href="http://www.junkbusters.com/ht/en/links.html#filtering">at JunkBusters</a>
+and <a href="http://www.flourish.org/adremove">by
+Francis Irving
+</a>.<p>
+
+
+<a href="#toc">(Back to the Table of Contents)</a>
+
+<h1><a name="future">The Future</a></h1>
+
+looks dark. Prepare for mpeg movies on the web containing commercials,
+sound ads played while downloading a document, java animations with an ad in
+the middle, and lots of acrobat pdf files full of
+shit. Simplistic filters like <code>WebFilter</code> are powerless
+against
+all of these. I hope the AI people will get their act together in
+time.<p>
+
+The
+only idea I have right now is to promote a little widely recognized
+No-Ads gif that all ad-free sites could put on their home pages. Maybe
+you can design one? <p>
+
+I have already received two suggestions for a No-Ads logo to be put on
+ad-free web sites. <a
+href="http://visar.csustan.edu:8000/HyperNews/get/noads.html">Have a
+look</a> and leave your comments.<p>
+
+
+
+<a href="#toc">(Back to the Table of Contents)</a>
+
+<h1><a name="feedback">What about feedback</a></h1>
+
+I have set up some space on the web where you can leave your
+suggestions and comments regarding <code>WebFilter</code> or read other people's
+remarks and respond to them. <a
+href="http://visar.csustan.edu:8000/HyperNews/get/noshit.html">Check
+it out!</a><p>
+
+There was an <a
+href="http://www.webweek.com/95Nov/news/noshit.html">article
+about Webfilter</a> (when it was still called <code>NoShit</code>) on WebWeek and
+<a href="http://www.suck.com/daily/95/10/02/">another one</a> on Suck.<p>
+
+
+<a href="#toc">(Back to the Table of Contents)</a>
+
+<hr>
+<address><a href="http://math-www.uni-paderborn.de/~axel/">Axel Boldt</a> 
+<a href="mailto:axel@uni-paderborn.de">&lt;axel@uni-paderborn.de&gt;</a></address>
+Last changed: 
+<!-- hhmts start -->
+30-Jul-2000
+<!-- hhmts end -->
+</body> </html>
+
+<!--  LocalWords:  html NoShit rel rev href mailto boldt ucsb edu Cern's httpd
+ -->
+<!--  LocalWords:  toc ul li em gifs download Netscape URL sed awk perl Lycos
+ -->
+<!--  LocalWords:  HotWired Cern FreeBSD URLs http dir noimage hotlist ol ftp
+ -->
+<!--  LocalWords:  org src libwww www uni paderborn de axel gatekeeper dec com
+ -->
+<!--  LocalWords:  gz Cd untar pre zcat xvf trojan cd README mv linux config cp
+ -->
+<!--  LocalWords:  conf PidFile ErrorLog csh pid endif setenv localhost br rm
+ -->
+<!--  LocalWords:  portnumber dl dt dd WinWeb VD TestingFilters sh ok Aug GMT
+ -->
+<!--  LocalWords:  Ctrl outfile noshit nofilth hostname hr lt gt PDT
+ -->

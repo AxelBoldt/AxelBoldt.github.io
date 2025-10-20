@@ -1,0 +1,41 @@
+<HTML><HEAD><TITLE>Axel Boldt's Search Bookmarklets</TITLE>
+<LINK href="mailto:axelboldt@yahoo.com" rel=owner rev=made>
+<BODY>
+<img src="http://vg06.met.vgwort.de/na/1e19f67189ae46a5a288193f6d46f96d" width="1" height="1" alt="">
+
+<H1>Searching several sites simultaneously for files, torrents etc.</H1>
+<H2>by Axel Boldt</H2>
+
+The following bookmarklets allow to search several sites simultaneously, with the results going to separate browser windows or tabs. They require that Javascript is enabled and work best if the browser opens all windows as tabs (In Firefox: Tools/Options/Tabs/"Open&nbsp;new&nbsp;windows&nbsp;in&nbsp;a&nbsp;new&nbsp;tab&nbsp;instead"; in Chrome: no need to do anything.)<p>
+
+Drag the bookmarklet you like to your browser's bookmarks toolbar (to enable in Firefox: right-click on menu bar, check "Bookmarks toolbar"; in Chrome: Wrench/Tools/"Always&nbsp;show&nbsp;bookmarks&nbsp;bar"). If you then click on the bookmarklet, a box will prompt you for search terms, and the results will appear in new windows/tabs. If you first select some text with the mouse and then click the bookmarklet, the search starts right away without further prompting.<p>
+
+In Firefox and Chrome you can also directly search from the address bar with a <a href="http://www.ghacks.net/2010/04/16/search-and-access-sites-faster-with-keywords/">keyword</a>, which is my preferred method: go to the address bar (Ctrl-L), enter a keyword followed by a space, search terms and Enter. To assign a keyword to a bookmarklet: in Firefox right-click on the bookmarklet, choose Properties, and enter the keyword. In Chrome it's a bit harder: right-click the bookmarklet and choose Copy, then Wrench/Options/Basics/Search/Manage/Add, enter a name and keyword and paste the bookmarklet into the URL field.<p>
+
+To quickly get rid of the opened tabs: Ctrl-W.<p>
+
+Here are the bookmarklets:
+<ul>
+<li><strong><a title="Google, Bing, Yahoo, Ask search" href="javascript:s='%S';if (s=='%'+'S'||s=='')s=(window.getSelection?window.getSelection():document.getSelection?document.getSelection():document.selection.createRange().text);if(s==''){l=parent.frames.length;if(l!=1){for(i=0;i<l;i++){s=parent.frames[i].document.getSelection?parent.frames[i].document.getSelection():parent.frames[i].document.selection.createRange().text;if(s){break;}}}}if(s==''){void(s=prompt('Google/Bing/Yahoo/Ask search:\nEnter search words. This will open 3 windows/tabs.',''));}s=encodeURIComponent(s);window.open('http://search.yahoo.com/search?p='+s);window.open('http://www.bing.com/search?q='+s);window.open('http://de.ask.com/web?q='+s);window.open('http://google.com/search?q='+s);void(0);">Search</a>.</strong> Searches the major search engines: Google, Bing, Yahoo and Ask.
+<li><strong><a title="Torrent search" href="javascript:s='%S';if (s=='%'+'S'||s=='')s=(window.getSelection?window.getSelection():document.getSelection?document.getSelection():document.selection.createRange().text);if(s==''){l=parent.frames.length;if(l!=1){for(i=0;i<l;i++){s=parent.frames[i].document.getSelection?parent.frames[i].document.getSelection():parent.frames[i].document.selection.createRange().text;if(s){break;}}}}if(s==''){void(s=prompt('Torrent search:\nEnter search words. This will open 4 windows/tabs.',''));}s=encodeURIComponent(s);window.open('http://btjunkie.org/search?f=1&q='+s);window.open('http://www.torrentz.com/search?q='+s);window.open('http://www.google.com/search?hl=en&safe=off&q='+s+'+torrent');window.open('http://isohunt.com/torrents/?ihq='+s);void(0);">Torrents</a>.</strong> Searches for torrent files using several specialized search engines and Google.
+<li><strong><a title="File search" href="javascript:s='%S';if (s=='%'+'S'||s=='')s=(window.getSelection?window.getSelection():document.getSelection?document.getSelection():document.selection.createRange().text);if(s==''){l=parent.frames.length;if(l!=1){for(i=0;i<l;i++){s=parent.frames[i].document.getSelection?parent.frames[i].document.getSelection():parent.frames[i].document.selection.createRange().text;if(s){break;}}}}if(s==''){void(s=prompt('File search:\nEnter search words. This will open 3 windows/tabs.',''));}s=encodeURIComponent(s);window.open('http://www.filecatch.com/?x=1&q='+s);window.open('http://www.filestube.com/search.html?select=All&q='+s);window.open('http://www.google.com/search?hl=en&q='+s+'+&#34;MegaUpload.com%2F%3Fd%3D&#34;|&#34;rapidshare.com%2Ffiles&#34;|&#34;rapidshare.de%2Ffiles&#34;|&#34;4shared.com&#34;|&#34;badongo.com%2Ffile&#34;|&#34;depositfiles.com%2Ffiles%2F&#34;|&#34;mediafire.com%2Fdownload.php&#34;|&#34;hotfile.com%2Fdl&#34;|&#34;uploaded.to%2F&#34;|&#34;ul.to&#34;');void(0);">Files</a>.</strong> Searches for files on one-click-hosters using several specialized search engines and Google.
+</ul> 
+
+<p>
+All these scripts are in the public domain; you can use them in any
+way you like.
+
+<h2>Credits</h2>
+The code to get the current window's selection was taken from <a href="http://krapplack.de/?u=/bookmarklets/">Krapplack's search bookmarklets</a>; the Google search for one-click-hosters was taken from <a href="http://filesharing.wikidot.com/compare:one-click-hosters-search-engines">filesharing.wikidot.com</a>.
+
+<P>
+<HR> 
+Last Change: <!-- hhmts start -->19-Dec-2010<!-- hhmts end -->.<BR>
+By <A href="http://math-www.uni-paderborn.de/~axel/">Axel Boldt</A>, 2010.<BR>This material 
+is in the public domain.
+
+<!--  LocalWords:  paderborn axel yugo kosovo Globalization turing consumerism
+ --><!--  LocalWords:  lycaeum Milosevic minefields globalization junkbuster DNS
+ --><!--  LocalWords:  sendmail nameserver yahoo ftp cdrom FreeBSD matlab Jun hhmts
+ --><!--  LocalWords:  PalmPC LocalWords webwasher WebWasher
+ --></BODY></HTML>
