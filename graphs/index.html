@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+        "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created by Wolfram Mathematica 6.0 -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>
+  Graphs_of_some_complex_functions
+ </title>
+ <link href="HTMLFiles/Default.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<img src="http://vg06.met.vgwort.de/na/d165b57d93f54a07a9470afbb2de1744" width="1" height="1" alt="">
+
+<h1>Mathematica 6.0 code to graph complex functions</h1>
+
+<font size=4>If you have Mathematica 6.0, you can download a working version of
+this notebook <a href="graphs.nb">here</a>.<p>
+
+The idea comes from Jan Homann, who uploaded a picture of the Riemann Zeta function to Wikipedia.<p><p></font>
+
+<pre class='Input'><span class="OutputFormInline">ComplexGraph[f_, xmin_, xmax_, ymin_, ymax_, points_:100] := <br /> <br />  (* f is the complex function to be graphed <br /> <br />     in the region[xmin, xmax] &times; [ymin, ymax] .<br /> <br />     The parameter points controls how many points will be <br /> <br />     sampled in each direction; good values are 100 - 500. *)<br /> <br />  RegionPlot[True, {x, xmin, xmax}, {y, ymin, ymax}, <br /> <br />    ColorFunction &rarr; Function[<br /> <br />      {x, y}, Hue[Mod[Arg[f[x + I * y]], 2Pi]/(2Pi), <br /> <br />         1/(1 + 0.3 Log[Abs[f[x + I * y]] + 1]), <br /> <br />         1 - 1/(1.1 + 5Log[Abs[f[x + I * y]] + 1])]], <br /> <br />    ColorFunctionScaling &rarr; False, <br /> <br />    AspectRatio &rarr; Automatic, <br /> <br />    PlotPoints &rarr; points]</span></pre>
+
+<p class='Text' style='font-size: 18px;'>
+The following is the color function used for all our examples. The argument of a complex value is encoded by the hue of a color (red = positive real, and then counterclockwise through yellow, green, cyan, blue and purple; cyan stands for negative real). Strong colors denote points close to the origin, black = 0, weak colors denote points with large absolute value, white = &infin;. 
+</p>
+
+
+
+<pre class='Input'><span class="OutputFormInline">ComplexGraph[Function[z, z], -50, 50, -50, 50, 100]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs1.png' alt='"graphs1.png"' width='252' height='247' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class="PageBreak">
+ 
+</p>
+
+
+
+<p class='Text' style='font-size: 18px;'>
+ Here is a picture of <span><span><span class="InputFormInline">f(z) = z^3</span></span></span>.&nbsp;&nbsp;The color of the point <span><span>z</span></span> encodes the value <span><span>f(z)</span></span> according to the above color function:
+</p>
+
+
+
+<pre class='Input'><span class="OutputFormInline">ComplexGraph[Function[z, z^3], -10, 10, -10, 10, 200]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs2.png' alt='"graphs2.png"' width='295' height='290' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class='Text' style='font-size: 18px;'>
+ A fifth-degree polynomial, with three zeros of order 1 and one zero of order 2:
+</p>
+
+
+
+<pre class='Input'><span
+class="OutputFormInline">ComplexGraph[Function[z, z (z - I) (z - 3) (z
+- 1 + I)^2], -5, 5, -5, 5, 200]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs3.png' alt='"graphs3.png"' width='291' height='291' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class="PageBreak">
+ 
+</p>
+
+
+
+<p class='Text' style='font-size: 18px;'>
+ The sine-function. Note that it is periodic in x-direction, but growing in positive and negative y-direction. As expected, only red and cyan on the real axis. Also note that in the upper half plane the order of the colors is reversed compared to the lower half-plane. Who knew? Well I guess it follows from the fact that the Taylor coefficients of <span><span>sin(z)</span></span> are all real, and so <span><span>sin(<font style="text-decoration: overline;">z</font>)=<font style="text-decoration: overline;">sin(z)</font></span></span>.
+</p>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs4.png' alt='"graphs5.png"' width='267' height='604' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class="PageBreak">
+ 
+</p>
+
+
+
+<p class='Text' style='font-size: 18px;'>
+ The exponential function. Nice and periodic in y-direction, growing in x-direction:
+</p>
+
+
+
+<pre class='Input'><span class="OutputFormInline">ComplexGraph[Exp, -10, 10, -10, 10, 200]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs5.png' alt='"graphs6.png"' width='483' height='478' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class="PageBreak">
+ 
+</p>
+
+
+
+<p class='Text' style='font-size: 18px;'>
+ The logarithm near the interesting spots z=0 (pole) and z=1 (zero). 
+</p>
+
+
+
+<pre class='Input'><span class="OutputFormInline">ComplexGraph[Log, -2, 2, -2, 2, 200]</span></pre>
+
+
+<p class="Output">
+ <img src='HTMLFiles/graphs6.png' alt='"graphs7.png"' width='217' height='219' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class='Text' style='font-size: 18px;'>
+ The clearly visible branch cut on the negative real axis is an artifact; the natural domain of the logarithm is its Riemann surface:
+</p>
+
+<pre class='Input'><span class="OutputFormInline">ParametricPlot3D[{r * Cos[theta], r * Sin[theta], theta/3}, <br /> <br />   {theta, -3Pi, 3Pi}, {r, 0, 4}, PlotPoints &rarr; 100, Mesh &rarr; None, <br /> <br />   ColorFunctionScaling &rarr; False, <br /> <br />   ColorFunction &rarr; Function[<br /> <br />     {x, y, z, theta, r}, Hue[<br /> <br />       Mod[Arg[I * theta + Log[r]], 2Pi]/(2Pi), <br /> <br />        1/(1 + 0.3 Log[Abs[I * theta + Log[r]] + 1]), <br /> <br />        1 - 1/(1.1 + 5Log[Abs[I * theta + Log[r]] + 1])]]]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs7.png' alt='"graphs8.png"' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class="PageBreak">
+ 
+</p>
+
+
+
+<p class='Text' style='font-size: 18px;'>
+ Here's the graph of the square-root function on its natural domain:
+</p>
+
+
+
+<pre class='Input'><span class="OutputFormInline">ParametricPlot3D[{r * Cos[theta], r * Sin[theta], <br /> <br />     r /2 * Cos[theta/2]}, {theta, 0, 4Pi}, {r, 0, 3}, <br /> <br />   PlotPoints &rarr; 100, Mesh &rarr; None, ColorFunctionScaling &rarr; False, <br /> <br />   ColorFunction &rarr; Function[<br /> <br />     {x, y, z, theta, r}, Hue[<br /> <br />       Mod[theta/2, 2Pi]/(2Pi), <br /> <br />        1/(1 + 0.3 Log[Abs[Sqrt[r]] + 1]), <br /> <br />        1 - 1/(1.1 + 5Log[Abs[Sqrt[r]] + 1])]]]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs9.png' alt='"graphs9.png"' width='477' height='405' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class="PageBreak">
+ 
+</p>
+
+
+
+<p class='Text' style='font-size: 18px;'>
+ A rational function with one pole of order 1, one pole of order 3, a zero of order 2, and three zeros of order 1.
+</p>
+
+
+
+<pre class='Input'><span class="OutputFormInline">ComplexGraph[Function[z, (z + 3 + 5I)^2 * <br /> <br />      (1/z + I/(z - 5 + 3I)^3)], -10, 10, -10, 10, 200]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs10.png' alt='"graphs10.png"' width='254' height='250' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class='Text' style='font-size: 18px;'>
+ <span><span><span class="InputFormInline">f(z) = e^(1/z)</span></span></span> has an essential singularity at <span><span>z=0</span></span>. From this picture it is not hard to imagine that the function takes on all non-zero values infinitely often in every neighborhood of 0 (Picard's big theorem):
+</p>
+
+
+
+<pre class='Input'><span class="OutputFormInline">ComplexGraph[Function[z, Exp[1/z]], -1, 1, -1, 1, 200]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs11.png' alt='"graphs11.png"' width='309' height='301' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class="PageBreak">
+ 
+</p>
+
+
+
+<p class='Text' style='font-size: 18px;'>
+ The Riemann &zeta;-function. Note the pole of order 1 at
+ <span><span>z=1</span></span> and the zeros of order 1 on the
+ negative real axis and on the critical line
+ <span><span>Re(z)=1/2.</span></span> The function is pretty boring
+ (close to 1) for <span><span>Re(z)&gt;1</span></span>, where it was originally defined.
+</p>
+
+
+
+<pre class='Input'><span class="OutputFormInline">ComplexGraph[Zeta, -40, 20, -40, 40, 400]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs12.png' alt='"graphs12.png"' width='423' height='552' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class="PageBreak">
+ 
+</p>
+
+
+
+<p class='Text' style='font-size: 18px;'>
+ The &zeta;-function on the critical strip
+ <span><span>0&lt;Re(z)&lt;1</span></span>, with the pole and the
+ first two zeros visible. The zeros have real part 1/2, as they should.
+</p>
+
+
+
+<pre class='Input'><span class="OutputFormInline">Show[ComplexGraph[Zeta, 0, 1, -1, 23, 200], AspectRatio &rarr; 5]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs13.png' alt='"graphs13.png"' width='200' height='800' border='0' style='vertical-align:middle'/>
+</p>
+
+<p class="PageBreak">
+ 
+</p>
+
+
+
+<p class='Text' style='font-size: 18px;'>
+ According to Voronin's Universality Theorem, the <span><span>&zeta;</span></span>-function on the strip <span><span>1/2&lt;Re(z)&lt;1</span></span> approximates every holomorphic function without zeros to arbitrary precision. In other words: the strip shows all possible &quot;analytic&quot; color patterns that don't use black or white. Here's a representative segment of the strip.
+</p>
+
+
+
+<pre class='Input'><span class="OutputFormInline">Show[ComplexGraph[Zeta, 1/2, 1, 103, 109, 200], AspectRatio &rarr; 5]</span></pre>
+
+<p class="Output">
+ <img src='HTMLFiles/graphs14.png' alt='"graphs14.png"' width='200' height='800' border='0' style='vertical-align:middle'/>
+</p>
+
+<hr/>
+<p class="Text">
+ Created December 2007 by <a href="http://math-www.uni-paderborn.de/~axel">Axel Boldt</a>, based on an idea by Jan Homann. All scripts and pictures on this page are in the public domain.<br />
+</p>
+
+
+
+
+</body>
+
+</html>

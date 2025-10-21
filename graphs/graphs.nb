@@ -1,0 +1,707 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     25418,        698]
+NotebookOptionsPosition[     23386,        635]
+NotebookOutlinePosition[     23819,        653]
+CellTagsIndexPosition[     23776,        650]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Mathematica 6.0 code to 
+graph a complex function
+\
+\>", "Input",
+ Evaluatable->False,
+ CellChangeTimes->{{3.4073674289179325`*^9, 3.407367470337491*^9}, {
+  3.407367519277864*^9, 3.4073675283709393`*^9}, {3.407438333713755*^9, 
+  3.407438344499264*^9}},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ComplexGraph", "[", 
+   RowBox[{
+   "f_", ",", "xmin_", ",", "xmax_", ",", "ymin_", ",", "ymax_", ",", 
+    RowBox[{"points_:", "100"}]}], "]"}], " ", ":=", " ", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "f", " ", "is", " ", "the", " ", "complex", " ", "function", " ", "to", 
+     " ", "be", " ", "graphed", " ", "in", " ", "the", " ", 
+     RowBox[{"region", "\[IndentingNewLine]", "[", 
+      RowBox[{"xmin", ",", "xmax"}], "]"}], " ", "\[Times]", " ", 
+     RowBox[{
+      RowBox[{"[", 
+       RowBox[{"ymin", ",", "ymax"}], "]"}], ".", " ", "\[IndentingNewLine]", 
+      "The"}], " ", "parameter", " ", "points", " ", "controls", " ", "how", 
+     " ", "many", " ", "points", " ", "will", " ", "be", 
+     "\[IndentingNewLine]", " ", "sampled", " ", "in", " ", "each", " ", 
+     "direction"}], ";", " ", 
+    RowBox[{
+     RowBox[{"good", " ", "values", " ", "are", " ", "100"}], "-", "500."}]}],
+    " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"RegionPlot", "[", 
+   RowBox[{"True", ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "xmin", ",", "xmax"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "ymin", ",", "ymax"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"ColorFunction", "\[Rule]", 
+     RowBox[{"Function", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Hue", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Mod", "[", 
+           RowBox[{
+            RowBox[{"Arg", "[", 
+             RowBox[{"f", "[", 
+              RowBox[{"x", "+", 
+               RowBox[{"I", "*", "y"}]}], "]"}], "]"}], ",", 
+            RowBox[{"2", "Pi"}]}], "]"}], "/", 
+          RowBox[{"(", 
+           RowBox[{"2", "Pi"}], ")"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"1", "/", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            RowBox[{"0.3", 
+             RowBox[{"Log", "[", 
+              RowBox[{
+               RowBox[{"Abs", "[", 
+                RowBox[{"f", "[", 
+                 RowBox[{"x", "+", 
+                  RowBox[{"I", "*", "y"}]}], "]"}], "]"}], "+", "1"}], 
+              "]"}]}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"1", "-", 
+          RowBox[{"1", "/", 
+           RowBox[{"(", 
+            RowBox[{"1.1", "+", 
+             RowBox[{"5", 
+              RowBox[{"Log", "[", 
+               RowBox[{
+                RowBox[{"Abs", "[", 
+                 RowBox[{"f", "[", 
+                  RowBox[{"x", "+", 
+                   RowBox[{"I", "*", "y"}]}], "]"}], "]"}], "+", "1"}], 
+               "]"}]}]}], ")"}]}]}]}], "]"}]}], "]"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"PlotPoints", "\[Rule]", "points"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.4073673844539967`*^9, {3.4073675607074366`*^9, 3.4073675884172816`*^9}, {
+   3.407438353392051*^9, 3.407438355094499*^9}, 3.407451254182477*^9}],
+
+Cell["\<\
+The idea comes from Jan Homann, who uploaded a picture of the Riemann Zeta \
+function to Wikipedia.
+
+The following is the color function used for all our examples. The argument \
+of a complex value is encoded by the hue of a color (red = positive real, and \
+then counterclockwise through yellow, green, cyan, blue and purple; cyan \
+stands for negative real). Strong colors denote points close to the origin, \
+black = 0, weak colors denote points with large absolute value, white = \
+\[Infinity]. \
+\>", "Text",
+ CellChangeTimes->{{3.4073520608202*^9, 3.4073520658374147`*^9}, {
+   3.407352108008053*^9, 3.4073521260740304`*^9}, {3.407352169196037*^9, 
+   3.4073523271832113`*^9}, {3.407352468596554*^9, 3.407352469597994*^9}, {
+   3.407358117078165*^9, 3.407358168952757*^9}, {3.407358215599832*^9, 
+   3.4073582228202143`*^9}, {3.407358402628766*^9, 3.4073584312298927`*^9}, 
+   3.4073648266059923`*^9, {3.407364935813024*^9, 3.4073649502738175`*^9}, {
+   3.407366890914322*^9, 3.4073669049144526`*^9}, {3.4073675407988095`*^9, 
+   3.407367542381085*^9}, {3.4074363993723087`*^9, 3.407436404079077*^9}},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"ComplexGraph", "[", 
+  RowBox[{
+   RowBox[{"Function", "[", 
+    RowBox[{"z", ",", "z"}], "]"}], ",", 
+   RowBox[{"-", "50"}], ",", "50", ",", 
+   RowBox[{"-", "50"}], ",", "50", ",", "100"}], "]"}]], "Input",
+ CellChangeTimes->{{3.40735132250856*^9, 3.407351325783269*^9}, {
+  3.4073513648093853`*^9, 3.4073514186968718`*^9}, {3.4073515038292866`*^9, 
+  3.407351504149747*^9}, {3.4073521404246655`*^9, 3.4073521600729184`*^9}, {
+  3.4073589544322205`*^9, 3.4073589760533104`*^9}}],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell[TextData[{
+ "Here is a picture of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "z", ")"}], "=", 
+    SuperscriptBox["z", "3"]}], TraditionalForm]]],
+ ".  The color of the point ",
+ Cell[BoxData[
+  FormBox["z", TraditionalForm]]],
+ " encodes the value ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", "(", "z", ")"}], TraditionalForm]]],
+ " according to the above color function:"
+}], "Text",
+ CellChangeTimes->{
+  3.407352532047792*^9, {3.4073526280959024`*^9, 3.407352642306336*^9}, {
+   3.407352696203837*^9, 3.40735278761528*^9}, {3.4073534546844783`*^9, 
+   3.407353485078182*^9}, {3.407358518435288*^9, 3.407358530672885*^9}, {
+   3.407358988961872*^9, 3.4073589898932114`*^9}, {3.4073613239794626`*^9, 
+   3.407361350317334*^9}, {3.407364875846797*^9, 3.4073649133707533`*^9}, {
+   3.4073669115339713`*^9, 3.4073669135068083`*^9}, {3.407436436986395*^9, 
+   3.407436444817656*^9}},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"ComplexGraph", "[", 
+  RowBox[{
+   RowBox[{"Function", "[", 
+    RowBox[{"z", ",", 
+     RowBox[{"z", "^", "3"}]}], "]"}], ",", 
+   RowBox[{"-", "10"}], ",", "10", ",", 
+   RowBox[{"-", "10"}], ",", "10", ",", "200"}], "]"}]], "Input",
+ CellChangeTimes->{{3.407351544257419*^9, 3.407351552989976*^9}, 
+   3.407352403512968*^9, {3.4073524985596385`*^9, 3.407352506641259*^9}, 
+   3.4073528406916*^9, {3.4073590357691774`*^9, 3.4073590358292637`*^9}}],
+
+Cell["\<\
+A fourth-degree polynomial, with three zeros of order 1 and one zero of order \
+2:\
+\>", "Text",
+ CellChangeTimes->{{3.407352889812232*^9, 3.407352976236504*^9}, 
+   3.407358545624384*^9, 3.4073668720371776`*^9, 3.407366918794411*^9, {
+   3.4074364550023007`*^9, 3.407436455713323*^9}},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"ComplexGraph", "[", 
+  RowBox[{
+   RowBox[{"Function", "[", 
+    RowBox[{"z", ",", 
+     RowBox[{"z", 
+      RowBox[{"(", 
+       RowBox[{"z", "-", "I"}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{"z", "-", "3"}], ")"}], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"z", "-", "1", "+", "I"}], ")"}], "^", "2"}]}]}], "]"}], ",", 
+   
+   RowBox[{"-", "5"}], ",", "5", ",", 
+   RowBox[{"-", "5"}], ",", "5", ",", "200"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4073515947099667`*^9, 3.407351615750221*^9}, {
+  3.407352989836059*^9, 3.407353028772046*^9}, {3.4073590982089615`*^9, 
+  3.4073590982690477`*^9}}],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell[TextData[{
+ "The sine-function. Note that it is periodic in x-direction, but growing in \
+positive and negative y-direction. As expected, only red and cyan on the real \
+axis. Also note that in the upper half plane the order of the colors is \
+reversed compared to the lower half-plane. Who knew? Well I guess it follows \
+from the fact that the Taylor coefficients of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sin", "(", "z", ")"}], TraditionalForm]]],
+ " are all real, and so ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"sin", "(", 
+     OverscriptBox["z", "_"], ")"}], "=", 
+    OverscriptBox[
+     RowBox[{"sin", "(", "z", ")"}], "_"]}], TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.407353055620653*^9, 3.4073531483740253`*^9}, {
+   3.4073585570608287`*^9, 3.407358566854912*^9}, {3.4073591529877295`*^9, 
+   3.407359169551547*^9}, 3.407366863384736*^9, {3.407366924142101*^9, 
+   3.4073669294196897`*^9}, {3.4074364888009005`*^9, 3.407436527366355*^9}, {
+   3.40745361235336*^9, 3.4074536316611233`*^9}, {3.407453742190056*^9, 
+   3.4074538167572784`*^9}, {3.407515929138749*^9, 3.407515934746813*^9}},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ComplexGraph", "[", 
+   RowBox[{"Sin", ",", 
+    RowBox[{
+     RowBox[{"-", "2"}], "Pi"}], ",", 
+    RowBox[{"2", "Pi"}], ",", 
+    RowBox[{"-", "15"}], ",", "15", ",", "200"}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.4073516363398275`*^9, 3.4073516637892976`*^9}, {
+  3.4073517256081886`*^9, 3.4073517579446864`*^9}, {3.4073531740609617`*^9, 
+  3.407353213828144*^9}, {3.407358572382861*^9, 3.407358575897915*^9}, {
+  3.407359207716426*^9, 3.4073592257623744`*^9}, {3.4073650604722753`*^9, 
+  3.407365080350859*^9}}],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell["\<\
+The exponential function. Nice and periodic in y-direction, growing in \
+x-direction:\
+\>", "Text",
+ CellChangeTimes->{{3.407353233576541*^9, 3.4073532592334337`*^9}, 
+   3.407358592221387*^9, {3.407359270917304*^9, 3.4073592831148434`*^9}, 
+   3.407366935137912*^9, {3.4074365487070417`*^9, 3.407436549398035*^9}},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"ComplexGraph", "[", 
+  RowBox[{"Exp", ",", 
+   RowBox[{"-", "10"}], ",", "10", ",", 
+   RowBox[{"-", "10"}], ",", "10", ",", "200"}], "]"}]], "Input",
+ CellChangeTimes->{{3.407351772605768*^9, 3.407351788889182*^9}, {
+  3.4073585891169233`*^9, 3.4073586023960176`*^9}}],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell["\<\
+The logarithm near the interesting spots z=0 (pole) and z=1 (zero). \
+\>", "Text",
+ CellChangeTimes->{{3.407353282436798*^9, 3.407353361620659*^9}, 
+   3.407358610387509*^9, {3.407359328930723*^9, 3.407359329852048*^9}, {
+   3.407366939904766*^9, 3.407366969457261*^9}, {3.4074276914259005`*^9, 
+   3.407427718594968*^9}, 3.4074508541772976`*^9},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"ComplexGraph", "[", 
+  RowBox[{"Log", ",", 
+   RowBox[{"-", "2"}], ",", "2", ",", 
+   RowBox[{"-", "2"}], ",", "2", ",", "200"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4073518269739456`*^9, 3.4073518518697443`*^9}, {
+  3.4073586157652416`*^9, 3.4073586200113473`*^9}, {3.4073593162725215`*^9, 
+  3.407359320338368*^9}}],
+
+Cell["\<\
+The clearly visible branch cut on the negative real axis is an artifact; the \
+natural domain of the logarithm is its Riemann surface:\
+\>", "Text",
+ CellChangeTimes->{{3.407427619101904*^9, 3.4074276746718097`*^9}, 
+   3.407450874035853*^9},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"r", "*", 
+      RowBox[{"Cos", "[", "theta", "]"}]}], ",", 
+     RowBox[{"r", "*", 
+      RowBox[{"Sin", "[", "theta", "]"}]}], ",", 
+     RowBox[{"theta", "/", "3"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"theta", ",", 
+     RowBox[{
+      RowBox[{"-", "3"}], "Pi"}], ",", 
+     RowBox[{"3", "Pi"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "4"}], "}"}], ",", 
+   RowBox[{"PlotPoints", "\[Rule]", "100"}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "None"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+   RowBox[{"ColorFunction", "\[Rule]", 
+    RowBox[{"Function", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z", ",", "theta", ",", "r"}], "}"}], ",", 
+      
+      RowBox[{"Hue", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Mod", "[", 
+          RowBox[{
+           RowBox[{"Arg", "[", 
+            RowBox[{
+             RowBox[{"I", "*", "theta"}], "+", 
+             RowBox[{"Log", "[", "r", "]"}]}], "]"}], ",", 
+           RowBox[{"2", "Pi"}]}], "]"}], "/", 
+         RowBox[{"(", 
+          RowBox[{"2", "Pi"}], ")"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"1", "/", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"0.3", 
+            RowBox[{"Log", "[", 
+             RowBox[{
+              RowBox[{"Abs", "[", 
+               RowBox[{
+                RowBox[{"I", "*", "theta"}], "+", 
+                RowBox[{"Log", "[", "r", "]"}]}], "]"}], "+", "1"}], 
+             "]"}]}]}], ")"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"1", "-", 
+         RowBox[{"1", "/", 
+          RowBox[{"(", 
+           RowBox[{"1.1", "+", 
+            RowBox[{"5", 
+             RowBox[{"Log", "[", 
+              RowBox[{
+               RowBox[{"Abs", "[", 
+                RowBox[{
+                 RowBox[{"I", "*", "theta"}], "+", 
+                 RowBox[{"Log", "[", "r", "]"}]}], "]"}], "+", "1"}], 
+              "]"}]}]}], ")"}]}]}]}], "]"}]}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4074277345278783`*^9, 3.4074277815254574`*^9}, {
+  3.4074508900088205`*^9, 3.4074508932835293`*^9}, {3.4075148233887587`*^9, 
+  3.407514830859501*^9}}],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell["\<\
+Here's the graph of the square-root function on its natural domain:\
+\>", "Text",
+ CellChangeTimes->{{3.407429050610312*^9, 3.4074290932215843`*^9}},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"r", "*", 
+      RowBox[{"Cos", "[", "theta", "]"}]}], ",", 
+     RowBox[{"r", "*", 
+      RowBox[{"Sin", "[", "theta", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"r", " ", "/", "2"}], "*", " ", 
+      RowBox[{"Cos", "[", 
+       RowBox[{"theta", "/", "2"}], "]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"theta", ",", "0", ",", 
+     RowBox[{"4", "Pi"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "3"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"PlotPoints", "\[Rule]", "100"}], ",", 
+   RowBox[{"Mesh", "\[Rule]", "None"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+   RowBox[{"ColorFunction", "\[Rule]", 
+    RowBox[{"Function", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z", ",", "theta", ",", "r"}], "}"}], ",", 
+      
+      RowBox[{"Hue", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Mod", "[", 
+          RowBox[{
+           RowBox[{"theta", "/", "2"}], ",", 
+           RowBox[{"2", "Pi"}]}], "]"}], "/", 
+         RowBox[{"(", 
+          RowBox[{"2", "Pi"}], ")"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"1", "/", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"0.3", 
+            RowBox[{"Log", "[", 
+             RowBox[{
+              RowBox[{"Abs", "[", 
+               RowBox[{"Sqrt", "[", "r", "]"}], "]"}], "+", "1"}], "]"}]}]}], 
+          ")"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"1", "-", 
+         RowBox[{"1", "/", 
+          RowBox[{"(", 
+           RowBox[{"1.1", "+", 
+            RowBox[{"5", 
+             RowBox[{"Log", "[", 
+              RowBox[{
+               RowBox[{"Abs", "[", 
+                RowBox[{"Sqrt", "[", "r", "]"}], "]"}], "+", "1"}], "]"}]}]}],
+            ")"}]}]}]}], "]"}]}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407429095825328*^9, 3.4074290995006127`*^9}}],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell["\<\
+A rational function with one pole of order 1, one pole of order 3, a zero of \
+order 2, and three zeros of order 1.\
+\>", "Text",
+ CellChangeTimes->{{3.4073533698725247`*^9, 3.4073533954292736`*^9}, {
+   3.407353529041398*^9, 3.407353540798304*^9}, {3.40735863565384*^9, 
+   3.4073586569244256`*^9}, {3.4073654837609344`*^9, 3.4073654930242543`*^9}, 
+   3.4073670383262897`*^9},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"ComplexGraph", "[", 
+  RowBox[{
+   RowBox[{"Function", "[", 
+    RowBox[{"z", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"z", "+", "3", "+", 
+         RowBox[{"5", "I"}]}], ")"}], "^", "2"}], "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1", "/", "z"}], "+", 
+        RowBox[{"I", "/", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"z", "-", "5", "+", 
+            RowBox[{"3", "I"}]}], ")"}], "^", "3"}]}]}], ")"}]}]}], "]"}], 
+   ",", 
+   RowBox[{"-", "10"}], ",", "10", ",", 
+   RowBox[{"-", "10"}], ",", "10", ",", "200"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4073518921376467`*^9, 3.4073519256258*^9}, {
+  3.407353569559661*^9, 3.407353590349555*^9}, {3.407358659478098*^9, 
+  3.407358678505458*^9}, {3.407365329128584*^9, 3.407365335437656*^9}, {
+  3.4073654501125507`*^9, 3.4073654562213345`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "z", ")"}], "=", 
+    SuperscriptBox["e", 
+     FractionBox["1", "z"]]}], TraditionalForm]]],
+ " has an essential singularity at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "=", "0"}], TraditionalForm]]],
+ ". From this picture it is not hard to imagine that the function takes on \
+all non-zero values infinitely often in every neighborhood of 0 (Picard's big \
+theorem):"
+}], "Text",
+ CellChangeTimes->{{3.4073536174785647`*^9, 3.4073536309679613`*^9}, {
+   3.407353685025693*^9, 3.407353827710864*^9}, {3.407358693997734*^9, 
+   3.407358753643501*^9}, {3.4073594802082496`*^9, 3.4073594933972144`*^9}, {
+   3.407365649138736*^9, 3.4073656511115727`*^9}, {3.4073670466582704`*^9, 
+   3.407367056722742*^9}, {3.4074366241154737`*^9, 3.4074366247563953`*^9}, {
+   3.407436976852685*^9, 3.407436987838482*^9}, 3.407450964195496*^9},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"ComplexGraph", "[", 
+  RowBox[{
+   RowBox[{"Function", "[", 
+    RowBox[{"z", ",", 
+     RowBox[{"Exp", "[", 
+      RowBox[{"1", "/", "z"}], "]"}]}], "]"}], ",", 
+   RowBox[{"-", "1"}], ",", "1", ",", 
+   RowBox[{"-", "1"}], ",", "1", ",", "200"}], "]"}]], "Input",
+ CellChangeTimes->{{3.407351946025133*^9, 3.407351972883754*^9}, 
+   3.407358758049837*^9}],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell[TextData[{
+ "The Riemann \[Zeta]-function. Note the pole of order 1 at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "=", "1"}], TraditionalForm]]],
+ " and the zeros of order 1 on the negative real axis and on the critical \
+line ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"Re", "(", "z", ")"}], "=", 
+    RowBox[{"1", "/", "2."}]}], TraditionalForm]]],
+ " The function is pretty boring (close to 1) for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"Re", "(", "z", ")"}], ">", "1"}], TraditionalForm]]],
+ ", where it was originally defined."
+}], "Text",
+ CellChangeTimes->{{3.407359569296352*^9, 3.4073597509175105`*^9}, {
+   3.4073657128403344`*^9, 3.4073657222538705`*^9}, {3.407367067898813*^9, 
+   3.4073671117017984`*^9}, 3.407450971405864*^9, {3.407514334425664*^9, 
+   3.4075143362182417`*^9}},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"ComplexGraph", "[", 
+  RowBox[{"Zeta", ",", 
+   RowBox[{"-", "40"}], ",", "20", ",", 
+   RowBox[{"-", "40"}], ",", "40", ",", "400"}], "]"}]], "Input",
+ CellChangeTimes->{{3.407359706243272*^9, 3.4073597091374335`*^9}, {
+  3.407359754863184*^9, 3.4073598172328672`*^9}, {3.407367640031499*^9, 
+  3.4073676400915856`*^9}}],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell[TextData[{
+ "The \[Zeta]-function on the critical strip ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0", "<", 
+    RowBox[{"Re", "(", "z", ")"}], "<", "1"}], TraditionalForm]]],
+ ", with the pole and the first two zeros visible. The zeros have real part \
+1/2, as they should."
+}], "Text",
+ CellChangeTimes->{{3.4073610429453554`*^9, 3.4073611003979683`*^9}, {
+   3.4073660460194225`*^9, 3.4073660637248816`*^9}, {3.4073671197934337`*^9, 
+   3.407367120254096*^9}, 3.4074510127753506`*^9, {3.407514325132301*^9, 
+   3.4075143314313583`*^9}},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ComplexGraph", "[", 
+    RowBox[{"Zeta", ",", "0", ",", "1", ",", 
+     RowBox[{"-", "1"}], ",", " ", "23", ",", "200"}], "]"}], ",", 
+   RowBox[{"AspectRatio", "\[Rule]", "5"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407361109971734*^9, 3.407361131001974*^9}, {
+   3.407365911335757*^9, 3.407365915311474*^9}, {3.407366066739216*^9, 
+   3.407366192550123*^9}, {3.407366319642874*^9, 3.4073663669809427`*^9}, {
+   3.4074292788785458`*^9, 3.407429284426523*^9}, 3.4074510225694337`*^9}],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell[TextData[{
+ "According to Voronin's Universality Theorem, the ",
+ Cell[BoxData[
+  FormBox["\[Zeta]", TraditionalForm]]],
+ "-function on the strip ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"1", "/", "2"}], "<", 
+    RowBox[{"Re", "(", "z", ")"}], "<", "1"}], TraditionalForm]]],
+ " approximates every holomorphic function without zeros to arbitrary \
+precision. In other words: the strip shows all possible \"analytic\" color \
+patterns that don't use black or white. Here's a representative segment of \
+the strip."
+}], "Text",
+ CellChangeTimes->{{3.407359863699683*^9, 3.4073600186324654`*^9}, {
+   3.407360097155376*^9, 3.4073601048965073`*^9}, {3.4073611054452257`*^9, 
+   3.4073611067771406`*^9}, {3.407361216444835*^9, 3.407361219318968*^9}, {
+   3.4073664281188545`*^9, 3.407366462578405*^9}, {3.407366512800621*^9, 
+   3.407366600777125*^9}, {3.40736671777536*^9, 3.40736672428472*^9}, {
+   3.40736714998685*^9, 3.407367246205205*^9}, {3.4073678358731055`*^9, 
+   3.4073678367143154`*^9}, {3.407437054724659*^9, 3.407437058820549*^9}, {
+   3.4074476514319763`*^9, 3.407447651582192*^9}, 3.407451033174683*^9},
+ FontSize->18],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"ComplexGraph", "[", 
+    RowBox[{"Zeta", ",", 
+     RowBox[{"1", "/", "2"}], ",", "1", ",", "103", ",", "109", ",", "200"}], 
+    "]"}], ",", 
+   RowBox[{"AspectRatio", "\[Rule]", "5"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.407360044099085*^9, 3.4073601568211713`*^9}, {
+  3.407360198751464*^9, 3.4073601996327314`*^9}, {3.407360234342642*^9, 
+  3.4073602359850035`*^9}, {3.407360681515645*^9, 3.4073607021052513`*^9}, {
+  3.4073608792199297`*^9, 3.4073608792900305`*^9}, {3.4073664738846626`*^9, 
+  3.407366496677437*^9}, {3.4073666556259937`*^9, 3.407366667453*^9}, {
+  3.407367285631898*^9, 3.4073672864731073`*^9}, {3.4074385626829967`*^9, 
+  3.4074385705643296`*^9}}],
+
+Cell["\<\
+Created by December 2007 by Axel Boldt, based on an idea by Jan Homann. All \
+scripts and pictures on this page are in the public domain.
+\
+\>", "Text",
+ CellFrame->{{0, 0}, {0, 3}},
+ CellChangeTimes->{{3.4074331555729585`*^9, 3.4074332139669247`*^9}, {
+  3.407515033851389*^9, 3.4075150366454067`*^9}}]
+},
+WindowSize->{615, 750},
+WindowMargins->{{221, Automatic}, {Automatic, 48}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+CellLabelAutoDelete->False,
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (April 20, 2007)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[568, 21, 279, 9, 80, "Input",
+ Evaluatable->False],
+Cell[850, 32, 3146, 79, 272, "Input"],
+Cell[3999, 113, 1132, 19, 126, "Text"],
+Cell[5134, 134, 505, 10, 31, "Input"],
+Cell[5642, 146, 44, 1, 7, "PageBreak",
+ PageBreakBelow->True],
+Cell[5689, 149, 921, 24, 34, "Text"],
+Cell[6613, 175, 473, 10, 31, "Input"],
+Cell[7089, 187, 311, 7, 57, "Text"],
+Cell[7403, 196, 638, 18, 52, "Input"],
+Cell[8044, 216, 44, 1, 7, "PageBreak",
+ PageBreakBelow->True],
+Cell[8091, 219, 1149, 25, 149, "Text"],
+Cell[9243, 246, 579, 13, 52, "Input"],
+Cell[9825, 261, 44, 1, 7, "PageBreak",
+ PageBreakBelow->True],
+Cell[9872, 264, 340, 7, 57, "Text"],
+Cell[10215, 273, 293, 6, 31, "Input"],
+Cell[10511, 281, 44, 1, 7, "PageBreak",
+ PageBreakBelow->True],
+Cell[10558, 284, 371, 7, 34, "Text"],
+Cell[10932, 293, 344, 7, 31, "Input"],
+Cell[11279, 302, 267, 6, 57, "Text"],
+Cell[11549, 310, 2306, 63, 152, "Input"],
+Cell[13858, 375, 44, 1, 7, "PageBreak",
+ PageBreakBelow->True],
+Cell[13905, 378, 174, 4, 34, "Text"],
+Cell[14082, 384, 2001, 55, 172, "Input"],
+Cell[16086, 441, 44, 1, 7, "PageBreak",
+ PageBreakBelow->True],
+Cell[16133, 444, 403, 8, 57, "Text"],
+Cell[16539, 454, 889, 24, 52, "Input"],
+Cell[17431, 480, 922, 21, 85, "Text"],
+Cell[18356, 503, 381, 10, 31, "Input"],
+Cell[18740, 515, 44, 1, 7, "PageBreak",
+ PageBreakBelow->True],
+Cell[18787, 518, 838, 23, 103, "Text"],
+Cell[19628, 543, 345, 7, 31, "Input"],
+Cell[19976, 552, 44, 1, 7, "PageBreak",
+ PageBreakBelow->True],
+Cell[20023, 555, 557, 13, 57, "Text"],
+Cell[20583, 570, 547, 10, 31, "Input"],
+Cell[21133, 582, 44, 1, 7, "PageBreak",
+ PageBreakBelow->True],
+Cell[21180, 585, 1147, 23, 126, "Text"],
+Cell[22330, 610, 736, 14, 31, "Input"],
+Cell[23069, 626, 313, 7, 76, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)
