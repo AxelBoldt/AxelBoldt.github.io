@@ -1,0 +1,124 @@
+<html> <head>
+<title>Linux Kernel Configuration Help Texts</title>
+<link rel="owner" rev="made" href="mailto:axelboldt@yahoo.com">
+</head>
+
+<body>
+<img src="http://vg06.met.vgwort.de/na/eba170a0b71845bfa0722a1b5f8a3cd2" width="1" height="1" alt="">
+<h1>Linux Kernel Configuration Help Texts</h1>
+
+Here is the combined wisdom of the net regarding the configuration
+options of the Linux kernel. Thanks to all who have
+contributed!<p>
+
+These help texts should give useful information for the configuration
+of Linux kernel versions 1.2, 1.3, 2.0, and 2.1.<p>
+
+<ul>
+  <li><a href="Configure.help-1.2">Help texts for kernels 1.2.x</a>
+  <li><a href="Configure.help-1.3">Help texts for kernels 1.3.x</a>
+  <li><a href="Configure.help-2.0">Help texts for kernels 2.0.x</a> 
+  <li><a href="Configure.help-2.1">Help texts for kernels 2.1.x</a> 
+  <li><a href="Configure.help-2.2">Help texts for kernels 2.2.x</a> 
+</ul>
+
+Please
+ tell me about any mistakes you spot or any suggestions or
+improvements you have. My email address is <a href="mailto:axelboldt@yahoo.com">axelboldt@yahoo.com</a>.<p>
+
+If you are new to Linux and anything in the help texts is unclear to you,
+please let me know. This thing is for you.
+<p>
+
+Feel free to use these help texts for your own configuration tools.  I
+have written a rather primitive drop-in replacements for the standard
+configuration script <code>Configure</code> which uses these help texts during the "make
+config" stage. Since the
+configuration process and the directory layout has slightly changed
+under 1.3, there are now two versions of the help texts and
+configuration scripts:
+
+<h3>Installing the new Configure script for kernel versions 1.2.x</h2>
+
+To install the new configuration script and the help texts, first
+rename the old script:
+<pre>mv /usr/src/linux/Configure /usr/src/linux/Configure.old</pre>
+then download the new one from <a
+href="Configure-1.2">http://math-www.uni-paderborn.de/~axel/Configure-1.2</a>
+and put it in place:
+<pre>mv Configure-1.2 /usr/src/linux/Configure</pre>
+Then fetch the help texts from <a
+href="Configure.help-1.2">http://math-www.uni-paderborn.de/~axel/Configure.help-1.2</a>
+and install them:
+<pre>mv Configure.help-1.2 /usr/src/linux/Configure.help</pre>
+
+You can now configure your kernel as before with <code>make
+config</code>; if you answer one of the configuration questions with
+<code>?</code>, you'll get help about that particular option.
+
+<h3>Installing the new Configure script for kernel versions 1.3.x with x&lt;37</h2>
+
+There is no Configure script for these kernel versions that uses the
+help texts. Please upgrade to a newer kernel.
+
+<h3>Installing the new Configure script for kernel versions 1.3.x with 36&lt;x&lt;47</h2>
+
+These kernels include the help texts already. You
+can find them as <code>Documentation/Configure.help</code> in the
+kernel source tree.<p>
+
+If you are running X, you will want to use the wonderful new X-based
+kernel configuration tool (which uses the help texts); just type
+<pre>make xconfig</pre>
+instead of
+<pre>make config</pre>
+and go from there.<p>
+
+If you don't have X, you can also install my Configure script replacement
+(works only for kernels 1.3.36 and above). To do this, first
+rename the old script:
+<pre>mv /usr/src/linux/scripts/Configure /usr/src/linux/scripts/Configure.old</pre>
+then download the new one from <a
+href="Configure-1.3">http://math-www.uni-paderborn.de/~axel/Configure-1.3</a>
+and put it in place:
+<pre>mv Configure-1.3 /usr/src/linux/scripts/Configure</pre>
+
+You can now configure the kernel as before with <code>make
+config</code>; if you answer one of the configuration questions with
+<code>?</code>, you'll get help about that particular option.
+
+<h3>Installing the new Configure script for kernel versions 1.3.x with
+x>46 and versions 2.0.0 and above</h2>
+
+Nothing has to be done here -- both the help texts and the Configure
+script replacement made it into the official kernel source. If you answer a
+question during the <code>make config</code> process with
+<code>?</code>, you'll get help for that particular option. X users
+will want to use
+<code>make xconfig</code> instead. Another option is the super cool
+text based menu directed configuration tool; just say <code>make
+menuconfig</code> and follow your nose. The help texts are
+automatically used by that script as well.
+<p>
+
+<hr>
+You can read more about Linux on the <a
+href="http://sunsite.unc.edu/mdw/linux.html">Linux Documentation Project Home Page</a>.<p>
+
+
+More specific information about what exactly the Linux kernel does and
+how to download, patch and compile it is contained in Brian Ward's <a
+href="http://sunsite.unc.edu/mdw/HOWTO/Kernel-HOWTO.html">Kernel HOWTO</a>.
+<p>
+
+<hr>
+
+Last Change:
+<!-- hhmts start -->
+18-Jun-2006
+<!-- hhmts end --><br>
+
+<address><a href="http://math-www.uni-paderborn.de/~axel/">Axel Boldt</a> 
+<a href="mailto:axel@uni-paderborn.de">&lt;axel@uni-paderborn.de&gt;</a></address><br>
+</body> </html>
+ 

@@ -1,0 +1,220 @@
+<html> <head>
+<title>Conveniently searching Wikipedia</title>
+<link rel="owner" rev="made" href="mailto:axelboldt@yahoo.com">
+</head>
+<body>
+<img src="http://vg06.met.vgwort.de/na/a0de335d126840bfbc1265e24c1fc811" width="1" height="1" alt="">
+
+<h1>Conveniently searching Wikipedia</h1>
+
+<ul>
+<li><a href="#bookmarklets">1. Bookmarklets</a>
+<li><a href="#keywords">2. Custom keywords to be used in the Location bar</a>
+<li><a href="#searchbar">3. Search bar</a>
+<li><a href="#conquery">4. Select text and right-click</a>
+<li><a href="#wikilook">5. Select text to get a pop-up</a>
+</ul>
+
+<h2><a name="bookmarklets">1. Bookmarklets</a></h2>
+A bookmarklet is a piece of Javascript code which can be used as an
+ordinary bookmark in a web browser. The bookmarklets below send the
+currently highlighted text to the search engine of <a
+href="http://en.wikipedia.org">the English Wikipedia</a> and then display the results in a new browser window. If no
+text is highlighted when the bookmarklet is
+activated, a popup dialog appears and allows the user to enter search
+terms. If they don't enter any search terms, they will be sent to the
+Wikipedia main page.
+
+Javascript needs to be enabled in your browser for this to work. Pick
+your browser below, and follow the instructions.
+
+
+<h3>Netscape and Mozilla</h3>
+
+If your Bookmarks Toolbar (a place to store commonly used bookmarks
+right under the location box) is
+not shown, choose View->Toolbars->Bookmarks Toolbar.
+Then drag and drop the following link to your Personal Toolbar.
+
+<center><a title="Wikipedia search"
+href="javascript:s=document.getSelection();for(i=0;i<frames.length;i++){if(s)break;s=frames[i].document.getSelection();}if(!s)void(s=prompt('Enter search terms for Wikipedia',''));wikiw=open('http://en.wikipedia.org/'+(s?'w/wiki.phtml?search='+escape(s):''));wikiw.focus();">Wikipedia
+search</a>
+</center>
+
+Alternatively, you can right-click on this link and select Add
+bookmark.<p>
+
+
+<b>Note:</b> Tested on Netscape 4.7/Windows, Netscape 4.76/Linux,
+Mozilla 0.9.6/Windows,
+Mozilla 1.6b/Linux, Firefox 1.5/Windows.
+
+
+<h3>Internet Explorer</h3>
+
+If the Links section (a place to store commonly used bookmarks) is not
+shown right below your location bar, go to View -> Toolbars -> Links.
+Then right-click on the following link, choose Add to Favorites, and
+create it in the Links folder. It will show up at the top.
+
+<center><a
+href="javascript:s=(document.frames.length?'':document.selection.createRange().text);for(i=0;i<document.frames.length;i++){if(s)break;s=document.frames[i].document.selection.createRange().text;}if(!s)void(s=prompt('Enter search terms for Wikipedia:',''));wikiw=window.open('http://en.wikipedia.org/'+(s?('w/wiki.phtml?search='+escape(s)):''));wikiw.focus();">Wikipedia
+search</a>
+</center>
+
+When you start the bookmarklet for the first time, you may get a
+security warning. Allow the script to run if you trust me.<p>
+<b>Note:</b> Tested on IE 5.5, IE 6.0.
+
+<h3>Opera</h3>
+
+Opera doesn't seem to support the getSelection() method, so this
+bookmarklet can only be used to type (or paste) in the Wikipedia
+search terms.
+Right-click on it, then select "Add link to bookmarks..."
+
+<center><a href="javascript:void(s=prompt('Enter search terms for Wikipedia:',''));wikiw=window.open('http://en.wikipedia.org/'+(s?('w/wiki.phtml?search='+escape(s)):''),'WikiWindows','menubar=yes,location=yes,status=yes,scrollbars=yes,resizable=yes');wikiw.focus()">Wikipedia
+search</a>
+
+</center>
+
+
+<b>Note:</b> Tested on Opera 6.0.
+
+<h2><a name="keywords">2. Custom keywords for the Location bar</a></h2>
+
+I actually don't use the bookmarklets anymore. Instead, I use <a href="http://www.ghacks.net/2010/04/16/search-and-access-sites-faster-with-keywords/">location box keywords</a> to have Google search Wikipedia
+for me.
+
+<h3>Mozilla, Firefox and relatives</h3>
+
+<ol>
+<li>In Firefox, create a new bookmark (Bookmarks/Manage Bookmarks/New
+     Bookmark)
+<li>Enter 'Wikipedia search' as Name (without the quotes).
+<li>Enter
+     'http://www.google.com/search?q=site:wikipedia.org+%s'
+     as Location.     
+<li>Enter 'w' as Keyword.
+<li>Click OK.
+</ol>
+
+Now, to search Wikipedia for "French revolution", go to the location bar
+(Ctrl-L) and enter 'w French revolution', again without the quotes,
+then hit Enter. This
+particular example will use Google to search all Wikipedias, not just the English
+one. I have
+similar keywords for all the other  searches I perform regularly. For
+instance, if you want a keyword that searches the German Wikipedia
+only, you can enter
+'http://de.wikipedia.org/wiki/Spezial:Search?search=%s' as Location
+and 'wg' as keyword.
+
+<h2>Chrome</h3>
+
+To add a similar quick search keyword to Chrome:
+<ol>
+<li>Right-click into the address bar and choose 'Edit search engines'
+<li>Click on 'Add'
+<li>Enter 'Wikipedia search' as Name (without the quotes).
+<li>Enter 'w' as Keyword.
+<li>Enter
+     'http://www.google.com/search?q=site:wikipedia.org+%s'
+     as URL.     
+<li>Click OK.
+</ol>
+
+<h3>Internet Explorer</h3>
+
+To enable a similar quick search from the Windows and Internet Explorer Address bars, do the following
+
+<ol>
+<li>Open Notepad and insert all of the text below:
+<div style="border:1px solid black">
+<pre>Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\SearchUrl\w]
+@="http://www.wikipedia.org/w/wiki.phtml?search=%s"
+" "="+"
+"#"="%23"
+"&"="%26"
+"?"="%3F"
+"+"="%2B"
+"="="%3D"
+</pre>
+</div>
+<li>Choose File | Save as and save the file as "wikipedia.reg" (either use quote marks around the file name or choose All Files from the Save as type drop-down in Notepad's Save dialog).
+<li>Double-click on the "wikipedia.reg" file to add the key to your Windows Registry.
+</ol>
+
+This will allow you to for example type "w french revolution" (without
+the quotes) into the Windows and Internet Explorer Address bars to
+immediately search Wikipedia for the given search terms.
+
+<p>Note: There are other URLs you can specify instead of the default (@) one given above. For instance, the line
+
+<pre>
+@="http://de.wikipedia.org/w/wiki.phtml?search=%s"
+</pre>
+will search the German Wikipedia and
+<pre>
+@="http://www.google.com/search?q=site:wikipedia.org+%s"
+</pre>
+will use Google to search all language Wikipedias.
+<p>
+<b>Note:</b>Tested on Internet Explorer 6.0 and 8.0.
+
+<h2><a name="searchbar">3. Search bar</a></h2>
+
+If you'd like the search bar (upper right) of Firefox to support
+Wikipedia searches, go <a href="https://addons.mozilla.org/search-engines.php">here</a> and click on 'Wikipedia'.
+For Internet Explorer's search bar Wikipedia support, go <a href="http://www.ieaddons.com/en/searchproviders">here</a>.
+
+
+<h2><a name="conquery">4. Select text and right-click</a></h2>
+
+<h3>Firefox</h3>
+<a href="http://mozilla-ext-ja.way-nifty.com/blog/2010/07/conquery-173-mo.html">Conquery</a> is a nice Firefox add-on, which allows you to select some text, right-click, and choose from a list of search engines, Wikipedia being one of them.
+
+<h3>Internet Explorer 8</h3>
+
+In Internet Explorer 8 and later, you can use <a href="http://www.microsoft.com/windows/internet-explorer/features/faster.aspx">web accelerators</a> to achieve the same effect. You want to install the <a href="http://www.ieaddons.com/en/details/dictionaries/Define_with_Wikipedia/">Define-with-Wikipedia accelerator</a>.
+
+<h3>Chrome</h3>
+
+In Chrome, a functionality similar to Conquery and web accelerators is available with the extension <a href="http://www.cleeki.com/download.html">Cleeki</a>. It comes with a Wikipedia search preconfigured.
+
+<h2><a name="wikilook">5. Select text to get a pop-up</a></h2>
+
+The Firefox addon <a href="https://addons.mozilla.org/af/firefox/addon/7675/">WikiLook</a> is a very convenient way to quickly look up words in <a href="http://wiktionary.org">Wiktionary</a> or Wikipedia. You select some text, and a popup with the Wiktionary/Wikipedia definition appears right away.
+
+<h2>Credits, Comments and Copyrights</h2>
+
+The idea for the bookmarklets came from the bookmarklets of the <a
+href="http://dict.leo.org">LEO German-English dictionary</a>. My
+versions are in the public domain.<p>
+
+The Internet Explorer keywords approach was found <a
+href="http://en.wikipedia.org/wiki/Wikipedia:Searching#Internet_Explorer">here</a>
+and is therefore covered under the GFDL.<p>
+
+Please let me know if something doesn't work right of if you have a
+Wikipedia bookmarklet for a different browser.<p>
+
+
+
+
+
+<p>
+<hr>
+Last Change:
+<!-- hhmts start -->
+25-Dec-2010
+<!-- hhmts end -->
+<br>
+
+<address><a href="http://math-www.uni-paderborn.de/~axel/">Axel
+Boldt</a>
+<a
+href="mailto:axelboldt@yahoo.com">&lt;axelboldt@yahoo.com&gt;</a></address>
+</body>
