@@ -2534,7 +2534,15 @@ Fock space is used. An element of the canonical orthonormal basis of this Fock s
 is a list |n_1,n_2,...> of non-negative integers, almost all zero, where n_i is 
 interpreted as the number of field quanta belonging to the i-th eigenfunction.
 
-
+8/29/26
+The short content of General Relativity's Einstein Equation, according to Needham's 
+Visual Differential Geometry (30.24): the initial second derivative of the 3D-volume of a 
+tiny ball of particles, all launched in the same time-like 4-direction and following 
+geodesic flow, is proportional to the volume times the negative of the sum 
+of the local mass/energy density plus the pressure. 
+[This is akin to the Jacobi equations for n-manifolds. The pressure term is new and 
+does not show up in a naive Newton approach, and it leads to black holes: if 
+you're beyond a certain pressure, you get a runaway process.] 
 
 
 
