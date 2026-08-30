@@ -2536,13 +2536,14 @@ interpreted as the number of field quanta belonging to the i-th eigenfunction.
 
 8/29/26
 The short content of General Relativity's Einstein Equation, according to Needham's 
-Visual Differential Geometry (30.24): the initial second derivative of the 3D-volume of a 
-tiny ball of particles, all launched in the same time-like 4-direction and following 
-geodesic flow, is proportional to the volume times the negative of the sum 
+Visual Differential Geometry (30.24): an observer in free fall prepares a tiny ball
+ of particles that also undergo free fall (geodesic flow): then the second time-derivative
+of the 3D-volume of the ball is proportional to the volume times the negative sum 
 of the local mass/energy density plus the pressure. 
-[This is akin to the Jacobi equations for n-manifolds. The pressure term is new and 
-does not show up in a naive Newton approach, and it leads to black holes: if 
-you're beyond a certain pressure, you get a runaway process.] 
+[This is akin to the Jacobi equations for Riemannian n-manifolds. The pressure term
+is new and does not show up in a naive Newton approach, and it leads to black holes: 
+as the pressure increases, it causes more gravity and thus even more pressure
+increase, a runaway process.] 
 
 
 
